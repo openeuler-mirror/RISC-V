@@ -20,7 +20,6 @@ DEBUG=true
 # round1, round2, round3
 #WEB_RPM_REPO_SRV=http://192.168.0.104/oelriscv
 #WEB_RPM_REPO_SYNC=http://192.168.0.104/oelriscv
-WEB_RPM_REPO_SRV=http://192.168.0.100:8000/risc-v/RPMS/
+#WEB_RPM_REPO_SRV=http://192.168.0.100:8000/risc-v/RPMS/
+WEB_RPM_REPO_SRV=https//isrc.iscas.ac.cn/mirror/fedora/alt/risc-v/RPMS/
 #WEB_RPM_REPO_SYNC=http://192.168.0.104/oelriscv
-
-

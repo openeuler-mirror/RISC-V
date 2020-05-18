@@ -9,6 +9,11 @@ function buildByQemu()
     local baseName=$5
 
     #
+    # virt-customize直接执行, 其执行不经过libvirt,在fedora 32上运行涉及该问题，在Ubuntu上不涉及.
+    #
+    export LIBGUESTFS_BACKEND=direct
+
+    #
     # 准备QEMU镜像环境，并调整大小满足编译期间的磁盘空间需求
     #
     cp $WORK_DIR/$QEMU_DISK_IMAGE $buildDir/${name}-disk.img
@@ -22,13 +27,13 @@ function buildByQemu()
     # rpm repo used to build SRPM in qemu builder VM.
     sed -e "s,@RPMREPOWEBSRV@,$WEB_RPM_REPO_SRV,g" < ./assets/local.repo.in > $buildDir/local.repo
 
-    # Copy in the firstboot script, SRPM and repo.
+    # 将firstboot script, SRPM, repo配置拷贝到编译虚拟机镜像.
     virt-customize -v -a $buildDir/$name-disk.img \
       --firstboot $buildDir/$name-boot.sh \
       --copy-in $buildDir/$baseName:/var/tmp \
       --copy-in $buildDir/local.repo:/etc/yum.repos.d/
 
-    # Boot the guest.
+    # 启动编译虚拟机.
     qemu-system-riscv64 \
         -nographic -machine virt $QEMU_EXTRA -m $QEMU_MEM_SIZE \
         -kernel $WORK_DIR/bbl \
