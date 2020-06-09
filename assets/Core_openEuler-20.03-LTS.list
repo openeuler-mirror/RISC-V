@@ -1,5 +1,8 @@
 # This is a list of RPMS which support basic Linux function such as dnf, ssh.
-#
+# You can get this list via 
+# "dnf install NetworkManager coreutils dnf dnf-plugins-core vim openssh 
+# passwd procps-ng systemd systemd-udev"
+# 
 ================================================================================
  Package                            Arch    Version                 Repo  Size
 ================================================================================
