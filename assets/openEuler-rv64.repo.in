@@ -1,0 +1,5 @@
+[oe-rv]
+name=oe-rv
+baseurl=@RPMREPOWEBSRV@
+enabled=1
+gpgcheck=0

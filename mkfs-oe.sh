@@ -8,7 +8,9 @@
 # in RISC-V system, or x86/aarch64 system that support
 # cross-arch dnf installation.
 
-CORE_RPMS="glibc systemd vim findutils coreutils binutils net-tools systemd-udev libssh openssh openssl passwd git NetworkManager iproute network-scripts dnf wget procps-ng dnf-plugins-core rpm-build"
+. globals.inc
+
+CORE_RPMS="systemd vim coreutils net-tools systemd-udev libssh openssh passwd git NetworkManager dnf wget procps-ng dnf-plugins-core rpm-build"
 
 set -e
 set -x
@@ -41,7 +43,9 @@ mount --make-rslave /var/tmp/mnt/dev
 mount --make-rslave /var/tmp/mnt/sys
 
 rpm --root /var/tmp/mnt --initdb
-yum install  --installroot /var/tmp/mnt --repo oe-rv  $CORE_RPMS -y
+
+sed -e "s,@RPMREPOWEBSRV@,$WEB_RPM_REPO_SRV,g" < ./assets/openEuler-rv64.repo.in > /etc/yum.repo.d/oe-riscv.repo
+dnf install  --installroot /var/tmp/mnt --repo oe-rv  $CORE_RPMS -y
 
 echo "Change default passwd to empty"
 sed -i '1s/*//'  /var/tmp/mnt/etc/shadow
