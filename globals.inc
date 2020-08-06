@@ -26,5 +26,5 @@ WEB_RPM_REPO_SRV=https//isrc.iscas.ac.cn/mirror/fedora/alt/risc-v/RPMS/
 
 # Preinstalled packages
 CORE_RPMS="systemd vim coreutils net-tools systemd-udev libssh openssh passwd NetworkManager dnf wget procps-ng dnf-plugins-core"
-BUILD_TOOLS="rpm-build autoconf make gdb dnf-utils git texinfo gcc gcc-c++"
+BUILD_TOOLS="rpm-build autoconf make gdb dnf-utils git texinfo gcc gcc-c++ hostname"
 OBS_RPMS="osc build sudo iputils ntpdate vim cpio curl perl-Compress-Zlib perl-TimeDate perl-Data-Dumper perl-XML-Parser screen psmisc bash binutils bsdtar lzma util-linux openslp lvm2 perl-Digest-MD5 git screen tmux wget expect"
