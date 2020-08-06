@@ -8,7 +8,7 @@
 # in RISC-V system, or x86/aarch64 system that support
 # cross-arch dnf installation.
 
-# . globals.inc
+. globals.inc
 
 
 INSTALL_RPMS="$CORE_RPMS $BUILD_TOOLS"
@@ -19,7 +19,7 @@ mkdir -p /var/tmp/
 rm -f /var/tmp/oe-rv.raw
 
 # Create parted and formatted disk
-truncate -s 2G /var/tmp/oe-rv.raw
+truncate -s 10G /var/tmp/oe-rv.raw
 losetup -P $(losetup -f) /var/tmp/oe-rv.raw
 loopdev=$(losetup -a | grep oe-rv.raw | awk -F: '{print $1;}')
 fdisk $loopdev << EOF
@@ -36,8 +36,8 @@ mkfs -t ext4 ${loopdev}p1
 mkdir  -p /var/tmp/mnt
 mount -o loop /${loopdev}p1 /var/tmp/mnt
 
-mkdir /var/tmp/mnt/{dev,proc,sys}
-mkdir /var/tmp/mnt/dev/pts
+mkdir -p /var/tmp/mnt/{dev,proc,sys}
+mkdir -p /var/tmp/mnt/dev/pts
 mount -t proc proc  /var/tmp/mnt/proc
 mount -t sysfs sysfs /var/tmp/mnt/sys
 mount -t devpts pts  /var/tmp/mnt/dev/pts  
@@ -45,6 +45,7 @@ mount -o bind /dev /var/tmp/mnt/dev
 
 rpm --root /var/tmp/mnt --initdb
 
+sed -e "s,@RPMREPOWEBSRV@,$WEB_RPM_REPO_SRV,g" < ./assets/openEuler-rv64.repo.in > /etc/yum.repo.d/oe-riscv.repo
 
 dnf install  --installroot /var/tmp/mnt   $INSTALL_RPMS 
 cp /etc/yum.repos.d/oe-rv.repo /var/tmp/mnt/etc/yum.repos.d/
@@ -64,5 +65,7 @@ umount /var/tmp/mnt/proc
 umount /var/tmp/mnt
 
 losetup -d $loopdev
-qemu-img convert -f raw -O qcow2 /var/tmp/oe-rv.raw /var/tmp/oe-rv.qcow2
-rm -rf /var/tmp/oe-rv.raw
+# Currently lack of qemu-img on openEuler RISC-V, 
+# you can do this step in a x86 or aarch64 host 
+#qemu-img convert -f raw -O qcow2 /var/tmp/oe-rv.raw /var/tmp/oe-rv.qcow2
+#rm -rf /var/tmp/oe-rv.raw
