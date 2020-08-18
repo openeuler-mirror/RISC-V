@@ -10,13 +10,13 @@
 
 . globals.inc
 
-CORE_RPMS="systemd vim coreutils net-tools systemd-udev libssh openssh passwd git NetworkManager dnf wget procps-ng dnf-plugins-core rpm-build"
 
+INSTALL_RPMS="$CORE_RPMS $BUILD_TOOLS"
 set -e
 set -x
 
 mkdir -p /var/tmp/
-rm -f /var/tmp/*
+rm -f /var/tmp/oe-rv.raw
 
 # Create parted and formatted disk
 truncate -s 10G /var/tmp/oe-rv.raw
@@ -33,32 +33,39 @@ EOF
 mkfs -t ext4 ${loopdev}p1
 
 # Create the installroot
-mkdir  /var/tmp/mnt
+mkdir  -p /var/tmp/mnt
 mount -o loop /${loopdev}p1 /var/tmp/mnt
-mkdir /var/tmp/mnt/{dev,proc,sys}
-mount -t proc /proc  /var/tmp/mnt/proc
-mount --rbind /sys /var/tmp/mnt/sys
-mount --rbind /dev /var/tmp/mnt/dev 
-mount --make-rslave /var/tmp/mnt/dev
-mount --make-rslave /var/tmp/mnt/sys
+
+mkdir -p /var/tmp/mnt/{dev,proc,sys}
+mkdir -p /var/tmp/mnt/dev/pts
+mount -t proc proc  /var/tmp/mnt/proc
+mount -t sysfs sysfs /var/tmp/mnt/sys
+mount -t devpts pts  /var/tmp/mnt/dev/pts  
+mount -o bind /dev /var/tmp/mnt/dev
 
 rpm --root /var/tmp/mnt --initdb
 
 sed -e "s,@RPMREPOWEBSRV@,$WEB_RPM_REPO_SRV,g" < ./assets/openEuler-rv64.repo.in > /etc/yum.repo.d/oe-riscv.repo
-dnf install  --installroot /var/tmp/mnt --repo oe-rv  $CORE_RPMS -y
 
-echo "Change default passwd to empty"
-sed -i '1s/*//'  /var/tmp/mnt/etc/shadow
+dnf install  --installroot /var/tmp/mnt   $INSTALL_RPMS 
+cp /etc/yum.repos.d/oe-rv.repo /var/tmp/mnt/etc/yum.repos.d/
+
+echo "Set default passwd to openEuler12#$"
+
+echo "root:openEuler12#$" | chpasswd -R /var/tmp/mnt/
 echo openEuler-RISCV-rare > /var/tmp/mnt/etc/hostname
 
 sync
 sleep 5
 
-umount -R /var/tmp/mnt/dev 
-umount -R /var/tmp/mnt/sys
-umount  /var/tmp/mnt/proc
+umount -l /var/tmp/mnt/dev 
+umount -l /var/tmp/mnt/dev/pts
+umount /var/tmp/mnt/sys
+umount /var/tmp/mnt/proc
 umount /var/tmp/mnt
 
 losetup -d $loopdev
-qemu-img convert -f raw -O qcow2 /var/tmp/oe-rv.raw /var/tmp/oe-rv-rare.qcow2
-rm -rf /var/tmp/oe-rv.raw
+# Currently lack of qemu-img on openEuler RISC-V, 
+# you can do this step in a x86 or aarch64 host 
+#qemu-img convert -f raw -O qcow2 /var/tmp/oe-rv.raw /var/tmp/oe-rv.qcow2
+#rm -rf /var/tmp/oe-rv.raw
