@@ -11,23 +11,28 @@ RISC-V 相关的活动由RISC-V sig负责。你可以通过如下方式参与RIS
 
 #### 目录结构
 
-- [tools](./tools): openEuler RISC-V构建相关的工具
-  - [制作openEuler RISC-V rootfs的工具](tools/mkfs-oe.sh)
+- [documents](./documents/): 使用文档
+  - [openEuler RISC-V的获取和运行](documents/Installing.md)
+  - [参与openEuler RISC-V的构建](documents/RPMbuild_RISC-V.md)
 - [configuration](./configuration): openEuler RISC-V包含的软件包列表
   - [Yaml格式的软件包列表](configuration/RISC-V_list.yaml)
   - [OBS 工程的软件包配置](configuration/RISC-V_meta)
-- [documents](./documents/): 使用文档
-  - [openEuler RISC-V的获取和运行](documents/openEuler镜像的构建.md)
-  - [参与openEuler RISC-V的构建](documents/交叉编译内核.md)
-  - [更新日志](documents/changelog.md)
-
+- [tools](./tools): openEuler RISC-V构建相关的工具
+  - [制作openEuler RISC-V rootfs的工具](tools/mkfs-oe.sh)
 
 #### 镜像仓库和repo源
 
-一个临时的镜像仓库和repo源可通过如下地址获取：
+ 一个临时的镜像仓库和repo源可通过如下地址获取：
 ```
 https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 ```
+
+#### 源码仓
+
+openEuler RISC-V移植版所使用的代码力求与src-openEuler工程中代码仓的master分支保持一致，因此在适配RISC-V架构的过程中所遇到的修改会尽量推送代码仓的master分支；如果openEuler的master分支暂时没有接纳所推送的代码，就暂时使用所推送的代码分支作为源码仓，待master接纳后使用master分支代码。
+
+openEuler RISC-V移植版所包含的软件包代码仓、版本信息在configuration目录下的[软件包列表文件](configuration/RISC-V_list.yaml)中可以获得。
+
 
 #### 使用镜像
 
@@ -36,11 +41,11 @@ https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 - Sifive Unleashed U54;
 
 即使手中没有RISC-V硬件也没关系，得益于QEMU的存在，你可以在几乎任意Linux环境中体验openEuler的RISC-V移植版，详细使用方法见这篇文档
-- [openEuler RISC-V的安装和启动](documents/openEuler镜像的构建.md)
+- [openEuler RISC-V的安装和启动](documents/Installing.md)
 
 #### 参与openEuler RISC-V移植版的构建
 
-当前openEuler RISC-V的移植版所支持的软件包数量相比于openEuler 的20.03 LTS和20.09 都要少，我们的目标是尽可能丰富openEuler RISC-V移植版所包含的软件包数量，使能绝大多数软件包。
+当前openEuler RISC-V的移植版所支持的软件包数量相比于openEuler 的20.03 LTS和20.09 都要少的多，我们的目标是尽可能丰富openEuler RISC-V移植版所包含的软件包数量，使能绝大多数软件包。
 可参考如下文档，参与到openEuler RISC-V移植版的软件包构建工作中来。
-- [参与openEuler RISC-V的构建](documents/交叉编译内核.md)
+- [参与openEuler RISC-V的构建](documents/RPMbuild_RISC-V.md)
 
