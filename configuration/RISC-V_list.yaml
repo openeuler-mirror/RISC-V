@@ -1,3097 +1,3093 @@
 ##  Sample yaml file:
-#- name:risc-v-kernel
+#- name: risc-v-kernel
 #  src:
 #   url: openeuler/kernel
-#   revision: v5.5.19    #default master
-#   version: 5.5.19
+#   revision: v5.5.19    #could be branch/tag/commit ID 
+#   version: 5.5.19      #
 #   exclude: .git
 #   compression: bz2
 #   file2compress: *.tar
 #  spec:
 #   url: src-openeuler/risc-v-kernel
 #   exclude: kernel.spec
-#
 packages:
-- name:CUnit
+- name: CUnit
   spec:
    url: src-openeuler/CUnit
-- name:CreateImage
-   compression: bz2
-   file2compress: *.tar
-- name:GeoIP
+- name: GeoIP
   spec:
    url: src-openeuler/GeoIP
-- name:GeoIP-GeoLite-data
+- name: GeoIP-GeoLite-data
   spec:
    url: src-openeuler/GeoIP-GeoLite-data
-- name:Judy
+- name: Judy
   spec:
    url: src-openeuler/Judy
-- name:ModemManager
+- name: ModemManager
   spec:
    url: src-openeuler/ModemManager
-- name:NetworkManager
+- name: NetworkManager
   spec:
    url: src-openeuler/NetworkManager
-- name:TeXamator
+- name: TeXamator
   spec:
    url: src-openeuler/TeXamator
-- name:abattis-cantarell-fonts
+- name: abattis-cantarell-fonts
   spec:
    url: src-openeuler/abattis-cantarell-fonts
-- name:accountsservice
+- name: accountsservice
   spec:
    url: src-openeuler/accountsservice
-- name:acl
+- name: acl
   spec:
    url: src-openeuler/acl
-- name:adcli
+- name: adcli
   spec:
    url: src-openeuler/adcli
-- name:adobe-mappings-cmap
+- name: adobe-mappings-cmap
   spec:
    url: src-openeuler/adobe-mappings-cmap
-- name:adobe-mappings-pdf
+- name: adobe-mappings-pdf
   spec:
    url: src-openeuler/adobe-mappings-pdf
-- name:adwaita-icon-theme
+- name: adwaita-icon-theme
   spec:
    url: src-openeuler/adwaita-icon-theme
-- name:alsa-firmware
+- name: alsa-firmware
   spec:
    url: src-openeuler/alsa-firmware
-- name:alsa-lib
+- name: alsa-lib
   spec:
    url: src-openeuler/alsa-lib
-- name:alsa-tools
+- name: alsa-tools
   spec:
    url: src-openeuler/alsa-tools
-- name:anaconda-user-help
+- name: anaconda-user-help
   spec:
    url: src-openeuler/anaconda-user-help
-- name:annobin
+- name: annobin
   spec:
    url: src-openeuler/annobin
-- name:anthy
+- name: anthy
   spec:
    url: src-openeuler/anthy
-- name:apache2-mod_xforward
+- name: apache2-mod_xforward
   spec:
    url: src-openeuler/apache2-mod_xforward
-- name:apr
+- name: apr
   spec:
    url: src-openeuler/apr
-- name:apr-util
+- name: apr-util
   spec:
    url: src-openeuler/apr-util
-- name:argon2
+- name: argon2
   spec:
    url: src-openeuler/argon2
-- name:arptables
+- name: arptables
   spec:
    url: src-openeuler/arptables
-- name:arpwatch
+- name: arpwatch
   spec:
    url: src-openeuler/arpwatch
-- name:asciidoc
+- name: asciidoc
   spec:
    url: src-openeuler/asciidoc
-- name:aspell
+- name: aspell
   spec:
    url: src-openeuler/aspell
-- name:at-spi2-atk
+- name: at-spi2-atk
   spec:
    url: src-openeuler/at-spi2-atk
-- name:at-spi2-core
+- name: at-spi2-core
   spec:
    url: src-openeuler/at-spi2-core
-- name:atf
+- name: atf
   spec:
    url: src-openeuler/atf
-- name:atk
+- name: atk
   spec:
    url: src-openeuler/atk
-- name:atkmm
+- name: atkmm
   spec:
    url: src-openeuler/atkmm
-- name:atmel-firmware
+- name: atmel-firmware
   spec:
    url: src-openeuler/atmel-firmware
-- name:attr
+- name: attr
   spec:
    url: src-openeuler/attr
-- name:audiofile
+- name: audiofile
   spec:
    url: src-openeuler/audiofile
-- name:audit
+- name: audit
   spec:
    url: src-openeuler/audit
-- name:augeas
+- name: augeas
   spec:
    url: src-openeuler/augeas
-- name:autoconf
+- name: autoconf
   spec:
    url: src-openeuler/autoconf
-- name:autoconf-archive
+- name: autoconf-archive
   spec:
    url: src-openeuler/autoconf-archive
-- name:autoconf213
+- name: autoconf213
   spec:
    url: src-openeuler/autoconf213
-- name:autogen
+- name: autogen
   spec:
    url: src-openeuler/autogen
-- name:automake
+- name: automake
   spec:
    url: src-openeuler/automake
-- name:avahi
+- name: avahi
   spec:
    url: src-openeuler/avahi
-- name:babel
+- name: babel
   spec:
    url: src-openeuler/babel
-- name:babeltrace
+- name: babeltrace
   spec:
    url: src-openeuler/babeltrace
-- name:babl
+- name: babl
   spec:
    url: src-openeuler/babl
-- name:basesystem
+- name: basesystem
   spec:
    url: src-openeuler/basesystem
-- name:bash
+- name: bash
   spec:
    url: src-openeuler/bash
-- name:bash-completion
+- name: bash-completion
   spec:
    url: src-openeuler/bash-completion
-- name:bc
+- name: bc
   spec:
    url: src-openeuler/bc
-- name:bind
+- name: bind
   spec:
    url: src-openeuler/bind
-- name:binutils
+- name: binutils
   spec:
    url: src-openeuler/binutils
-- name:bison
+- name: bison
   spec:
    url: src-openeuler/bison
-- name:bluez
+- name: bluez
   spec:
    url: src-openeuler/bluez
-- name:boost
+- name: boost
   spec:
    url: src-openeuler/boost
-- name:bpg-fonts
+- name: bpg-fonts
   spec:
    url: src-openeuler/bpg-fonts
-- name:bridge-utils
+- name: bridge-utils
   spec:
    url: src-openeuler/bridge-utils
-- name:brotli
+- name: brotli
   spec:
    url: src-openeuler/brotli
-- name:bubblewrap
+- name: bubblewrap
   spec:
    url: src-openeuler/bubblewrap
-- name:byacc
+- name: byacc
   spec:
    url: src-openeuler/byacc
-- name:bzip2
+- name: bzip2
   spec:
    url: src-openeuler/bzip2
-- name:ca-certificates
+- name: ca-certificates
   spec:
    url: src-openeuler/ca-certificates
-- name:cachefilesd
+- name: cachefilesd
   spec:
    url: src-openeuler/cachefilesd
-- name:cairo
+- name: cairo
   spec:
    url: src-openeuler/cairo
-- name:cdparanoia
+- name: cdparanoia
   spec:
    url: src-openeuler/cdparanoia
-- name:check
+- name: check
   spec:
    url: src-openeuler/check
-- name:chkconfig
+- name: chkconfig
   spec:
    url: src-openeuler/chkconfig
-- name:chrpath
+- name: chrpath
   spec:
    url: src-openeuler/chrpath
-- name:cim-schema
+- name: cim-schema
   spec:
    url: src-openeuler/cim-schema
-- name:cjkuni-ukai-fonts
+- name: cjkuni-ukai-fonts
   spec:
    url: src-openeuler/cjkuni-ukai-fonts
-- name:cldr-emoji-annotation
+- name: cldr-emoji-annotation
   spec:
    url: src-openeuler/cldr-emoji-annotation
-- name:cloud-utils
+- name: cloud-utils
   spec:
    url: src-openeuler/cloud-utils
-- name:cmake
+- name: cmake
   spec:
    url: src-openeuler/cmake
-- name:cmocka
+- name: cmocka
   spec:
    url: src-openeuler/cmocka
-- name:color-filesystem
+- name: color-filesystem
   spec:
    url: src-openeuler/color-filesystem
-- name:colord
+- name: colord
   spec:
    url: src-openeuler/colord
-- name:convmv
+- name: convmv
   spec:
    url: src-openeuler/convmv
-- name:copy-jdk-configs
+- name: copy-jdk-configs
   spec:
    url: src-openeuler/copy-jdk-configs
-- name:coreutils
+- name: coreutils
   spec:
    url: src-openeuler/coreutils
-- name:cpio
+- name: cpio
   spec:
    url: src-openeuler/cpio
-- name:cppunit
+- name: cppunit
   spec:
    url: src-openeuler/cppunit
-- name:cracklib
+- name: cracklib
   spec:
    url: src-openeuler/cracklib
-- name:cronie
+- name: cronie
   spec:
    url: src-openeuler/cronie
-- name:crontabs
+- name: crontabs
   spec:
    url: src-openeuler/crontabs
-- name:crypto-policies
+- name: crypto-policies
   spec:
    url: src-openeuler/crypto-policies
-- name:cryptsetup
+- name: cryptsetup
   spec:
    url: src-openeuler/cryptsetup
-- name:cscope
+- name: cscope
   spec:
    url: src-openeuler/cscope
-- name:ctags
+- name: ctags
   spec:
    url: src-openeuler/ctags
-- name:cups
+- name: cups
   spec:
    url: src-openeuler/cups
-- name:curl
+- name: curl
   spec:
    url: src-openeuler/curl
-- name:custom_build_tool
+- name: custom_build_tool
   spec:
    url: src-openeuler/custom_build_tool
    compression: bz2
-   file2compress: *.tar
-- name:cyrus-sasl
+   file2compress: "*.tar"
+- name: cyrus-sasl
   spec:
    url: src-openeuler/cyrus-sasl
-- name:dblatex
+- name: dblatex
   spec:
    url: src-openeuler/dblatex
-- name:dbus
+- name: dbus
   spec:
    url: src-openeuler/dbus
-- name:dbus-glib
+- name: dbus-glib
   spec:
    url: src-openeuler/dbus-glib
-- name:dbus-python
+- name: dbus-python
   spec:
    url: src-openeuler/dbus-python
-- name:debootstrap
+- name: debootstrap
   spec:
    url: src-openeuler/debootstrap
-- name:dejagnu
+- name: dejagnu
   spec:
    url: src-openeuler/dejagnu
-- name:dejavu-fonts
+- name: dejavu-fonts
   spec:
    url: src-openeuler/dejavu-fonts
-- name:deltarpm
+- name: deltarpm
   spec:
    url: src-openeuler/deltarpm
-- name:desktop-file-utils
+- name: desktop-file-utils
   spec:
    url: src-openeuler/desktop-file-utils
-- name:dhcp
+- name: dhcp
   spec:
    url: src-openeuler/dhcp
-- name:diffstat
+- name: diffstat
   spec:
    url: src-openeuler/diffstat
-- name:diffutils
+- name: diffutils
   spec:
    url: src-openeuler/diffutils
-- name:dkms
+- name: dkms
   spec:
    url: src-openeuler/dkms
-- name:dnf
+- name: dnf
   spec:
    url: src-openeuler/dnf
-- name:dnf-plugins-core
+- name: dnf-plugins-core
   spec:
    url: src-openeuler/dnf-plugins-core
-- name:docbook-dtds
+- name: docbook-dtds
   spec:
    url: src-openeuler/docbook-dtds
-- name:docbook-style-dsssl
+- name: docbook-style-dsssl
   spec:
    url: src-openeuler/docbook-style-dsssl
-- name:docbook-style-xsl
+- name: docbook-style-xsl
   spec:
    url: src-openeuler/docbook-style-xsl
-- name:docbook-utils
+- name: docbook-utils
   spec:
    url: src-openeuler/docbook-utils
-- name:docbook5-style-xsl
+- name: docbook5-style-xsl
   spec:
    url: src-openeuler/docbook5-style-xsl
-- name:docker-compose
+- name: docker-compose
   spec:
    url: src-openeuler/docker-compose
-- name:dos2unix
+- name: dos2unix
   spec:
    url: src-openeuler/dos2unix
-- name:dosfstools
+- name: dosfstools
   spec:
    url: src-openeuler/dosfstools
-- name:dotconf
+- name: dotconf
   spec:
    url: src-openeuler/dotconf
-- name:doxygen
+- name: doxygen
   spec:
    url: src-openeuler/doxygen
-- name:dwz
+- name: dwz
   spec:
    url: src-openeuler/dwz
-- name:e2fsprogs
+- name: e2fsprogs
   spec:
    url: src-openeuler/e2fsprogs
-- name:ebtables
+- name: ebtables
   spec:
    url: src-openeuler/ebtables
-- name:ed
+- name: ed
   spec:
    url: src-openeuler/ed
-- name:efi-rpm-macros
+- name: efi-rpm-macros
   spec:
    url: src-openeuler/efi-rpm-macros
-- name:eglexternalplatform
+- name: eglexternalplatform
   spec:
    url: src-openeuler/eglexternalplatform
-- name:elfutils
+- name: elfutils
   spec:
    url: src-openeuler/elfutils
-- name:elinks
+- name: elinks
   spec:
    url: src-openeuler/elinks
-- name:emacs
+- name: emacs
   spec:
    url: src-openeuler/emacs
-- name:emacs-auctex
+- name: emacs-auctex
   spec:
    url: src-openeuler/emacs-auctex
-- name:enchant2
+- name: enchant2
   spec:
    url: src-openeuler/enchant2
-- name:environment-modules
+- name: environment-modules
   spec:
    url: src-openeuler/environment-modules
-- name:ethtool
+- name: ethtool
   spec:
    url: src-openeuler/ethtool
-- name:expat
+- name: expat
   spec:
    url: src-openeuler/expat
-- name:expect
+- name: expect
   spec:
    url: src-openeuler/expect
-- name:fakechroot
+- name: fakechroot
   spec:
    url: src-openeuler/fakechroot
-- name:fdupes
+- name: fdupes
   spec:
    url: src-openeuler/fdupes
-- name:file
+- name: file
   spec:
    url: src-openeuler/file
-- name:file-roller
+- name: file-roller
   spec:
    url: src-openeuler/file-roller
-- name:filesystem
+- name: filesystem
   spec:
    url: src-openeuler/filesystem
-- name:findutils
+- name: findutils
   spec:
    url: src-openeuler/findutils
-- name:fipscheck
+- name: fipscheck
   spec:
    url: src-openeuler/fipscheck
-- name:firewalld
+- name: firewalld
   spec:
    url: src-openeuler/firewalld
-- name:flac
+- name: flac
   spec:
    url: src-openeuler/flac
-- name:flex
+- name: flex
   spec:
    url: src-openeuler/flex
-- name:fltk
+- name: fltk
   spec:
    url: src-openeuler/fltk
-- name:fontconfig
+- name: fontconfig
   spec:
    url: src-openeuler/fontconfig
-- name:fonts-rpm-macros
+- name: fonts-rpm-macros
   spec:
    url: src-openeuler/fonts-rpm-macros
-- name:fpaste
+- name: fpaste
   spec:
    url: src-openeuler/fpaste
-- name:freeglut
+- name: freeglut
   spec:
    url: src-openeuler/freeglut
-- name:freetype
+- name: freetype
   spec:
    url: src-openeuler/freetype
-- name:fribidi
+- name: fribidi
   spec:
    url: src-openeuler/fribidi
-- name:fros
+- name: fros
   spec:
    url: src-openeuler/fros
-- name:fuse
+- name: fuse
   spec:
    url: src-openeuler/fuse
-- name:fuse-python
+- name: fuse-python
   spec:
    url: src-openeuler/fuse-python
-- name:fxload
+- name: fxload
   spec:
    url: src-openeuler/fxload
-- name:gamin
+- name: gamin
   spec:
    url: src-openeuler/gamin
-- name:gawk
+- name: gawk
   spec:
    url: src-openeuler/gawk
-- name:gc
+- name: gc
   spec:
    url: src-openeuler/gc
-- name:gcab
+- name: gcab
   spec:
    url: src-openeuler/gcab
-- name:gcc
+- name: gcc
   spec:
    url: src-openeuler/gcc
-- name:gcc_secure
+- name: gcc_secure
   spec:
    url: src-openeuler/gcc_secure
-- name:gcr
+- name: gcr
   spec:
    url: src-openeuler/gcr
-- name:gd
+- name: gd
   spec:
    url: src-openeuler/gd
-- name:gdb
+- name: gdb
   spec:
    url: src-openeuler/gdb
-- name:gdbm
+- name: gdbm
   spec:
    url: src-openeuler/gdbm
-- name:gdk-pixbuf2
+- name: gdk-pixbuf2
   spec:
    url: src-openeuler/gdk-pixbuf2
-- name:gdm
+- name: gdm
   spec:
    url: src-openeuler/gdm
-- name:geoclue2
+- name: geoclue2
   spec:
    url: src-openeuler/geoclue2
-- name:geolite2
+- name: geolite2
   spec:
    url: src-openeuler/geolite2
-- name:gettext
+- name: gettext
   spec:
    url: src-openeuler/gettext
-- name:gflags
+- name: gflags
   spec:
    url: src-openeuler/gflags
-- name:ghostscript
+- name: ghostscript
   spec:
    url: src-openeuler/ghostscript
-- name:giflib
+- name: giflib
   spec:
    url: src-openeuler/giflib
-- name:git
+- name: git
   spec:
    url: src-openeuler/git
-- name:glib
+- name: glib
   spec:
    url: src-openeuler/glib
-- name:glib-networking
+- name: glib-networking
   spec:
    url: src-openeuler/glib-networking
-- name:glib2
+- name: glib2
   spec:
    url: src-openeuler/glib2
-- name:glibc
+- name: glibc
   spec:
    url: src-openeuler/glibc
-- name:glibmm24
+- name: glibmm24
   spec:
    url: src-openeuler/glibmm24
-- name:gmp
+- name: gmp
   spec:
    url: src-openeuler/gmp
-- name:gnome-common
+- name: gnome-common
   spec:
    url: src-openeuler/gnome-common
-- name:gnupg2
+- name: gnupg2
   spec:
    url: src-openeuler/gnupg2
-- name:gnutls
+- name: gnutls
   spec:
    url: src-openeuler/gnutls
-- name:gobject-introspection
+- name: gobject-introspection
   spec:
    url: src-openeuler/gobject-introspection
-- name:google-droid-fonts
+- name: google-droid-fonts
   spec:
    url: src-openeuler/google-droid-fonts
-- name:gperf
+- name: gperf
   spec:
    url: src-openeuler/gperf
-- name:gpgme
+- name: gpgme
   spec:
    url: src-openeuler/gpgme
-- name:gpm
+- name: gpm
   spec:
    url: src-openeuler/gpm
-- name:graphite2
+- name: graphite2
   spec:
    url: src-openeuler/graphite2
-- name:graphviz
+- name: graphviz
   spec:
    url: src-openeuler/graphviz
-- name:grep
+- name: grep
   spec:
    url: src-openeuler/grep
-- name:groff
+- name: groff
   spec:
    url: src-openeuler/groff
-- name:grubby
+- name: grubby
   spec:
    url: src-openeuler/grubby
-- name:gsettings-desktop-schemas
+- name: gsettings-desktop-schemas
   spec:
    url: src-openeuler/gsettings-desktop-schemas
-- name:gsm
+- name: gsm
   spec:
    url: src-openeuler/gsm
-- name:gstreamer
+- name: gstreamer
   spec:
    url: src-openeuler/gstreamer
-- name:gstreamer-plugins-base
+- name: gstreamer-plugins-base
   spec:
    url: src-openeuler/gstreamer-plugins-base
-- name:gstreamer-plugins-good
+- name: gstreamer-plugins-good
   spec:
    url: src-openeuler/gstreamer-plugins-good
-- name:gstreamer1
+- name: gstreamer1
   spec:
    url: src-openeuler/gstreamer1
-- name:gstreamer1-plugins-bad-free
+- name: gstreamer1-plugins-bad-free
   spec:
    url: src-openeuler/gstreamer1-plugins-bad-free
-- name:gstreamer1-plugins-base
+- name: gstreamer1-plugins-base
   spec:
    url: src-openeuler/gstreamer1-plugins-base
-- name:gstreamer1-plugins-good
+- name: gstreamer1-plugins-good
   spec:
    url: src-openeuler/gstreamer1-plugins-good
-- name:gtk
+- name: gtk
   spec:
    url: src-openeuler/gtk
-- name:gtk-doc
+- name: gtk-doc
   spec:
    url: src-openeuler/gtk-doc
-- name:gtk-vnc
+- name: gtk-vnc
   spec:
    url: src-openeuler/gtk-vnc
-- name:gtk2
+- name: gtk2
   spec:
    url: src-openeuler/gtk2
-- name:gtk3
+- name: gtk3
   spec:
    url: src-openeuler/gtk3
-- name:guile
+- name: guile
   spec:
    url: src-openeuler/guile
-- name:gzip
+- name: gzip
   spec:
    url: src-openeuler/gzip
-- name:harfbuzz
+- name: harfbuzz
   spec:
    url: src-openeuler/harfbuzz
-- name:haveged
+- name: haveged
   spec:
    url: src-openeuler/haveged
-- name:hdparm
+- name: hdparm
   spec:
    url: src-openeuler/hdparm
-- name:help2man
+- name: help2man
   spec:
    url: src-openeuler/help2man
-- name:hfsplus-tools
+- name: hfsplus-tools
   spec:
    url: src-openeuler/hfsplus-tools
-- name:hicolor-icon-theme
+- name: hicolor-icon-theme
   spec:
    url: src-openeuler/hicolor-icon-theme
-- name:hostname
+- name: hostname
   spec:
    url: src-openeuler/hostname
-- name:httpd
+- name: httpd
   spec:
    url: src-openeuler/httpd
-- name:hwdata
+- name: hwdata
   spec:
    url: src-openeuler/hwdata
-- name:hyphen
+- name: hyphen
   spec:
    url: src-openeuler/hyphen
-- name:i2c-tools
+- name: i2c-tools
   spec:
    url: src-openeuler/i2c-tools
-- name:icfg
+- name: icfg
   spec:
    url: src-openeuler/icfg
-- name:icoutils
+- name: icoutils
   spec:
    url: src-openeuler/icoutils
-- name:icu
+- name: icu
   spec:
    url: src-openeuler/icu
-- name:ima-evm-utils
+- name: ima-evm-utils
   spec:
    url: src-openeuler/ima-evm-utils
-- name:initscripts
+- name: initscripts
   spec:
    url: src-openeuler/initscripts
-- name:intltool
+- name: intltool
   spec:
    url: src-openeuler/intltool
-- name:iotop
+- name: iotop
   spec:
    url: src-openeuler/iotop
-- name:ipcalc
+- name: ipcalc
   spec:
    url: src-openeuler/ipcalc
-- name:iperf3
+- name: iperf3
   spec:
    url: src-openeuler/iperf3
-- name:iproute
+- name: iproute
   spec:
    url: src-openeuler/iproute
-- name:ipset
+- name: ipset
   spec:
    url: src-openeuler/ipset
-- name:iptables
+- name: iptables
   spec:
    url: src-openeuler/iptables
-- name:iputils
+- name: iputils
   spec:
    url: src-openeuler/iputils
-- name:ipxe
+- name: ipxe
   spec:
    url: src-openeuler/ipxe
-- name:irqbalance
+- name: irqbalance
   spec:
    url: src-openeuler/irqbalance
-- name:iso-codes
+- name: iso-codes
   spec:
    url: src-openeuler/iso-codes
-- name:itstool
+- name: itstool
   spec:
    url: src-openeuler/itstool
-- name:ivtv-firmware
+- name: ivtv-firmware
   spec:
    url: src-openeuler/ivtv-firmware
-- name:jansson
+- name: jansson
   spec:
    url: src-openeuler/jansson
-- name:javapackages-tools
+- name: javapackages-tools
   spec:
    url: src-openeuler/javapackages-tools
-- name:jbig2dec
+- name: jbig2dec
   spec:
    url: src-openeuler/jbig2dec
-- name:jbigkit
+- name: jbigkit
   spec:
    url: src-openeuler/jbigkit
-- name:jemalloc
+- name: jemalloc
   spec:
    url: src-openeuler/jemalloc
-- name:jfsutils
+- name: jfsutils
   spec:
    url: src-openeuler/jfsutils
-- name:jomolhari-fonts
+- name: jomolhari-fonts
   spec:
    url: src-openeuler/jomolhari-fonts
-- name:json-c
+- name: json-c
   spec:
    url: src-openeuler/json-c
-- name:json-glib
+- name: json-glib
   spec:
    url: src-openeuler/json-glib
-- name:jsoncpp
+- name: jsoncpp
   spec:
    url: src-openeuler/jsoncpp
-- name:julietaula-montserrat-fonts
+- name: julietaula-montserrat-fonts
   spec:
    url: src-openeuler/julietaula-montserrat-fonts
-- name:kde-filesystem
+- name: kde-filesystem
   spec:
    url: src-openeuler/kde-filesystem
-- name:kde-settings
+- name: kde-settings
   spec:
    url: src-openeuler/kde-settings
-- name:keyrings-filesystem
+- name: keyrings-filesystem
   spec:
    url: src-openeuler/keyrings-filesystem
-- name:keyutils
+- name: keyutils
   spec:
    url: src-openeuler/keyutils
-- name:khmeros-fonts
+- name: khmeros-fonts
   spec:
    url: src-openeuler/khmeros-fonts
-- name:kmod
+- name: kmod
   spec:
    url: src-openeuler/kmod
-- name:krb5
+- name: krb5
   spec:
    url: src-openeuler/krb5
-- name:lato-fonts
+- name: lato-fonts
   spec:
    url: src-openeuler/lato-fonts
-- name:lcms2
+- name: lcms2
   spec:
    url: src-openeuler/lcms2
-- name:less
+- name: less
   spec:
    url: src-openeuler/less
-- name:libICE
+- name: libICE
   spec:
    url: src-openeuler/libICE
-- name:libSM
+- name: libSM
   spec:
    url: src-openeuler/libSM
-- name:libX11
+- name: libX11
   spec:
    url: src-openeuler/libX11
-- name:libXau
+- name: libXau
   spec:
    url: src-openeuler/libXau
-- name:libXaw
+- name: libXaw
   spec:
    url: src-openeuler/libXaw
-- name:libXcomposite
+- name: libXcomposite
   spec:
    url: src-openeuler/libXcomposite
-- name:libXcursor
+- name: libXcursor
   spec:
    url: src-openeuler/libXcursor
-- name:libXdamage
+- name: libXdamage
   spec:
    url: src-openeuler/libXdamage
-- name:libXdmcp
+- name: libXdmcp
   spec:
    url: src-openeuler/libXdmcp
-- name:libXext
+- name: libXext
   spec:
    url: src-openeuler/libXext
-- name:libXfixes
+- name: libXfixes
   spec:
    url: src-openeuler/libXfixes
-- name:libXft
+- name: libXft
   spec:
    url: src-openeuler/libXft
-- name:libXi
+- name: libXi
   spec:
    url: src-openeuler/libXi
-- name:libXinerama
+- name: libXinerama
   spec:
    url: src-openeuler/libXinerama
-- name:libXmu
+- name: libXmu
   spec:
    url: src-openeuler/libXmu
-- name:libXpm
+- name: libXpm
   spec:
    url: src-openeuler/libXpm
-- name:libXrandr
+- name: libXrandr
   spec:
    url: src-openeuler/libXrandr
-- name:libXrender
+- name: libXrender
   spec:
    url: src-openeuler/libXrender
-- name:libXt
+- name: libXt
   spec:
    url: src-openeuler/libXt
-- name:libXtst
+- name: libXtst
   spec:
    url: src-openeuler/libXtst
-- name:libXxf86dga
+- name: libXxf86dga
   spec:
    url: src-openeuler/libXxf86dga
-- name:libXxf86misc
+- name: libXxf86misc
   spec:
    url: src-openeuler/libXxf86misc
-- name:libXxf86vm
+- name: libXxf86vm
   spec:
    url: src-openeuler/libXxf86vm
-- name:libaec
+- name: libaec
   spec:
    url: src-openeuler/libaec
-- name:libaesgm
+- name: libaesgm
   spec:
    url: src-openeuler/libaesgm
-- name:libaio
+- name: libaio
   spec:
    url: src-openeuler/libaio
-- name:libappstream-glib
+- name: libappstream-glib
   spec:
    url: src-openeuler/libappstream-glib
-- name:libarchive
+- name: libarchive
   spec:
    url: src-openeuler/libarchive
-- name:libart_lgpl
+- name: libart_lgpl
   spec:
    url: src-openeuler/libart_lgpl
-- name:libassuan
+- name: libassuan
   spec:
    url: src-openeuler/libassuan
-- name:libasyncns
+- name: libasyncns
   spec:
    url: src-openeuler/libasyncns
-- name:libatomic_ops
+- name: libatomic_ops
   spec:
    url: src-openeuler/libatomic_ops
-- name:libcap
+- name: libcap
   spec:
    url: src-openeuler/libcap
-- name:libcap-ng
+- name: libcap-ng
   spec:
    url: src-openeuler/libcap-ng
-- name:libcgroup
+- name: libcgroup
   spec:
    url: src-openeuler/libcgroup
-- name:libclc
+- name: libclc
   spec:
    url: src-openeuler/libclc
-- name:libcomps
+- name: libcomps
   spec:
    url: src-openeuler/libcomps
-- name:libcroco
+- name: libcroco
   spec:
    url: src-openeuler/libcroco
-- name:libdaemon
+- name: libdaemon
   spec:
    url: src-openeuler/libdaemon
-- name:libdatrie
+- name: libdatrie
   spec:
    url: src-openeuler/libdatrie
-- name:libdb
+- name: libdb
   spec:
    url: src-openeuler/libdb
-- name:libdbi
+- name: libdbi
   spec:
    url: src-openeuler/libdbi
-- name:libdbusmenu
+- name: libdbusmenu
   spec:
    url: src-openeuler/libdbusmenu
-- name:libdnf
+- name: libdnf
   spec:
    url: src-openeuler/libdnf
-- name:libdrm
+- name: libdrm
   spec:
    url: src-openeuler/libdrm
-- name:libdvdread
+- name: libdvdread
   spec:
    url: src-openeuler/libdvdread
-- name:libecap
+- name: libecap
   spec:
    url: src-openeuler/libecap
-- name:libedit
+- name: libedit
   spec:
    url: src-openeuler/libedit
-- name:libell
+- name: libell
   spec:
    url: src-openeuler/libell
-- name:libepoxy
+- name: libepoxy
   spec:
    url: src-openeuler/libepoxy
-- name:liberation-fonts
+- name: liberation-fonts
   spec:
    url: src-openeuler/liberation-fonts
-- name:libesmtp
+- name: libesmtp
   spec:
    url: src-openeuler/libesmtp
-- name:libestr
+- name: libestr
   spec:
    url: src-openeuler/libestr
-- name:libev
+- name: libev
   spec:
    url: src-openeuler/libev
-- name:libevdev
+- name: libevdev
   spec:
    url: src-openeuler/libevdev
-- name:libevent
+- name: libevent
   spec:
    url: src-openeuler/libevent
-- name:libevhtp
+- name: libevhtp
   spec:
    url: src-openeuler/libevhtp
-- name:libfastjson
+- name: libfastjson
   spec:
    url: src-openeuler/libfastjson
-- name:libffi
+- name: libffi
   spec:
    url: src-openeuler/libffi
    exclude: libffi.spec
-- name:libfontenc
+- name: libfontenc
   spec:
    url: src-openeuler/libfontenc
-- name:libgcrypt
+- name: libgcrypt
   spec:
    url: src-openeuler/libgcrypt
-- name:libglvnd
+- name: libglvnd
   spec:
    url: src-openeuler/libglvnd
-- name:libgpg-error
+- name: libgpg-error
   spec:
    url: src-openeuler/libgpg-error
-- name:libgudev
+- name: libgudev
   spec:
    url: src-openeuler/libgudev
-- name:libgusb
+- name: libgusb
   spec:
    url: src-openeuler/libgusb
-- name:libhbaapi
+- name: libhbaapi
   spec:
    url: src-openeuler/libhbaapi
-- name:libical
+- name: libical
   spec:
    url: src-openeuler/libical
-- name:libid3tag
+- name: libid3tag
   spec:
    url: src-openeuler/libid3tag
-- name:libidn
+- name: libidn
   spec:
    url: src-openeuler/libidn
-- name:libidn2
+- name: libidn2
   spec:
    url: src-openeuler/libidn2
-- name:libijs
+- name: libijs
   spec:
    url: src-openeuler/libijs
-- name:libimagequant
+- name: libimagequant
   spec:
    url: src-openeuler/libimagequant
-- name:libjpeg-turbo
+- name: libjpeg-turbo
   spec:
    url: src-openeuler/libjpeg-turbo
-- name:libksba
+- name: libksba
   spec:
    url: src-openeuler/libksba
-- name:liblognorm
+- name: liblognorm
   spec:
    url: src-openeuler/liblognorm
-- name:libmad
+- name: libmad
   spec:
    url: src-openeuler/libmad
-- name:libmaxminddb
+- name: libmaxminddb
   spec:
    url: src-openeuler/libmaxminddb
-- name:libmbim
+- name: libmbim
   spec:
    url: src-openeuler/libmbim
-- name:libmetalink
+- name: libmetalink
   spec:
    url: src-openeuler/libmetalink
-- name:libmicrohttpd
+- name: libmicrohttpd
   spec:
    url: src-openeuler/libmicrohttpd
-- name:libmnl
+- name: libmnl
   spec:
    url: src-openeuler/libmnl
-- name:libmodman
+- name: libmodman
   spec:
    url: src-openeuler/libmodman
-- name:libmodulemd
+- name: libmodulemd
   spec:
    url: src-openeuler/libmodulemd
-- name:libmpc
+- name: libmpc
   spec:
    url: src-openeuler/libmpc
-- name:libmpcdec
+- name: libmpcdec
   spec:
    url: src-openeuler/libmpcdec
-- name:libmspack
+- name: libmspack
   spec:
    url: src-openeuler/libmspack
-- name:libndp
+- name: libndp
   spec:
    url: src-openeuler/libndp
-- name:libnet
+- name: libnet
   spec:
    url: src-openeuler/libnet
-- name:libnetfilter_conntrack
+- name: libnetfilter_conntrack
   spec:
    url: src-openeuler/libnetfilter_conntrack
-- name:libnetfilter_cthelper
+- name: libnetfilter_cthelper
   spec:
    url: src-openeuler/libnetfilter_cthelper
-- name:libnetfilter_cttimeout
+- name: libnetfilter_cttimeout
   spec:
    url: src-openeuler/libnetfilter_cttimeout
-- name:libnetfilter_queue
+- name: libnetfilter_queue
   spec:
    url: src-openeuler/libnetfilter_queue
-- name:libnfnetlink
+- name: libnfnetlink
   spec:
    url: src-openeuler/libnfnetlink
-- name:libnfs
+- name: libnfs
   spec:
    url: src-openeuler/libnfs
-- name:libnftnl
+- name: libnftnl
   spec:
    url: src-openeuler/libnftnl
-- name:libnl3
+- name: libnl3
   spec:
    url: src-openeuler/libnl3
-- name:libnotify
+- name: libnotify
   spec:
    url: src-openeuler/libnotify
-- name:libnsl2
+- name: libnsl2
   spec:
    url: src-openeuler/libnsl2
-- name:libogg
+- name: libogg
   spec:
    url: src-openeuler/libogg
-- name:libomxil-bellagio
+- name: libomxil-bellagio
   spec:
    url: src-openeuler/libomxil-bellagio
-- name:libpaper
+- name: libpaper
   spec:
    url: src-openeuler/libpaper
-- name:libpcap
+- name: libpcap
   spec:
    url: src-openeuler/libpcap
-- name:libpipeline
+- name: libpipeline
   spec:
    url: src-openeuler/libpipeline
-- name:libpng
+- name: libpng
   spec:
    url: src-openeuler/libpng
-- name:libpng12
+- name: libpng12
   spec:
    url: src-openeuler/libpng12
-- name:libproxy
+- name: libproxy
   spec:
    url: src-openeuler/libproxy
-- name:libpsl
+- name: libpsl
   spec:
    url: src-openeuler/libpsl
-- name:libpwquality
+- name: libpwquality
   spec:
    url: src-openeuler/libpwquality
-- name:libqmi
+- name: libqmi
   spec:
    url: src-openeuler/libqmi
-- name:librabbitmq
+- name: librabbitmq
   spec:
    url: src-openeuler/librabbitmq
-- name:libraw1394
+- name: libraw1394
   spec:
    url: src-openeuler/libraw1394
-- name:librdkafka
+- name: librdkafka
   spec:
    url: src-openeuler/librdkafka
-- name:librelp
+- name: librelp
   spec:
    url: src-openeuler/librelp
-- name:librepo
+- name: librepo
   spec:
    url: src-openeuler/librepo
-- name:libreport
+- name: libreport
   spec:
    url: src-openeuler/libreport
-- name:librsvg2
+- name: librsvg2
   spec:
    url: src-openeuler/librsvg2
-- name:libseccomp
+- name: libseccomp
   spec:
    url: src-openeuler/libseccomp
-- name:libsecret
+- name: libsecret
   spec:
    url: src-openeuler/libsecret
-- name:libselinux
+- name: libselinux
   spec:
    url: src-openeuler/libselinux
-- name:libsemanage
+- name: libsemanage
   spec:
    url: src-openeuler/libsemanage
-- name:libsepol
+- name: libsepol
   spec:
    url: src-openeuler/libsepol
-- name:libsigsegv
+- name: libsigsegv
   spec:
    url: src-openeuler/libsigsegv
-- name:libsmi
+- name: libsmi
   spec:
    url: src-openeuler/libsmi
-- name:libsolv
+- name: libsolv
   spec:
    url: src-openeuler/libsolv
-- name:libsoup
+- name: libsoup
   spec:
    url: src-openeuler/libsoup
-- name:libspiro
+- name: libspiro
   spec:
    url: src-openeuler/libspiro
-- name:libsrtp
+- name: libsrtp
   spec:
    url: src-openeuler/libsrtp
-- name:libssh
+- name: libssh
   spec:
    url: src-openeuler/libssh
-- name:libssh2
+- name: libssh2
   spec:
    url: src-openeuler/libssh2
-- name:libstemmer
+- name: libstemmer
   spec:
    url: src-openeuler/libstemmer
-- name:libtar
+- name: libtar
   spec:
    url: src-openeuler/libtar
-- name:libtasn1
+- name: libtasn1
   spec:
    url: src-openeuler/libtasn1
-- name:libteam
+- name: libteam
   spec:
    url: src-openeuler/libteam
-- name:libthai
+- name: libthai
   spec:
    url: src-openeuler/libthai
-- name:libtheora
+- name: libtheora
   spec:
    url: src-openeuler/libtheora
-- name:libtiff
+- name: libtiff
   spec:
    url: src-openeuler/libtiff
-- name:libtirpc
+- name: libtirpc
   spec:
    url: src-openeuler/libtirpc
-- name:libtool
+- name: libtool
   spec:
    url: src-openeuler/libtool
-- name:libunistring
+- name: libunistring
   spec:
    url: src-openeuler/libunistring
-- name:libusb
+- name: libusb
   spec:
    url: src-openeuler/libusb
-- name:libusbmuxd
+- name: libusbmuxd
   spec:
    url: src-openeuler/libusbmuxd
-- name:libusbx
+- name: libusbx
   spec:
    url: src-openeuler/libusbx
-- name:libuser
+- name: libuser
   spec:
    url: src-openeuler/libuser
-- name:libutempter
+- name: libutempter
   spec:
    url: src-openeuler/libutempter
-- name:libuv
+- name: libuv
   spec:
    url: src-openeuler/libuv
-- name:libverto
+- name: libverto
   spec:
    url: src-openeuler/libverto
-- name:libvisual
+- name: libvisual
   spec:
    url: src-openeuler/libvisual
-- name:libvoikko
+- name: libvoikko
   spec:
    url: src-openeuler/libvoikko
-- name:libwebp
+- name: libwebp
   spec:
    url: src-openeuler/libwebp
-- name:libwpe
+- name: libwpe
   spec:
    url: src-openeuler/libwpe
-- name:libx86emu
+- name: libx86emu
   spec:
    url: src-openeuler/libx86emu
-- name:libxcb
+- name: libxcb
   spec:
    url: src-openeuler/libxcb
-- name:libxcrypt
+- name: libxcrypt
   spec:
    url: src-openeuler/libxcrypt
-- name:libxkbcommon
+- name: libxkbcommon
   spec:
    url: src-openeuler/libxkbcommon
-- name:libxkbfile
+- name: libxkbfile
   spec:
    url: src-openeuler/libxkbfile
-- name:libxml2
+- name: libxml2
   spec:
    url: src-openeuler/libxml2
-- name:libxshmfence
+- name: libxshmfence
   spec:
    url: src-openeuler/libxshmfence
-- name:libxslt
+- name: libxslt
   spec:
    url: src-openeuler/libxslt
-- name:libyaml
+- name: libyaml
   spec:
    url: src-openeuler/libyaml
-- name:libzip
+- name: libzip
   spec:
    url: src-openeuler/libzip
-- name:linux-firmware
+- name: linux-firmware
   spec:
    url: src-openeuler/linux-firmware
-- name:linuxconsoletools
+- name: linuxconsoletools
   spec:
    url: src-openeuler/linuxconsoletools
-- name:linuxptp
+- name: linuxptp
   spec:
    url: src-openeuler/linuxptp
-- name:lksctp-tools
+- name: lksctp-tools
   spec:
    url: src-openeuler/lksctp-tools
-- name:lmdb
+- name: lmdb
   spec:
    url: src-openeuler/lmdb
-- name:lockdev
+- name: lockdev
   spec:
    url: src-openeuler/lockdev
-- name:logrotate
+- name: logrotate
   spec:
    url: src-openeuler/logrotate
-- name:logwatch
+- name: logwatch
   spec:
    url: src-openeuler/logwatch
-- name:lrzsz
+- name: lrzsz
   spec:
    url: src-openeuler/lrzsz
-- name:lsscsi
+- name: lsscsi
   spec:
    url: src-openeuler/lsscsi
-- name:lua
+- name: lua
   spec:
    url: src-openeuler/lua
-- name:lua-expat
+- name: lua-expat
   spec:
    url: src-openeuler/lua-expat
-- name:lua-filesystem
+- name: lua-filesystem
   spec:
    url: src-openeuler/lua-filesystem
-- name:lua-json
+- name: lua-json
   spec:
    url: src-openeuler/lua-json
-- name:lua-lpeg
+- name: lua-lpeg
   spec:
    url: src-openeuler/lua-lpeg
-- name:lua-lunit
+- name: lua-lunit
   spec:
    url: src-openeuler/lua-lunit
-- name:lua-posix
+- name: lua-posix
   spec:
    url: src-openeuler/lua-posix
-- name:lua-socket
+- name: lua-socket
   spec:
    url: src-openeuler/lua-socket
-- name:lvm2
+- name: lvm2
   spec:
    url: src-openeuler/lvm2
-- name:lynx
+- name: lynx
   spec:
    url: src-openeuler/lynx
-- name:lz4
+- name: lz4
   spec:
    url: src-openeuler/lz4
-- name:lzo
+- name: lzo
   spec:
    url: src-openeuler/lzo
-- name:lzop
+- name: lzop
   spec:
    url: src-openeuler/lzop
-- name:m2crypto
+- name: m2crypto
   spec:
    url: src-openeuler/m2crypto
-- name:m4
+- name: m4
   spec:
    url: src-openeuler/m4
-- name:mac-robber
+- name: mac-robber
   spec:
    url: src-openeuler/mac-robber
-- name:mailcap
+- name: mailcap
   spec:
    url: src-openeuler/mailcap
-- name:mailx
+- name: mailx
   spec:
    url: src-openeuler/mailx
-- name:make
+- name: make
   spec:
    url: src-openeuler/make
-- name:mallard-rng
+- name: mallard-rng
   spec:
    url: src-openeuler/mallard-rng
-- name:man-db
+- name: man-db
   spec:
    url: src-openeuler/man-db
-- name:man-pages
+- name: man-pages
   spec:
    url: src-openeuler/man-pages
-- name:mariadb-connector-c
+- name: mariadb-connector-c
   spec:
    url: src-openeuler/mariadb-connector-c
-- name:mcpp
+- name: mcpp
   spec:
    url: src-openeuler/mcpp
-- name:mesa
+- name: mesa
   spec:
    url: src-openeuler/mesa
-- name:mesa-libGLU
+- name: mesa-libGLU
   spec:
    url: src-openeuler/mesa-libGLU
-- name:mesa-libGLw
+- name: mesa-libGLw
   spec:
    url: src-openeuler/mesa-libGLw
-- name:meson
+- name: meson
   spec:
    url: src-openeuler/meson
-- name:mlocate
+- name: mlocate
   spec:
    url: src-openeuler/mlocate
-- name:mobile-broadband-provider-info
+- name: mobile-broadband-provider-info
   spec:
    url: src-openeuler/mobile-broadband-provider-info
-- name:mozilla-filesystem
+- name: mozilla-filesystem
   spec:
    url: src-openeuler/mozilla-filesystem
-- name:mozjs52
+- name: mozjs52
   spec:
    url: src-openeuler/mozjs52
-- name:mpfr
+- name: mpfr
   spec:
    url: src-openeuler/mpfr
-- name:mrtg
+- name: mrtg
   spec:
    url: src-openeuler/mrtg
-- name:mt-st
+- name: mt-st
   spec:
    url: src-openeuler/mt-st
-- name:mtdev
+- name: mtdev
   spec:
    url: src-openeuler/mtdev
-- name:mtx
+- name: mtx
   spec:
    url: src-openeuler/mtx
-- name:multilib-rpm-config
+- name: multilib-rpm-config
   spec:
    url: src-openeuler/multilib-rpm-config
-- name:mypaint-brushes
+- name: mypaint-brushes
   spec:
    url: src-openeuler/mypaint-brushes
-- name:ncompress
+- name: ncompress
   spec:
    url: src-openeuler/ncompress
-- name:ncurses
+- name: ncurses
   spec:
    url: src-openeuler/ncurses
-- name:ndisc6
+- name: ndisc6
   spec:
    url: src-openeuler/ndisc6
-- name:neon
+- name: neon
   spec:
    url: src-openeuler/neon
-- name:net-tools
+- name: net-tools
   spec:
    url: src-openeuler/net-tools
-- name:nettle
+- name: nettle
   spec:
    url: src-openeuler/nettle
-- name:newt
+- name: newt
   spec:
    url: src-openeuler/newt
-- name:nghttp2
+- name: nghttp2
   spec:
    url: src-openeuler/nghttp2
-- name:ninja-build
+- name: ninja-build
   spec:
    url: src-openeuler/ninja-build
-- name:npth
+- name: npth
   spec:
    url: src-openeuler/npth
-- name:nspr
+- name: nspr
   spec:
    url: src-openeuler/nspr
-- name:nss
+- name: nss
   spec:
    url: src-openeuler/nss
-- name:nss-altfiles
+- name: nss-altfiles
   spec:
    url: src-openeuler/nss-altfiles
-- name:nss-pem
+- name: nss-pem
   spec:
    url: src-openeuler/nss-pem
-- name:nss_wrapper
+- name: nss_wrapper
   spec:
    url: src-openeuler/nss_wrapper
-- name:ntp
+- name: ntp
   spec:
    url: src-openeuler/ntp
-- name:ntpstat
+- name: ntpstat
   spec:
    url: src-openeuler/ntpstat
-- name:numactl
+- name: numactl
   spec:
    url: src-openeuler/numactl
-- name:numad
+- name: numad
   spec:
    url: src-openeuler/numad
-- name:numpy
+- name: numpy
   spec:
    url: src-openeuler/numpy
-- name:nvme-cli
+- name: nvme-cli
   spec:
    url: src-openeuler/nvme-cli
-- name:obs-env
+- name: obs-env
   spec:
    url: src-openeuler/obs-env
-- name:obs-service-download_files
+- name: obs-service-download_files
   spec:
    url: src-openeuler/obs-service-download_files
-- name:obs-service-extract_file
+- name: obs-service-extract_file
   spec:
    url: src-openeuler/obs-service-extract_file
-- name:obs-service-rust2rpm
+- name: obs-service-rust2rpm
   spec:
    url: src-openeuler/obs-service-rust2rpm
-- name:obs-service-set_version
+- name: obs-service-set_version
   spec:
    url: src-openeuler/obs-service-set_version
-- name:oniguruma
+- name: oniguruma
   spec:
    url: src-openeuler/oniguruma
-- name:openEuler-indexhtml
+- name: openEuler-indexhtml
   spec:
    url: src-openeuler/openEuler-indexhtml
    compression: gz
-   file2compress: *.tar
-- name:openEuler-logos
+   file2compress: "*.tar"
+- name: openEuler-logos
   spec:
    url: src-openeuler/openEuler-logos
    compression: xz
-   file2compress: *.tar
-- name:openEuler-release
+   file2compress: "*.tar"
+- name: openEuler-release
   spec:
    url: src-openeuler/openEuler-release
    compression: gz
-   file2compress: *.tar
-- name:openEuler-repos
+   file2compress: "*.tar"
+- name: openEuler-repos
   spec:
    url: src-openeuler/openEuler-repos
-- name:openEuler-rpm-config
+- name: openEuler-rpm-config
   spec:
    url: src-openeuler/openEuler-rpm-config
-- name:opencc
+- name: opencc
   spec:
    url: src-openeuler/opencc
-- name:openjade
+- name: openjade
   spec:
    url: src-openeuler/openjade
-- name:openjpeg2
+- name: openjpeg2
   spec:
    url: src-openeuler/openjpeg2
-- name:openldap
+- name: openldap
   spec:
    url: src-openeuler/openldap
-- name:opensbi
+- name: opensbi
   spec:
    url: src-openeuler/opensbi
-- name:openslp
+- name: openslp
   spec:
    url: src-openeuler/openslp
-- name:opensp
+- name: opensp
   spec:
    url: src-openeuler/opensp
-- name:openssh
+- name: openssh
   spec:
    url: src-openeuler/openssh
-- name:openssl
+- name: openssl
   spec:
    url: src-openeuler/openssl
    exclude: openssl.spec
-- name:openssl-pkcs11
+- name: openssl-pkcs11
   spec:
    url: src-openeuler/openssl-pkcs11
-- name:opus
+- name: opus
   spec:
    url: src-openeuler/opus
-- name:os-prober
+- name: os-prober
   spec:
    url: src-openeuler/os-prober
-- name:osc
+- name: osc
   spec:
    url: src-openeuler/osc
-- name:overpass-fonts
+- name: overpass-fonts
   spec:
    url: src-openeuler/overpass-fonts
-- name:p11-kit
+- name: p11-kit
   spec:
    url: src-openeuler/p11-kit
-- name:paktype-naqsh-fonts
+- name: paktype-naqsh-fonts
   spec:
    url: src-openeuler/paktype-naqsh-fonts
-- name:paktype-naskh-basic-fonts
+- name: paktype-naskh-basic-fonts
   spec:
    url: src-openeuler/paktype-naskh-basic-fonts
-- name:paktype-tehreer-fonts
+- name: paktype-tehreer-fonts
   spec:
    url: src-openeuler/paktype-tehreer-fonts
-- name:pam
+- name: pam
   spec:
    url: src-openeuler/pam
-- name:pam_krb5
+- name: pam_krb5
   spec:
    url: src-openeuler/pam_krb5
-- name:pango
+- name: pango
   spec:
    url: src-openeuler/pango
-- name:paratype-pt-sans-fonts
+- name: paratype-pt-sans-fonts
   spec:
    url: src-openeuler/paratype-pt-sans-fonts
-- name:parted
+- name: parted
   spec:
    url: src-openeuler/parted
-- name:passwd
+- name: passwd
   spec:
    url: src-openeuler/passwd
-- name:patch
+- name: patch
   spec:
    url: src-openeuler/patch
-- name:patchutils
+- name: patchutils
   spec:
    url: src-openeuler/patchutils
-- name:pax
+- name: pax
   spec:
    url: src-openeuler/pax
-- name:pciutils
+- name: pciutils
   spec:
    url: src-openeuler/pciutils
-- name:pcre
+- name: pcre
   spec:
    url: src-openeuler/pcre
-- name:pcre2
+- name: pcre2
   spec:
    url: src-openeuler/pcre2
-- name:perl
+- name: perl
   spec:
    url: src-openeuler/perl
-- name:perl-Algorithm-Diff
+- name: perl-Algorithm-Diff
   spec:
    url: src-openeuler/perl-Algorithm-Diff
-- name:perl-Archive-Tar
+- name: perl-Archive-Tar
   spec:
    url: src-openeuler/perl-Archive-Tar
-- name:perl-B-Debug
+- name: perl-B-Debug
   spec:
    url: src-openeuler/perl-B-Debug
-- name:perl-CPAN
+- name: perl-CPAN
   spec:
    url: src-openeuler/perl-CPAN
-- name:perl-CPAN-Meta
+- name: perl-CPAN-Meta
   spec:
    url: src-openeuler/perl-CPAN-Meta
-- name:perl-CPAN-Meta-Requirements
+- name: perl-CPAN-Meta-Requirements
   spec:
    url: src-openeuler/perl-CPAN-Meta-Requirements
-- name:perl-CPAN-Meta-YAML
+- name: perl-CPAN-Meta-YAML
   spec:
    url: src-openeuler/perl-CPAN-Meta-YAML
-- name:perl-Carp
+- name: perl-Carp
   spec:
    url: src-openeuler/perl-Carp
-- name:perl-Compress-Bzip2
+- name: perl-Compress-Bzip2
   spec:
    url: src-openeuler/perl-Compress-Bzip2
-- name:perl-Compress-Raw-Bzip2
+- name: perl-Compress-Raw-Bzip2
   spec:
    url: src-openeuler/perl-Compress-Raw-Bzip2
-- name:perl-Compress-Raw-Zlib
+- name: perl-Compress-Raw-Zlib
   spec:
    url: src-openeuler/perl-Compress-Raw-Zlib
-- name:perl-Config-Perl-V
+- name: perl-Config-Perl-V
   spec:
    url: src-openeuler/perl-Config-Perl-V
-- name:perl-DB_File
+- name: perl-DB_File
   spec:
    url: src-openeuler/perl-DB_File
-- name:perl-Data-Dumper
+- name: perl-Data-Dumper
   spec:
    url: src-openeuler/perl-Data-Dumper
-- name:perl-Devel-PPPort
+- name: perl-Devel-PPPort
   spec:
    url: src-openeuler/perl-Devel-PPPort
-- name:perl-Digest
+- name: perl-Digest
   spec:
    url: src-openeuler/perl-Digest
-- name:perl-Digest-MD5
+- name: perl-Digest-MD5
   spec:
    url: src-openeuler/perl-Digest-MD5
-- name:perl-Digest-SHA
+- name: perl-Digest-SHA
   spec:
    url: src-openeuler/perl-Digest-SHA
-- name:perl-Encode
+- name: perl-Encode
   spec:
    url: src-openeuler/perl-Encode
-- name:perl-Encode-Locale
+- name: perl-Encode-Locale
   spec:
    url: src-openeuler/perl-Encode-Locale
-- name:perl-Env
+- name: perl-Env
   spec:
    url: src-openeuler/perl-Env
-- name:perl-Error
+- name: perl-Error
   spec:
    url: src-openeuler/perl-Error
-- name:perl-Exporter
+- name: perl-Exporter
   spec:
    url: src-openeuler/perl-Exporter
-- name:perl-ExtUtils-Install
+- name: perl-ExtUtils-Install
   spec:
    url: src-openeuler/perl-ExtUtils-Install
-- name:perl-ExtUtils-MakeMaker
+- name: perl-ExtUtils-MakeMaker
   spec:
    url: src-openeuler/perl-ExtUtils-MakeMaker
-- name:perl-ExtUtils-Manifest
+- name: perl-ExtUtils-Manifest
   spec:
    url: src-openeuler/perl-ExtUtils-Manifest
-- name:perl-ExtUtils-ParseXS
+- name: perl-ExtUtils-ParseXS
   spec:
    url: src-openeuler/perl-ExtUtils-ParseXS
-- name:perl-Fedora-VSP
+- name: perl-Fedora-VSP
   spec:
    url: src-openeuler/perl-Fedora-VSP
-- name:perl-File-Copy-Recursive
+- name: perl-File-Copy-Recursive
   spec:
    url: src-openeuler/perl-File-Copy-Recursive
-- name:perl-File-Fetch
+- name: perl-File-Fetch
   spec:
    url: src-openeuler/perl-File-Fetch
-- name:perl-File-HomeDir
+- name: perl-File-HomeDir
   spec:
    url: src-openeuler/perl-File-HomeDir
-- name:perl-File-Path
+- name: perl-File-Path
   spec:
    url: src-openeuler/perl-File-Path
-- name:perl-File-Temp
+- name: perl-File-Temp
   spec:
    url: src-openeuler/perl-File-Temp
-- name:perl-File-Which
+- name: perl-File-Which
   spec:
    url: src-openeuler/perl-File-Which
-- name:perl-Filter
+- name: perl-Filter
   spec:
    url: src-openeuler/perl-Filter
-- name:perl-Filter-Simple
+- name: perl-Filter-Simple
   spec:
    url: src-openeuler/perl-Filter-Simple
-- name:perl-Getopt-Long
+- name: perl-Getopt-Long
   spec:
    url: src-openeuler/perl-Getopt-Long
-- name:perl-HTML-Parser
+- name: perl-HTML-Parser
   spec:
    url: src-openeuler/perl-HTML-Parser
-- name:perl-HTTP-Tiny
+- name: perl-HTTP-Tiny
   spec:
    url: src-openeuler/perl-HTTP-Tiny
-- name:perl-IO-Compress
+- name: perl-IO-Compress
   spec:
    url: src-openeuler/perl-IO-Compress
-- name:perl-IO-Socket-IP
+- name: perl-IO-Socket-IP
   spec:
    url: src-openeuler/perl-IO-Socket-IP
-- name:perl-IPC-Cmd
+- name: perl-IPC-Cmd
   spec:
    url: src-openeuler/perl-IPC-Cmd
-- name:perl-IPC-SysV
+- name: perl-IPC-SysV
   spec:
    url: src-openeuler/perl-IPC-SysV
-- name:perl-IPC-System-Simple
+- name: perl-IPC-System-Simple
   spec:
    url: src-openeuler/perl-IPC-System-Simple
-- name:perl-JSON-PP
+- name: perl-JSON-PP
   spec:
    url: src-openeuler/perl-JSON-PP
-- name:perl-Locale-Codes
+- name: perl-Locale-Codes
   spec:
    url: src-openeuler/perl-Locale-Codes
-- name:perl-Locale-Maketext
+- name: perl-Locale-Maketext
   spec:
    url: src-openeuler/perl-Locale-Maketext
-- name:perl-MIME-Base64
+- name: perl-MIME-Base64
   spec:
    url: src-openeuler/perl-MIME-Base64
-- name:perl-Math-BigInt
+- name: perl-Math-BigInt
   spec:
    url: src-openeuler/perl-Math-BigInt
-- name:perl-Math-BigInt-FastCalc
+- name: perl-Math-BigInt-FastCalc
   spec:
    url: src-openeuler/perl-Math-BigInt-FastCalc
-- name:perl-Math-BigRat
+- name: perl-Math-BigRat
   spec:
    url: src-openeuler/perl-Math-BigRat
-- name:perl-Module-CoreList
+- name: perl-Module-CoreList
   spec:
    url: src-openeuler/perl-Module-CoreList
-- name:perl-Module-Load
+- name: perl-Module-Load
   spec:
    url: src-openeuler/perl-Module-Load
-- name:perl-Module-Load-Conditional
+- name: perl-Module-Load-Conditional
   spec:
    url: src-openeuler/perl-Module-Load-Conditional
-- name:perl-Module-Metadata
+- name: perl-Module-Metadata
   spec:
    url: src-openeuler/perl-Module-Metadata
-- name:perl-Net-SSLeay
+- name: perl-Net-SSLeay
   spec:
    url: src-openeuler/perl-Net-SSLeay
-- name:perl-Params-Check
+- name: perl-Params-Check
   spec:
    url: src-openeuler/perl-Params-Check
-- name:perl-PathTools
+- name: perl-PathTools
   spec:
    url: src-openeuler/perl-PathTools
-- name:perl-Perl-OSType
+- name: perl-Perl-OSType
   spec:
    url: src-openeuler/perl-Perl-OSType
-- name:perl-PerlIO-via-QuotedPrint
+- name: perl-PerlIO-via-QuotedPrint
   spec:
    url: src-openeuler/perl-PerlIO-via-QuotedPrint
-- name:perl-Pod-Checker
+- name: perl-Pod-Checker
   spec:
    url: src-openeuler/perl-Pod-Checker
-- name:perl-Pod-Escapes
+- name: perl-Pod-Escapes
   spec:
    url: src-openeuler/perl-Pod-Escapes
-- name:perl-Pod-Parser
+- name: perl-Pod-Parser
   spec:
    url: src-openeuler/perl-Pod-Parser
-- name:perl-Pod-Perldoc
+- name: perl-Pod-Perldoc
   spec:
    url: src-openeuler/perl-Pod-Perldoc
-- name:perl-Pod-Simple
+- name: perl-Pod-Simple
   spec:
    url: src-openeuler/perl-Pod-Simple
-- name:perl-Pod-Usage
+- name: perl-Pod-Usage
   spec:
    url: src-openeuler/perl-Pod-Usage
-- name:perl-SGMLSpm
+- name: perl-SGMLSpm
   spec:
    url: src-openeuler/perl-SGMLSpm
-- name:perl-Scalar-List-Utils
+- name: perl-Scalar-List-Utils
   spec:
    url: src-openeuler/perl-Scalar-List-Utils
-- name:perl-Socket
+- name: perl-Socket
   spec:
    url: src-openeuler/perl-Socket
-- name:perl-Storable
+- name: perl-Storable
   spec:
    url: src-openeuler/perl-Storable
-- name:perl-Switch
+- name: perl-Switch
   spec:
    url: src-openeuler/perl-Switch
-- name:perl-Sys-Syslog
+- name: perl-Sys-Syslog
   spec:
    url: src-openeuler/perl-Sys-Syslog
-- name:perl-Term-ANSIColor
+- name: perl-Term-ANSIColor
   spec:
    url: src-openeuler/perl-Term-ANSIColor
-- name:perl-Term-Cap
+- name: perl-Term-Cap
   spec:
    url: src-openeuler/perl-Term-Cap
-- name:perl-TermReadKey
+- name: perl-TermReadKey
   spec:
    url: src-openeuler/perl-TermReadKey
-- name:perl-Test-Harness
+- name: perl-Test-Harness
   spec:
    url: src-openeuler/perl-Test-Harness
-- name:perl-Test-Simple
+- name: perl-Test-Simple
   spec:
    url: src-openeuler/perl-Test-Simple
-- name:perl-Text-Balanced
+- name: perl-Text-Balanced
   spec:
    url: src-openeuler/perl-Text-Balanced
-- name:perl-Text-Diff
+- name: perl-Text-Diff
   spec:
    url: src-openeuler/perl-Text-Diff
-- name:perl-Text-ParseWords
+- name: perl-Text-ParseWords
   spec:
    url: src-openeuler/perl-Text-ParseWords
-- name:perl-Text-Unidecode
+- name: perl-Text-Unidecode
   spec:
    url: src-openeuler/perl-Text-Unidecode
-- name:perl-Text-WrapI18N
+- name: perl-Text-WrapI18N
   spec:
    url: src-openeuler/perl-Text-WrapI18N
-- name:perl-Thread-Queue
+- name: perl-Thread-Queue
   spec:
    url: src-openeuler/perl-Thread-Queue
-- name:perl-Time-HiRes
+- name: perl-Time-HiRes
   spec:
    url: src-openeuler/perl-Time-HiRes
-- name:perl-Time-Local
+- name: perl-Time-Local
   spec:
    url: src-openeuler/perl-Time-Local
-- name:perl-TimeDate
+- name: perl-TimeDate
   spec:
    url: src-openeuler/perl-TimeDate
-- name:perl-URI
+- name: perl-URI
   spec:
    url: src-openeuler/perl-URI
-- name:perl-Unicode-Collate
+- name: perl-Unicode-Collate
   spec:
    url: src-openeuler/perl-Unicode-Collate
-- name:perl-Unicode-EastAsianWidth
+- name: perl-Unicode-EastAsianWidth
   spec:
    url: src-openeuler/perl-Unicode-EastAsianWidth
-- name:perl-Unicode-Normalize
+- name: perl-Unicode-Normalize
   spec:
    url: src-openeuler/perl-Unicode-Normalize
-- name:perl-XML-Parser
+- name: perl-XML-Parser
   spec:
    url: src-openeuler/perl-XML-Parser
-- name:perl-XML-XPath
+- name: perl-XML-XPath
   spec:
    url: src-openeuler/perl-XML-XPath
-- name:perl-YAML-LibYAML
+- name: perl-YAML-LibYAML
   spec:
    url: src-openeuler/perl-YAML-LibYAML
-- name:perl-autodie
+- name: perl-autodie
   spec:
    url: src-openeuler/perl-autodie
-- name:perl-bignum
+- name: perl-bignum
   spec:
    url: src-openeuler/perl-bignum
-- name:perl-constant
+- name: perl-constant
   spec:
    url: src-openeuler/perl-constant
-- name:perl-experimental
+- name: perl-experimental
   spec:
    url: src-openeuler/perl-experimental
-- name:perl-generators
+- name: perl-generators
   spec:
    url: src-openeuler/perl-generators
-- name:perl-libintl-perl
+- name: perl-libintl-perl
   spec:
    url: src-openeuler/perl-libintl-perl
-- name:perl-libnet
+- name: perl-libnet
   spec:
    url: src-openeuler/perl-libnet
-- name:perl-libwww-perl
+- name: perl-libwww-perl
   spec:
    url: src-openeuler/perl-libwww-perl
-- name:perl-parent
+- name: perl-parent
   spec:
    url: src-openeuler/perl-parent
-- name:perl-perlfaq
+- name: perl-perlfaq
   spec:
    url: src-openeuler/perl-perlfaq
-- name:perl-podlators
+- name: perl-podlators
   spec:
    url: src-openeuler/perl-podlators
-- name:perl-threads
+- name: perl-threads
   spec:
    url: src-openeuler/perl-threads
-- name:perl-threads-shared
+- name: perl-threads-shared
   spec:
    url: src-openeuler/perl-threads-shared
-- name:perl-version
+- name: perl-version
   spec:
    url: src-openeuler/perl-version
-- name:pigz
+- name: pigz
   spec:
    url: src-openeuler/pigz
-- name:pixman
+- name: pixman
   spec:
    url: src-openeuler/pixman
-- name:pkcs11-helper
+- name: pkcs11-helper
   spec:
    url: src-openeuler/pkcs11-helper
-- name:pkgconf
+- name: pkgconf
   spec:
    url: src-openeuler/pkgconf
-- name:pnm2ppa
+- name: pnm2ppa
   spec:
    url: src-openeuler/pnm2ppa
-- name:policycoreutils
+- name: policycoreutils
   spec:
    url: src-openeuler/policycoreutils
-- name:polkit
+- name: polkit
   spec:
    url: src-openeuler/polkit
-- name:poppler
+- name: poppler
   spec:
    url: src-openeuler/poppler
-- name:poppler-data
+- name: poppler-data
   spec:
    url: src-openeuler/poppler-data
-- name:popt
+- name: popt
   spec:
    url: src-openeuler/popt
-- name:postgresql
+- name: postgresql
   spec:
    url: src-openeuler/postgresql
-- name:pps-tools
+- name: pps-tools
   spec:
    url: src-openeuler/pps-tools
-- name:pptp
+- name: pptp
   spec:
    url: src-openeuler/pptp
-- name:prefetch_tuning
+- name: prefetch_tuning
   spec:
    url: src-openeuler/prefetch_tuning
-- name:procmail
+- name: procmail
   spec:
    url: src-openeuler/procmail
-- name:procps-ng
+- name: procps-ng
   spec:
    url: src-openeuler/procps-ng
-- name:proj
+- name: proj
   spec:
    url: src-openeuler/proj
-- name:psacct
+- name: psacct
   spec:
    url: src-openeuler/psacct
-- name:psmisc
+- name: psmisc
   spec:
    url: src-openeuler/psmisc
-- name:psutils
+- name: psutils
   spec:
    url: src-openeuler/psutils
-- name:publicsuffix-list
+- name: publicsuffix-list
   spec:
    url: src-openeuler/publicsuffix-list
-- name:pyatspi
+- name: pyatspi
   spec:
    url: src-openeuler/pyatspi
-- name:pycairo
+- name: pycairo
   spec:
    url: src-openeuler/pycairo
-- name:pygobject2
+- name: pygobject2
   spec:
    url: src-openeuler/pygobject2
-- name:pygobject3
+- name: pygobject3
   spec:
    url: src-openeuler/pygobject3
-- name:pygtk2
+- name: pygtk2
   spec:
    url: src-openeuler/pygtk2
-- name:pyparsing
+- name: pyparsing
   spec:
    url: src-openeuler/pyparsing
-- name:python-IPy
+- name: python-IPy
   spec:
    url: src-openeuler/python-IPy
-- name:python-PyMySQL
+- name: python-PyMySQL
   spec:
    url: src-openeuler/python-PyMySQL
-- name:python-SecretStorage
+- name: python-SecretStorage
   spec:
    url: src-openeuler/python-SecretStorage
-- name:python-alsa
+- name: python-alsa
   spec:
    url: src-openeuler/python-alsa
-- name:python-aniso8601
+- name: python-aniso8601
   spec:
    url: src-openeuler/python-aniso8601
-- name:python-apipkg
+- name: python-apipkg
   spec:
    url: src-openeuler/python-apipkg
-- name:python-argcomplete
+- name: python-argcomplete
   spec:
    url: src-openeuler/python-argcomplete
-- name:python-asn1crypto
+- name: python-asn1crypto
   spec:
    url: src-openeuler/python-asn1crypto
-- name:python-atomicwrites
+- name: python-atomicwrites
   spec:
    url: src-openeuler/python-atomicwrites
-- name:python-attrs
+- name: python-attrs
   spec:
    url: src-openeuler/python-attrs
-- name:python-augeas
+- name: python-augeas
   spec:
    url: src-openeuler/python-augeas
-- name:python-backports
+- name: python-backports
   spec:
    url: src-openeuler/python-backports
-- name:python-backports-ssl_match_hostname
+- name: python-backports-ssl_match_hostname
   spec:
    url: src-openeuler/python-backports-ssl_match_hostname
-- name:python-backports-unittest_mock
+- name: python-backports-unittest_mock
   spec:
    url: src-openeuler/python-backports-unittest_mock
-- name:python-backports_abc
+- name: python-backports_abc
   spec:
    url: src-openeuler/python-backports_abc
-- name:python-bcrypt
+- name: python-bcrypt
   spec:
    url: src-openeuler/python-bcrypt
-- name:python-beautifulsoup4
+- name: python-beautifulsoup4
   spec:
    url: src-openeuler/python-beautifulsoup4
-- name:python-blinker
+- name: python-blinker
   spec:
    url: src-openeuler/python-blinker
-- name:python-bottle
+- name: python-bottle
   spec:
    url: src-openeuler/python-bottle
-- name:python-cached_property
+- name: python-cached_property
   spec:
    url: src-openeuler/python-cached_property
-- name:python-cffi
+- name: python-cffi
   spec:
    url: src-openeuler/python-cffi
-- name:python-chardet
+- name: python-chardet
   spec:
    url: src-openeuler/python-chardet
-- name:python-cheetah
+- name: python-cheetah
   spec:
    url: src-openeuler/python-cheetah
-- name:python-cherrypy
+- name: python-cherrypy
   spec:
    url: src-openeuler/python-cherrypy
-- name:python-click
+- name: python-click
   spec:
    url: src-openeuler/python-click
-- name:python-configobj
+- name: python-configobj
   spec:
    url: src-openeuler/python-configobj
-- name:python-configparser
+- name: python-configparser
   spec:
    url: src-openeuler/python-configparser
-- name:python-configshell
+- name: python-configshell
   spec:
    url: src-openeuler/python-configshell
-- name:python-constantly
+- name: python-constantly
   spec:
    url: src-openeuler/python-constantly
-- name:python-construct
+- name: python-construct
   spec:
    url: src-openeuler/python-construct
-- name:python-contextlib2
+- name: python-contextlib2
   spec:
    url: src-openeuler/python-contextlib2
-- name:python-coverage
+- name: python-coverage
   spec:
    url: src-openeuler/python-coverage
-- name:python-cryptography-vectors
+- name: python-cryptography-vectors
   spec:
    url: src-openeuler/python-cryptography-vectors
-- name:python-cups
+- name: python-cups
   spec:
    url: src-openeuler/python-cups
-- name:python-cycler
+- name: python-cycler
   spec:
    url: src-openeuler/python-cycler
-- name:python-dateutil
+- name: python-dateutil
   spec:
    url: src-openeuler/python-dateutil
-- name:python-decorator
+- name: python-decorator
   spec:
    url: src-openeuler/python-decorator
-- name:python-dict2xml
+- name: python-dict2xml
   spec:
    url: src-openeuler/python-dict2xml
-- name:python-distro
+- name: python-distro
   spec:
    url: src-openeuler/python-distro
-- name:python-dmidecode
+- name: python-dmidecode
   spec:
    url: src-openeuler/python-dmidecode
-- name:python-dns
+- name: python-dns
   spec:
    url: src-openeuler/python-dns
-- name:python-docker
+- name: python-docker
   spec:
    url: src-openeuler/python-docker
-- name:python-docker-pycreds
+- name: python-docker-pycreds
   spec:
    url: src-openeuler/python-docker-pycreds
-- name:python-dockerpty
+- name: python-dockerpty
   spec:
    url: src-openeuler/python-dockerpty
-- name:python-docopt
+- name: python-docopt
   spec:
    url: src-openeuler/python-docopt
-- name:python-docutils
+- name: python-docutils
   spec:
    url: src-openeuler/python-docutils
-- name:python-ecdsa
+- name: python-ecdsa
   spec:
    url: src-openeuler/python-ecdsa
-- name:python-enchant
+- name: python-enchant
   spec:
    url: src-openeuler/python-enchant
-- name:python-entrypoints
+- name: python-entrypoints
   spec:
    url: src-openeuler/python-entrypoints
-- name:python-enum34
+- name: python-enum34
   spec:
    url: src-openeuler/python-enum34
-- name:python-ethtool
+- name: python-ethtool
   spec:
    url: src-openeuler/python-ethtool
-- name:python-evdev
+- name: python-evdev
   spec:
    url: src-openeuler/python-evdev
-- name:python-execnet
+- name: python-execnet
   spec:
    url: src-openeuler/python-execnet
-- name:python-extras
+- name: python-extras
   spec:
    url: src-openeuler/python-extras
-- name:python-filelock
+- name: python-filelock
   spec:
    url: src-openeuler/python-filelock
-- name:python-fixtures
+- name: python-fixtures
   spec:
    url: src-openeuler/python-fixtures
-- name:python-flask
+- name: python-flask
   spec:
    url: src-openeuler/python-flask
-- name:python-flask-restful
+- name: python-flask-restful
   spec:
    url: src-openeuler/python-flask-restful
-- name:python-flit
+- name: python-flit
   spec:
    url: src-openeuler/python-flit
-- name:python-fonttools
+- name: python-fonttools
   spec:
    url: src-openeuler/python-fonttools
-- name:python-freezegun
+- name: python-freezegun
   spec:
    url: src-openeuler/python-freezegun
-- name:python-funcsigs
+- name: python-funcsigs
   spec:
    url: src-openeuler/python-funcsigs
-- name:python-futures
+- name: python-futures
   spec:
    url: src-openeuler/python-futures
-- name:python-genshi
+- name: python-genshi
   spec:
    url: src-openeuler/python-genshi
-- name:python-gflags
+- name: python-gflags
   spec:
    url: src-openeuler/python-gflags
-- name:python-google-apputils
+- name: python-google-apputils
   spec:
    url: src-openeuler/python-google-apputils
-- name:python-hamcrest
+- name: python-hamcrest
   spec:
    url: src-openeuler/python-hamcrest
-- name:python-html5lib
+- name: python-html5lib
   spec:
    url: src-openeuler/python-html5lib
-- name:python-httplib2
+- name: python-httplib2
   spec:
    url: src-openeuler/python-httplib2
-- name:python-humanize
+- name: python-humanize
   spec:
    url: src-openeuler/python-humanize
-- name:python-hwdata
+- name: python-hwdata
   spec:
    url: src-openeuler/python-hwdata
-- name:python-hyperlink
+- name: python-hyperlink
   spec:
    url: src-openeuler/python-hyperlink
-- name:python-hypothesis
+- name: python-hypothesis
   spec:
    url: src-openeuler/python-hypothesis
-- name:python-idna
+- name: python-idna
   spec:
    url: src-openeuler/python-idna
-- name:python-imagesize
+- name: python-imagesize
   spec:
    url: src-openeuler/python-imagesize
-- name:python-incremental
+- name: python-incremental
   spec:
    url: src-openeuler/python-incremental
-- name:python-iniparse
+- name: python-iniparse
   spec:
    url: src-openeuler/python-iniparse
-- name:python-inotify
+- name: python-inotify
   spec:
    url: src-openeuler/python-inotify
-- name:python-ipaddress
+- name: python-ipaddress
   spec:
    url: src-openeuler/python-ipaddress
-- name:python-iso8601
+- name: python-iso8601
   spec:
    url: src-openeuler/python-iso8601
-- name:python-itsdangerous
+- name: python-itsdangerous
   spec:
    url: src-openeuler/python-itsdangerous
-- name:python-jinja2
+- name: python-jinja2
   spec:
    url: src-openeuler/python-jinja2
-- name:python-jsonpatch
+- name: python-jsonpatch
   spec:
    url: src-openeuler/python-jsonpatch
-- name:python-jsonpointer
+- name: python-jsonpointer
   spec:
    url: src-openeuler/python-jsonpointer
-- name:python-jsonschema
+- name: python-jsonschema
   spec:
    url: src-openeuler/python-jsonschema
-- name:python-junitxml
+- name: python-junitxml
   spec:
    url: src-openeuler/python-junitxml
-- name:python-jwt
+- name: python-jwt
   spec:
    url: src-openeuler/python-jwt
-- name:python-keyczar
+- name: python-keyczar
   spec:
    url: src-openeuler/python-keyczar
-- name:python-kitchen
+- name: python-kitchen
   spec:
    url: src-openeuler/python-kitchen
-- name:python-kiwisolver
+- name: python-kiwisolver
   spec:
    url: src-openeuler/python-kiwisolver
-- name:python-kmod
+- name: python-kmod
   spec:
    url: src-openeuler/python-kmod
-- name:python-ldap
+- name: python-ldap
   spec:
    url: src-openeuler/python-ldap
-- name:python-linecache2
+- name: python-linecache2
   spec:
    url: src-openeuler/python-linecache2
-- name:python-linux-procfs
+- name: python-linux-procfs
   spec:
    url: src-openeuler/python-linux-procfs
-- name:python-lit
+- name: python-lit
   spec:
    url: src-openeuler/python-lit
-- name:python-logutils
+- name: python-logutils
   spec:
    url: src-openeuler/python-logutils
-- name:python-lxml
+- name: python-lxml
   spec:
    url: src-openeuler/python-lxml
-- name:python-mako
+- name: python-mako
   spec:
    url: src-openeuler/python-mako
-- name:python-markdown
+- name: python-markdown
   spec:
    url: src-openeuler/python-markdown
-- name:python-markupsafe
+- name: python-markupsafe
   spec:
    url: src-openeuler/python-markupsafe
-- name:python-meh
+- name: python-meh
   spec:
    url: src-openeuler/python-meh
-- name:python-memcached
+- name: python-memcached
   spec:
    url: src-openeuler/python-memcached
-- name:python-mimeparse
+- name: python-mimeparse
   spec:
    url: src-openeuler/python-mimeparse
-- name:python-mock
+- name: python-mock
   spec:
    url: src-openeuler/python-mock
-- name:python-more-itertools
+- name: python-more-itertools
   spec:
    url: src-openeuler/python-more-itertools
-- name:python-mox
+- name: python-mox
   spec:
    url: src-openeuler/python-mox
-- name:python-mysqlclient
+- name: python-mysqlclient
   spec:
    url: src-openeuler/python-mysqlclient
-- name:python-netaddr
+- name: python-netaddr
   spec:
    url: src-openeuler/python-netaddr
-- name:python-nose
+- name: python-nose
   spec:
    url: src-openeuler/python-nose
-- name:python-ntplib
+- name: python-ntplib
   spec:
    url: src-openeuler/python-ntplib
-- name:python-oauthlib
+- name: python-oauthlib
   spec:
    url: src-openeuler/python-oauthlib
-- name:python-olefile
+- name: python-olefile
   spec:
    url: src-openeuler/python-olefile
-- name:python-ordered-set
+- name: python-ordered-set
   spec:
    url: src-openeuler/python-ordered-set
-- name:python-packaging
+- name: python-packaging
   spec:
    url: src-openeuler/python-packaging
-- name:python-paramiko
+- name: python-paramiko
   spec:
    url: src-openeuler/python-paramiko
-- name:python-parse
+- name: python-parse
   spec:
    url: src-openeuler/python-parse
-- name:python-paste
+- name: python-paste
   spec:
    url: src-openeuler/python-paste
-- name:python-path
+- name: python-path
   spec:
    url: src-openeuler/python-path
-- name:python-pbr
+- name: python-pbr
   spec:
    url: src-openeuler/python-pbr
-- name:python-pecan
+- name: python-pecan
   spec:
    url: src-openeuler/python-pecan
-- name:python-pip
+- name: python-pip
   spec:
    url: src-openeuler/python-pip
-- name:python-pluggy
+- name: python-pluggy
   spec:
    url: src-openeuler/python-pluggy
-- name:python-ply
+- name: python-ply
   spec:
    url: src-openeuler/python-ply
-- name:python-pocketlint
+- name: python-pocketlint
   spec:
    url: src-openeuler/python-pocketlint
-- name:python-polib
+- name: python-polib
   spec:
    url: src-openeuler/python-polib
-- name:python-pretend
+- name: python-pretend
   spec:
    url: src-openeuler/python-pretend
-- name:python-prettytable
+- name: python-prettytable
   spec:
    url: src-openeuler/python-prettytable
-- name:python-productmd
+- name: python-productmd
   spec:
    url: src-openeuler/python-productmd
-- name:python-psutil
+- name: python-psutil
   spec:
    url: src-openeuler/python-psutil
-- name:python-pyasn1
+- name: python-pyasn1
   spec:
    url: src-openeuler/python-pyasn1
-- name:python-pycparser
+- name: python-pycparser
   spec:
    url: src-openeuler/python-pycparser
-- name:python-pycurl
+- name: python-pycurl
   spec:
    url: src-openeuler/python-pycurl
-- name:python-pygments
+- name: python-pygments
   spec:
    url: src-openeuler/python-pygments
-- name:python-pymongo
+- name: python-pymongo
   spec:
    url: src-openeuler/python-pymongo
-- name:python-pynacl
+- name: python-pynacl
   spec:
    url: src-openeuler/python-pynacl
-- name:python-pysocks
+- name: python-pysocks
   spec:
    url: src-openeuler/python-pysocks
-- name:python-pytest-cov
+- name: python-pytest-cov
   spec:
    url: src-openeuler/python-pytest-cov
-- name:python-pytest-expect
+- name: python-pytest-expect
   spec:
    url: src-openeuler/python-pytest-expect
-- name:python-pytest-fixture-config
+- name: python-pytest-fixture-config
   spec:
    url: src-openeuler/python-pytest-fixture-config
-- name:python-pytest-mock
+- name: python-pytest-mock
   spec:
    url: src-openeuler/python-pytest-mock
-- name:python-pytest-shutil
+- name: python-pytest-shutil
   spec:
    url: src-openeuler/python-pytest-shutil
-- name:python-pytest-virtualenv
+- name: python-pytest-virtualenv
   spec:
    url: src-openeuler/python-pytest-virtualenv
-- name:python-pytoml
+- name: python-pytoml
   spec:
    url: src-openeuler/python-pytoml
-- name:python-pyudev
+- name: python-pyudev
   spec:
    url: src-openeuler/python-pyudev
-- name:python-redis
+- name: python-redis
   spec:
    url: src-openeuler/python-redis
-- name:python-reportlab
+- name: python-reportlab
   spec:
    url: src-openeuler/python-reportlab
-- name:python-repoze-lru
+- name: python-repoze-lru
   spec:
    url: src-openeuler/python-repoze-lru
-- name:python-requests
+- name: python-requests
   spec:
    url: src-openeuler/python-requests
-- name:python-requests-file
+- name: python-requests-file
   spec:
    url: src-openeuler/python-requests-file
-- name:python-requests-ftp
+- name: python-requests-ftp
   spec:
    url: src-openeuler/python-requests-ftp
-- name:python-rpm-generators
+- name: python-rpm-generators
   spec:
    url: src-openeuler/python-rpm-generators
-- name:python-rsa
+- name: python-rsa
   spec:
    url: src-openeuler/python-rsa
-- name:python-rtslib
+- name: python-rtslib
   spec:
    url: src-openeuler/python-rtslib
-- name:python-ruamel-yaml
+- name: python-ruamel-yaml
   spec:
    url: src-openeuler/python-ruamel-yaml
-- name:python-ruamel-yaml-clib
+- name: python-ruamel-yaml-clib
   spec:
    url: src-openeuler/python-ruamel-yaml-clib
-- name:python-schedutils
+- name: python-schedutils
   spec:
    url: src-openeuler/python-schedutils
-- name:python-scikit-optimize
+- name: python-scikit-optimize
   spec:
    url: src-openeuler/python-scikit-optimize
-- name:python-semantic_version
+- name: python-semantic_version
   spec:
    url: src-openeuler/python-semantic_version
-- name:python-setuptools
+- name: python-setuptools
   spec:
    url: src-openeuler/python-setuptools
-- name:python-setuptools_git
+- name: python-setuptools_git
   spec:
    url: src-openeuler/python-setuptools_git
-- name:python-setuptools_scm
+- name: python-setuptools_scm
   spec:
    url: src-openeuler/python-setuptools_scm
-- name:python-simplegeneric
+- name: python-simplegeneric
   spec:
    url: src-openeuler/python-simplegeneric
-- name:python-simpleline
+- name: python-simpleline
   spec:
    url: src-openeuler/python-simpleline
-- name:python-singledispatch
+- name: python-singledispatch
   spec:
    url: src-openeuler/python-singledispatch
-- name:python-six
+- name: python-six
   spec:
    url: src-openeuler/python-six
-- name:python-slip
+- name: python-slip
   spec:
    url: src-openeuler/python-slip
-- name:python-snowballstemmer
+- name: python-snowballstemmer
   spec:
    url: src-openeuler/python-snowballstemmer
-- name:python-sphinx
+- name: python-sphinx
   spec:
    url: src-openeuler/python-sphinx
-- name:python-sphinx-theme-alabaster
+- name: python-sphinx-theme-alabaster
   spec:
    url: src-openeuler/python-sphinx-theme-alabaster
-- name:python-sphinx_rtd_theme
+- name: python-sphinx_rtd_theme
   spec:
    url: src-openeuler/python-sphinx_rtd_theme
-- name:python-sphinxcontrib-spelling
+- name: python-sphinxcontrib-spelling
   spec:
    url: src-openeuler/python-sphinxcontrib-spelling
-- name:python-sphinxcontrib-websupport
+- name: python-sphinxcontrib-websupport
   spec:
    url: src-openeuler/python-sphinxcontrib-websupport
-- name:python-sqlalchemy
+- name: python-sqlalchemy
   spec:
    url: src-openeuler/python-sqlalchemy
-- name:python-subprocess32
+- name: python-subprocess32
   spec:
    url: src-openeuler/python-subprocess32
-- name:python-sure
+- name: python-sure
   spec:
    url: src-openeuler/python-sure
-- name:python-systemd
+- name: python-systemd
   spec:
    url: src-openeuler/python-systemd
-- name:python-tempita
+- name: python-tempita
   spec:
    url: src-openeuler/python-tempita
-- name:python-testscenarios
+- name: python-testscenarios
   spec:
    url: src-openeuler/python-testscenarios
-- name:python-testtools
+- name: python-testtools
   spec:
    url: src-openeuler/python-testtools
-- name:python-texttable
+- name: python-texttable
   spec:
    url: src-openeuler/python-texttable
-- name:python-threadpoolctl
+- name: python-threadpoolctl
   spec:
    url: src-openeuler/python-threadpoolctl
-- name:python-toml
+- name: python-toml
   spec:
    url: src-openeuler/python-toml
-- name:python-tornado
+- name: python-tornado
   spec:
    url: src-openeuler/python-tornado
-- name:python-tqdm
+- name: python-tqdm
   spec:
    url: src-openeuler/python-tqdm
-- name:python-traceback2
+- name: python-traceback2
   spec:
    url: src-openeuler/python-traceback2
-- name:python-u-msgpack-python
+- name: python-u-msgpack-python
   spec:
    url: src-openeuler/python-u-msgpack-python
-- name:python-unittest2
+- name: python-unittest2
   spec:
    url: src-openeuler/python-unittest2
-- name:python-urlgrabber
+- name: python-urlgrabber
   spec:
    url: src-openeuler/python-urlgrabber
-- name:python-urllib3
+- name: python-urllib3
   spec:
    url: src-openeuler/python-urllib3
-- name:python-urwid
+- name: python-urwid
   spec:
    url: src-openeuler/python-urwid
-- name:python-varlink
+- name: python-varlink
   spec:
    url: src-openeuler/python-varlink
-- name:python-virtualenv
+- name: python-virtualenv
   spec:
    url: src-openeuler/python-virtualenv
-- name:python-waitress
+- name: python-waitress
   spec:
    url: src-openeuler/python-waitress
-- name:python-webencodings
+- name: python-webencodings
   spec:
    url: src-openeuler/python-webencodings
-- name:python-webob
+- name: python-webob
   spec:
    url: src-openeuler/python-webob
-- name:python-websocket-client
+- name: python-websocket-client
   spec:
    url: src-openeuler/python-websocket-client
-- name:python-webtest
+- name: python-webtest
   spec:
    url: src-openeuler/python-webtest
-- name:python-werkzeug
+- name: python-werkzeug
   spec:
    url: src-openeuler/python-werkzeug
-- name:python-which
+- name: python-which
   spec:
    url: src-openeuler/python-which
-- name:python-whoosh
+- name: python-whoosh
   spec:
    url: src-openeuler/python-whoosh
-- name:python-zipp
+- name: python-zipp
   spec:
    url: src-openeuler/python-zipp
-- name:python-zope-event
+- name: python-zope-event
   spec:
    url: src-openeuler/python-zope-event
-- name:python-zope-interface
+- name: python-zope-interface
   spec:
    url: src-openeuler/python-zope-interface
-- name:python2
+- name: python2
   spec:
    url: src-openeuler/python2
-- name:python2-typing
+- name: python2-typing
   spec:
    url: src-openeuler/python2-typing
-- name:python3
+- name: python3
   spec:
    url: src-openeuler/python3
-- name:python3-mallard-ducktype
+- name: python3-mallard-ducktype
   spec:
    url: src-openeuler/python3-mallard-ducktype
-- name:pytz
+- name: pytz
   spec:
    url: src-openeuler/pytz
-- name:pyxattr
+- name: pyxattr
   spec:
    url: src-openeuler/pyxattr
-- name:qrencode
+- name: qrencode
   spec:
    url: src-openeuler/qrencode
-- name:qt5
+- name: qt5
   spec:
    url: src-openeuler/qt5
-- name:qt5-doc
+- name: qt5-doc
   spec:
    url: src-openeuler/qt5-doc
-- name:quota
+- name: quota
   spec:
    url: src-openeuler/quota
-- name:re2
+- name: re2
   spec:
    url: src-openeuler/re2
-- name:readline
+- name: readline
   spec:
    url: src-openeuler/readline
-- name:recode
+- name: recode
   spec:
    url: src-openeuler/recode
-- name:rest
+- name: rest
   spec:
    url: src-openeuler/rest
-- name:rhash
+- name: rhash
   spec:
    url: src-openeuler/rhash
-- name:risc-v-kernel
+- name: risc-v-kernel
   src:
    url: openeuler/kernel
    revision: v5.5.19
    version: 5.5.19
    exclude: .git
    compression: bz2
-   file2compress: *.tar
+   file2compress: "*.tar"
   spec:
    url: src-openeuler/risc-v-kernel
    exclude: kernel.spec
-- name:rootfiles
+- name: rootfiles
   spec:
    url: src-openeuler/rootfiles
-- name:rootsh
+- name: rootsh
   spec:
    url: src-openeuler/rootsh
-- name:rpcbind
+- name: rpcbind
   spec:
    url: src-openeuler/rpcbind
-- name:rpcsvc-proto
+- name: rpcsvc-proto
   spec:
    url: src-openeuler/rpcsvc-proto
-- name:rpm
+- name: rpm
   spec:
    url: src-openeuler/rpm
-- name:rpmdevtools
+- name: rpmdevtools
   spec:
    url: src-openeuler/rpmdevtools
-- name:rpmrebuild
+- name: rpmrebuild
   spec:
    url: src-openeuler/rpmrebuild
-- name:rsync
+- name: rsync
   spec:
    url: src-openeuler/rsync
-- name:ruby
+- name: ruby
   spec:
    url: src-openeuler/ruby
-- name:ruby-common
+- name: ruby-common
   spec:
    url: src-openeuler/ruby-common
-- name:sanlock
+- name: sanlock
   spec:
    url: src-openeuler/sanlock
-- name:satyr
+- name: satyr
   spec:
    url: src-openeuler/satyr
-- name:sblim-cmpi-devel
+- name: sblim-cmpi-devel
   spec:
    url: src-openeuler/sblim-cmpi-devel
-- name:screen
+- name: screen
   spec:
    url: src-openeuler/screen
-- name:scrub
+- name: scrub
   spec:
    url: src-openeuler/scrub
-- name:security-tool
+- name: security-tool
   spec:
    url: src-openeuler/security-tool
    compression: bz2
-   file2compress: *.tar
-- name:sed
+   file2compress: "*.tar"
+- name: sed
   spec:
    url: src-openeuler/sed
-- name:sendmail
+- name: sendmail
   spec:
    url: src-openeuler/sendmail
-- name:setup
+- name: setup
   spec:
    url: src-openeuler/setup
-- name:sg3_utils
+- name: sg3_utils
   spec:
    url: src-openeuler/sg3_utils
-- name:sgml-common
+- name: sgml-common
   spec:
    url: src-openeuler/sgml-common
-- name:shadow
+- name: shadow
   spec:
    url: src-openeuler/shadow
-- name:shared-mime-info
+- name: shared-mime-info
   spec:
    url: src-openeuler/shared-mime-info
-- name:sharutils
+- name: sharutils
   spec:
    url: src-openeuler/sharutils
-- name:sil-abyssinica-fonts
+- name: sil-abyssinica-fonts
   spec:
    url: src-openeuler/sil-abyssinica-fonts
-- name:sil-scheherazade-fonts
+- name: sil-scheherazade-fonts
   spec:
    url: src-openeuler/sil-scheherazade-fonts
-- name:slang
+- name: slang
   spec:
    url: src-openeuler/slang
-- name:smp_utils
+- name: smp_utils
   spec:
    url: src-openeuler/smp_utils
-- name:snappy
+- name: snappy
   spec:
    url: src-openeuler/snappy
-- name:softhsm
+- name: softhsm
   spec:
    url: src-openeuler/softhsm
-- name:sos
+- name: sos
   spec:
    url: src-openeuler/sos
-- name:soundtouch
+- name: soundtouch
   spec:
    url: src-openeuler/soundtouch
-- name:source-highlight
+- name: source-highlight
   spec:
    url: src-openeuler/source-highlight
-- name:speexdsp
+- name: speexdsp
   spec:
    url: src-openeuler/speexdsp
-- name:spice-protocol
+- name: spice-protocol
   spec:
    url: src-openeuler/spice-protocol
-- name:sqlite
+- name: sqlite
   spec:
    url: src-openeuler/sqlite
-- name:star
+- name: star
   spec:
    url: src-openeuler/star
-- name:stix-fonts
+- name: stix-fonts
   spec:
    url: src-openeuler/stix-fonts
-- name:strace
+- name: strace
   spec:
    url: src-openeuler/strace
-- name:stunnel
+- name: stunnel
   spec:
    url: src-openeuler/stunnel
-- name:subunit
+- name: subunit
   spec:
    url: src-openeuler/subunit
-- name:sudo
+- name: sudo
   spec:
    url: src-openeuler/sudo
-- name:swig
+- name: swig
   spec:
    url: src-openeuler/swig
-- name:symlinks
+- name: symlinks
   spec:
    url: src-openeuler/symlinks
-- name:sysfsutils
+- name: sysfsutils
   spec:
    url: src-openeuler/sysfsutils
-- name:sysstat
+- name: sysstat
   spec:
    url: src-openeuler/sysstat
-- name:systemd
+- name: systemd
   spec:
    url: src-openeuler/systemd
-- name:systemtap
+- name: systemtap
   spec:
    url: src-openeuler/systemtap
-- name:taglib
+- name: taglib
   spec:
    url: src-openeuler/taglib
-- name:tar
+- name: tar
   spec:
    url: src-openeuler/tar
-- name:targetcli
+- name: targetcli
   spec:
    url: src-openeuler/targetcli
-- name:tcl
+- name: tcl
   spec:
    url: src-openeuler/tcl
-- name:tcllib
+- name: tcllib
   spec:
    url: src-openeuler/tcllib
-- name:tcp_wrappers
+- name: tcp_wrappers
   spec:
    url: src-openeuler/tcp_wrappers
-- name:telepathy-filesystem
+- name: telepathy-filesystem
   spec:
    url: src-openeuler/telepathy-filesystem
-- name:texi2html
+- name: texi2html
   spec:
    url: src-openeuler/texi2html
-- name:texinfo
+- name: texinfo
   spec:
    url: src-openeuler/texinfo
-- name:texlive
+- name: texlive
   spec:
    url: src-openeuler/texlive
-- name:texlive-base
+- name: texlive-base
   spec:
    url: src-openeuler/texlive-base
-- name:thai-scalable-fonts
+- name: thai-scalable-fonts
   spec:
    url: src-openeuler/thai-scalable-fonts
-- name:thin-provisioning-tools
+- name: thin-provisioning-tools
   spec:
    url: src-openeuler/thin-provisioning-tools
-- name:tibetan-machine-uni-fonts
+- name: tibetan-machine-uni-fonts
   spec:
    url: src-openeuler/tibetan-machine-uni-fonts
-- name:tidy
+- name: tidy
   spec:
    url: src-openeuler/tidy
-- name:time
+- name: time
   spec:
    url: src-openeuler/time
-- name:tinycdb
+- name: tinycdb
   spec:
    url: src-openeuler/tinycdb
-- name:tinyxml2
+- name: tinyxml2
   spec:
    url: src-openeuler/tinyxml2
-- name:tix
+- name: tix
   spec:
    url: src-openeuler/tix
-- name:tk
+- name: tk
   spec:
    url: src-openeuler/tk
-- name:tmux
+- name: tmux
   spec:
    url: src-openeuler/tmux
-- name:tokyocabinet
+- name: tokyocabinet
   spec:
    url: src-openeuler/tokyocabinet
-- name:traceroute
+- name: traceroute
   spec:
    url: src-openeuler/traceroute
-- name:transfig
+- name: transfig
   spec:
    url: src-openeuler/transfig
-- name:tree
+- name: tree
   spec:
    url: src-openeuler/tree
-- name:trousers
+- name: trousers
   spec:
    url: src-openeuler/trousers
-- name:ttmkfdir
+- name: ttmkfdir
   spec:
    url: src-openeuler/ttmkfdir
-- name:tuned
+- name: tuned
   spec:
    url: src-openeuler/tuned
-- name:tzdata
+- name: tzdata
   spec:
    url: src-openeuler/tzdata
-- name:uchardet
+- name: uchardet
   spec:
    url: src-openeuler/uchardet
-- name:uname-build-checks
+- name: uname-build-checks
   spec:
    url: src-openeuler/uname-build-checks
-- name:unbound
+- name: unbound
   spec:
    url: src-openeuler/unbound
-- name:unicode-emoji
+- name: unicode-emoji
   spec:
    url: src-openeuler/unicode-emoji
-- name:unicode-ucd
+- name: unicode-ucd
   spec:
    url: src-openeuler/unicode-ucd
-- name:unixODBC
+- name: unixODBC
   spec:
    url: src-openeuler/unixODBC
-- name:unzip
+- name: unzip
   spec:
    url: src-openeuler/unzip
-- name:upower
+- name: upower
   spec:
    url: src-openeuler/upower
-- name:urw-base35-fonts
+- name: urw-base35-fonts
   spec:
    url: src-openeuler/urw-base35-fonts
-- name:usb_modeswitch-data
+- name: usb_modeswitch-data
   spec:
    url: src-openeuler/usb_modeswitch-data
-- name:ustr
+- name: ustr
   spec:
    url: src-openeuler/ustr
-- name:utf8proc
+- name: utf8proc
   spec:
    url: src-openeuler/utf8proc
-- name:util-linux
+- name: util-linux
   spec:
    url: src-openeuler/util-linux
-- name:uuid
+- name: uuid
   spec:
    url: src-openeuler/uuid
-- name:vala
+- name: vala
   spec:
    url: src-openeuler/vala
-- name:vconfig
+- name: vconfig
   spec:
    url: src-openeuler/vconfig
-- name:vim
+- name: vim
   spec:
    url: src-openeuler/vim
-- name:virt-what
+- name: virt-what
   spec:
    url: src-openeuler/virt-what
-- name:vulkan-headers
+- name: vulkan-headers
   spec:
    url: src-openeuler/vulkan-headers
-- name:wavpack
+- name: wavpack
   spec:
    url: src-openeuler/wavpack
-- name:wayland
+- name: wayland
   spec:
    url: src-openeuler/wayland
-- name:wayland-protocols
+- name: wayland-protocols
   spec:
    url: src-openeuler/wayland-protocols
-- name:webkit2gtk3
+- name: webkit2gtk3
   spec:
    url: src-openeuler/webkit2gtk3
-- name:wget
+- name: wget
   spec:
    url: src-openeuler/wget
-- name:which
+- name: which
   spec:
    url: src-openeuler/which
-- name:woff2
+- name: woff2
   spec:
    url: src-openeuler/woff2
-- name:words
+- name: words
   spec:
    url: src-openeuler/words
-- name:wpa_supplicant
+- name: wpa_supplicant
   spec:
    url: src-openeuler/wpa_supplicant
-- name:wpebackend-fdo
+- name: wpebackend-fdo
   spec:
    url: src-openeuler/wpebackend-fdo
-- name:wqy-microhei-fonts
+- name: wqy-microhei-fonts
   spec:
    url: src-openeuler/wqy-microhei-fonts
-- name:wqy-zenhei-fonts
+- name: wqy-zenhei-fonts
   spec:
    url: src-openeuler/wqy-zenhei-fonts
-- name:xcb-proto
+- name: xcb-proto
   spec:
    url: src-openeuler/xcb-proto
-- name:xcb-util
+- name: xcb-util
   spec:
    url: src-openeuler/xcb-util
-- name:xdg-dbus-proxy
+- name: xdg-dbus-proxy
   spec:
    url: src-openeuler/xdg-dbus-proxy
-- name:xdg-desktop-portal
+- name: xdg-desktop-portal
   spec:
    url: src-openeuler/xdg-desktop-portal
-- name:xdg-desktop-portal-gtk
+- name: xdg-desktop-portal-gtk
   spec:
    url: src-openeuler/xdg-desktop-portal-gtk
-- name:xfsprogs
+- name: xfsprogs
   spec:
    url: src-openeuler/xfsprogs
-- name:xhtml1-dtds
+- name: xhtml1-dtds
   spec:
    url: src-openeuler/xhtml1-dtds
-- name:xkeyboard-config
+- name: xkeyboard-config
   spec:
    url: src-openeuler/xkeyboard-config
-- name:xmlrpc-c
+- name: xmlrpc-c
   spec:
    url: src-openeuler/xmlrpc-c
-- name:xmlto
+- name: xmlto
   spec:
    url: src-openeuler/xmlto
-- name:xmltoman
+- name: xmltoman
   spec:
    url: src-openeuler/xmltoman
-- name:xorg-x11-drivers
+- name: xorg-x11-drivers
   spec:
    url: src-openeuler/xorg-x11-drivers
-- name:xorg-x11-font-utils
+- name: xorg-x11-font-utils
   spec:
    url: src-openeuler/xorg-x11-font-utils
-- name:xorg-x11-fonts
+- name: xorg-x11-fonts
   spec:
    url: src-openeuler/xorg-x11-fonts
-- name:xorg-x11-proto-devel
+- name: xorg-x11-proto-devel
   spec:
    url: src-openeuler/xorg-x11-proto-devel
-- name:xorg-x11-server-utils
+- name: xorg-x11-server-utils
   spec:
    url: src-openeuler/xorg-x11-server-utils
-- name:xorg-x11-util-macros
+- name: xorg-x11-util-macros
   spec:
    url: src-openeuler/xorg-x11-util-macros
-- name:xorg-x11-xauth
+- name: xorg-x11-xauth
   spec:
    url: src-openeuler/xorg-x11-xauth
-- name:xorg-x11-xbitmaps
+- name: xorg-x11-xbitmaps
   spec:
    url: src-openeuler/xorg-x11-xbitmaps
-- name:xorg-x11-xtrans-devel
+- name: xorg-x11-xtrans-devel
   spec:
    url: src-openeuler/xorg-x11-xtrans-devel
-- name:xz
+- name: xz
   spec:
    url: src-openeuler/xz
-- name:yajl
+- name: yajl
   spec:
    url: src-openeuler/yajl
-- name:yaml-cpp
+- name: yaml-cpp
   spec:
    url: src-openeuler/yaml-cpp
-- name:zd1211-firmware
+- name: zd1211-firmware
   spec:
    url: src-openeuler/zd1211-firmware
-- name:zip
+- name: zip
   spec:
    url: src-openeuler/zip
-- name:zlib
+- name: zlib
   spec:
    url: src-openeuler/zlib
-- name:zopfli
+- name: zopfli
   spec:
    url: src-openeuler/zopfli
-- name:zstd
+- name: zstd
   spec:
    url: src-openeuler/zstd
-- name:zziplib
+- name: zziplib
   spec:
    url: src-openeuler/zziplib
