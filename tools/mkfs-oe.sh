@@ -8,7 +8,7 @@
 # in RISC-V system, or x86/aarch64 system that support
 # cross-arch dnf installation.
 
-. globals.inc
+. ./globals.inc
 
 
 INSTALL_RPMS="$CORE_RPMS $BUILD_TOOLS"
