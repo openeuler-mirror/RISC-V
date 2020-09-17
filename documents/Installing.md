@@ -7,7 +7,7 @@
 
 QEMU 模拟器环境
 - 操作系统：x86_64/aarch64 Linux
-- QEMU 版本：> 4.0.0
+- QEMU 版本：>= 4.0.0, <=5.0
 
 #### 获取openEuler RISC-V 移植版系统镜像
 
