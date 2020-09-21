@@ -18,7 +18,7 @@ def handle_service(service,save):
     
     if(not os.path.exists(file)):
         if (save != ""):
-            is_exist = save_not_exist_packages(service,save)
+            save_not_exist_packages(service,save)
         return
     else:
         lens_origin,lens_insert = replace_service(file,temp_file)
@@ -54,10 +54,8 @@ def replace_service(file,temp_file):
         lines = fr.readlines()
         lens_origin = len(lines)
         #print(lens_origin)
-        """
-        some service files have been replacesd already or do not use tar_scm_kernel
-        so only files having tar_scm_kernel will be inserted extract_file
-        """
+        """some service files have been replacesd already or do not use tar_scm_kernel"""
+        """so only files having tar_scm_kernel will be inserted extract_file"""
         for l in lines:
             if origin_line in l:
                 #print(service+" changes and inserts extract file")
