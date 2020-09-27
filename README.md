@@ -7,7 +7,7 @@
 RISC-V 相关的活动由RISC-V sig负责。你可以通过如下方式参与RISC-V SIG：
 - 建立或回复 issue：欢迎通过建立或回复 issue 来讨论，RISC-V SIG 所独立维护的仓库列表可在 [sig-RISC-V](https://gitee.com/openeuler/community/tree/master/sig/sig-RISC-V) 中查看。除了独立维护的仓库之外，若在src-openEuler 的其他软件仓中有和RISC-V相关的问题，请同时在本仓openEuler/RISC-V和相关软件仓中提ISSUE，方便共同解决。
 - SIG 组例会：每周二上午会进行例会讨论，会议链接会通过openEuler-Dev的邮件列表发送
-- Maillist 联系：目前RISC-V SIG没有独立的mainlist，可使用openEuler-Dev（ dev@openeuler.org ）的邮件列表进行讨论，若话题讨论足够丰富的话会考虑申请独立的RISC-V maillist。
+- Maillist 联系：目前RISC-V SIG没有独立的maillist，可使用openEuler-Dev（ dev@openeuler.org ）的邮件列表进行讨论，若话题讨论足够丰富的话会考虑申请独立的RISC-V maillist。
 - 微信：加入RISC -V sig的微信群，一起进行讨论，欢迎分享你的想法         
     <img src="./documents/sig-RISC-V-WeChatGroup.jpg" width="30%" height="30%">
 #### 目录结构
