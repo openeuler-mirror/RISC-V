@@ -171,7 +171,7 @@ def handle_xml_service(service):
             archive_type = param.text
             #print("archive type = ", type)
             ret_str += "   archive: " + archive_type + '\n'
-        for param in service.findall("param[@name='file']"):
+        for param in service.findall("param[@name='files']"):
             file2archive = param.text
             #print("archive file = ", param.text)
             ret_str += "   file2archive: " + file2archive + '\n'
@@ -230,7 +230,7 @@ if __name__ == "__main__":
         #print("handle package:" + dir)
         if package.startswith('.'):
             continue
-        str_buf += "- name:" + package + '\n'
+        str_buf += "- name: " + package + '\n'
         for file in os.listdir(service_dir + "/" + package):
             if file != "_service":
                 continue
