@@ -30,6 +30,10 @@ RISC-V 相关的活动由RISC-V sig负责。你可以通过如下方式参与RIS
 
 提供二进制RPM包, 和源码包SRPM托管，提供软件源服务. 
 ```
+https://repo.openeuler.org/openEuler-preview/RISC-V/
+```
+
+```
 https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 ```
 
