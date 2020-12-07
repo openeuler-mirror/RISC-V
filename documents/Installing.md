@@ -11,11 +11,19 @@ QEMU 模拟器环境
 
 #### 获取openEuler RISC-V 移植版系统镜像
 
-目前在以下网址可以获取到一个临时的版本以及repo源
+在openEuler官网可以获得openEuler RISC-V移植版发布的最新版本的openEuler RISC-V镜像以及repo源
+```
+https://openeuler.org/zh/download/
+```
+其中的两个文件是启动openEuler RISC-V 移植版所必需的：
+- fw_payload_oe.elf 利用openSBI将kernel-5.5的image作为payload所制作的用于QEMU启动的image
+- openEuler-preview.riscv64.qcow2 openEuler RISC-V移植版的rootfs镜像
+
+还可以从以下网址获取到openEuler RISC-V之前的版本以及repo源
 ```
 https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 ```
-其中两个文件是启动openEuler RISC-V 移植版所必需的：
+其中
 - fw_payload_oe.elf 利用openSBI将kernel-5.5的image作为payload所制作的用于QEMU启动的image
 - oe-rv-rv64g-30G.qcow2 openEuler RISC-V移植版的rootfs镜像
 
