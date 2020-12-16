@@ -49,19 +49,15 @@ def replace_service(file,temp_file):
     with open(file, mode='r') as fr, open(temp_file, mode='w') as fw:
         origin_line = '<service name="tar_scm_kernel">'
         update_line = '<service name="tar_scm">'
-        #hit_line = '</service>'
         insert_lines = '    <service name="extract_file">\n' + '      <param name="archive">*.tar</param>\n' + '      <param name="files">*/*</param>\n' + '    </service>\n'
         lines = fr.readlines()
         lens_origin = len(lines)
-        #print(lens_origin)
         #some service files have been replacesd already or do not use tar_scm_kernel
         #so only files having tar_scm_kernel will be inserted extract_file
         for l in lines:
             if origin_line in l:
-                #print(service+" changes and inserts extract file")
                 lines.insert(lens_origin-2,insert_lines)
         lens_insert = len(lines)
-        #print(lens_insert)
         fr.close()
         for line in lines:
             fw.write(line.replace(origin_line,update_line))
@@ -75,9 +71,7 @@ if __name__ == '__main__':
     else:
         save_dir = ""
     for package in sorted(os.listdir(obs_dir)):
-        #print(dir)
         if package.startswith('.'):
             continue
         service_dir = obs_dir + "/" + package
-        #print(service_dir)
         handle_service(service_dir,save_dir)
