@@ -3,11 +3,16 @@
 #### 介绍
 本软件仓中托管了有关于openEuler RISC-V相关的信息，包括如何获取及使用openEuler RISC-V的文档、工程配置以及工具。
 #### 动态
+- **2021年3月**  《SIGer》青少年开源活动科普专刊第#10期 [链接](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)
+- **2021年3月**  openEuler RISC-V 使能runc 容器。[链接](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)
+- **2021年2月**  准备添加RISC-V TEE的支持
+- **2020年12月** 2020 openEuler 高校开发者大赛，试题4。[链接](https://www.bilibili.com/video/BV1WD4y1X7HT?p=5)
+- **2020年12月** 2020 openEuler summit 峰会展示在果壳上执行openEuler RISC-V。[链接](https://openeuler.org/zh/blog/yang_yanchao/2021-3-12-start-a-containerd-on-riscv.html)
 - **2020年11月** 在[openeuler镜像仓](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)发布第二版rootfs和kernel镜像，可以在qemu中启动镜像，体验openEuler RISC-V移植版。      
 - **2020年10月** 中科院成功移植openEuler RISC-V到果壳（nutshell）     
-- **2020年9月** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux     
-- **2020年8月** 在[OBS构建系统](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V)开始构建openEuler RISC-V软件包		
-- **2020年6月** 在[中科院的镜像仓](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/)发布了第一版rootfs和kernel镜像。
+- **2020年9月** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux。
+- **2020年8月** 在[OBS构建系统](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V)开始构建openEuler RISC-V软件包。	
+- **2020年6月** 在[中科院的镜像仓](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/)发布了第一版rootfs和kernel镜像。[新闻](http://crva.ict.ac.cn/crvs2020/index/slides/3-9.pdf)
 #### 参与RISC-V SIG的活动
 RISC-V 相关的活动由RISC-V sig负责。你可以通过如下方式参与RISC-V SIG：
 - 建立或回复 issue：欢迎通过建立或回复 issue 来讨论，RISC-V SIG 所独立维护的仓库列表可在 [sig-RISC-V](https://gitee.com/openeuler/community/tree/master/sig/sig-RISC-V) 中查看。除了独立维护的仓库之外，若在src-openEuler 的其他软件仓中有和RISC-V相关的问题，请同时在本仓openEuler/RISC-V和相关软件仓中提ISSUE，方便共同解决。
