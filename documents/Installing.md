@@ -13,6 +13,7 @@ QEMU 模拟器环境
 
 在openEuler官网可以获得openEuler RISC-V移植版发布的最新版本的openEuler RISC-V镜像以及repo源
 ```
+https://repo.openeuler.org/openEuler-preview/RISC-V/Image/
 https://openeuler.org/zh/download/
 ```
 其中的两个文件是启动openEuler RISC-V 移植版所必需的：
