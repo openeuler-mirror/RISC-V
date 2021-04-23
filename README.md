@@ -3,6 +3,7 @@
 #### 介绍
 本软件仓中托管了有关于openEuler RISC-V相关的信息，包括如何获取及使用openEuler RISC-V的文档、工程配置以及工具。
 #### 动态
+- **2021年4月**  RISC-V 处理器开发商优矽科技加入 openEuler 社区 [链接](https://gitee.com/flame-ai/hello-openEuler/issues/I3CHPZ#note_4752587_link)
 - **2021年3月**  《SIGer》青少年开源活动科普专刊第#10期 [链接](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)
 - **2021年3月**  openEuler RISC-V 使能runc 容器。[链接](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)
 - **2021年2月**  准备添加RISC-V TEE的支持
