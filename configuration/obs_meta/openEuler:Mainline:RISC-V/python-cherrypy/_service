@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/python-cherrypy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d86cf752326d2afd048d63fd764966b27cc33f18</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

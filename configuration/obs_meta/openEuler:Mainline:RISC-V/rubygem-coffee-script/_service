@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/rubygem-coffee-script.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">cb9640b82b502b54757e6bedd2d030a07d78f619</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-websocket-driver.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">873ecc09f8625bf3e5faf24cbf29341176caafe0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

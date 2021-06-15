@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/vorbis-tools.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">04fd355e9cc68196bb61f7bd46ecc0de71c58de6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

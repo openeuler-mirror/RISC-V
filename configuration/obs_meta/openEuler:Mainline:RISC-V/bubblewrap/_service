@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/bubblewrap.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8ee219956afe354a9123afc3d15397371d9952b2</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

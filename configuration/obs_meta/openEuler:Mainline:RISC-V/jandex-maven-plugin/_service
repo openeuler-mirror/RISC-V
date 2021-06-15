@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/jandex-maven-plugin.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">948450740ea091d436bc414e98b2a058fea48a9b</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,14 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/logrotate.git</param>
+      <param name="revision"></param>
+      <param name="filename">logrotate</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e59056023705afbe97e64633c1c113db5a26aa18</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

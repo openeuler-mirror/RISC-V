@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/takari-incrementalbuild.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d9f4a2e235e1558dc9a41e1d6c0a65edbc382269</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

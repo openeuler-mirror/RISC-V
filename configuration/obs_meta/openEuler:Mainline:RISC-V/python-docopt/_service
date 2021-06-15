@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-docopt.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4cf1c8a6829da5b15cb28e5880a078d1e3a5d2f1</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

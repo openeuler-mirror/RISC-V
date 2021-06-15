@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/geolatte-geom.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">76e3c59e853b0ad5248b8085e0e43eb1a9e981a0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

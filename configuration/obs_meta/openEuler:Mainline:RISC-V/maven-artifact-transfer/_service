@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/maven-artifact-transfer.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6169974938e2ebaf25b5310426101b4e33d517dc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

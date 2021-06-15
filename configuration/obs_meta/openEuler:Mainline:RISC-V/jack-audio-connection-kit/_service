@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/jack-audio-connection-kit.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e569acf93d1d88923e5af2b641e934a6cf9c46c5</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

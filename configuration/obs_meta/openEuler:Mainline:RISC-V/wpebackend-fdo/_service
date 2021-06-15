@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/wpebackend-fdo.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b1a50085fe0e898068ea9278960bc5caff59b381</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

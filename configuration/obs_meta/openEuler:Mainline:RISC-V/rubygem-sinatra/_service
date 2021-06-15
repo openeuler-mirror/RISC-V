@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/rubygem-sinatra.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">417444712f8d600c6301348fa99b3a7552326fce</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

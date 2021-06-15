@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/gnuplot.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">bf451c7b24c2bafd4f730d3695b28d57e6ba1954</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

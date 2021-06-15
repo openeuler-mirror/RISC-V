@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libdmapsharing.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">18af207e3f90195b7a770f4209167b21ebf39639</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

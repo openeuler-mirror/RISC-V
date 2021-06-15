@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/navilu-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3e4712fcdeb5cb063849adbeebfcc3b1c61e3f6e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-flit.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">efd56a63ef2ab92fe9dc976491e3e6b2160bc179</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

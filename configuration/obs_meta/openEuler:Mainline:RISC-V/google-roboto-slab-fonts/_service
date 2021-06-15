@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/google-roboto-slab-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">57c26f6dd94abbd1425ed71504e8fb3f81d0cd9c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/xdg-dbus-proxy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">36b296340268c1fdf14c389b12c0bc678518768e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/bea-stax.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">558caec986d1fd19cd3f338ab047b619c9ccfe31</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

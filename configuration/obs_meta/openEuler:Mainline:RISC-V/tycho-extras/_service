@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/tycho-extras.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">70b154a2283f101c0f6c8b65fa51e71aa78f491a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

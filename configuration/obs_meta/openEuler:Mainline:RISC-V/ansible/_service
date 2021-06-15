@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/ansible.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">2771f99ec4877f3b39b36c6d51508732ad3e0a80</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

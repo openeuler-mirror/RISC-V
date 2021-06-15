@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/joda-convert.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">28c985f6b536625acd838b27c9ae0dba3f7d9c62</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

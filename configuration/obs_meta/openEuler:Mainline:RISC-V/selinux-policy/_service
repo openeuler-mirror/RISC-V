@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/selinux-policy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">bbb7898a9998f88b62fc546ce16cc53e8ab351b4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

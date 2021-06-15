@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/mongo-java-driver2.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8bdb9d213666c4d7a3e2e6239ea1b74edb1158b4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

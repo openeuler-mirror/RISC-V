@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/ModemManager.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">261aa49624e787ecdfde0ad4c507b01fdbf9e46e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

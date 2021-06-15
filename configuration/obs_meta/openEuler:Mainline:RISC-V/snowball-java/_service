@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/snowball-java.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ab9a7321c3b04504ce2c2808168d632881caf626</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

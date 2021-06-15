@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/gnome-initial-setup.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b1be3e3bef7adab396116e66ccbd35ce86ce8cbe</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

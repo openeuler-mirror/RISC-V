@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-sphinxcontrib-serializinghtml.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9ded36fa373ab4a7faaa61a5661273230e993593</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

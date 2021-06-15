@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/ivtv-firmware.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f62aaee1048fce2fb39172fc61a8a3afc143e864</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

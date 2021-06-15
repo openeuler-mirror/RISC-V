@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/texlive-split-x.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e5137818cab6f3af1617ace5cc0b70c68c5d2f58</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

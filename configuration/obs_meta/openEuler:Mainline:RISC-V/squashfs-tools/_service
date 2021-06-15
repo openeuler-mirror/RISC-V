@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/squashfs-tools.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f9b7f4d1164b14992ec8cf798dad33a345df4e66</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

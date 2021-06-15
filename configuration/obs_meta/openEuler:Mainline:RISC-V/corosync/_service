@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/corosync.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3c05181a2c7fb36580323a3ceeb3ea9e9d2e1a5c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-graceful-readlink.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1ef383c54634ef6a2b254f0bea8712734d473446</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

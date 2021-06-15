@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/gnome-video-effects.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">cd31feac12c2d57128c87e2e9b3a51b508dad4c2</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

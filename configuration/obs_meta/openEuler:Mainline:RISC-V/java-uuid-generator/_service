@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/java-uuid-generator.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">90fe72c15c6920acac2df1a57a527544d958945e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

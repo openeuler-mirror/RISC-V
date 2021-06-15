@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/dleyna-server.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0272216861a2fe9eca93ab65922f3d30dcd84f44</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

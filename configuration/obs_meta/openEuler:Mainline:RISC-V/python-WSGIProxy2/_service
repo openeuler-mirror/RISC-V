@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-WSGIProxy2.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">772a7c035c738e9f1e3c56e576810cacfd0a4e05</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

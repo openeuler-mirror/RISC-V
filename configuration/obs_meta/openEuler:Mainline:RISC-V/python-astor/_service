@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-astor.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e6a5382ad2ddeea51d35d9253a0c24c3a0c0b4c4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

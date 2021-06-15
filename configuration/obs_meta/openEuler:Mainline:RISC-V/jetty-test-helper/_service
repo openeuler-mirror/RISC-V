@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/jetty-test-helper.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">237523f8611fce74e6389bec2a5f869bd0a99944</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

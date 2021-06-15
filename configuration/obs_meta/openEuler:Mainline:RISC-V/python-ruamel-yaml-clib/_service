@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-ruamel-yaml-clib.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">69f7752edd0c4362ce3dbabc1a43dfe58d4a8d20</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

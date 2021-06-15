@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/portreserve.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1eb8f43b8761b8f5391254b9d6e011e774582626</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/uglify-js1.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a8e0d38a6238a03f06e1a6cd8e51e02cb01c4687</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

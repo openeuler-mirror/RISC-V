@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/prefetch_tuning.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3e8b869c9cac4e6bd0b2e9bf9b258af4f7c42bb7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

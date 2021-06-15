@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/dblatex.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4c99ea28b80cde5facaecba9a9931b7ce297f9dc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

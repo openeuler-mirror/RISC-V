@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-pinkie-promise.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">50d0a7ef9fcb2c2662e14cbab06d208dd4eabeb9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

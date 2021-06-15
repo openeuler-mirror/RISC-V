@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/zookeeper.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">56f76a52c1f93e45cb65731ebb678b7164223aa3</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

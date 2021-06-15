@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-proxyquire.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">96682f9f09e1ef59fd8d27fb725ce6d0708460ed</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-merge-descriptors.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">38b8e23b041976b2fad760166b0a46f95152c6c9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

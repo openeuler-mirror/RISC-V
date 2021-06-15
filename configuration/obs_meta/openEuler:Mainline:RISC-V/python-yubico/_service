@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-yubico.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d696cc888d1f26ea071e7c0ca6b34718a049ff57</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

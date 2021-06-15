@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/container-exception-logger.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9af056ef27a5bd96fc94ed19f89f6fa68f6aa244</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

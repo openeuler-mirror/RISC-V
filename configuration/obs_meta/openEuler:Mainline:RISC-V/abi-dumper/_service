@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/abi-dumper.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f389bbfd46d1d812bb550d70c77803f05d689320</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

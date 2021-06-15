@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-load-grunt-tasks.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">032d1398d7d9db3fba5c2decfcc109936bd9834a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

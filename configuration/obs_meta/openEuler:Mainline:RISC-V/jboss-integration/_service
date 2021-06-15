@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/jboss-integration.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c0cc85f684a5c0dc0e690093704f1749d6656194</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/qt5-qtmultimedia.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c120e2f094da2a9b3d95ea0d11010de144e60306</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

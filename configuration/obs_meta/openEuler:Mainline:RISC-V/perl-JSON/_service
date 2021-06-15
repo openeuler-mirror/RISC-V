@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-JSON.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">216fb79be0c4c514e2eaea48e7e87ea7cfe22d43</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

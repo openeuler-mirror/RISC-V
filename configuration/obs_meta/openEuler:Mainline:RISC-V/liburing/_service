@@ -1,0 +1,6 @@
+<services>
+    <service name="tar_scm_kernel_repo">
+      <param name="scm">repo</param>
+      <param name="url">next/openEuler/liburing</param>
+    </service>
+</services>

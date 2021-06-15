@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-File-ReadBackwards.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6e866ed179beb18f5437ed246394dbfb3a3a5cd0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

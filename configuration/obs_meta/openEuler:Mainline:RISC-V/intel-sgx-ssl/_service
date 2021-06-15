@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/intel-sgx-ssl.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c290d51606a9ea02c04a637731ffaa58d5617908</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

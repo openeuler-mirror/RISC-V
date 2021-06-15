@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/haproxy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b7e9a62f41ff7e9778e37b434e4af19ddcb237c0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

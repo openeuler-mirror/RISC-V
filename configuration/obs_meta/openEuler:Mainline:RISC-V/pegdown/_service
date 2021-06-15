@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/pegdown.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">43610adc2b86999fffcf85c25ae6309b1ac550bc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

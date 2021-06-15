@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libXxf86dga.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9479992495b99546c7bdb69ced1bf1e50633d46f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

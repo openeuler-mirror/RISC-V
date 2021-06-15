@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/takari-lifecycle.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f1d9bfdde1f226b585045b03d48f3fef4ebcd204</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

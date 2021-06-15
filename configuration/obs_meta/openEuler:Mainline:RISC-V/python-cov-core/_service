@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-cov-core.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ac95497e101a41714c44a78bac6a801e8072d0cb</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

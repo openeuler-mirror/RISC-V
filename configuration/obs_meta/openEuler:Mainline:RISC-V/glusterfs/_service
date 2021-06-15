@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/glusterfs.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">dba66656cd7a862515e4d3a6b6342ea1e93d7617</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

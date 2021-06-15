@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/xorg-x11-drv-nouveau.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">33499d9b837c171d25f50db5889ac70172b60eac</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

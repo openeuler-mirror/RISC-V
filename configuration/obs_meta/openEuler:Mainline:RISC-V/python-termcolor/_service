@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-termcolor.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">698a23ba5ce1a064e726a8d18716de7bcfb40af3</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

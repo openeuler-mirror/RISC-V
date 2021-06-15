@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/docker-anaconda-addon.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">cebd2e2a55b38fdc5f30842d2e173fd672916092</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

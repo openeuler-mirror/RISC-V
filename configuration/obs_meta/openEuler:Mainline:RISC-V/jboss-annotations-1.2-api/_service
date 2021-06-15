@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/jboss-annotations-1.2-api.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">793dce1ec701f46f3fd6c16067aa2c428ac8b8db</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

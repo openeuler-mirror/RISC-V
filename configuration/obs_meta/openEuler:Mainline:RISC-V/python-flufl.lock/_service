@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-flufl.lock.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b14b9a2fc225d62f14e3147abb8ebbbbb38e99da</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

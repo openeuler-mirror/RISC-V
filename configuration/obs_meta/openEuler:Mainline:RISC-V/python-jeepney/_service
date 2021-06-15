@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-jeepney.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">eacf1cd836b4de44c11a27ee34bc0265aa8d5e55</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

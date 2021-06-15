@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-cryptography-vectors.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ee66f13697ef02047ac7e76561b85766b0910ad9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

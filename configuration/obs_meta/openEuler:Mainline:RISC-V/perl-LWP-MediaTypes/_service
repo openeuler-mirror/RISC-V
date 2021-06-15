@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-LWP-MediaTypes.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">38396c6be62c97647051a70ec14dcd3f3ebd36f3</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

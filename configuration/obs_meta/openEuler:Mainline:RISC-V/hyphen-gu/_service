@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/hyphen-gu.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1a69f5a4d959ad5306eed52a3d3ad83c2bc01a96</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/game-music-emu.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f5991ab05af0b3d4c2e4c6beca31d245783a0dea</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

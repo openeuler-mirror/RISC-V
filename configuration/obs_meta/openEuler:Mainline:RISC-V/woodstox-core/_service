@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/woodstox-core.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1f44f7cddd1f7619884529d1a997c3b2fefa1578</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

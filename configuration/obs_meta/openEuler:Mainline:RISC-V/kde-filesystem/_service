@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/kde-filesystem.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3442eb606cd7e47ed28b3c9929d4168b2eed6aec</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

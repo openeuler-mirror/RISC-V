@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/GeoIP-GeoLite-data.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e6b746f358818605231f34b82c4bbcc02ea4e38c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

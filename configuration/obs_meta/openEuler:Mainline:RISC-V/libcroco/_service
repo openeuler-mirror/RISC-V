@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libcroco.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">62b25cba225518613ad280bb7a3f7fbb2a872b95</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/extra-cmake-modules.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">de2b71bf91aadaa3db7b2954967a03404f8d123e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

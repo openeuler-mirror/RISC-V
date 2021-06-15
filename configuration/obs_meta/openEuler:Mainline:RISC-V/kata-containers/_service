@@ -1,0 +1,50 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/kata-containers.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="recompress">
+      <param name="compression">gz</param>
+      <param name="file">*.tar</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="tar_scm_repo_docker">
+       <param name="scm">git</param>
+       <param name="url">git@gitee.com:src-openeuler/kata-containers.git</param>
+       <param name="filename">kata_integration</param>
+       <param name="versionformat">v1.0.0</param>
+       <param name="submodules">disable</param>
+       <param name="exclude">.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="tar_scm_repo_docker">
+       <param name="scm">git</param>
+       <param name="url">git@gitee.com:src-openeuler/kata-containers.git</param>
+       <param name="filename">kata-containers</param>
+       <param name="versionformat">v1.11.1</param>
+       <param name="submodules">disable</param>
+       <param name="exclude">.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="recompress">
+      <param name="compression">gz</param>
+      <param name="file">*.tar</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="extract_file">
+      <param name="archive">*kata-containers*.tar.gz</param>
+      <param name="files">kata-containers.spec</param>
+      <param name="exclude">.git</param>
+      <param name="revision">25ec45d46dcbd1e3eb1fb68652e491c62ac48480</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

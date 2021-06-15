@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mousetweaks.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">33659b7570e707f5596d0acfedf536ef5a099743</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

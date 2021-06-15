@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/bind-dyndb-ldap.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">333825ee34fb9dc7ceae71b4d544efd2393dd28a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

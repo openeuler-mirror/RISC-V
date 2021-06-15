@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/debootstrap.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">31c235d1c0cce10baf31678b573704ad3b8e7ed8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/hsqldb.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">43ea90639026f0d74e7fd380b94c50fda97ccb2e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

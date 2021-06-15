@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/weld-core.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3d1b1187f7c24a4db87c04b58efa0b7329b7d967</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-jaraco-collections.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ff8e9f0af7eee0e583c2a640c468bbc3a0525d78</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

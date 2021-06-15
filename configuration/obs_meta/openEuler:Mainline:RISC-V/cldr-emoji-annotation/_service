@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/cldr-emoji-annotation.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">927ac39b5cb7b9a79ff59695a3b1e58d92d1f0b5</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/lohit-gujarati-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">54c33539c73344bebc31aa4319bee20517feca81</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

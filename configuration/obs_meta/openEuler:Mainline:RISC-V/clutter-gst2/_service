@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/clutter-gst2.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">839c94810be71f03889fa78d2a1f9c520d3f0cc4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

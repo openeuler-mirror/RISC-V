@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/spice-vdagent.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e284dedc36b987a460ce07b23fa7c19953fdc046</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

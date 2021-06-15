@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/adobe-mappings-cmap.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">2328af1cabf127227b37625aa1dfdcc5d1dcdc4c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

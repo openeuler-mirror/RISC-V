@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mysql-connector-java.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9932c4630bec3e2e1a0d06e1e1a4013d8421a87e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

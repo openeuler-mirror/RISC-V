@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/portaudio.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ab03e3a1e609baa162a65f60c108bfbdc344a82d</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

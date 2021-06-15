@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/rubygem-kramdown.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3a12e8416d0649ebde0b85c8b42e6092d7754c1a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

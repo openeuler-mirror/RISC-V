@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/tuscany-sdo-java.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c53a74f450689c7d49834d951cda9f972c76081c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

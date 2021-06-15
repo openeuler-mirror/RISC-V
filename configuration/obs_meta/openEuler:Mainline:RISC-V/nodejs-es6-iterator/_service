@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-es6-iterator.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e2a36b9ddfb0056df95c5a7a80635f021b3acb5b</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

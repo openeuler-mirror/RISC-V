@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-backports-unittest_mock.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">038bfd014947f64aa83a6aa47f4151983a5f2b7f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

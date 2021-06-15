@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/glassfish-jax-rs-api.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">593f58e3ab8504dd003d6d5f821fef51213d600b</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

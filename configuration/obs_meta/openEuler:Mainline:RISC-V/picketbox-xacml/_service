@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/picketbox-xacml.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e4f74f3848c9792c6339af411f3e9444e520eda3</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

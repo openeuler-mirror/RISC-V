@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/powermock.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">529d2eb62ce3e44702fc94a434855e5f97fc3bbe</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

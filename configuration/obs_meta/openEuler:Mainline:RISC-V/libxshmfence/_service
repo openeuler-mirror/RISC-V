@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libxshmfence.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">31df3d7d2680a243a77febd774b7055ecfd0055c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

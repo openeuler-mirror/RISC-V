@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/fxload.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">fd9512bb604df6f5a4bd47b0aff0ba82dd3d2749</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

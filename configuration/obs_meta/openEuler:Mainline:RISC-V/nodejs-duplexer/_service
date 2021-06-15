@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-duplexer.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d7394314259ded94abd5f0c7ec39c8fe32ce8d69</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

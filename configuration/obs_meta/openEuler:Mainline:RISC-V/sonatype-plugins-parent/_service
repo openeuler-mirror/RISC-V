@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/sonatype-plugins-parent.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">734d7898c2bdb8a058353a2bc69eeb124e037f3d</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

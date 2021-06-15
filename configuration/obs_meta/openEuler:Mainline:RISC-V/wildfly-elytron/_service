@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/wildfly-elytron.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5d4aefbdb64e6392ef0035d1588d46b0b1d716a1</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/telepathy-glib.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">03d1e09dad0c8321f73339f6fa2476a0edcd64c9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

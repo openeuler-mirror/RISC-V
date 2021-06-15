@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-tensorboard-plugin-wit.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">50e88d2251f947bda84efb4e027c97603b0fa319</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

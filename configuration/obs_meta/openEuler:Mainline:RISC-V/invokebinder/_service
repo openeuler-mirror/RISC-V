@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/invokebinder.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">169c76d40473dace64a523ae91fb14fab1a3ae50</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

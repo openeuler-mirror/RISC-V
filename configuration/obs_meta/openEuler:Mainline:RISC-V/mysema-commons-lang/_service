@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/mysema-commons-lang.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7fcf8637c2304c0bb0a283cd0d4fca4f62c699f7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

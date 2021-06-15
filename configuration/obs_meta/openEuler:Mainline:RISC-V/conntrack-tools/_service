@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/conntrack-tools.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8520f39c3f8d672c03322f8b92f35dc89f83e07c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

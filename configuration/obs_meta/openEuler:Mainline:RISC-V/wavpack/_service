@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/wavpack.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9c55f1175d36b745c1fb9a7589bb00982bc33f03</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

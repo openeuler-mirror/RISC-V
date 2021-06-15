@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mockito.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6c9bf3bddef814ccbe235a66b333e8bb3c42bd7c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

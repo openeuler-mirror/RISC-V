@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/plexus-pom.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a2b3d9037ac30663f8da742f832af5d9e3ecc7c9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

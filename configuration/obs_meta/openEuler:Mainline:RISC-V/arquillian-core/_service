@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/arquillian-core.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">fa4a6cfd7db48dd943d4e6efd07fafa3fecef78b</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

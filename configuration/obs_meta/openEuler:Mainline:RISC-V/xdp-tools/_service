@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/xdp-tools.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">adadd9807fff08dc4ee34d64182141b1699671ed</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

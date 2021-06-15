@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/python-requests-toolbelt.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b114314b2a7ec72016a7f395c11c07338bb9cf9a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

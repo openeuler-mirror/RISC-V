@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/ehcache-sizeof-agent.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ae610a92a2f4e4c0bf3790ade5635a7aaefbdf52</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

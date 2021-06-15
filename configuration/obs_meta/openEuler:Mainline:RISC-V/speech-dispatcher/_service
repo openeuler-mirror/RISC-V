@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/speech-dispatcher.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6c29498e5f29aba9f1d46700aedbc43d980b23ba</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
