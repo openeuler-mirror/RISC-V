@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/openoffice.org-dict-cs_CZ.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">550d6773baab89e3e1bde88d3cb7fff9a303c96c</param>
+      <param name="revision">f41e9a63740e126f299deb51efda31c0c583c64f</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

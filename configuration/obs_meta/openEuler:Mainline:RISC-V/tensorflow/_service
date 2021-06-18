@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/tensorflow.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">c6208c3088a4a264de3eba4112cfcbec6cfb5cfd</param>
+      <param name="revision">f26f76e173610c693208de4964bd26614174c29b</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

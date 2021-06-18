@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/gupnp.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">b292abe0c305eaaee5594484f75c0504b9ec7e77</param>
+      <param name="revision">306be5f6fa9b542f984846a384a9fad37dea2e47</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

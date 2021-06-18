@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/sleuthkit.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">6f95cc291186391efe693eb99e3d1de76e472d35</param>
+      <param name="revision">c00aef0b12cbd98f3badc431b18b31bd19ced946</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

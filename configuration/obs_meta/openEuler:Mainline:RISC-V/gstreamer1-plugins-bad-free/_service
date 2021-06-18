@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/gstreamer1-plugins-bad-free.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">feb1c1eda2d1b8dc4801f95c6f5ff5f29366edaa</param>
+      <param name="revision">f49b1cc0fac33930e483b42a1c37054ba71fdb66</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

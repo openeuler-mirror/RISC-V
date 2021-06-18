@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/python-cpio.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">cafc5c29d3828bf52b3a27acc623ef12fd6e9ee6</param>
+      <param name="revision">c741827436d1a1cb543542debc574faa96ff8ca3</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

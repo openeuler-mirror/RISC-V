@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/evolution-data-server.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">0be4a310eb57c10cb54caebddc374de2a91218f0</param>
+      <param name="revision">bd17de930acd2d2bc1dd12137be30231ade9e57e</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

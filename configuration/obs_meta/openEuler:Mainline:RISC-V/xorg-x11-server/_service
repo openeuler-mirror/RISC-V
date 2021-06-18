@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/xorg-x11-server.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">a3af69becd9b10a2b2c706747c8c82ddd09d2af4</param>
+      <param name="revision">bc69f569d9bfa2de92ed76ace6bd6339ba267e7d</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/stax-ex.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">26cd7686a68f5ffa60828c19d69413181a88736f</param>
+      <param name="revision">191e130be745e5b2f4ac8a962050076cbf1e76ad</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

@@ -2,10 +2,8 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/cpio.git</param>
-      <param name="revision"></param>
-      <param name="filename">cpio</param>
-      <param name="exclude">.git</param>
       <param name="revision">48d3e2db0388daa91a21c8893cffc853e90a661f</param>
+      <param name="exclude">.git</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

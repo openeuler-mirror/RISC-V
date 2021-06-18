@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/mariadb.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">c72a5b8e8b3544104ce77a9fabad283abfbb4030</param>
+      <param name="revision">bc6c9c7a9abc8f4b27e04f78792dbf5bb3c6b075</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

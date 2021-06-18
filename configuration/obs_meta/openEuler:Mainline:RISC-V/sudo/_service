@@ -2,8 +2,6 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/sudo.git</param>
-      <!--param name="revision"></param-->
-      <!--param name="filename">sudo</param-->
       <param name="exclude">.git</param>
       <param name="revision">2b375dab5da2d6dde590b0021ab950a470b4173a</param>
     </service> 

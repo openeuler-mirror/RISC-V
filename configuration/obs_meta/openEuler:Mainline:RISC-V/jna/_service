@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/jna.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">ef54a59b77dbba9aadd44bfeb79ca8ddc868f5d1</param>
+      <param name="revision">670969bdbd3dd1dd0bdb104547a36d3c2837db58</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

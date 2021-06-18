@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/python-blivet.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">8c7b472cf04f13b0a1f3a3607274fab71b0feffe</param>
+      <param name="revision">b9aab5f8e46421709d60adb668c1ae637c87ff19</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

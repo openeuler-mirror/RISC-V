@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/perl-Text-CharWidth.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">12b8ef52ebbcd6d80017dd459e463c13b419e3ab</param>
+      <param name="revision">e89da473df524aff95437f687e5dd4921f619907</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

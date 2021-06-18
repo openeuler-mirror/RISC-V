@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/hyphen-as.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">a1f177f4846ca7f320de012f857a22f162b68f9d</param>
+      <param name="revision">98f0393260dd43c9d08a00eed4de052d8cef3a95</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

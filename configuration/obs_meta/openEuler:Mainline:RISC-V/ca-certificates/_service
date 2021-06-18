@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/ca-certificates.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">3d9cbcd4e4afa76e2031067fcd3967ff63fef6a0</param>
+      <param name="revision">bfe4218213d7197214cc162cc2cbb2e8e6606eaf</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>
