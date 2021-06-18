@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/pyScss.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f7d834ccb25b8f8f26c34ba673a3346421787d16</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

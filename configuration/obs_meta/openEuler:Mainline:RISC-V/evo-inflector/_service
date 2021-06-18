@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/evo-inflector.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d14b68abc085637e0b3ff5433a518df3f05e2a9c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

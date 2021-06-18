@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-django-cache-url.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3f73b15d23831c93de772f88dd848d8b4c279f3c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

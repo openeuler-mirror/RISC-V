@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/isula-transform.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3529962b1075899ea2548a32f9395ba0aed2c205</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/grizzly-npn.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7fb8ca206faf6d93b8f5f98d0a1c0ac62f3e619f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

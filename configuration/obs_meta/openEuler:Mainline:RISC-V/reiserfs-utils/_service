@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/reiserfs-utils.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8cbea6da7b439d010c4dd095cb0416e6ce0a5a21</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

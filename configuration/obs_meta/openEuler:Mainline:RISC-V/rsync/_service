@@ -1,0 +1,14 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/rsync.git</param>
+      <param name="revision"></param>
+      <param name="filename">rsync</param>
+      <param name="exclude">.git</param>
+      <param name="revision">684c0da9e87e1e4c547b032f9ef072783a190531</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

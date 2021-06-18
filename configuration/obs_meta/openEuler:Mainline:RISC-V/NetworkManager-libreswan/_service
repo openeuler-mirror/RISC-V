@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/NetworkManager-libreswan.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">99cf3177ab974ca17da8e92351c67b8b5b752af6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

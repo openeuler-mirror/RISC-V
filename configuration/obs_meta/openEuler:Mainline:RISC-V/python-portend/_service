@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-portend.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8f3a47fcf24071b9f5f088728e77f3e80a6e4281</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

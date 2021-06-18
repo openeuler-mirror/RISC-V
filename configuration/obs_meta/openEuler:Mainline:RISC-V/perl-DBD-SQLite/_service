@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-DBD-SQLite.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b11fa47d2185a55b860368fb2edb7fd6ea4b2c63</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

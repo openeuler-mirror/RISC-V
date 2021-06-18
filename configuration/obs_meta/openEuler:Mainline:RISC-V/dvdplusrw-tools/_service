@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/dvdplusrw-tools.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">cc03fc45beb0bac8d0e2e3e1b2fba5507acd88c1</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>     

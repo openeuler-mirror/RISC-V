@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/harfbuzz.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8719d11386dd67e1097276a3643ca2fb3e451f23</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

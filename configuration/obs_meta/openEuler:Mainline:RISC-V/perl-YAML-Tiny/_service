@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-YAML-Tiny.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a44635bbb7986b6d6e531610b9dc1d60686f1f33</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

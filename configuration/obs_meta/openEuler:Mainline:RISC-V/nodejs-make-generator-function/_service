@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-make-generator-function.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a5ff842ead58563218e2a213898cfb57a1dfc01b</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

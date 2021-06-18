@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/hibernate-jpa-2.0-api.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ce41af0a2f90ee3e0abb54f53134c745359958fc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

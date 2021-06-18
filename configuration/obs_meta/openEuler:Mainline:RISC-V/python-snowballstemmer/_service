@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-snowballstemmer.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">99b5ff148a3545cb4e39f0680cc5a3719abece89</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

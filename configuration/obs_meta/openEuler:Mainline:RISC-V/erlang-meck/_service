@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/erlang-meck.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9d8e545fdfd9f419ac7a199fd8f1d7eb4b4edd3a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

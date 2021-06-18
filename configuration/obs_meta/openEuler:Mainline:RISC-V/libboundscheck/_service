@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libboundscheck.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7ffcd596b083b464e60ae59eaabfe3e6f82053a0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/spatial4j.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">56486e9efadb37df0ac6e87c4cf22f7d3e3d8f52</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

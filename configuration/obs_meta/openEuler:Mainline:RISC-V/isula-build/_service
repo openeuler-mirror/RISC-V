@@ -1,0 +1,18 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/isula-build.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">2fcfbd8fefa1212c33db3e71ce2bd0711c19a138</param>
+    </service>
+    <service name="recompress">
+      <param name="compression">gz</param>
+      <param name="file">*.tar</param>
+      <param name="exclude">.git</param>
+      <param name="revision">2fcfbd8fefa1212c33db3e71ce2bd0711c19a138</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

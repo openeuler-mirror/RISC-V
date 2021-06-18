@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/postgresql-odbc.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5dcd9ebab2e83bf0613e24f223c6f19fca9cef38</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

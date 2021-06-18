@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-paperboy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">8208cf64f0f4ea53d1ae47f7895c3c8488305dbb</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

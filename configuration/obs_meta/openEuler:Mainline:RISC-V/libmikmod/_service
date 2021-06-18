@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libmikmod.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">38017113a31cb60e8ea6c3019b9957e5b1755b87</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

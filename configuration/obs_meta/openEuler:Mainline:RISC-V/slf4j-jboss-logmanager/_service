@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/slf4j-jboss-logmanager.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">672ddf61a9433f5e5c454ecd41c0086462d00969</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

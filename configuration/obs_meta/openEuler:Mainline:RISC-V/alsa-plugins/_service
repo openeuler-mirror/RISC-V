@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/alsa-plugins.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">33da58f2e2029b4cd27352a5fb5c98f113a93121</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

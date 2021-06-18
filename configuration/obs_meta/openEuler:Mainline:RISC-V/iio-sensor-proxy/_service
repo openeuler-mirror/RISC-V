@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/iio-sensor-proxy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3c44dd8ec0b44f35ff9a0cf2b60a429c87439b01</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

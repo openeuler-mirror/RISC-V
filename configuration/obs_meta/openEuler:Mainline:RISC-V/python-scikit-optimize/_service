@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-scikit-optimize.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">16df38b9af073761affa624fddb242e8e1a4077e</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

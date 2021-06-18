@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-Date-Calc.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e1e5fd0eb088c4869f41d5e1e078d6fdf280d961</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

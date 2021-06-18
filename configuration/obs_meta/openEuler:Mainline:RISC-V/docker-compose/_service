@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/docker-compose.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3972ad188a118a5367808ec1fd3e6097f5794d25</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

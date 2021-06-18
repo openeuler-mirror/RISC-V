@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/poly2tri.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a2003d2d14d2b2b6796c0a092a2f386f1b4ba7bc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>     

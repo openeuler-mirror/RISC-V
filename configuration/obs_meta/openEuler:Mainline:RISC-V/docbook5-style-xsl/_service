@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/docbook5-style-xsl.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6e20524d8ade64dad3138a12b60e25165bf4b483</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

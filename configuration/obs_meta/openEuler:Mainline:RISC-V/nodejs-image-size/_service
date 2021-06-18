@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-image-size.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">da86813a0b0bf8c679be3b1fdb21d105e4ce2126</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

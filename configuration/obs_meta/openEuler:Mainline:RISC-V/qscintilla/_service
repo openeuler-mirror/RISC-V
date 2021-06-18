@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/qscintilla.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">39e63324bdb2c36df2f60fdb54790b49ca948ad7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

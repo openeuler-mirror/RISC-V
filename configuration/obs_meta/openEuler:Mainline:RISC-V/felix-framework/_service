@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/felix-framework.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">849d09eedc4f6eccb8f18b2a5433b37204a3e76c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

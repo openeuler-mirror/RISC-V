@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/abattis-cantarell-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c85eb7670f0bc14a2ab9bb2099386e4307e79404</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

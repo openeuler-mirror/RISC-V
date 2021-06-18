@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-assertion-error.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7e4b1c889bf77a2097d1abd5956c77d1269170f7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

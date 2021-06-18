@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-module-not-found-error.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a0c05e77b91b9d00826e5c1be64349dc030f1dd4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

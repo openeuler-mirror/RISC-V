@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-netaddr.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9dd3d5d773c96acd6c7eb2614c7c0f170a4199f2</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

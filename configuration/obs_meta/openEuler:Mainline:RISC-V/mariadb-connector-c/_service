@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mariadb-connector-c.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9fab11808f913005b2ee86971e0cec8f077f9f8f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

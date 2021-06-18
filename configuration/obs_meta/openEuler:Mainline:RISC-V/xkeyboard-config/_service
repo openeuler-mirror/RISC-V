@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/xkeyboard-config.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">749e2bd14f02ddb31217b086b39f4bdac1d2797c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

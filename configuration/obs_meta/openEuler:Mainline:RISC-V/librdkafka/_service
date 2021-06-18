@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/librdkafka.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">417cae14da7c69e36c35b9a6c434cdabf38bbed6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

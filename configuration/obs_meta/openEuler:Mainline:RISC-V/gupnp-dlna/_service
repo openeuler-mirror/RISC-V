@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/gupnp-dlna.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f744eae8abe32ed5108a03ae5b22dde22d67edc1</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/crash-trace-command.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5483d57f88c9de709c9065c57861e4380f5918e9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

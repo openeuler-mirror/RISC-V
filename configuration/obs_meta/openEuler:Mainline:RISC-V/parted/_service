@@ -1,0 +1,14 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/parted.git</param>
+      <param name="revision"></param>
+      <param name="filename">parted</param>
+      <param name="exclude">.git</param>
+      <param name="revision">72d7a24cf70cb3e8cde56d52b1583f0e3a6f8acf</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/rubygem-cucumber-expressions.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">97f6a203c7b7aaf2771a085db0a5258b93d4a461</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

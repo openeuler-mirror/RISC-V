@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mypaint-brushes.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d74c9e31cc4e2ad914dd02cf7dc417b1b620d725</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>     

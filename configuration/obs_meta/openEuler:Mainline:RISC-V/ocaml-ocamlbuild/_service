@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/ocaml-ocamlbuild.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c8aec9f599694f676ec804f6bd0a36cc08cf94ff</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

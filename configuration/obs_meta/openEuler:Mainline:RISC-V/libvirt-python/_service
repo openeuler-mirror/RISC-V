@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libvirt-python.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d6615c46f886b9eb41bae48db4e54c2abb64a01d</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

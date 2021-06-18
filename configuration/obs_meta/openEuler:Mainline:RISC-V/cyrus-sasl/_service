@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/cyrus-sasl.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9b7425a1ce66cdc680e5bde22905721e4a33a8f4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

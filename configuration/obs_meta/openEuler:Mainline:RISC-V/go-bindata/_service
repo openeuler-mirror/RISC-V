@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/go-bindata.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7fe4985029fb87ebe8bebf0c29f1cf24a1b2620d</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

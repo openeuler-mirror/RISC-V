@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/microcode_ctl.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f0f5e82933417bca88b9fee00ebcaddf64869b70</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/oscap-anaconda-addon.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0b9d3f24b71130b17f68baa204dec983870f2839</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

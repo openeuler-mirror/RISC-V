@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-backcall.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5ce31288f2224d278b1fd4c0b8e0eb2fd3e0c0a8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

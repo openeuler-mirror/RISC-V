@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-Flask-Script.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3b773c10bff20db1b1401450754bbe8170bb2619</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

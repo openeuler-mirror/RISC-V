@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-zope-deprecation.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">7ac6f7f89bc890f5b62928f4b59af84e055d86e1</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

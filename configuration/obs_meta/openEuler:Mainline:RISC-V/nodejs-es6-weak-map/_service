@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-es6-weak-map.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">77f6c037d0daaa0814da24e6251c3fd04708d707</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

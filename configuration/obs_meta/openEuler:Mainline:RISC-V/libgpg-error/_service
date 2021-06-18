@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libgpg-error.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4ac04c6c4f09414cc176bbb924ee32f6c48955bd</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/efibootmgr.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4a8c1b8b1c6fb64b2150831f0c0c052d86cfcb0f</param>
+    </service> 
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

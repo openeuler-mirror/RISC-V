@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/maven-clean-plugin.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4b682e2a1a5287c7ceb254665c4bc3b3b7b015bc</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

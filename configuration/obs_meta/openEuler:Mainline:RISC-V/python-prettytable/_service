@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-prettytable.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">40016d55425a0d12c9b76f2974bbc0f2a2516532</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

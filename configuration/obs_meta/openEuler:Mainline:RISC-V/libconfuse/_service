@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libconfuse.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">803a0f59acce8f66a6f83f07ef0d58a4e40a761a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

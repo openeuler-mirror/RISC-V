@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/mesa-demos.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6c8df5e502f73725be7b4a28453aad9a15bf5294</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

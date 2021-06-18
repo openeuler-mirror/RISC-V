@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-arrify.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5a9029009e5d3c1f630e5b6a8d4b9f427924cb1f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

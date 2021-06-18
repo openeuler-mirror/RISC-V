@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/znerd-oss-parent.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5047d21fe66313b4d4ced83e8465f92d7a54fb92</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

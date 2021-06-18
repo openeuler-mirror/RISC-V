@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/jboss-remoting.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d62ff8c99b1f2173173a326fe71d1ae7dc49580a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

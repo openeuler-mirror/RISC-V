@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/batik.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b256d8fbaf68c4d1a56edce09a558a1306cdb5a4</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

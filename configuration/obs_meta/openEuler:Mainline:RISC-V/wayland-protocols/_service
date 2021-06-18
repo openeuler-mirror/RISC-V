@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/wayland-protocols.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1cc7ca2f59fd83dba51ea2a1feeacda1af868227</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

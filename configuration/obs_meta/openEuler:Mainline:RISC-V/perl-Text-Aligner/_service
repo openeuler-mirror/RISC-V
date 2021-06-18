@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/perl-Text-Aligner.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a2934deecc85f2fe0405294e2b93f495c13791c9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

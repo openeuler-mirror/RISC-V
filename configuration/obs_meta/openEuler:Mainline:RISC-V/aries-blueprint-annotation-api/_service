@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/aries-blueprint-annotation-api.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">77aa6c2a0ff8cf5752e2414bb3eeec535327da2a</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

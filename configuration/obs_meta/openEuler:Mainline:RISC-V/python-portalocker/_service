@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-portalocker.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">23d55815f6064b751cce4e88957f97cd5ba7e8e5</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

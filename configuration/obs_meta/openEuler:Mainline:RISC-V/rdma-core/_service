@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/rdma-core.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d7e98c27c6c593299a0a44d69930b9aa0a741267</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

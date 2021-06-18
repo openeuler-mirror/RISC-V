@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-is-regex.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">346c89d0999b1c0dbc2c80f1a029f18b01dead01</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

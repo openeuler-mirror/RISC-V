@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libsmbios.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4c7f67cceb85a0e7c1122bff765e55dba4526f59</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

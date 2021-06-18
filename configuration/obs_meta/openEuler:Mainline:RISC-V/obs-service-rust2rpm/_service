@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/obs-service-rust2rpm.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9dbd087a6baa074ef57e23ff6c67861422a56518</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

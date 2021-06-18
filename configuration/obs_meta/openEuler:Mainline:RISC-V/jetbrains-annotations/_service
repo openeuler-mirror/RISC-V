@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/jetbrains-annotations.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3ed910d75484ca58650295e09831c847c9ad20fb</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

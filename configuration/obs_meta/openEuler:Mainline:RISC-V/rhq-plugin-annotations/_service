@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/rhq-plugin-annotations.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">73dc39c13ac237c374f1516a4a6f0f837abbace7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

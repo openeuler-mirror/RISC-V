@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-repoze-lru.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ca98d6d27f4a78477117246b40f0249d77eb2db8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

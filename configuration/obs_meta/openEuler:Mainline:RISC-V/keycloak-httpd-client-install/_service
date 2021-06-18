@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/keycloak-httpd-client-install.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a876f3ae4c3acb56c06693f79005e072f7152700</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/maven-doxia.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0bf0f56f4e8a320cc38a13c7a66fcc4c3140ecd8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

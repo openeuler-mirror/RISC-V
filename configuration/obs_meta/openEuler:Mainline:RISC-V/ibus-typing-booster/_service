@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/ibus-typing-booster.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">dc2520b05f3136563dbcef8661cc0a0d348d72d7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

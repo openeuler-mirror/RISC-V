@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/HikariCP.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6b1e239bec68ee3cb7546f1f2e32a60ff220fd04</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>	

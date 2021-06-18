@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/hibernate-validator.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f2b4b5b6e03fd33299e00f01a77c23c274309c96</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

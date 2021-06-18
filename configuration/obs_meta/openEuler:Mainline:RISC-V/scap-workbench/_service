@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/scap-workbench.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">e1354cb389c8396f18ef94248bd33c6afbf70616</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

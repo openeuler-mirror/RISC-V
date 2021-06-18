@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/lua-lunit.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0d77b1c3c9ce857b7549ceffb8488d0f6cdc50c3</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

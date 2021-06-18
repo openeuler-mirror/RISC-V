@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/castor-maven-plugin.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">99e28343c6073fac874dd01ab2db9e770e05bacf</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

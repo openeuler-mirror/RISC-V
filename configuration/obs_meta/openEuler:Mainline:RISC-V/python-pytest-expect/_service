@@ -1,0 +1,13 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-pytest-expect.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c8d12bd183b73b0a835eba686fcc11a5ea327031</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
+	

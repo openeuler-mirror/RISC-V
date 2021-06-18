@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/uima-addons.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">f499e5c76c25b85a28e1b96beed34746ea9a06ff</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

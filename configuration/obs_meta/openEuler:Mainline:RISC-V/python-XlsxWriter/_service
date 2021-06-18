@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-XlsxWriter.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1981c8cd4240ab8f598dcb3226f0707b5fa475e7</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

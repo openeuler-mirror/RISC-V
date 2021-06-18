@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/mustache-java.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d948eaaa3c3ffda8670a0065e55c1e232bb89526</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

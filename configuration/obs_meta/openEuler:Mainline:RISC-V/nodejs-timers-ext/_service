@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-timers-ext.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3cb5c3d29f9517575d18dd165fe83729ed6f300c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

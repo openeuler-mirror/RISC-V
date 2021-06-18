@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/gstreamer-plugins-good.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b4578e019f76e3e14e00b59fe3a7382e95cc3ee0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

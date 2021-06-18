@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/native-platform.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a353b6ca0de1f2e36c323e2c9e49c7484d20dd4f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

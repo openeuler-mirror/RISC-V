@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-process-nextick-args.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">b0cae7436a0575de151749c02ac2e6c6a8868b6f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

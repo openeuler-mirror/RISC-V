@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/derby.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a0eaa17dd606ac2afb2b749c50f360ea6fe73e7c</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

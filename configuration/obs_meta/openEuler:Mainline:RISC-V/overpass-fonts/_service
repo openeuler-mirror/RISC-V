@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/overpass-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">ead116ada3cc87527d57177a3e888c10be386ebd</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

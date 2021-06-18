@@ -1,0 +1,27 @@
+<services>
+    <service name="tar_scm_repo_docker">
+       <param name="scm">git</param>
+       <param name="url">git@gitee.com:src-openeuler/kata_integration.git</param>
+       <param name="filename">kata-integration</param>
+       <param name="versionformat">v1.0.0</param>
+       <param name="exclude">.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">de18dc9941c15064979bd6e22e85f25af8413144</param>
+    </service>
+    <service name="recompress">
+       <param name="compression">gz</param>
+       <param name="file">*.tar</param>
+      <param name="exclude">.git</param>
+      <param name="revision">de18dc9941c15064979bd6e22e85f25af8413144</param>
+    </service>
+    <service name="extract_file">
+      <param name="archive">*kata-integration*.tar.gz</param>
+      <param name="files">kata-integration.spec</param>
+      <param name="exclude">.git</param>
+      <param name="revision">de18dc9941c15064979bd6e22e85f25af8413144</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

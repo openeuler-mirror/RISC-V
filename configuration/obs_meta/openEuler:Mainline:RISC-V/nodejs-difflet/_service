@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-difflet.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">4697fc17b86d60c478cb3c06ce0bfab7c4a738f6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

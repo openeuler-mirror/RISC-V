@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/rubygem-bcrypt.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0ef7172ca0f3ec16e07b47f3294ad530f7c44dc6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

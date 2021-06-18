@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/ibus-libpinyin.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3e92e93fc42be62bd1f23ee37e6cee12711f65c6</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

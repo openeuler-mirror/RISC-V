@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/perl-DBD-MySQL.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">69ab70f4ffbe5c96c08d436f29e780af96477787</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

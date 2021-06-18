@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/python-qrcode.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">81897e0cabea212a6f009e9301eb2770f7a2e0d8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libsodium.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">d5faf7451602a10ffd1f9f44c04c44836c1fbbc9</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

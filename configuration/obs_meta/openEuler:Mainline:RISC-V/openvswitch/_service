@@ -1,0 +1,17 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/openvswitch.git</param>
+      <param name="exclude">openvswitch-kmod.spec</param>
+      <param name="exclude">.git</param>
+      <param name="revision">fc85f16da0048ee7f85c88309a7c77108a8f22e1</param>
+    </service>
+    <!--service name="extract_file">
+        <param name="archive">*.tar.gz</param>
+        <param name="files">*/rhel/openvswitch.spec</param>
+    </service-->
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

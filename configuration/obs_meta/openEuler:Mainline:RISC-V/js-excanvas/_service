@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/js-excanvas.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">1183afaa42a0ed8193665afd777be9293792c823</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

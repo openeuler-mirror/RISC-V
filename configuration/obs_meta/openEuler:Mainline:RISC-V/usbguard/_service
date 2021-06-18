@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/usbguard.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">9bce4ba19e3aef24acb4c8444326f82e13967f55</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

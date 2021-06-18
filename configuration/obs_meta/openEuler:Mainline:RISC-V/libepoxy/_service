@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/libepoxy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">c4e843eaac2ef39b233cdbdc72c3b21eec050a96</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

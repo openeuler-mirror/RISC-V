@@ -1,0 +1,18 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/openEuler-indexhtml.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3c3cbe72e9bd526fe5a0ebf3b05374c026464f2f</param>
+    </service>
+    <service name="recompress">
+    <param name="compression">gz</param>
+    <param name="file">*.tar</param>
+      <param name="exclude">.git</param>
+      <param name="revision">3c3cbe72e9bd526fe5a0ebf3b05374c026464f2f</param>
+  </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

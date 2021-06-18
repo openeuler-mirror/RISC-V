@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/u2f-hidraw-policy.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0d125fa17606cd5de659348cf805415b6a9a706f</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

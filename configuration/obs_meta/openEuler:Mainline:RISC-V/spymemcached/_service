@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/spymemcached.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">a8409bb6cceb29e2b1e6fc3ad20218ffd4fee691</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

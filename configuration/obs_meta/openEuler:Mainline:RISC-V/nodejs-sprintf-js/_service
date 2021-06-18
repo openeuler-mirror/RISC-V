@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-sprintf-js.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">55449f144be39c50ecef78021300f6dcdfc2f6f8</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

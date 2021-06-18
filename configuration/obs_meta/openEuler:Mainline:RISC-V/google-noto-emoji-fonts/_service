@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/google-noto-emoji-fonts.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">6241f81462d571062980f5f1f326c0d3b59a4cd5</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

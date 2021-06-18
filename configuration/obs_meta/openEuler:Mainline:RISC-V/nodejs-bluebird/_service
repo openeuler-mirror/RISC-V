@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/nodejs-bluebird.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">5be68da0d8e2ba57c0485a4c2a33d4a7ed07eda2</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

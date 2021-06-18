@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/kmod-kvdo.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">0bc0f1bbe51da81a31f6f45bc6c27ffb814fc034</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>

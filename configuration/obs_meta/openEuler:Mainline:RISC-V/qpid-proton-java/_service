@@ -1,0 +1,12 @@
+<services>
+    <service name="tar_scm">
+      <param name="scm">git</param>
+      <param name="url">git@gitee.com:src-openeuler/qpid-proton-java.git</param>
+      <param name="exclude">.git</param>
+      <param name="revision">100f6ef54b3a542b7c11d2c367904c8565b18f83</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/*</param>
+    </service>
+</services>
