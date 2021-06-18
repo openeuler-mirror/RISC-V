@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/hfsplus-tools.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">480e6a098161fdf571181ce578a955e0eefff1fa</param>
+      <param name="revision">fe312689c53a992ce886ee454b6cb93f479362ed</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

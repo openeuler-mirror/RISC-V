@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/biosdevname.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">92763a38175a58880f9ff85262ab38cafc8cd60d</param>
+      <param name="revision">239ab7cbb2123b9c60ffe5de0f7ebb76002010fc</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/PyYAML.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">bd4c6d5a57fcb9886ec51c78f9cd582319f1f84e</param>
+      <param name="revision">acdc262478360c9e3f81222974e75c876850ba5d</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

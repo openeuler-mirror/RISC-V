@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/hunspell-km.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">0e20aa296f0f1ddb6e2d6b72c1e3d37949162c92</param>
+      <param name="revision">a075b6fcabd564031e0afa23d8889615552f7637</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

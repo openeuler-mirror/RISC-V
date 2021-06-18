@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/memcached.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">0f162bf32b564b9418a9f742d0e4d4263dac8779</param>
+      <param name="revision">486373d15764dc4c9454f766248873d47078708e</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

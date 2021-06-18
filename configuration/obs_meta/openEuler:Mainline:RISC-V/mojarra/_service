@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/mojarra.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">f5008c2318ed4e6a5795cdd2d4a647ba4dfae393</param>
+      <param name="revision">2bd864d27fa8b8da0b45673cd64dcb307d069f94</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

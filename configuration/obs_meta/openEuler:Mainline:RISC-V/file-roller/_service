@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/file-roller.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">193a58efd1bd94fb3272b3971976be7c9015c2a5</param>
+      <param name="revision">466b827bd3450c26db5383a933977aeef6b99103</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

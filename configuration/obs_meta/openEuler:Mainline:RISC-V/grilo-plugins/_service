@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/grilo-plugins.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">418d24735d9d64d0377935f43c8c67dcf58da9c7</param>
+      <param name="revision">96fccb3dc31861fed033aa8ac083cd54e0e85abc</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

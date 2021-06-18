@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/mikmod.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">da409c15b47df7491bd26fe79f4bb6ce29e042be</param>
+      <param name="revision">31073a3caf5cddcb04625d4c61a960a092d8392c</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

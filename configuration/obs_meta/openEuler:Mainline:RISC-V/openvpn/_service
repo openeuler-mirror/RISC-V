@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/openvpn.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">9a77da39fd39ccea47131f8cbaab775b9792a4b9</param>
+      <param name="revision">e188357f258863f57b0bbb5f9237b36faa6e77a4</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

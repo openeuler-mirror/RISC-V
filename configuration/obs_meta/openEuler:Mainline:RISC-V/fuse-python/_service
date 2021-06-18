@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/fuse-python.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">3cf524d03d6cc54f763d0011fa5cdef09f99ffa1</param>
+      <param name="revision">c744b787c3045d08c34eaf375b529d7439acd5fb</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

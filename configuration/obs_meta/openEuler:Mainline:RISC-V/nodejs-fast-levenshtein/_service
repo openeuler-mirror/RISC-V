@@ -3,7 +3,7 @@
         <param name="scm">git</param>
         <param name="url">git@gitee.com:src-openeuler/nodejs-fast-levenshtein.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">5fb18d47cfcbf6fd1d417f25a8aedf05112cb48a</param>
+      <param name="revision">b0a6173bf88adf8574f038a93ef96559838cfcd9</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

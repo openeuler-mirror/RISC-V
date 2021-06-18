@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/virt-manager.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">10ab5cd304b20d6c4aaf0a13e34fbbddc23a9fb1</param>
+      <param name="revision">e096fcdaae02764db0d1ef674e9d8230de08f49a</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

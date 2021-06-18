@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/varnish.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">286737d3728b7138964ac641dabc5ca0aff712dc</param>
+      <param name="revision">81a26b7a3f94daf558ae9dfb0a39e64c0cfc5fee</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

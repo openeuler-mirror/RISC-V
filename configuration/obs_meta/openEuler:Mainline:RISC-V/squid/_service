@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/squid.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">3445986d53aa8886f015b8b01827e08e59bbc84a</param>
+      <param name="revision">5db7d5ba16a6885995f0310894b86edc569a8f30</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

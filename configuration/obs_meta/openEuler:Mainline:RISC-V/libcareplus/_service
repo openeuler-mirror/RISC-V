@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/libcareplus.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">581bb5817398f8158654b8d1196cdb1d816f423d</param>
+      <param name="revision">9517c959f670cc6bad4a5a9ee99c135b12ba251e</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/nodejs-should.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">09988544edbb8b028e1b6f38c99a63013ac5f9f3</param>
+      <param name="revision">acd8f241cbc11fdda0fdf4bd71514beeea4d3964</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

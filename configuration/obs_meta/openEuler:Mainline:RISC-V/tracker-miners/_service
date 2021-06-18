@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/tracker-miners.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">b8320d1ed6ffc0cbda71cb5a54d4c302494b58c5</param>
+      <param name="revision">3d770c5bd2fe420a340717c06f8e0f1205024124</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

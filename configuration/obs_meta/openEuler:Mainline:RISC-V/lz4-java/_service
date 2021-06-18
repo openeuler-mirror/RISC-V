@@ -3,7 +3,7 @@
         <param name="scm">git</param>
         <param name="url">git@gitee.com:src-openeuler/lz4-java.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">2879336b1ca1b144a86c8ade8f4ddcb806fa1007</param>
+      <param name="revision">93f8a6d5da8570b4a92764001f8fa8eb88eef2a0</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

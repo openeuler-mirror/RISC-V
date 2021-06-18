@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/perl-Test-File.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">a960ff7b72adb32b578ddeb990a196403c1add06</param>
+      <param name="revision">ce200578e0d2e9e2a06f6dd9c52d04f885b8282c</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

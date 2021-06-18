@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/polkit.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">6006e064f0da4f5ea268e69e82be10d21584240a</param>
+      <param name="revision">be4d9ffc05f73ba8af2247e094a52dd1c24a6a4c</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

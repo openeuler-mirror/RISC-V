@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/perl-NetAddr-IP.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">27eabc71999e729349be3bbf518ec55f4bb32b88</param>
+      <param name="revision">e85df11d0cac1c1fb85f93e6b5cd8dd53f1dc289</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

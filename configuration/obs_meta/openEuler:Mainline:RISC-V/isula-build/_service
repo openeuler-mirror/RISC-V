@@ -3,13 +3,13 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/isula-build.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">2fcfbd8fefa1212c33db3e71ce2bd0711c19a138</param>
+      <param name="revision">dafe8c5431be59b2588b745cf2a365ac2bd4d8d4</param>
     </service>
     <service name="recompress">
       <param name="compression">gz</param>
       <param name="file">*.tar</param>
       <param name="exclude">.git</param>
-      <param name="revision">2fcfbd8fefa1212c33db3e71ce2bd0711c19a138</param>
+      <param name="revision">dafe8c5431be59b2588b745cf2a365ac2bd4d8d4</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

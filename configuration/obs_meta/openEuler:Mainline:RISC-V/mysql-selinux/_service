@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/mysql-selinux.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">2a9c81cdca427851c09196ec0e36aa8957d150bd</param>
+      <param name="revision">56ebecb610772d403b7243352622be5fe1b19a79</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

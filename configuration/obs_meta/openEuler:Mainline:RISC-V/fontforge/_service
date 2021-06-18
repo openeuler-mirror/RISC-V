@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/fontforge.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">80eee22a09a6d60b2305f2ca0419f88ed7860d44</param>
+      <param name="revision">0a90082f0b4b1bffaa98396518fbfd6614e2f914</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

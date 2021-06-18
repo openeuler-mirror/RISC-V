@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/opa-psm2.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">4beca77733f3602392ad65e2f16628654f87a855</param>
+      <param name="revision">a135cda6d2140d04960dcb814a3013f8df936928</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

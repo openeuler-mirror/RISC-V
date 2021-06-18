@@ -2,8 +2,6 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/rsyslog.git</param>
-      <param name="revision"></param>
-      <param name="filename">rsyslog</param>
       <param name="exclude">.git</param>
       <param name="revision">141b7fcba974963d11b0b64d3bf5254e5565525a</param>
     </service> 

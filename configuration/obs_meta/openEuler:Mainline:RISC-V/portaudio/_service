@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/portaudio.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">ab03e3a1e609baa162a65f60c108bfbdc344a82d</param>
+      <param name="revision">8cf494afb1d23718a5ea268f32b23e3b91750144</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

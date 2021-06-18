@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/perl-Unicode-LineBreak.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">d97b3b2994a1a8b8c4026a2a8fdf4aeca4014513</param>
+      <param name="revision">46795a29163d8977a6d0e7a66967077b19388211</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

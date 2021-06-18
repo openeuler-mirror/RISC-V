@@ -3,7 +3,7 @@
         <param name="scm">git</param>
         <param name="url">git@gitee.com:src-openeuler/resteasy.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">1eeb9b531fabb8da1ad2ba83d8c7fe4428cf2bf2</param>
+      <param name="revision">7772bd991bf479891698dc9bc17f66be8e21864f</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

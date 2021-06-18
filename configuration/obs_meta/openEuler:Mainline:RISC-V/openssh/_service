@@ -2,10 +2,8 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/openssh.git</param>
-      <param name="revision"></param>
-      <param name="filename">openssh</param>
-      <param name="exclude">.git</param>
       <param name="revision">1575d3deb7ec09d75bb374691f509ae9de30bd89</param>
+      <param name="exclude">.git</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>

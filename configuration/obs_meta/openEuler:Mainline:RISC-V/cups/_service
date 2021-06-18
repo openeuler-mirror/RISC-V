@@ -3,7 +3,7 @@
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/cups.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">1e13f0940065aa12578cae1e964d8988590ecf18</param>
+      <param name="revision">fbd73f4114f85e16cddd89e2e5fdf7d1d90e6b71</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>
