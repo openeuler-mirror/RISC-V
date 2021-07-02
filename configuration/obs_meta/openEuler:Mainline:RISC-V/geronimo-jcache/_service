@@ -1,9 +1,9 @@
 <services>
     <service name="tar_scm">
-      <param name="scm">git</param>
-      <param name="url">git@gitee.com:eastb233/gcc.git</param>
+        <param name="scm">git</param>
+        <param name="url">git@gitee.com:src-openeuler/geronimo-jcache.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">develop</param>
+      <param name="revision">36bc6e0196edfab1eff36821e811ccb8f174d5d5</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>
