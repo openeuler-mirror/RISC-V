@@ -14,7 +14,7 @@ This repository hosts information about openEuler RISC-V. It includes how to get
 - **September, 2020** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux。<句意理解问题1> OpenEuler RISC-V was released at Huawei Full Connectivity (HC) 2020 Conference. It is the first RISC-V version of Linux released in China.
 - **August, 2020** Start building software packages of openEuler RISC-V in [OBS construction system](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V).	
 - **June, 2020** The first version of rootfs and kernel mirror was released in [repositories of Chinese Academy of Sciences](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/). [News](http://crva.ict.ac.cn/crvs2020/index/slides/3-9.pdf)
-#### Participate in events of RISC-V SIG <ok>
+#### Participate in events of RISC-V SIG
 RISC-V SIG is responsible for RISC-V related events. You can participate in RISC-V SIG the following ways:
 - Create or reply to issues：You are welcome to discuss by creating or replying to issues. A list of repositories that independently maintained by RISC-V SIG is available in [sig-RISC-V](https://gitee.com/openeuler/community/tree/master/sig/sig-RISC-V). In addition to the independently maintained repositories, if there are any RISC-V related problems in other repositories of src-openEuler, please issue them in openEuler/RISC-V and related repositories, so that we can solve them together.
 - SIG group regular meetings: Every Tuesday morning, there will be a regular meeting discussion . A link to the meeting will be sent through the openEuler-Dev mailing list.
