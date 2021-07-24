@@ -1,6 +1,6 @@
 # RISC-V 
 
-#### Introduction <ok>
+#### Introduction
 This repository hosts information about openEuler RISC-V. It includes how to get and use the documentation, project configuration and tools of openEuler RISC-V.
 #### News Update
 - **April, 2021**  UC Techip, a  RISC-V processor developer, joined the OpenEuler community.  [Link](https://gitee.com/flame-ai/hello-openEuler/issues/I3CHPZ#note_4752587_link)
@@ -11,7 +11,7 @@ This repository hosts information about openEuler RISC-V. It includes how to get
 - **December, 2020** Demonstrate executing openEuler RISC-V on NutShell at the 2020 openEuler Summit.[Link](https://openeuler.org/zh/blog/yang_yanchao/2021-3-12-start-a-containerd-on-riscv.html)
 - **November, 2020** In [openeuler's mirror repository](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/) the second version of rootfs and kernel's mirror were released. You can start he mirror in QEMU and experience ported version of openEuler RISC-V.       
 - **October, 2020** The Chinese Academy of Sciences has successfully ported openEuler RISC-V to the NutShell.     
-- **September, 2020** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux。 OpenEuler RISC-V was released at Huawei Full Connectivity (HC) 2020 Conference. It is the first RISC-V version of Linux released in China.
+- **September, 2020** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux。<句意理解问题1> OpenEuler RISC-V was released at Huawei Full Connectivity (HC) 2020 Conference. It is the first RISC-V version of Linux released in China.
 - **August, 2020** Start building software packages of openEuler RISC-V in [OBS construction system](https://build.openeuler.org/project/show/openEuler:Mainline:RISC-V).	
 - **June, 2020** The first version of rootfs and kernel mirror was released in [repositories of Chinese Academy of Sciences](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/). [News](http://crva.ict.ac.cn/crvs2020/index/slides/3-9.pdf)
 #### Participate in events of RISC-V SIG <ok>
@@ -21,7 +21,7 @@ RISC-V SIG is responsible for RISC-V related events. You can participate in RISC
 - Mail list contact: Currently, there is no independent mail list for RISC-V SIG. You can discuss using the openEuler-Dev (dev@openeuler.org) mailing list. However, if the discussion of the topic is rich enough, applying for an independent RISC-V mail list will be considered.
 - WeChat: Contact us to join the WeChat group of RISC-V SIG and have discussions here. Please feel free to share your thoughts.          
     <img src="./documents/sig-RISC-V-WeChatContact-QRcode.jpg" width="30%" height="30%">
-#### Directory Structure <ok>
+#### Directory Structure
 
 - [documents](./documents/): usage documents
   - [To get and use openEuler RISC-V](documents/Installing.md)
@@ -32,7 +32,7 @@ RISC-V SIG is responsible for RISC-V related events. You can participate in RISC
 - [tools](./tools): build-related tools of openEuler RISC-V 
   - [Tools for making openEuler RISC-V rootf](tools/mkfs-oe.sh)
 
-#### RPM repo mirror repository and services of software source <ok>
+#### RPM repo mirror repository and services of software source 
 
 Binary RPM package, source package SRPM hosting and software source services are provided.
 ```
@@ -43,20 +43,20 @@ https://repo.openeuler.org/openEuler-preview/RISC-V/
 https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 ```
 
-#### Mirror Download <ok>
+#### Mirror Download
 
 Root file system(rootfs), virtual disk mirroring, kernel mirroring, openSBI, and binary mirror service like BBL are provided. These are for developers and enthusiasts who want to quickly set up the build environment for compilation, to have a quick experience of the RISC-V port version of OpenEuler OS in a virtual machine environment, and to have a quick experience of the ported version of openEuler OS on the recommended hardware platform.
 
 - QEMU RISC-V 64 simulation environment: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images
 - NutShell(果壳, UCAS) COOSCA1.0 hardware environment： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS
 
-#### Source-code repository  <ok>
+#### Source-code repository
 
 The code used in ported version of openEuler RISC-V is intended to be consistent with the master branch of the codebase in src-openEule. Thus, the changes encountered during the adaptation of the RISC-V architecture will be pushed to the master branch of the codebase as much as possible. If the master branch of openEuler does not accept the pushed code at the moment, then branch of the pushed code will be used as source-code repository temporality. After master has accepted it, code of master branch will be used.
 
  The software packages codebase and version information that the ported version of openEuler RISC-V includes are available in [the package list file](configuration/RISC-V_list.yaml) under the Configuration directory.
 
-### 列在openEuler社区维护的创建专门深度维护的源码repo <???>
+### 列在openEuler社区维护的创建专门深度维护的源码repo <句意理解问题2>
 
 - opensbi
 - risc-v-kernel
@@ -66,17 +66,17 @@ The code used in ported version of openEuler RISC-V is intended to be consistent
 - openEuler-riscv-glibc-NutShell
 
 
-#### Virtual machine simulation platform <ok>
+#### Virtual machine simulation platform
 
 Currently, ported version of openEuler RISC-V supports the following target platforms:
 - Implement QEMU-RISC-V 64 virtual machine running on x86_64, aarch64 platform. It is also the preferred initial development test environment during development.
 
-#### Hardware platform support <ok>
+#### Hardware platform support
 
 - NutShell(果壳, UCAS) COOSCA1.0: This is the currently default supported hardware testing environment.
 - SiFive HiFive Unleashed
 
-#### How to deploy tests for openeuler OS on Nutshell (果壳, UCAS) COOSCA1.0 <ok>
+#### How to deploy tests for openeuler OS on Nutshell (果壳, UCAS) COOSCA1.0
 - Material preparation
   - [RV_BOOT.UCAS_COOSCA1.0_V1.BIN](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS/RV_BOOT.UCAS-COOSCA1.0_V1.BIN):  Port kernel and BBL package files that support Nutshell UCAS COOSCA1.0.
   - [oe-UCAS_COOSCA1.0-rootfs.v1.tar.gz](https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS/oe-UCAS_COOSCA1.0-rootfs.v1.tar.gz): Port the root file system adapted to run on Nutshell UCAS Coosca 1.0.
