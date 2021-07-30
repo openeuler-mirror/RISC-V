@@ -35,7 +35,7 @@ def _pull(base, name):
         _cmd = "git clone %s" % url
         print("_cmd: %s" % _cmd)
         subprocess.getstatusoutput("git clone %s" % url)
-        subprocess.getstatusoutput("cd %s" % url)
+        subprocess.getstatusoutput("cd %s" % name)
         subprocess.getstatusoutput("git reset --hard %s" % revision)
 
 def _main():
