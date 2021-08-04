@@ -22,8 +22,15 @@ def _pull(base, name):
     root = DOMTree.documentElement
     services = root.getElementsByTagName("service")
     params = services[0].getElementsByTagName("param")
-    url = params[1].childNodes[0].data
-    revision = params[2].childNodes[0].data
+    url = ""
+    revision = ""
+    for p in params:
+        attr = p.getAttribute("name")
+        if attr == "url":
+            url = p.childNodes[0].data
+        if attr == "revision":
+            revision = p.childNodes[0].data
+
     print("_url: %s" % url)
     print("_revision: %s" % revision)
 
