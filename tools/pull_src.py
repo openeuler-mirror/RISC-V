@@ -8,6 +8,11 @@
 #
 # eg:
 #      <path_to_this_repo>/tools/pull_src.py bash
+#      to pull source code of 'bash'
+#
+#      specifically, use 'all' to pull full collection
+#      <path_to_this_repo>/tools/pull_src.py all
+#      to get all source code.
 #
 
 import os
@@ -15,6 +20,11 @@ from xml.dom.minidom import parse
 import xml.dom.minidom
 import subprocess
 import sys
+
+def _pull_all(base):
+    for root, dirs, files in os.walk(base):
+        for pkg in dirs:
+            _pull(base, pkg)
 
 def _pull(base, name):
     fullname = os.path.join(base, name, "_service")
@@ -34,23 +44,20 @@ def _pull(base, name):
     print("_url: %s" % url)
     print("_revision: %s" % revision)
 
-    if revision != ".git":
-        _cmd = "git clone %s -b %s " % (url, revision)
-        print("_cmd: %s" % _cmd)
-        subprocess.getstatusoutput("git clone %s -b %s" % (url, revision))
-    else:
-        _cmd = "git clone %s" % url
-        print("_cmd: %s" % _cmd)
-        subprocess.getstatusoutput("git clone %s" % url)
-        subprocess.getstatusoutput("cd %s" % name)
-        subprocess.getstatusoutput("git reset --hard %s" % revision)
+    _cmd = "git clone %s" % url
+    print("_cmd: %s" % _cmd)
+    subprocess.getstatusoutput("git clone %s" % url)
+    subprocess.getstatusoutput("cd %s && git checkout %s && git reset --hard" % (name, revision))
 
 def _main():
     base = os.path.realpath(sys.argv[0])
     base = os.path.dirname(base)
     base = os.path.dirname(base)
     base = base + "/configuration/obs_meta/openEuler:Mainline:RISC-V"
-    _pull(base, sys.argv[1])
+    if sys.argv[1] == "all":
+        _pull_all(base)
+    else:
+        _pull(base, sys.argv[1])
 
 if __name__== '__main__':
     _main()
