@@ -50,10 +50,9 @@ def _pull(base, name):
     subprocess.getstatusoutput("cd %s && git checkout %s && git reset --hard" % (name, revision))
 
 def _main():
-    base = os.path.realpath(sys.argv[0])
-    base = os.path.dirname(base)
-    base = os.path.dirname(base)
-    base = base + "/configuration/obs_meta/openEuler:Mainline:RISC-V"
+    rpath = "../configuration/obs_meta/openEuler:Mainline:RISC-V"
+    base = os.path.join(os.path.dirname(sys.argv[0]), rpath)
+
     if sys.argv[1] == "all":
         _pull_all(base)
     else:
