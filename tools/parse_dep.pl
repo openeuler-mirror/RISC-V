@@ -4,6 +4,7 @@ use strict;
 use File::Path;
 use File::Basename;
 use Switch;
+use Data::Dumper;
 
 my %pkg_dep_map = ();
 
@@ -49,8 +50,10 @@ sub _handle_src_dir
     closedir(DIR);
 
     foreach my $d (@dirs) {
-        print "processing: " . $d . "\n";
-        _handle_one_spec($dir . "/" . $d . "/" . $d . ".spec", $d);
+        unless ($d =~ /\./ or $d =~ /\.\./) {
+            print "processing: " . $d . "\n";
+            _handle_one_spec($dir . "/" . $d . "/" . $d . ".spec", $d);
+        }
     }
 }
 
@@ -74,10 +77,18 @@ switch($ARGV[0]) {
     }
 }
 
+=for
 foreach my $pkg (keys %pkg_dep_map) {
     print "package: [" . $pkg . "] deps:\n";
     my @deps = $pkg_dep_map{$pkg};
     print "@{$pkg_dep_map{$pkg}}\n";
 }
+=cut
+
+open(DEPS, ">.deps") || die "can not open: $1";
+print DEPS Dumper(\%pkg_dep_map);
+close(DEPS) || die "error closing file: $1!";
+
+print "Dependencies are saved into [.deps] for further use.\n";
 
 exit(0);
