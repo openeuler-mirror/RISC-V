@@ -38,22 +38,27 @@ sub _handle_dep_str
 sub _handle_one_spec
 {
     my ($spec, $name) = @_;
+    my %pkg_map = ();
     open(SPEC, $spec);
     while (<SPEC>) {
         my $line = $_;
         if ($line =~ /buildrequires(.*?):(.*)/ig) {
             my @ndeps;
-            if (exists($pkg_dep_map{$name})) {
-                @ndeps = @{$pkg_dep_map{$name}};
+            if (exists($pkg_map{"bdep"})) {
+                @ndeps = @{$pkg_map{"bdep"}};
             }
             my @deps = _handle_dep_str($2);
 
             push(@ndeps, @deps);
-            $pkg_dep_map{$name} = [ @ndeps ];
-        } else {
-            #print $line;
+            $pkg_map{"bdep"} = [ @ndeps ];
+        }
+        if ($line =~ /Version:(\s+?)(.*)/g) {
+            my $version = $2;
+            $version =~ s/ //g;
+            $pkg_map{"version"} = $version;
         }
     }
+    $pkg_dep_map{$name} = { %pkg_map };
     close(SPEC);
 }
 
