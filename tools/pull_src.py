@@ -33,21 +33,36 @@ def _pull(base, name):
     services = root.getElementsByTagName("service")
     params = services[0].getElementsByTagName("param")
     url = ""
-    revision = ""
+    revision = "master"
     for p in params:
         attr = p.getAttribute("name")
         if attr == "url":
             url = p.childNodes[0].data
         if attr == "revision":
-            revision = p.childNodes[0].data
+            try:
+                revision = p.childNodes[0].data
+            except IndexError:
+                print("##################################")
+                print("Handle revision error for [%s]" % name)
+                print("##################################")
+                pass
 
     print("_url: %s" % url)
-    print("_revision: %s" % revision)
+    force_https = os.getenv('FORCE_GITEE_HTTPS', "")
+    if force_https != "":
+        url = url.replace("git@gitee.com:", "https://gitee.com/")
+        print("USE https: %s" % url)
+        print("_revision: %s" % revision)
 
     _cmd = "git clone %s" % url
     print("_cmd: %s" % _cmd)
     subprocess.getstatusoutput("git clone %s" % url)
     subprocess.getstatusoutput("cd %s && git checkout %s && git reset --hard" % (name, revision))
+    if not os.path.exists(name):
+        print("-----")
+        print("Get source of [ %s ] failed." % name)
+        print("-----")
+
 
 def _main():
     rpath = "../configuration/obs_meta/openEuler:Mainline:RISC-V"
@@ -59,4 +74,7 @@ def _main():
         _pull(base, sys.argv[1])
 
 if __name__== '__main__':
-    _main()
+    try:
+        _main()
+    except KeyboardInterrupt:
+        pass
