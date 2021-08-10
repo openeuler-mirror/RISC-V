@@ -20,25 +20,45 @@ sub _print_help
     print "  batch handle all subsequent specs.\n";
 }
 
+sub _handle_dep_str
+{
+    my ($_depstr) = @_;
+
+    $_depstr =~ s/\s+?>/>/g;
+    $_depstr =~ s/\s+?</</g;
+    $_depstr =~ s/\s+?=/=/g;
+    $_depstr =~ s/=\s+?/=/g;
+    $_depstr =~ s/,/ /g;
+
+    my @deps;
+    @deps = split(' ', $_depstr);
+    return @deps;
+}
+
 sub _handle_one_spec
 {
     my ($spec, $name) = @_;
+    my %pkg_map = ();
     open(SPEC, $spec);
     while (<SPEC>) {
         my $line = $_;
         if ($line =~ /buildrequires(.*?):(.*)/ig) {
             my @ndeps;
-            if (exists($pkg_dep_map{$name})) {
-                @ndeps = @{$pkg_dep_map{$name}};
+            if (exists($pkg_map{"bdep"})) {
+                @ndeps = @{$pkg_map{"bdep"}};
             }
-            my @deps = split(' ', $2);
+            my @deps = _handle_dep_str($2);
 
             push(@ndeps, @deps);
-            $pkg_dep_map{$name} = [ @ndeps ];
-        } else {
-            #print $line;
+            $pkg_map{"bdep"} = [ @ndeps ];
+        }
+        if ($line =~ /Version:(\s+?)(.*)/g) {
+            my $version = $2;
+            $version =~ s/ //g;
+            $pkg_map{"version"} = $version;
         }
     }
+    $pkg_dep_map{$name} = { %pkg_map };
     close(SPEC);
 }
 
@@ -67,7 +87,6 @@ switch($ARGV[0]) {
     case "-f" {
         my $name = basename($ARGV[1], ".spec");
         _handle_one_spec($ARGV[1], $name);
-        exit(0);
     }
     case "-d" {
         _handle_src_dir($ARGV[1]);
@@ -84,6 +103,7 @@ foreach my $pkg (keys %pkg_dep_map) {
     print "@{$pkg_dep_map{$pkg}}\n";
 }
 =cut
+
 
 open(DEPS, ">.deps") || die "can not open: $1";
 print DEPS Dumper(\%pkg_dep_map);

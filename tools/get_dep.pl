@@ -34,9 +34,19 @@ switch($ARGV[0]) {
     case "-p" {
         my $pkg = $ARGV[1];
         if (exists($pkg_dep_map{$pkg})) {
-            print "package: [" . $pkg . "] deps:\n";
-            my @deps = $pkg_dep_map{$pkg};
-            print "@{$pkg_dep_map{$pkg}}\n";
+            my %pkg_info = %{$pkg_dep_map{$pkg}};
+
+            print "package: [" . $pkg . "]\n";
+            print "version: " . $pkg_info{"version"} . "\n";
+            print "build dependenies:\n";
+
+            my @deps = @{$pkg_info{'bdep'}};
+            #print "@{$pkg_info{'bdep'}}";
+            print "{\n";
+            for my $_dep (@deps) {
+                print "\t$_dep\n";
+            }
+            print "}\n";
         } else {
             print "Please make sure the parse_dep.pl has success. And the " .
                 $pkg . " is in openEuler source repo.\n";
