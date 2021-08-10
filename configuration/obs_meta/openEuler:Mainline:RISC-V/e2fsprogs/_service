@@ -2,7 +2,6 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/e2fsprogs.git</param>
-      <param name="revision"></param>
       <param name="filename">e2fsprogs</param>
       <param name="exclude">.git</param>
       <param name="revision">3a64614b86ef9e2900504c9a4d791888308bbe0e</param>
