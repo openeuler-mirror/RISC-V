@@ -2,7 +2,6 @@
     <service name="tar_scm">
       <param name="scm">git</param>
       <param name="url">git@gitee.com:src-openeuler/python3.git</param>
-      <param name="revision"></param>
       <param name="filename">python</param>
       <param name="exclude">.git</param>
       <param name="revision">35bb16f9283e80802c99de3415f428b46c562dbf</param>
