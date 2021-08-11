@@ -38,24 +38,62 @@ sub _handle_dep_str
 sub _handle_one_spec
 {
     my ($spec, $name) = @_;
+    my $version;
+    my $release;
     my %pkg_map = ();
     open(SPEC, $spec);
+
+    my $pkg_name = $name;
+    $pkg_map{$pkg_name} = {};
     while (<SPEC>) {
         my $line = $_;
+        if ($line =~ /Name:\s*(.*)/ig) {
+            $name = $1;
+        }
+        if ($line =~ /Version:\s*(.*)/ig) {
+            $version = $1;
+        }
+        if ($line =~ /Release:\s*(.*)/ig) {
+            $release = $1;
+        }
         if ($line =~ /buildrequires(.*?):(.*)/ig) {
             my @ndeps;
-            if (exists($pkg_map{"bdep"})) {
-                @ndeps = @{$pkg_map{"bdep"}};
+            my %pkg = %{$pkg_map{$pkg_name}};
+            if (exists($pkg{"bdep"})) {
+                @ndeps = @{$pkg{"bdep"}};
             }
             my @deps = _handle_dep_str($2);
 
             push(@ndeps, @deps);
-            $pkg_map{"bdep"} = [ @ndeps ];
+            $pkg{"bdep"} = [ @ndeps ];
+            $pkg_map{$pkg_name} = { %pkg };
         }
-        if ($line =~ /Version:(\s+?)(.*)/g) {
+        if ($line =~ /Version:(\s*)(.*)/g) {
             my $version = $2;
-            $version =~ s/ //g;
-            $pkg_map{"version"} = $version;
+            my %pkg = %{$pkg_map{$pkg_name}};
+            $pkg{"version"} = $version;
+            $pkg_map{$pkg_name} = { %pkg };
+        }
+        if ($line =~ /%package*/g) {
+            my @gs = split(' ', $line);
+            my $subpn = $gs[scalar @gs - 1];
+            if (scalar @gs == 2) {
+                $pkg_name = $name . "-" . $subpn;
+            } else {
+                $pkg_name = $subpn;
+            }
+            $pkg_map{$pkg_name} = {};
+        }
+        if ($line =~ /^Requires:(\s*)(.*)/g) {
+            my @rdeps;
+            my %pkg = %{$pkg_map{$pkg_name}};
+            if (exists($pkg{"rdep"})) {
+                @rdeps = @{$pkg{"rdep"}};
+            }
+            my @deps = _handle_dep_str($2);
+            push(@rdeps, @deps);
+            $pkg{"rdep"} = [ @rdeps ];
+            $pkg_map{$pkg_name} = { %pkg };
         }
     }
     $pkg_dep_map{$name} = { %pkg_map };
