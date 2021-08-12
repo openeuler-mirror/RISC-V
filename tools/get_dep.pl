@@ -41,9 +41,18 @@ switch($ARGV[0]) {
             print "version: " . $pkg_info{"version"} . "\n";
             print "build dependenies:\n";
 
-            my @deps = @{$pkg_info{'bdep'}};
-            #print "@{$pkg_info{'bdep'}}";
-            print "{\n";
+            my @deps;
+            @deps = @{$pkg_info{'bdep'}};
+            #print Dumper \@deps;
+            print "bdep: {\n";
+            for my $_dep (@deps) {
+                print "\t$_dep\n";
+            }
+            print "}\n";
+
+            @deps = @{$pkg_info{'rdep'}};
+            #print Dumper \@deps;
+            print "rdep: {\n";
             for my $_dep (@deps) {
                 print "\t$_dep\n";
             }
@@ -51,6 +60,48 @@ switch($ARGV[0]) {
         } else {
             print "Please make sure the parse_dep.pl has success. And the " .
                 $pkg . " is in openEuler source repo.\n";
+        }
+    }
+    case "-ba" {
+        # check bdep of all packages then count top 10 pkgs for build env
+        my @pkgs = keys(%pkg_dep_map);
+        my %bdep_count;
+
+        for my $pkg (@pkgs) {
+            my %main_pkg = %{$pkg_dep_map{$pkg}};
+            %main_pkg = %{$main_pkg{$pkg}};
+            #print Dumper \%main_pkg;
+            my @bdeps = @{$main_pkg{'bdep'}};
+            for my $bd (@bdeps) {
+                if (exists($bdep_count{$bd})) {
+                    $bdep_count{$bd}++;
+                } else {
+                    $bdep_count{$bd} = 1;
+                }
+            }
+        }
+
+        my %rbdev_map;
+        my @scores;
+        for my $rd (keys(%bdep_count)) {
+            my @deps;
+            my $rkey = $bdep_count{$rd};
+            if (exists($rbdev_map{$rkey})) {
+                @deps = @{$rbdev_map{$rkey}};
+            } else {
+                push(@scores, ($rkey));
+            }
+            push(@deps, ($rd));
+            $rbdev_map{$rkey} = [ @deps ];
+        }
+
+        my @sorted_scores = sort { $a <=> $b } @scores;
+        #print Dumper \@sorted_scores;
+        my $idx = scalar @sorted_scores - 1;
+        while ($idx >= 0) {
+            print "Refed " . $sorted_scores[$idx] . " times:\n";
+            print Dumper \@{$rbdev_map{$sorted_scores[$idx]}};
+            $idx--;
         }
     }
     case "-br" {
@@ -73,7 +124,7 @@ switch($ARGV[0]) {
             #print "$h\n";
             my %pinfo = %{$pkg_dep_map{$h}};
             %pinfo = %{$pinfo{$h}};
-            for my $nd (@{$pinfo{'bdep'}}) {
+            for my $nd (@{$pinfo{'rdep'}}) {
                 unless (exists($depmap{$nd})) {
                     push(@queue, ($nd));
                     $depmap{$nd} = 1;
