@@ -41,14 +41,17 @@ sub _handle_one_spec
     my $version;
     my $release;
     my %pkg_map = ();
-    open(SPEC, $spec);
-
     my $pkg_name = $name;
     $pkg_map{$pkg_name} = {};
+
+    open(SPEC, $spec) or print "file [ " . $spec . " ] does not exists.\n";
     while (<SPEC>) {
         my $line = $_;
         if ($line =~ /Name:\s*(.*)/ig) {
+            # renamed main package
             $name = $1;
+            $pkg_name = $name;
+            $pkg_map{$pkg_name} = {};
         }
         if ($line =~ /Version:\s*(.*)/ig) {
             $version = $1;
@@ -84,7 +87,7 @@ sub _handle_one_spec
             }
             $pkg_map{$pkg_name} = {};
         }
-        if ($line =~ /^Requires:(\s*)(.*)/g) {
+        if ($line =~ /^Requires.*:(\s*)(.*)/g) {
             my @rdeps;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"rdep"})) {
@@ -109,8 +112,11 @@ sub _handle_src_dir
 
     foreach my $d (@dirs) {
         unless ($d =~ /\./ or $d =~ /\.\./) {
-            print "processing: " . $d . "\n";
-            _handle_one_spec($dir . "/" . $d . "/" . $d . ".spec", $d);
+            my @specs = `ls $dir/$d/*spec`;
+            for my $spec (@specs) {
+                print "processing: " . $spec;
+                _handle_one_spec($spec, $d);
+            }
         }
     }
 }
