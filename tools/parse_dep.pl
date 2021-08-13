@@ -59,13 +59,14 @@ sub _handle_one_spec
         if ($line =~ /Release:\s*(.*)/ig) {
             $release = $1;
         }
-        if ($line =~ /buildrequires(.*?):(.*)/ig) {
+        if ($line =~ /^BuildRequires(.*?):(.*)/g) {
             my @ndeps;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"bdep"})) {
                 @ndeps = @{$pkg{"bdep"}};
             }
             my @deps = _handle_dep_str($2);
+            #print Dumper \@deps;
 
             push(@ndeps, @deps);
             $pkg{"bdep"} = [ @ndeps ];
@@ -77,7 +78,13 @@ sub _handle_one_spec
             $pkg{"version"} = $version;
             $pkg_map{$pkg_name} = { %pkg };
         }
-        if ($line =~ /%package*/g) {
+        if ($line =~ /Release:(\s*)(.*)/g) {
+            my $release = $2;
+            my %pkg = %{$pkg_map{$pkg_name}};
+            $pkg{"release"} = $release;
+            $pkg_map{$pkg_name} = { %pkg };
+        }
+        if ($line =~ /\%package*/g) {
             my @gs = split(' ', $line);
             my $subpn = $gs[scalar @gs - 1];
             if (scalar @gs == 2) {
@@ -87,7 +94,7 @@ sub _handle_one_spec
             }
             $pkg_map{$pkg_name} = {};
         }
-        if ($line =~ /^Requires.*:(\s*)(.*)/g) {
+        if ($line =~ /^Requires.*?:(\s*)(.*)/g) {
             my @rdeps;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"rdep"})) {
@@ -98,7 +105,19 @@ sub _handle_one_spec
             $pkg{"rdep"} = [ @rdeps ];
             $pkg_map{$pkg_name} = { %pkg };
         }
+        if ($line =~ /^Provides.*?:(\s*)(.*)/g) {
+            my @provides;
+            my %pkg = %{$pkg_map{$pkg_name}};
+            if (exists($pkg{"provides"})) {
+                @provides = @{$pkg{"provides"}};
+            }
+            my @pros = _handle_dep_str($2);
+            push(@provides, @pros);
+            $pkg{"provides"} = [ @provides ];
+            $pkg_map{$pkg_name} = { %pkg };
+        }
     }
+    #print Dumper \%pkg_map;
     $pkg_dep_map{$name} = { %pkg_map };
     close(SPEC);
 }
