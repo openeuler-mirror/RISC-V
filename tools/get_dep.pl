@@ -41,20 +41,27 @@ switch($ARGV[0]) {
             print "version: " . $pkg_info{"version"} . "\n";
             print "build dependenies:\n";
 
-            my @deps;
-            @deps = @{$pkg_info{'bdep'}};
-            #print Dumper \@deps;
+            my @bdeps = @{$pkg_info{'bdep'}};
+            #print Dumper \@bdeps;
             print "bdep: {\n";
-            for my $_dep (@deps) {
+            for my $_dep (@bdeps) {
                 print "\t$_dep\n";
             }
             print "}\n";
 
-            @deps = @{$pkg_info{'rdep'}};
-            #print Dumper \@deps;
+            my @rdeps = @{$pkg_info{'rdep'}};
+            #print Dumper \@rdeps;
             print "rdep: {\n";
-            for my $_dep (@deps) {
+            for my $_dep (@rdeps) {
                 print "\t$_dep\n";
+            }
+            print "}\n";
+
+            my @provides = @{$pkg_info{'provides'}};
+            #print Dumper \@deps;
+            print "provides: {\n";
+            for my $_prov (@provides) {
+                print "\t$_prov\n";
             }
             print "}\n";
         } else {
@@ -63,7 +70,7 @@ switch($ARGV[0]) {
         }
     }
     case "-ba" {
-        # check bdep of all packages then count top 10 pkgs for build env
+        # check bdep of all packages then count top 15 pkgs for build env
         my @pkgs = keys(%pkg_dep_map);
         my %bdep_count;
 
@@ -95,13 +102,14 @@ switch($ARGV[0]) {
             $rbdev_map{$rkey} = [ @deps ];
         }
 
-        my @sorted_scores = sort { $a <=> $b } @scores;
+        my @sorted_scores = sort { $b <=> $a } @scores;
         #print Dumper \@sorted_scores;
-        my $idx = scalar @sorted_scores - 1;
-        while ($idx >= 0) {
+        my $max_idx = scalar @sorted_scores - 1;
+        my $idx = 0;
+        while ($idx <= $max_idx and $idx < 15) {
             print "Refed " . $sorted_scores[$idx] . " times:\n";
             print Dumper \@{$rbdev_map{$sorted_scores[$idx]}};
-            $idx--;
+            $idx++;
         }
     }
     case "-br" {
@@ -111,9 +119,12 @@ switch($ARGV[0]) {
         my @queue;
         my %pkg_info = %{$pkg_dep_map{$pkg}};
         %pkg_info = %{$pkg_info{$pkg}};
-        my @deps = @{$pkg_info{'bdep'}};
+        my @rdeps = @{$pkg_info{'rdep'}};
 
-        for my $_d (@deps) {
+=for
+        Note, the 'rdep' of the specifed pkg also need *build*.
+=cut
+        for my $_d (@rdeps) {
             $depmap{$_d} = 1;
             push(@queue, ($_d));
         }
