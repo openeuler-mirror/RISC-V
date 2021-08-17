@@ -26,6 +26,32 @@ open DEPS, "<.deps" or die "error reading: $1!";
 }
 close(DEPS) or die "error closing file: $1!";
 
+my %pkg_rmap;
+for my $k (keys(%pkg_dep_map)) {
+    my %pkg = %{ $pkg_dep_map{$k} };
+    my %pkgs = %{ $pkg{'pkgs'} };
+
+    for my $sk (keys(%pkgs)) {
+        $pkg_rmap{$sk} = $k;
+    }
+}
+
+sub _get_version
+{
+    my ($k) = @_;
+    my $version = "unknown";
+
+    if (exists($pkg_rmap{$k})) {
+        my $pn = $pkg_rmap{$k};
+        my %pkg = %{ $pkg_dep_map{$pn} };
+        my %pinfo = %{ $pkg{'info'} };
+        #print Dumper \%pinfo;
+        $version = $pinfo{'version'};
+    }
+
+    return $version;
+}
+
 switch($ARGV[0]) {
     case "-h" {
         _print_help($0);
@@ -34,12 +60,16 @@ switch($ARGV[0]) {
     case "-bp" {
         my $pkg = $ARGV[1];
         if (exists($pkg_dep_map{$pkg})) {
-            my %pkg_info = %{$pkg_dep_map{$pkg}};
-            %pkg_info = %{$pkg_info{$pkg}};
+            my %pkg_info = %{ $pkg_dep_map{$pkg} };
+            %pkg_info = %{ $pkg_info{'info'} };
 
             print "package: [" . $pkg . "]\n";
             print "version: " . $pkg_info{"version"} . "\n";
             print "build dependenies:\n";
+
+            %pkg_info = %{ $pkg_dep_map{$pkg} };
+            %pkg_info = %{ $pkg_info{'pkgs'} };
+            %pkg_info = %{ $pkg_info{$pkg} };
 
             my @bdeps = @{$pkg_info{'bdep'}};
             #print Dumper \@bdeps;
@@ -76,8 +106,11 @@ switch($ARGV[0]) {
 
         for my $pkg (@pkgs) {
             my %main_pkg = %{$pkg_dep_map{$pkg}};
+            %main_pkg = %{ $main_pkg{'pkgs'} };
+            %main_pkg = %{ $main_pkg{$pkg} };
             %main_pkg = %{$main_pkg{$pkg}};
             #print Dumper \%main_pkg;
+
             my @bdeps = @{$main_pkg{'bdep'}};
             for my $bd (@bdeps) {
                 if (exists($bdep_count{$bd})) {
@@ -114,15 +147,23 @@ switch($ARGV[0]) {
     }
     case "-br" {
         my $pkg = $ARGV[1];
+        unless (exists($pkg_rmap{$pkg})) {
+            print "$pkg is not valid.\n";
+            exit 0;
+        } else {
+            $pkg = $pkg_rmap{$pkg};
+        }
+
         my @alldep;
         my %depmap;
         my @queue;
         my %pkg_info = %{$pkg_dep_map{$pkg}};
+        %pkg_info = %{$pkg_info{'pkgs'}};
         %pkg_info = %{$pkg_info{$pkg}};
-        my @rdeps = @{$pkg_info{'rdep'}};
 
+        my @rdeps = @{$pkg_info{'bdep'}};
 =for
-        Note, the 'rdep' of the specifed pkg also need *build*.
+        Note, the 'rdep' of the specifed pkg also need be *build*.
 =cut
         for my $_d (@rdeps) {
             $depmap{$_d} = 1;
@@ -134,6 +175,7 @@ switch($ARGV[0]) {
             push(@alldep, ($h));
             #print "$h\n";
             my %pinfo = %{$pkg_dep_map{$h}};
+            %pinfo = %{$pinfo{'pkgs'}};
             %pinfo = %{$pinfo{$h}};
             for my $nd (@{$pinfo{'rdep'}}) {
                 unless (exists($depmap{$nd})) {
@@ -147,7 +189,8 @@ switch($ARGV[0]) {
 
         print "\nThere are [ " . scalar @alldep . " ] deps.\n";
         for my $k (@alldep) {
-            print $k . " -> " . $depmap{$k} . "\n";
+            my $version = _get_version($k);
+            print "$k-$version -> " . $depmap{$k} . "\n";
         }
     }
     else {
