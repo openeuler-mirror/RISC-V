@@ -30,7 +30,6 @@ sub resume_data
     }
     close(DEPS) or die "error closing file: $1!";
 
-
     for my $k (keys(%pkg_dep_map)) {
         my %pkg = %{ $pkg_dep_map{$k} };
         my %pkgs = %{ $pkg{'pkgs'} };
@@ -61,45 +60,49 @@ sub _process_bp
 {
     my ($pkg) = @_;
 
-    if (exists($pkg_dep_map{$pkg})) {
-        my %pkg_info = %{ $pkg_dep_map{$pkg} };
-        %pkg_info = %{ $pkg_info{'info'} };
+    $pkg = $pkg_rmap{$pkg};
 
-        print "package: [" . $pkg . "]\n";
-        print "version: " . $pkg_info{"version"} . "\n";
-        print "build dependenies:\n";
-
-        %pkg_info = %{ $pkg_dep_map{$pkg} };
-        %pkg_info = %{ $pkg_info{'pkgs'} };
-        %pkg_info = %{ $pkg_info{$pkg} };
-
-        my @bdeps = @{$pkg_info{'bdep'}};
-        #print Dumper \@bdeps;
-        print "bdep: {\n";
-        for my $_dep (@bdeps) {
-            print "\t$_dep\n";
-        }
-        print "}\n";
-
-        my @rdeps = @{$pkg_info{'rdep'}};
-        #print Dumper \@rdeps;
-        print "rdep: {\n";
-        for my $_dep (@rdeps) {
-            print "\t$_dep\n";
-        }
-        print "}\n";
-
-        my @provides = @{$pkg_info{'provides'}};
-        #print Dumper \@deps;
-        print "provides: {\n";
-        for my $_prov (@provides) {
-            print "\t$_prov\n";
-        }
-        print "}\n";
-    } else {
+    unless (exists($pkg_rmap{$pkg})) {
         print "Please make sure the parse_dep.pl has success. And the " .
-            $pkg . " is in openEuler source repo.\n";
+            $pkg . " is included in openEuler.\n";
+
+        exit 0;
     }
+
+    my %pkg_info = %{ $pkg_dep_map{$pkg} };
+    %pkg_info = %{ $pkg_info{'info'} };
+
+    print "package: [" . $pkg . "]\n";
+    print "version: " . $pkg_info{"version"} . "\n";
+    print "build dependenies:\n";
+
+    %pkg_info = %{ $pkg_dep_map{$pkg} };
+    %pkg_info = %{ $pkg_info{'pkgs'} };
+    %pkg_info = %{ $pkg_info{$pkg} };
+
+    my @bdeps = @{$pkg_info{'bdep'}};
+    #print Dumper \@bdeps;
+    print "bdep: {\n";
+    for my $_dep (@bdeps) {
+        print "\t$_dep\n";
+    }
+    print "}\n";
+
+    my @rdeps = @{$pkg_info{'rdep'}};
+    #print Dumper \@rdeps;
+    print "rdep: {\n";
+    for my $_dep (@rdeps) {
+        print "\t$_dep\n";
+    }
+    print "}\n";
+
+    my @provides = @{$pkg_info{'provides'}};
+    #print Dumper \@deps;
+    print "provides: {\n";
+    for my $_prov (@provides) {
+        print "\t$_prov\n";
+    }
+    print "}\n";
 }
 
 sub _process_ba
@@ -154,11 +157,11 @@ sub _process_ba
 sub _process_br
 {
     my ($pkg) = @_;
+    $pkg = $pkg_rmap{$pkg};
+
     unless (exists($pkg_rmap{$pkg})) {
         print "$pkg is not valid.\n";
         exit 0;
-    } else {
-        $pkg = $pkg_rmap{$pkg};
     }
 
     my @alldep;
@@ -214,7 +217,7 @@ switch($ARGV[0]) {
     }
     case "-br" {
         resume_data();
-        _process_bp($ARGV[1]);
+        _process_br($ARGV[1]);
     }
     else {
         _print_help($0);
