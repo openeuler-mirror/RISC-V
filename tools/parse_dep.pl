@@ -20,6 +20,81 @@ sub _print_help
     print "  batch handle all subsequent specs.\n";
 }
 
+sub _handle_macro
+{
+    my ($macro_str, %vars) = @_;
+
+    while ($macro_str =~ /\%\{\?(\w+):/) {
+        my $old_m = $macro_str;
+        my $var = $1;
+        my $reg_expr = ".*?";
+        my $exprv;
+
+        while ($macro_str =~ /\%\{\?\w+:($reg_expr)\}/) {
+            $exprv = $1;
+            if ($exprv =~ /\%\{/) {
+                $reg_expr = $reg_expr . "\}";
+            } else {
+                last;
+            }
+        }
+
+        unless ($reg_expr =~ /\}$/) {
+            $reg_expr .= "\}";
+        }
+
+        if (exists($vars{$var})) {
+            $macro_str =~ s/\%\{\?\w+:$reg_expr/$exprv/;
+        } else {
+            $macro_str =~ s/\%\{\?\w+:$reg_expr//;
+        }
+
+        if ($old_m == $macro_str) {
+            #print "unhandled: $macro_str\n";
+            last;
+        }
+    }
+
+    while ($macro_str =~ /\%\{\!\?(\w+):/) {
+        my $old_m = $macro_str;
+        my $var = $1;
+        my $reg_expr = ".*?";
+        my $exprv;
+
+        while ($macro_str =~ /\%\{\!\?\w+:($reg_expr)\}/) {
+            $exprv = $1;
+            if ($exprv =~ /\{/) {
+                $reg_expr = $reg_expr . "\}";
+            } else {
+                last;
+            }
+        }
+
+        unless ($reg_expr =~ /\}$/) {
+            $reg_expr .= "\}";
+        }
+
+        unless (exists($vars{$var})) {
+            $macro_str =~ s/\%\{\!\?\w+:$reg_expr/$exprv/;
+        } else {
+            $macro_str =~ s/\%\{\!\?\w+:$reg_expr\}//;
+        }
+
+        if ($old_m == $macro_str) {
+            #print "unhandled: $macro_str\n";
+            last;
+        }
+    }
+
+    # nasty fix for MACRO like: %{?epoch:%{epoch}:}%{version}-%{release}
+    # the extra :} seems like pointless however there were exists words
+    if ($macro_str =~ /\s:\}/) {
+        $macro_str =~ s/\s:\}/ /;
+    }
+
+    return $macro_str;
+}
+
 sub _handle_var
 {
     my ($var_str, %vars) = @_;
@@ -75,7 +150,11 @@ sub _handle_one_spec
 
     open(SPEC, $spec) or print "file [ " . $spec . " ] does not exists.\n";
     while (<SPEC>) {
-        if ($_ =~ /\%global\s+(\w+)\s+(.*)/ig) {
+        my $line = $_;
+        if ($line =~ /\%.*/g) {
+            $line = _handle_macro($line, %globals);
+        }
+        if ($line =~ /\%global\s+(\w+)\s+(.*)/ig) {
             # get global defines
             my $varname = $1;
             my $varvalue = $2;
@@ -84,7 +163,7 @@ sub _handle_one_spec
             $globals{$varname} = $varvalue;
         }
 
-        if ($_ =~ /Name:\s*(.*)/ig) {
+        if ($line =~ /Name:\s*(.*)/ig) {
             # renamed main package
             $name = $1;
             $name = _handle_var($name, %globals);
@@ -92,7 +171,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = {};
         }
 
-        if ($_ =~ /^BuildRequires(.*?):(.*)/g) {
+        if ($line =~ /^BuildRequires(.*?):(.*)/g) {
             my @ndeps;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"bdep"})) {
@@ -107,7 +186,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($_ =~ /Version:(\s*)(.*)/g) {
+        if ($line =~ /Version:(\s*)(.*)/g) {
             my $version = _handle_var($2, %globals);
             $pinfo{version} = $version;
             $globals{version} = $version;
@@ -116,7 +195,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($_ =~ /Release:(\s*)(.*)/g) {
+        if ($line =~ /Release:(\s*)(.*)/g) {
             my $release = _handle_var($2, %globals);
             $pinfo{release} = $release;
             $globals{release} = $release;
@@ -125,7 +204,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($_ =~ /Epoch:(\s*)(.*)/g) {
+        if ($line =~ /Epoch:(\s*)(.*)/g) {
             my $epoch = $2;
             $pinfo{epoch} = $epoch;
             $globals{epoch} = $epoch;
@@ -134,7 +213,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($_ =~ /\%package*/g) {
+        if ($line =~ /\%package*/g) {
             my @gs = split(' ', $_);
             my $subpn = $gs[scalar @gs - 1];
             if (scalar @gs == 2) {
@@ -146,7 +225,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = {};
         }
 
-        if ($_ =~ /^Requires.*?:(\s*)(.*)/g) {
+        if ($line =~ /^Requires.*?:(\s*)(.*)/g) {
             my @rdeps;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"rdep"})) {
@@ -159,7 +238,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($_ =~ /^Provides.*?:(\s*)(.*)/g) {
+        if ($line =~ /^Provides.*?:(\s*)(.*)/g) {
             my @provides;
             my %pkg = %{$pkg_map{$pkg_name}};
             if (exists($pkg{"provides"})) {
@@ -200,7 +279,7 @@ sub _handle_src_dir
         unless ($d =~ /\./ or $d =~ /\.\./) {
             my @specs = `ls $dir/$d/*spec`;
             for my $spec (@specs) {
-                print "processing: " . $spec;
+                print "--- processing: $spec";
                 _handle_one_spec($spec, $d);
             }
         }
