@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-#use strict;
+use strict;
 
 use Switch;
 use Storable;
@@ -18,14 +18,23 @@ sub _print_help
 }
 
 #####################################################
-my %pkg_dep_map;
+my %pkg_dep_map = ();
+
+# the sub-pkg -> pkg pack map.
 my %pkg_rmap;
+
+# the reversed build dep map
+my %rbdm;
+
+# the provided to pkg-name map
+my %p2pm;
 
 sub resume_data
 {
     open DEPS, "<.deps" or die "error reading: $1!";
     {
         local $/;
+        no strict;
         %pkg_dep_map = % { eval <DEPS> };
     }
     close(DEPS) or die "error closing file: $1!";
@@ -37,7 +46,29 @@ sub resume_data
         for my $sk (keys(%pkgs)) {
             $pkg_rmap{$sk} = $k;
         }
+
+        # get bdep from 'mpkg'
+        my %mpkg = %{ $pkgs{$k} };
+        my @bdeps = [];
+        if (exists($mpkg{'bdep'})) {
+            @bdeps = @{ $mpkg{bdep} };
+        }
+
+        for my $bd (@bdeps) {
+            my @rbdeps = ();
+            if (exists($rbdm{$bd})) {
+                @rbdeps = @{ $rbdm{$bd} };
+            }
+            push(@rbdeps, ($k));
+            $rbdm{$bd} = [ @rbdeps ];
+        }
     }
+
+=for
+    open(DEPS, ">.bdeps") || die "can not open: $1";
+    print DEPS Dumper(\%rbdm);
+    close(DEPS) || die "error closing file: $1!";
+=cut
 }
 
 sub _get_version
@@ -54,6 +85,22 @@ sub _get_version
     }
 
     return $version;
+}
+
+sub _process_dp
+{
+    my ($pkg) = @_;
+    $pkg = $pkg_rmap{$pkg};
+
+    unless (exists($pkg_rmap{$pkg})) {
+        print "Please make sure the parse_dep.pl has success. And the " .
+            $pkg . " is included in openEuler.\n";
+
+        exit 0;
+    }
+
+    print "Package: [ $pkg ]\n";
+    print Dumper \%{ $pkg_dep_map{$pkg} };
 }
 
 sub _process_bp
@@ -183,10 +230,14 @@ sub _process_br
         my $h = shift(@queue);
         push(@alldep, ($h));
         #print "$h\n";
-        my %pinfo = %{$pkg_dep_map{$h}};
-        %pinfo = %{$pinfo{'pkgs'}};
-        %pinfo = %{$pinfo{$h}};
+        unless(exists($pkg_dep_map{$h})) {
+            next;
+        }
+        my %pinfo = %{ $pkg_dep_map{$h} };
+        %pinfo = %{ $pinfo{'pkgs'} };
+        %pinfo = %{ $pinfo{$h} };
         for my $nd (@{$pinfo{'rdep'}}) {
+            #print "$h (rdep to) -> $nd\n";
             unless (exists($depmap{$nd})) {
                 push(@queue, ($nd));
                 $depmap{$nd} = 1;
@@ -210,6 +261,10 @@ switch($ARGV[0]) {
     case "-bp" {
         resume_data();
         _process_bp($ARGV[1]);
+    }
+    case "-dp" {
+        resume_data();
+        _process_dp($ARGV[1]);
     }
     case "-ba" {
         resume_data();
