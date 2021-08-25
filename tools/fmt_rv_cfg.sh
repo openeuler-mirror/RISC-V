@@ -2,15 +2,16 @@
 
 prj="openEuler:Mainline:RISC-V"
 
+function usage()
+{
+    echo "Usage: sh fmt_rv_cfg.sh -f CFG-DIR-TO-FORMAT | -r CONFIG-TO-REFRESH | -h"
+}
+
 if [ $# == 0 ]; then
     usage
     exit 1
 fi
 
-function usage()
-{
-    echo "Usage: sh fmt_rv_cfg.sh -f CFG-DIR-TO-FORMAT | -r CONFIG-TO-REFRESH | -h"
-}
 
 function format_cfg()
 {
