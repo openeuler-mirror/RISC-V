@@ -28,6 +28,28 @@ my %rbdm;
 
 # the provided to pkg-name map
 my %p2pm;
+my @all_provides;
+
+sub _update_p2pm
+{
+    my ($pvd, $pvdm) = @_;
+    my @proa;
+    if (exists($p2pm{$pvd})) {
+        @proa = @{ $p2pm{$pvd} };
+    } else {
+        push(@all_provides, $pvd);
+    }
+    push(@proa, [ $pvdm]);
+    $p2pm{$pvd} = [ @proa ];
+}
+
+sub _save_p2pm
+{
+    my ($fn) = @_;
+    open(P2PM, ">$fn") || die "can not open: $fn";
+    print P2PM Dumper \%p2pm;
+    close(P2PM) || die "error closing file: $fn!";
+}
 
 sub resume_data
 {
@@ -42,10 +64,23 @@ sub resume_data
     for my $k (keys(%pkg_dep_map)) {
         my %pkg = %{ $pkg_dep_map{$k} };
         my %pkgs = %{ $pkg{'pkgs'} };
+        my @spks = keys(%pkgs);
 
-        for my $sk (keys(%pkgs)) {
+        for my $sk (@spks) {
             $pkg_rmap{$sk} = $k;
         }
+
+        for my $sk (@spks) {
+            _update_p2pm($sk, $sk);
+            my %spkg = %{ $pkgs{$sk} };
+            if (exists($spkg{provides})) {
+                for my $procan (@{ $spkg{provides} }) {
+                    _update_p2pm($procan, $sk);
+                }
+            }
+        }
+
+        #_save_p2pm("p2pm");
 
         # get bdep from 'mpkg'
         my %mpkg = %{ $pkgs{$k} };
@@ -87,10 +122,9 @@ sub _get_version
     return $version;
 }
 
-sub _process_dp
+sub _check_subpkg
 {
     my ($pkg) = @_;
-    $pkg = $pkg_rmap{$pkg};
 
     unless (exists($pkg_rmap{$pkg})) {
         print "Please make sure the parse_dep.pl has success. And the " .
@@ -98,6 +132,14 @@ sub _process_dp
 
         exit 0;
     }
+}
+
+sub _process_dp
+{
+    my ($pkg) = @_;
+
+    _check_subpkg($pkg);
+    $pkg = $pkg_rmap{$pkg};
 
     print "Package: [ $pkg ]\n";
     print Dumper \%{ $pkg_dep_map{$pkg} };
@@ -107,8 +149,6 @@ sub _process_bp
 {
     my ($pkg) = @_;
 
-    $pkg = $pkg_rmap{$pkg};
-
     unless (exists($pkg_rmap{$pkg})) {
         print "Please make sure the parse_dep.pl has success. And the " .
             $pkg . " is included in openEuler.\n";
@@ -116,6 +156,7 @@ sub _process_bp
         exit 0;
     }
 
+    $pkg = $pkg_rmap{$pkg};
     my %pkg_info = %{ $pkg_dep_map{$pkg} };
     %pkg_info = %{ $pkg_info{'info'} };
 
@@ -201,23 +242,62 @@ sub _process_ba
     }
 }
 
+sub _guess_provider
+{
+    my ($rq) = @_;
+
+    my $rrq = "unknown";
+    my $rrv = "unknown";
+
+    if ($rq =~ /(.*)>=(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } elsif ($rq =~ /(.*)>(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } elsif ($rq =~ /(.*)<=(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } elsif ($rq =~ /(.*)<(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } elsif ($rq =~ /(.*)=(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } else {
+        $rrq = $rq;
+    }
+    
+    unless (exists($pkg_rmap{$rrq})) {
+        print "[$rrq] has No provider.\n";
+        $rrq = "unknown";
+    } else {
+        $rrq = $pkg_rmap{$rrq};
+    }
+
+    return $rrq;
+}
+
 sub _process_br
 {
     my ($pkg) = @_;
-    $pkg = $pkg_rmap{$pkg};
 
-    unless (exists($pkg_rmap{$pkg})) {
-        print "$pkg is not valid.\n";
-        exit 0;
-    }
+    _check_subpkg($pkg);
 
+    my $mpkg = $pkg_rmap{$pkg};
     my @alldep;
     my %depmap;
     my @queue;
-    my %pkg_info = %{$pkg_dep_map{$pkg}};
+    my %pkg_info = %{$pkg_dep_map{$mpkg}};
+
     %pkg_info = %{$pkg_info{'pkgs'}};
     %pkg_info = %{$pkg_info{$pkg}};
 
+    unless (exists($pkg_info{bdep})) {
+        print "[$pkg] has NO build deps. Plain data: \n";
+        print Dumper \%pkg_info;
+        exit -2;
+    }
     my @rdeps = @{$pkg_info{'bdep'}};
 
     #Note, the 'rdep' of the specifed pkg also need be *build*.
@@ -231,7 +311,10 @@ sub _process_br
         push(@alldep, ($h));
         #print "$h\n";
         unless(exists($pkg_dep_map{$h})) {
-            next;
+            $h = _guess_provider($h);
+            if ($h =~ /unknown/) {
+                next;
+            }
         }
         my %pinfo = %{ $pkg_dep_map{$h} };
         %pinfo = %{ $pinfo{'pkgs'} };
@@ -250,7 +333,12 @@ sub _process_br
     print "\nThere are [ " . scalar @alldep . " ] deps.\n";
     for my $k (@alldep) {
         my $version = _get_version($k);
-        print "$k-$version -> " . $depmap{$k} . "\n";
+        if ($version =~ /unknown/) {
+            $version = "";
+        } else {
+            $version = "-$version";
+        }
+        print "$k$version -> " . $depmap{$k} . "\n";
     }
 }
 
