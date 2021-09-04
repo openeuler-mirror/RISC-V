@@ -8,15 +8,24 @@ use Data::Dumper;
 
 my %pkg_dep_map = ();
 my %g_globals = (
-    '_isa', 'riscv64',
+    '_isa_name', 'riscv',
+    '_isa_bits', '64',
+    '_isa', '',
+    '_lib', 'lib',
     '_prefix', '/usr',
     '_bindir', '/bin',
     '_sbindir', '/sbin',
     '_mandir', '/usr/share/man',
+    '_docdir', '/usr/share/doc',
     '_infodir', '/usr/share/info',
     '_includedir', '/usr/include',
     '_libdir', '/usr/lib',
-    '_datadir', '/usr/',
+    '_libexecdir', '/usr/libexec',
+    '_datadir', '/usr',
+    '_var', '/var',
+    '_sysconfdir', '/etc',
+    '_unitdir', '/usr/lib/systemd/system',
+    '_tmpfilesdir', '/usr/lib/tmpfiles.d',
     'python3_pkgversion', '3'
 );
 
@@ -135,7 +144,24 @@ sub _handle_var
             $var_str =~ s/\%\{$var\}/_\$_\{$var\}/g;
         }
     }
+    $var_str =~ s/_\$_/\%/g;
 
+    while ($var_str =~ /\%\{\?(\w+)\}/) {
+        my $var = $1;
+        if (exists($vars{$var})) {
+            unless ($vars{$var} =~ /\%\{$var\}/) {
+                $var_str =~ s/\%\{\?$var\}/$vars{$var}/g;
+            } else {
+                # recursive definition like 'global optval %{optval}xyz'
+                $var_str =~ s/\%\{\?$var\}//g;
+            }
+        } elsif (exists($g_globals{$var})) {
+            $var_str =~ s/\%\{\?$var\}/$g_globals{$var}/g;
+        } else {
+            # temporarily modify then restore to original later
+            $var_str =~ s/\%\{\?$var\}/_\$_\{$var\}/g;
+        }
+    }
     $var_str =~ s/_\$_/\%/g;
 
     return $var_str;
@@ -169,7 +195,7 @@ sub _get_pkg_for_fl
         return $pn;
     }
 
-    my $sub_name_reg = '[\w-\%\{\}\.\-]';
+    my $sub_name_reg = '[\w-\%\{\}\.\-\+]';
 
     # for [%files sub-pkg]
     if ($line =~ /^($sub_name_reg+)$/) {
@@ -189,9 +215,9 @@ sub _get_pkg_for_fl
     }
 
     # for [%files -n exact_name]
-    if ($line =~ /-n\s+([\w-\%\{\}\.]+)/) {
+    if ($line =~ /-n\s+([\w-\%\{\}\.\+]+)/) {
         $pn = $1;
-        $line =~ s/-n\s+([\w-\%\{\}\.]+)//;
+        $line =~ s/-n\s+([\w-\%\{\}\.\+]+)//;
     }
 
     $line = "$line  ";
@@ -226,14 +252,30 @@ sub _handle_one_spec
 
     $pinfo{'name'} = $name;
     $globals{'name'} = $name;
-    $globals{'nil'} = "";
+    #$globals{'nil'} = "";
     $pkg_map{$pkg_name} = {};
 
     open(SPEC, $spec) or print "file [ " . $spec . " ] does not exists.\n";
+    my $skip_line = 0;
     while (<SPEC>) {
         my $line = $_;
         $line =~ s/^\s+|\s+$//g;
 
+        if ($line =~ /^#.*/) {
+            next;
+        }
+
+        if ($line =~ /^%if 0/) {
+            $skip_line = 1;
+            next;
+        }
+        if (($line =~ /^%endif$/ or $line =~ /^%else/) and $skip_line > 0) {
+            $skip_line = 0;
+            next;
+        }
+        if ($skip_line > 0) {
+            next;
+        }
         if ($fl_handling == 1) {
             unless (exists($pkg_map{$fl_pkg})) {
                 $fl_handling = 0;
