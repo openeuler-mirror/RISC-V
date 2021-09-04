@@ -8,13 +8,15 @@
 set -e
 set -x
 
+tmp_mnt_dir="/tmp/buildenv-mnt"
+
 mkdir -p /var/tmp/
-rm -f /var/tmp/oe-repo-rv.raw
+rm -f /var/tmp/oe-benv-rv.raw
 
 # Create parted and formatted disk
-truncate -s 40G /tmp/oe-repo-rv.raw
-losetup -P $(losetup -f) /tmp/oe-repo-rv.raw
-loopdev=$(losetup -a | grep oe-repo-rv.raw | awk -F: '{print $1;}')
+truncate -s 40G /tmp/oe-benv-rv.raw
+losetup -P $(losetup -f) /tmp/oe-benv-rv.raw
+loopdev=$(losetup -a | grep oe-benv-rv.raw | awk -F: '{print $1;}')
 sudo fdisk $loopdev << EOF
 n
 p
@@ -27,17 +29,17 @@ EOF
 mkfs -t ext4 ${loopdev}p1
 
 # Create the installroot
-mkdir -p /tmp/repo-mnt
-mount -o loop /${loopdev}p1 /tmp/repo-mnt
+mkdir -p $tmp_mnt_dir
+mount -o loop /${loopdev}p1 $tmp_mnt_dir
 
-mkdir -p /tmp/repo-mnt/repo
-cp -a $1 /tmp/repo-mnt/repo/rpms
+mkdir -p $tmp_mnt_dir/build_env
+cp -a $1 $tmp_mnt_dir/build_env
 sync
-umount /tmp/repo-mnt
+umount $tmp_mnt_dir
 
 losetup -d $loopdev
 
 # Currently lack of qemu-img on openEuler RISC-V, 
 # you can do this step in a x86 or aarch64 host 
-qemu-img convert -f raw -O qcow2 /tmp/oe-repo-rv.raw oe-repo-rv.qcow2
-rm -rf /tmp/oe-repo-rv.raw
+qemu-img convert -f raw -O qcow2 /tmp/oe-benv-rv.raw oe-benv-rv.qcow2
+rm -rf /tmp/oe-benv-rv.raw
