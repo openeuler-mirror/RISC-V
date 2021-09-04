@@ -7,6 +7,36 @@ use Switch;
 use Data::Dumper;
 
 my %pkg_dep_map = ();
+my %g_globals = (
+    '_isa_name', 'riscv',
+    '_isa_bits', '64',
+    '_isa', '',
+    '_lib', 'lib',
+    '_prefix', '/usr',
+    '_bindir', '/bin',
+    '_sbindir', '/sbin',
+    '_mandir', '/usr/share/man',
+    '_docdir', '/usr/share/doc',
+    '_infodir', '/usr/share/info',
+    '_includedir', '/usr/include',
+    '_libdir', '/usr/lib',
+    '_libexecdir', '/usr/libexec',
+    '_datadir', '/usr',
+    '_var', '/var',
+    '_sysconfdir', '/etc',
+    '_unitdir', '/usr/lib/systemd/system',
+    '_tmpfilesdir', '/usr/lib/tmpfiles.d',
+    'python3_pkgversion', '3'
+);
+
+print Dumper \%g_globals;
+sub _save_pkg_dep_map
+{
+    my ($fn) = @_;
+    open(DEPS, ">$fn") || die "can not open: $fn";
+    print DEPS Dumper(\%pkg_dep_map);
+    close(DEPS) || die "error closing file: $fn!";
+}
 
 sub _print_help
 {
@@ -108,11 +138,30 @@ sub _handle_var
                 # recursive definition like 'global optval %{optval}xyz'
                 $var_str =~ s/\%\{$var\}//g;
             }
+        } elsif (exists($g_globals{$var})) {
+            $var_str =~ s/\%\{$var\}/$g_globals{$var}/g;
         } else {
             $var_str =~ s/\%\{$var\}/_\$_\{$var\}/g;
         }
     }
+    $var_str =~ s/_\$_/\%/g;
 
+    while ($var_str =~ /\%\{\?(\w+)\}/) {
+        my $var = $1;
+        if (exists($vars{$var})) {
+            unless ($vars{$var} =~ /\%\{$var\}/) {
+                $var_str =~ s/\%\{\?$var\}/$vars{$var}/g;
+            } else {
+                # recursive definition like 'global optval %{optval}xyz'
+                $var_str =~ s/\%\{\?$var\}//g;
+            }
+        } elsif (exists($g_globals{$var})) {
+            $var_str =~ s/\%\{\?$var\}/$g_globals{$var}/g;
+        } else {
+            # temporarily modify then restore to original later
+            $var_str =~ s/\%\{\?$var\}/_\$_\{$var\}/g;
+        }
+    }
     $var_str =~ s/_\$_/\%/g;
 
     return $var_str;
@@ -134,6 +183,61 @@ sub _handle_str
     return @deps;
 }
 
+sub _get_pkg_for_fl
+{
+    my ($line, $pn) = @_;
+
+    $line =~ s/%files//;
+    $line =~ s/^\s+|\s+$//;
+
+    # just [%files]
+    if ($line =~ /^$/) {
+        return $pn;
+    }
+
+    my $sub_name_reg = '[\w-\%\{\}\.\-\+]';
+
+    # for [%files sub-pkg]
+    if ($line =~ /^($sub_name_reg+)$/) {
+        $pn = "$pn-$1";
+        return $pn;
+    }
+
+    # for [%files sub-pkg -f ...]
+    if ($line =~ /^($sub_name_reg+)\s+-/) {
+        #print "?? $line\n";
+        $pn = "$pn-$1";
+        $line =~ s/^($sub_name_reg+)\s+-/ -/;
+        # We are done if there is NO more stuff need handling
+        if ($line =~ /^$/) {
+            return $pn;
+        }
+    }
+
+    # for [%files -n exact_name]
+    if ($line =~ /-n\s+([\w-\%\{\}\.\+]+)/) {
+        $pn = $1;
+        $line =~ s/-n\s+([\w-\%\{\}\.\+]+)//;
+    }
+
+    $line = "$line  ";
+    # if there are [-f <file_name_for_files_list>]*
+    while (length($line) > 0) {
+        if ($line =~ /^\s+$/) {
+            last;
+        }
+        if ($line =~ /-f\s+(.*?)\s/) {
+            my $plf = $1;
+            $line =~ s/-f\s+(.*?)\s/ /;
+        } else {
+            print "unhandled: $line\n";
+            last;
+        }
+    }
+
+    return $pn;
+}
+
 sub _handle_one_spec
 {
     my ($spec, $name) = @_;
@@ -143,17 +247,74 @@ sub _handle_one_spec
     my %pinfo = ();
     my $pkg_name = $name;
     my %globals;
+    my $fl_handling = 0;
+    my $fl_pkg;
+
     $pinfo{'name'} = $name;
     $globals{'name'} = $name;
-    $globals{'nil'} = "";
+    #$globals{'nil'} = "";
     $pkg_map{$pkg_name} = {};
 
     open(SPEC, $spec) or print "file [ " . $spec . " ] does not exists.\n";
+    my $skip_line = 0;
     while (<SPEC>) {
         my $line = $_;
+        $line =~ s/^\s+|\s+$//g;
+
+        if ($line =~ /^#.*/) {
+            next;
+        }
+
+        if ($line =~ /^%if 0/) {
+            $skip_line = 1;
+            next;
+        }
+        if (($line =~ /^%endif$/ or $line =~ /^%else/) and $skip_line > 0) {
+            $skip_line = 0;
+            next;
+        }
+        if ($skip_line > 0) {
+            next;
+        }
+        if ($fl_handling == 1) {
+            unless (exists($pkg_map{$fl_pkg})) {
+                $fl_handling = 0;
+            } elsif ($line =~ /^$/) {
+                $fl_handling = 0;
+            } else {
+                # the $line need be expanded, resolve '%{} / %() / %[] etc'
+                # then update the 'provides' of $fl_pkg
+
+                unless(
+                    $line =~ /^%doc/ or
+                    $line =~ /^%dir/ or
+                    $line =~ /^%exclude/ or
+                    $line =~ /^%license/
+                ) {
+                        my @provides;
+                        my %pkg = %{$pkg_map{$fl_pkg}};
+                        if (exists($pkg{"provides"})) {
+                            @provides = @{$pkg{"provides"}};
+                        }
+                        my $prds = _handle_var($line, %globals);
+                        push(@provides, $prds);
+                        $pkg{"provides"} = [ @provides ];
+                        $pkg_map{$fl_pkg} = { %pkg };
+                }
+            }
+        }
+
         if ($line =~ /\%.*/g) {
             $line = _handle_macro($line, %globals);
         }
+
+        if ($line =~ /^\%files.*/g) {
+            $fl_handling = 1;
+            # need determine $fl_pkg
+            $fl_pkg = _get_pkg_for_fl($line, $name);
+            $fl_pkg = _handle_var($fl_pkg, %globals);
+        }
+
         if ($line =~ /\%global\s+(\w+)\s+(.*)/ig) {
             # get global defines
             my $varname = $1;
@@ -161,9 +322,20 @@ sub _handle_one_spec
             $varvalue = _handle_var($varvalue, %globals);
             #print "get global: $varname -> $varvalue\n";
             $globals{$varname} = $varvalue;
+            next;
         }
 
-        if ($line =~ /Name:\s*(.*)/ig) {
+        if ($line =~ /\%define\s+(\w+)\s+(.*)/ig) {
+            # get global defines
+            my $varname = $1;
+            my $varvalue = $2;
+            $varvalue = _handle_var($varvalue, %globals);
+            #print "get global: $varname -> $varvalue\n";
+            $globals{$varname} = $varvalue;
+            next;
+        }
+
+        if ($line =~ /^Name:\s*(.*)/ig) {
             # renamed main package
             $name = $1;
             $name = _handle_var($name, %globals);
@@ -186,7 +358,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($line =~ /Version:(\s*)(.*)/g) {
+        if ($line =~ /^Version:(\s*)(.*)/g) {
             my $version = _handle_var($2, %globals);
             $pinfo{version} = $version;
             $globals{version} = $version;
@@ -195,7 +367,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($line =~ /Release:(\s*)(.*)/g) {
+        if ($line =~ /^Release:(\s*)(.*)/g) {
             my $release = _handle_var($2, %globals);
             $pinfo{release} = $release;
             $globals{release} = $release;
@@ -204,7 +376,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($line =~ /Epoch:(\s*)(.*)/g) {
+        if ($line =~ /^Epoch:(\s*)(.*)/g) {
             my $epoch = $2;
             $pinfo{epoch} = $epoch;
             $globals{epoch} = $epoch;
@@ -213,7 +385,7 @@ sub _handle_one_spec
             $pkg_map{$pkg_name} = { %pkg };
         }
 
-        if ($line =~ /\%package*/g) {
+        if ($line =~ /^\%package\s+/g) {
             my @gs = split(' ', $_);
             my $subpn = $gs[scalar @gs - 1];
             if (scalar @gs == 2) {
@@ -365,9 +537,7 @@ foreach my $pkg (keys %pkg_dep_map) {
 }
 =cut
 
-open(DEPS, ">.deps") || die "can not open: $1";
-print DEPS Dumper(\%pkg_dep_map);
-close(DEPS) || die "error closing file: $1!";
+_save_pkg_dep_map(".deps");
 
 print "Dependencies are saved into [.deps] for further use.\n";
 

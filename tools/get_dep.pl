@@ -28,6 +28,28 @@ my %rbdm;
 
 # the provided to pkg-name map
 my %p2pm;
+my @all_provides;
+
+sub _update_p2pm
+{
+    my ($pvd, $pvdm) = @_;
+    my @proa;
+    if (exists($p2pm{$pvd})) {
+        @proa = @{ $p2pm{$pvd} };
+    } else {
+        push(@all_provides, $pvd);
+    }
+    push(@proa, $pvdm);
+    $p2pm{$pvd} = [ @proa ];
+}
+
+sub _save_p2pm
+{
+    my ($fn) = @_;
+    open(P2PM, ">$fn") || die "can not open: $fn";
+    print P2PM Dumper \%p2pm;
+    close(P2PM) || die "error closing file: $fn!";
+}
 
 sub resume_data
 {
@@ -42,10 +64,23 @@ sub resume_data
     for my $k (keys(%pkg_dep_map)) {
         my %pkg = %{ $pkg_dep_map{$k} };
         my %pkgs = %{ $pkg{'pkgs'} };
+        my @spks = keys(%pkgs);
 
-        for my $sk (keys(%pkgs)) {
+        for my $sk (@spks) {
             $pkg_rmap{$sk} = $k;
         }
+
+        for my $sk (@spks) {
+            _update_p2pm($sk, $sk);
+            my %spkg = %{ $pkgs{$sk} };
+            if (exists($spkg{provides})) {
+                for my $procan (@{ $spkg{provides} }) {
+                    _update_p2pm($procan, $sk);
+                }
+            }
+        }
+
+        #_save_p2pm("p2pm");
 
         # get bdep from 'mpkg'
         my %mpkg = %{ $pkgs{$k} };
@@ -87,10 +122,9 @@ sub _get_version
     return $version;
 }
 
-sub _process_dp
+sub _check_subpkg
 {
     my ($pkg) = @_;
-    $pkg = $pkg_rmap{$pkg};
 
     unless (exists($pkg_rmap{$pkg})) {
         print "Please make sure the parse_dep.pl has success. And the " .
@@ -98,6 +132,44 @@ sub _process_dp
 
         exit 0;
     }
+}
+
+sub _get_pkg_by_provider
+{
+    my ($pvd) = @_;
+    my $mpkg = "unknown";
+    my @wild_matches;
+
+    for my $pd (@all_provides) {
+        if ($pd =~ /$pvd/) {
+            my @pvds = @{$p2pm{$pd}};
+            #print Dumper \@pvds;
+            $mpkg = $pvds[0];
+            #return early for now. by pass the 'multple provider' case.
+            return $mpkg;
+        }
+        if ($pd =~ /($pvd)/) {
+            #print "Wildcard match: $pd\n";
+            push(@wild_matches, $pd);
+        }
+    }
+
+    if (scalar(@wild_matches) > 0) {
+        my @pvds = @{ $p2pm{$wild_matches[0]} };
+        $mpkg = $pvds[0];
+        if ($mpkg =~ /-static/) {
+            #$mpkg =~ s/-static//;
+        }
+    }
+    return $mpkg;
+}
+
+sub _process_dp
+{
+    my ($pkg) = @_;
+
+    _check_subpkg($pkg);
+    $pkg = $pkg_rmap{$pkg};
 
     print "Package: [ $pkg ]\n";
     print Dumper \%{ $pkg_dep_map{$pkg} };
@@ -107,8 +179,6 @@ sub _process_bp
 {
     my ($pkg) = @_;
 
-    $pkg = $pkg_rmap{$pkg};
-
     unless (exists($pkg_rmap{$pkg})) {
         print "Please make sure the parse_dep.pl has success. And the " .
             $pkg . " is included in openEuler.\n";
@@ -116,6 +186,7 @@ sub _process_bp
         exit 0;
     }
 
+    $pkg = $pkg_rmap{$pkg};
     my %pkg_info = %{ $pkg_dep_map{$pkg} };
     %pkg_info = %{ $pkg_info{'info'} };
 
@@ -201,45 +272,136 @@ sub _process_ba
     }
 }
 
+sub __format_str
+{
+    my ($fstr) = @_;
+
+    $fstr =~ s/\+/\\\+/g;
+    $fstr =~ s/\./\\\./g;
+    $fstr =~ s/\*/\\\*/g;
+    $fstr =~ s/\?/\\\?/g;
+    $fstr =~ s/\[/\\\[/g;
+    $fstr =~ s/\]/\\\]/g;
+    $fstr =~ s/\(/\\\(/g;
+    $fstr =~ s/\)/\\\)/g;
+    $fstr =~ s/\{/\\\{/g;
+    $fstr =~ s/\}/\\\}/g;
+
+    return $fstr;
+}
+
+sub _guess_provider
+{
+    my ($rq) = @_;
+
+    if (exists($p2pm{$rq})) {
+        my @pvds = @{$p2pm{$rq}};
+        return $pvds[0];
+    }
+
+    my $rrq = "unknown";
+    my $rrv = "unknown";
+
+    $rq = __format_str($rq);
+
+    if ($rq =~ /(.*)>=(.*)/ or
+        $rq =~ /(.*)>(.*)/ or
+        $rq =~ /(.*)<=(.*)/ or
+        $rq =~ /(.*)<(.*)/ or
+        $rq =~ /(.*)=(.*)/) {
+        $rrq = $1;
+        $rrv = $2;
+    } elsif ($rq =~ /^(.*?)($rq)$/) {
+        $rrq = "$1$2";
+    } else {
+        $rrq = $rq;
+    }
+    
+    unless (exists($pkg_rmap{$rrq})) {
+        # means No spkg provided the $rrq
+        my $spkg = _get_pkg_by_provider($rrq);
+        if ($spkg =~ /unknown/) {
+            print STDERR "[$rrq] has No provider.\n";
+            $rrq = "unknown";
+        } else {
+            #print "Best try: $spkg\n";
+            $rrq = $spkg;
+        }
+    }
+
+    return $rrq;
+}
+
 sub _process_br
 {
     my ($pkg) = @_;
-    $pkg = $pkg_rmap{$pkg};
 
-    unless (exists($pkg_rmap{$pkg})) {
-        print "$pkg is not valid.\n";
-        exit 0;
-    }
+    _check_subpkg($pkg);
 
-    my @alldep;
-    my %depmap;
-    my @queue;
-    my %pkg_info = %{$pkg_dep_map{$pkg}};
+    my $mpkg = $pkg_rmap{$pkg};
+    my %pkg_info = %{$pkg_dep_map{$mpkg}};
+
     %pkg_info = %{$pkg_info{'pkgs'}};
     %pkg_info = %{$pkg_info{$pkg}};
 
-    my @rdeps = @{$pkg_info{'bdep'}};
-
-    #Note, the 'rdep' of the specifed pkg also need be *build*.
-    for my $_d (@rdeps) {
-        $depmap{$_d} = 1;
-        push(@queue, ($_d));
+    unless (exists($pkg_info{bdep})) {
+        print STDERR "[$pkg] has NO build deps. Plain data: \n";
+        print STDERR Dumper \%pkg_info;
+        return ();
     }
+
+    return __get_rdeps(@{$pkg_info{'bdep'}});
+}
+
+sub __get_rdeps
+{
+    my @alldep;
+    my %depmap;
+    my @queue;
+    for my $bd (@_) {
+        my $gbd = _guess_provider($bd);
+        if ($gbd =~ /unknown/) {
+            print STDERR "#0 skipped [$bd]\n";
+            next;
+        }
+        $bd = $gbd;
+        $depmap{$bd} = 1;
+        push(@queue, $bd);
+    }
+
+    print STDERR Dumper \@queue;
 
     while (scalar @queue > 0) {
         my $h = shift(@queue);
-        push(@alldep, ($h));
-        #print "$h\n";
         unless(exists($pkg_dep_map{$h})) {
-            next;
+            my $gh = _guess_provider($h);
+            if ($gh =~ /unknown/) {
+                print STDERR "skipped [$h]\n";
+                next;
+            }
+            $h = $gh;
         }
-        my %pinfo = %{ $pkg_dep_map{$h} };
+        push(@alldep, $h);
+
+        my $mh = $pkg_rmap{$h};
+        my %pinfo = %{ $pkg_dep_map{$mh} };
         %pinfo = %{ $pinfo{'pkgs'} };
         %pinfo = %{ $pinfo{$h} };
+
         for my $nd (@{$pinfo{'rdep'}}) {
             #print "$h (rdep to) -> $nd\n";
             unless (exists($depmap{$nd})) {
-                push(@queue, ($nd));
+                push(@queue, $nd);
+                $depmap{$nd} = 1;
+            } else {
+                $depmap{$nd}++;
+            }
+        }
+        for my $nd (@{$pinfo{'bdep'}}) {
+            #print "$h (rdep to) -> $nd\n";
+            #$nd =~ s/-devel//g;
+            unless (exists($depmap{$nd})) {
+                push(@queue, $nd);
                 $depmap{$nd} = 1;
             } else {
                 $depmap{$nd}++;
@@ -247,11 +409,73 @@ sub _process_br
         }
     }
 
-    print "\nThere are [ " . scalar @alldep . " ] deps.\n";
+    print STDERR "\nThere are [ " . scalar @alldep . " ] deps.\n";
     for my $k (@alldep) {
         my $version = _get_version($k);
-        print "$k-$version -> " . $depmap{$k} . "\n";
+        if ($version =~ /unknown/) {
+            $version = "";
+        } else {
+            $version = "-$version";
+        }
+        print STDERR "$k$version -> " . $depmap{$k} . "\n";
     }
+
+    return @alldep;
+}
+
+sub _get_pkg_all_rdep
+{
+    my (%pkg_info) = @_;
+    my @deps = ();
+
+    unless (exists($pkg_info{rdep})) {
+        print STDERR "[pkg] has NO runtime deps. Plain data: \n";
+        #print Dumper \%pkg_info;
+    } else {
+        push(@deps, @{$pkg_info{rdep}});
+    }
+    unless (exists($pkg_info{bdep})) {
+        print STDERR "[pkg] has NO build deps. Plain data: \n";
+        #print Dumper \%pkg_info;
+    } else {
+        push(@deps, @{$pkg_info{bdep}});
+        for my $brb (@{$pkg_info{bdep}}) {
+            if ($brb =~ /^(.*?)-devel/) {
+                push(@deps, "$1-libs");
+            }
+        }
+    }
+
+    my @rrdeps = __get_rdeps(@deps);
+    my $i = 0;
+    while ($i < scalar @rrdeps) {
+        if ($rrdeps[$i] =~ /\%\(/) {
+            $rrdeps[$i] =~ s/\%\(/\$\(/g;
+        }
+        $i++;
+    }
+    return @rrdeps;
+}
+
+sub _process_be
+{
+    my ($pkg) = @_;
+
+    _check_subpkg($pkg);
+
+    my $mpkg = $pkg_rmap{$pkg};
+    my %pkg_info = %{$pkg_dep_map{$mpkg}};
+
+    %pkg_info = %{$pkg_info{'pkgs'}};
+    %pkg_info = %{$pkg_info{$pkg}};
+
+    return _get_pkg_all_rdep(%pkg_info);
+}
+
+sub uniq_merge (@) {
+    # From CPAN List::MoreUtils, version 0.22
+    my %h;
+    map { $h{$_}++ == 0 ? $_ : () } @_;
 }
 
 switch($ARGV[0]) {
@@ -272,7 +496,47 @@ switch($ARGV[0]) {
     }
     case "-br" {
         resume_data();
-        _process_br($ARGV[1]);
+        my @bes = _process_be($ARGV[1]);
+        print "------\n";
+        for (@bes) {
+            print "$_\n";
+        }
+    }
+    case "-be" {
+        resume_data();
+        my @all_pkgs = ("glibc");
+        my @fs1_pkgs = _process_be("bash");
+        push(@fs1_pkgs, 'bash');
+        @all_pkgs = uniq_merge(@all_pkgs, @fs1_pkgs);
+
+        my @fs2_pkgs = _process_be('rpm-build');
+        push(@fs2_pkgs, 'rpm-build');
+        @all_pkgs = uniq_merge(@all_pkgs, @fs2_pkgs);
+
+        my @fs3_pkgs = _process_be('rpm');
+        push(@fs3_pkgs, 'rpm');
+        @all_pkgs = uniq_merge(@all_pkgs, @fs3_pkgs);
+
+        print STDERR "\nThe build env should be installed with below packages:\n";
+        for my $b (@all_pkgs) {
+            print STDOUT " $b ";
+        }
+        print STDOUT "\n";
+    }
+    case "-pg" {
+        resume_data();
+        my $q = $ARGV[1];
+        print "query: [$q]\n";
+        if (exists($p2pm{$q})) {
+            print Dumper \@{$p2pm{$ARGV[1]}};
+        }
+        my $mpkg = _guess_provider(($q));
+        if ($mpkg =~ /unknown/) {
+            print "Could not find provider for [$q]\n";
+        } else {
+            print STDERR "mpkg: $mpkg\n";
+            #print STDERR Dumper \%{$pkg_dep_map{$pkg_rmap{$mpkg}}};
+        }
     }
     else {
         _print_help($0);
