@@ -1,9 +1,9 @@
 <services>
     <service name="tar_scm">
       <param name="scm">git</param>
-      <param name="url">git@gitee.com:eastb233/gcc.git</param>
+      <param name="url">git@gitee.com:src-openeuler/gcc.git</param>
       <param name="exclude">.git</param>
-      <param name="revision">develop</param>
+      <param name="revision">openEuler-21.09</param>
     </service>
     <service name="extract_file">
         <param name="archive">*.tar</param>
