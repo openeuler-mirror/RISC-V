@@ -47,8 +47,8 @@ https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 
 Root file system(rootfs), virtual disk mirroring, kernel mirroring, openSBI, and binary mirror service like BBL are provided. These are for developers and enthusiasts who want to quickly set up the build environment for compilation, to have a quick experience of the RISC-V port version of OpenEuler OS in a virtual machine environment, and to have a quick experience of the ported version of openEuler OS on the recommended hardware platform.
 
-- QEMU RISC-V 64 simulation environment: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images
-- NutShell(果壳, UCAS) COOSCA1.0 hardware environment： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS
+- QEMU RISC-V 64 simulation environment: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/
+- NutShell(果壳, UCAS) COOSCA1.0 hardware environment： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS/
 
 #### Source-code repository
 
