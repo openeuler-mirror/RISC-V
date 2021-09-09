@@ -47,7 +47,7 @@ rpm --root /var/tmp/mnt --initdb
 
 sed -e "s,@RPMREPOWEBSRV@,$WEB_RPM_REPO_SRV,g" < ./assets/openEuler-rv64.repo.in > /etc/yum.repo.d/oe-riscv.repo
 
-dnf install  --installroot /var/tmp/mnt   $INSTALL_RPMS 
+dnf install -y --installroot /var/tmp/mnt   $INSTALL_RPMS 
 cp /etc/yum.repos.d/oe-rv.repo /var/tmp/mnt/etc/yum.repos.d/
 
 echo "Set default passwd to openEuler12#$"

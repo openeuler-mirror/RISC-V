@@ -5,10 +5,10 @@
 #### 动态
 - **2021年4月**  RISC-V 处理器开发商优矽科技加入 openEuler 社区 [链接](https://gitee.com/flame-ai/hello-openEuler/issues/I3CHPZ#note_4752587_link)
 - **2021年3月**  《SIGer》青少年开源文化期刊 [第#4期](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)、[第#10期 《南征北战》](https://gitee.com/yuandj/siger/blob/master/%E7%AC%AC10%E6%9C%9F%20%E5%8D%97%E5%BE%81%E5%8C%97%E6%88%98%EF%BC%88%E4%B8%8A12%EF%BC%89.md)
-- **2021年3月**  openEuler RISC-V 使能runc 容器。[链接](https://gitee.com/flame-ai/siger/blob/master/%E7%AC%AC4%E6%9C%9F%20Better%20RISC-V%20For%20Better%20Life.md)
+- **2021年3月**  openEuler RISC-V 使能runc 容器。[链接](https://openeuler.org/zh/blog/yang_yanchao/2021-3-12-start-a-containerd-on-riscv.html)
 - **2021年2月**  准备添加RISC-V TEE的支持
 - **2020年12月** 2020 openEuler 高校开发者大赛，试题4。[链接](https://www.bilibili.com/video/BV1WD4y1X7HT?p=5)
-- **2020年12月** 2020 openEuler summit 峰会展示在果壳上执行openEuler RISC-V。[链接](https://openeuler.org/zh/blog/yang_yanchao/2021-3-12-start-a-containerd-on-riscv.html)
+- **2020年12月** 2020 openEuler summit 峰会展示在果壳上执行openEuler RISC-V。
 - **2020年11月** 在[openeuler镜像仓](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)发布第二版rootfs和kernel镜像，可以在qemu中启动镜像，体验openEuler RISC-V移植版。      
 - **2020年10月** 中科院成功移植openEuler RISC-V到果壳（nutshell）     
 - **2020年9月** 在华为全联接（HC）2020大会上发布了openEuler RISC-V，国内首发RISC-V版Linux。
@@ -47,8 +47,8 @@ https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 
 提供根文件系统rootfs、虚拟磁盘镜像、内核镜像、openSBI、BBL等二进制镜像服务。用于在虚拟机环境快速搭建编译构建环境、想在虚拟机环境快速体验openEuler OS的RISC-V移植版本、想在推荐的硬件平台上快速体验openEuler OS的移植版本的开发者和爱好者.
 
-- QEMU RISC-V 64仿真环境: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images
-- NutShell(果壳, UCAS) COOSCA1.0硬件环境： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS
+- QEMU RISC-V 64仿真环境: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/
+- NutShell(果壳, UCAS) COOSCA1.0硬件环境： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS/
 
 #### 源码仓
 

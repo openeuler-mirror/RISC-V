@@ -21,7 +21,7 @@ DEBUG=true
 #WEB_RPM_REPO_SRV=http://192.168.0.104/oelriscv
 #WEB_RPM_REPO_SYNC=http://192.168.0.104/oelriscv
 #WEB_RPM_REPO_SRV=http://192.168.0.100:8000/risc-v/RPMS/
-WEB_RPM_REPO_SRV=https//isrc.iscas.ac.cn/mirror/fedora/alt/risc-v/RPMS/
+WEB_RPM_REPO_SRV=https://repo.openeuler.org/openEuler-preview/RISC-V/everything/
 #WEB_RPM_REPO_SYNC=http://192.168.0.104/oelriscv
 
 # Preinstalled packages
