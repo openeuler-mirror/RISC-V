@@ -47,8 +47,8 @@ https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/
 
 提供根文件系统rootfs、虚拟磁盘镜像、内核镜像、openSBI、BBL等二进制镜像服务。用于在虚拟机环境快速搭建编译构建环境、想在虚拟机环境快速体验openEuler OS的RISC-V移植版本、想在推荐的硬件平台上快速体验openEuler OS的移植版本的开发者和爱好者.
 
-- QEMU RISC-V 64仿真环境: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images
-- NutShell(果壳, UCAS) COOSCA1.0硬件环境： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS
+- QEMU RISC-V 64仿真环境: https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/
+- NutShell(果壳, UCAS) COOSCA1.0硬件环境： https://isrc.iscas.ac.cn/mirror/openeuler-sig-riscv/images/NutShellUCAS/
 
 #### 源码仓
 
