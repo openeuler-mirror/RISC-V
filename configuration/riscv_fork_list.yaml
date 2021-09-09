@@ -189,3 +189,11 @@ packages:
    exclude: gcc.spec
    archive: "*.tar"
    file2archive: "*/*"
+- name: gdbus-codegen-glibmm
+src:
+   url: src-openEuler/gdbus-codegen-glibmm
+   revision: 
+   exclude: .git
+   exclude: gdbus-codegen-glibmm.spec
+   archive: "*.tar"
+   file2archive: "*/*"
