@@ -1,60 +1,50 @@
 packages:
-
-  - name: tss2
+- name: tss2
   src:
    url: src-openEuler / tss2 
    revision: 
    exclude: 
    archive: 
    file2archive:
-  
-  
-  - name: x265
+- name: x265
   src:
    url: src-openEuler / x265
    revision: 
    exclude: 
    archive: 
    file2archive: 
-   
-  
-  - name: tbb
+- name: tbb
   src:
    url: riscv-spare/tbb
    revision: master
    exclude: .git
    archive: "*.tar"
-   file2archive: "*/*"
-  
-    - name: file
+   file2archive: "*/*" 
+- name: file
   src:
    url: src-openeuler/file
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-  
-  - name: python-keyring
+- name: python-keyring
   src:
    url: src-openeuler/python-keyring
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: webkit2gtk3
+- name: webkit2gtk3
   spec:
-   url: src-openeuler/webkit2gtk3
-   
-   - name: aspell
+   url: src-openeuler/webkit2gtk3 
+- name: aspell
   src:
    url: src-openeuler/aspell
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-  
-  - name: containerd
+   - name: containerd
   src:
    url: src-openeuler/containerd
    filename: containerd
@@ -65,8 +55,7 @@ packages:
    file2archive: "containerd.spec"
    compression: gz
    file2compress: "_service:tar_scm_repo_docker:containerd*.tar"
-  
-- name: docker-engine
+- name: docker
   src:
    url: src-openeuler/docker
    filename: docker
@@ -83,7 +72,6 @@ packages:
    file2archive: "docker-engine-openeuler.spec"
    compression: gz
    file2compress: "*.tar"
-  
 - name: risc-v-kernel
   src:
    url: openeuler/kernel
@@ -99,7 +87,6 @@ packages:
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-
 - name: runc
   src:
    url: src-openeuler/runc
@@ -111,103 +98,90 @@ packages:
    file2archive: "runc-openeuler.spec"
    compression: gz
    file2compress: "_service:tar_scm_repo_docker:docker-runc.tar"
-   
-   - name: atlas
+- name: atlas
   src:
    url: src-openeuler/atlas
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: golang
+- name: golang
   src:
    url: src-openeuler/golang
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: qt
+- name: qt
   src:
    url: riscv-spare/qt
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: qt5-qtbase
+- name: qt5-qtbase
   src:
    url: riscv-spare/qt
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-  
-  - name: webrtc-audio-processing
+- name: webrtc-audio-processing
   src:
    url: //gitee.com/riscv-spare/webrtc-audio-processing
    revision: master
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: ppp
+- name: ppp
   src:
    url: riscv-spare/ppp
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: redis
+- name: redis
   src:
    url: riscv-spare/redis
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: libhugetlbfs
+- name: libhugetlbfs
   src:
    url: src-openeuler/libhugetlbfs
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: isomd5sum
+- name: isomd5sum
   src:
    url: src-openeuler/isomd5sum
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: acpica-tools
+- name: acpica-tools
   src:
    url: src-openeuler/acpica-tools
    revision: openEuler-20.03-LTS-tag
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: python-greenlet
+- name: python-greenlet
   src:
    url: riscv-spare/python-greenlet
    revision: master
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: systemd
+- name: systemd
   src:
    url: whoisxxx/systemd
    revision: 6624b2db781a5a5708387c56fe71ae08e2f8f376
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   
-   - name: gcc
+- name: gcc
   src:
    url: eastb233/gcc
    revision: d13edd33eb6598b69cc930330c10b92750e3fd43
