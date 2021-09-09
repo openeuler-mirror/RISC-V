@@ -44,7 +44,7 @@ packages:
    exclude: .git
    archive: "*.tar"
    file2archive: "*/*"
-   - name: containerd
+- name: containerd
   src:
    url: src-openeuler/containerd
    filename: containerd
