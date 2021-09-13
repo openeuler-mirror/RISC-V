@@ -1,4 +1,5 @@
 packages:
+- name: ck
 - name: tss2
 - name: x265
 - name: tbb
