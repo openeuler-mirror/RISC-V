@@ -1,8 +1,5 @@
 #!/bin/sh
 
-set -e
-set -x
-
 BIN_SH=`realpath $0`
 BIN_PATH=`dirname $BIN_SH`
 tmp_chroot_env="/tmp/oe-chroot-env"
@@ -26,22 +23,39 @@ $BIN_PATH/get_dep.pl -be 2>/dev/null > $tmp_chroot_env/.palist
 # change work dir to chroot dir then find rpm and extract
 cd $tmp_chroot_env
 rm -f .alist
+rm -f .msplist
 for t in `cat .palist `; do
     #find $RPM_DIR -name  "$t-[0-9]*rpm" | grep -v 'src.rpm' | grep -v debuginfo | grep -v debugsource >> .alist
-    find $RPM_DIR -name  "$t-[0-9]*rpm" >> .alist
+    rpmf=`find $RPM_DIR -name  "$t-[0-9]*rpm"`
+    if [ "x$rpmf" = "x" ]; then
+        echo $t >> .msplist
+    else
+        for j in $rpmf; do
+            echo $j >> .alist
+        done
+    fi
 done 
 
 sed -i -e '/src.rpm/d' .alist
 
 for i in `cat .alist`; do
-    rpm2cpio $i | sudo cpio -id
+    rpm2cpio $i | sudo cpio -id 2>/dev/null
 done
 
 # hack/fix symlinks stuff
-sudo rsync -a lib/* usr/lib
-sudo rsync -a lib64/* usr/lib64
-sudo rsync -a bin/* usr/bin
-sudo rsync -a sbin/* usr/sbin
+if [ -e lib ]; then
+    sudo rsync -a lib/* usr/lib
+fi
+if [ -e lib64 ]; then
+    sudo rsync -a lib64/* usr/lib64
+fi
+if [ -e bin ]; then
+    sudo rsync -a bin/* usr/bin
+fi
+if [ -e sbin ]; then
+    sudo rsync -a sbin/* usr/sbin
+fi
+
 sudo rm -rf lib lib64 bin sbin
 sudo ln -s usr/lib .
 sudo ln -s usr/lib64 .
