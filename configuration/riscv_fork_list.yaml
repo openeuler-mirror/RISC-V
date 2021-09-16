@@ -25,3 +25,4 @@ packages:
 - name: systemd
 - name: gcc
 - name: gdbus-codegen-glibmm
+- name: http-parser
