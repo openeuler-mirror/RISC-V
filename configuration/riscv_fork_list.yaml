@@ -1,4 +1,19 @@
 packages:
+- name: ceph
+- name: fabtests
+- name: fwupd
+- name: gnome-software
+- name: jq
+- name: libdap
+- name: libkate
+- name: libsecret
+- name: libstoragemgmt
+- name: llvm
+- name: mpich
+- name: openmpi
+- name: rapidjson
+- name: rdma-core
+- name: vdo
 - name: qrencode
 - name: ck
 - name: tss2
