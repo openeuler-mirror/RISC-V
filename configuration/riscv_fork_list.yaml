@@ -42,3 +42,4 @@ packages:
 - name: gcc
 - name: gdbus-codegen-glibmm
 - name: http-parser
+- name: pixman
