@@ -44,3 +44,4 @@ packages:
 - name: http-parser
 - name: pixman
 - name: httpd
+- name: sscg
