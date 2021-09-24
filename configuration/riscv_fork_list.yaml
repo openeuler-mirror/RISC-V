@@ -1,4 +1,18 @@
 packages:
+- name: afflib
+- name: clamav
+- name: cmake
+- name: htslib
+- name: liboauth
+- name: libofa
+- name: libreport
+- name: libreswan
+- name: mod_auth_openidc
+- name: php
+- name: raptor2
+- name: redland
+- name: sblim-sfcc
+- name: wsmancli
 - name: ceph
 - name: fabtests
 - name: fwupd
