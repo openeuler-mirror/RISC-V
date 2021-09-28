@@ -59,3 +59,4 @@ packages:
 - name: pixman
 - name: httpd
 - name: sscg
+- name: ldns
