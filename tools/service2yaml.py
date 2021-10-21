@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 ## convert _service.xml to/from riscv_proj_list.yaml
 ## USAGE: service2yaml <RISC-V_DIR> <PROJ_LIST.yaml> -- convert _service to yaml
-##      [TODO]  service2yaml -r <RISC-V_DIR> <PROJ_LIST.yaml> -- convert yaml to _services
+##        service2yaml -r <RISC-V_DIR> <PROJ_LIST.yaml> -- convert yaml to _services
 ## yaml format
 ## <PROJ_LIST> -> <PACKAGE>,<PACKAGE>,...
 ## <PACKAGE> -> [[<SRC_TAR_URL>, <REVISION>, <EXCLUDE>], [<SPEC_REPO_URL>, <REVISION>, <EXCLUDE>]]
@@ -36,8 +36,9 @@ import shutil
 import subprocess
 import sys
 import tarfile
-
+from xml.dom.minidom import *
 import yaml
+import getopt
 
 def import_xml_parser():
     #global ET
@@ -202,20 +203,101 @@ def xml2yaml(xmlfile):
             service_str += handle_xml_service(service)
         return service_str
     return "unhandle errors in xml2yaml!"
+def create_xml_node(doc,param,attribute,text):
+    node = doc.createElement(param)
+    node.setAttribute('name',attribute)
+    node.appendChild(doc.createTextNode(text))
+    return node
+    
+def yaml2xml(yamlfile,output_dir):
+    yaml_file = open(yamlfile)
+    yaml_dict = yaml.safe_load(yaml_file)
+    packages = yaml_dict["packages"]
+    for package in packages:
+        name = package["name"]
+        package_path = output_dir+'//'+name
+        if not os.path.exists(package_path):
+            os.mkdir(package_path)
+        src = package["src"]
+        url_text = src["url"]
+        revision_text = src["revision"]
+        exclude_text = src["exclude"]
+        archive_text = src["archive"]
+        file2archive_text = src["file2archive"]
+        
+        doc=Document()
+        root = doc.createElement('services')
+        doc.appendChild(root)      
+        tar_scm_service = doc.createElement('service')
+        tar_scm_service.setAttribute('name','tar_scm')
+        root.appendChild(tar_scm_service)
+        
+        tar_scm_service.appendChild(create_xml_node(doc,'param','scm','git'))
+        tar_scm_service.appendChild(create_xml_node(doc,'param','url','git@gitee.com:' + url_text + '.git'))
+        tar_scm_service.appendChild(create_xml_node(doc,'param','exclude',exclude_text))
+        tar_scm_service.appendChild(create_xml_node(doc,'param','revision',revision_text))
+    
+        extract_file_service = doc.createElement('service')
+        extract_file_service.setAttribute('name','extract_file')
+        root.appendChild(extract_file_service)
+        
+        extract_file_service.appendChild(create_xml_node(doc,'param','archive',archive_text))
+        extract_file_service.appendChild(create_xml_node(doc,'param','files',file2archive_text))
+        
+        with open(package_path+'//_service', 'wb') as f:
+            f.write(doc.toprettyxml(indent='\t', encoding='utf-8')[39:])
+        f.close()
+        
+def check_file(args):
+    if len(args) != 2:
+        print('error: params error')
+        sys.exit()
+    input_file=args[0]
+    output_file=args[1]
+    return input_file,output_file
 
-if __name__ == "__main__":
-    service_dir = sys.argv[1]
-    yamlfile = sys.argv[2]
-    str_buf = "packages:\n"
-    for pkg_dir in sorted(os.listdir(service_dir)):
-        package = pkg_dir
-        if package.startswith('.'):
-            continue
-        str_buf += "- name: " + package + '\n'
-        for file in os.listdir(service_dir + "/" + package):
-            if file != "_service":
-                continue
-            str_buf += xml2yaml(service_dir + "/" + package + "/" + file)
-    f = open(yamlfile, "a")
-    print(str_buf, file = f)
-    f.close()
+def usage():
+    print('convert _service.xml to/from riscv_proj_list.yaml')
+    print('usage example: ')
+    print('service2yaml -t <RISC-V_DIR> <PROJ_LIST.yaml>')
+    print('service2yaml -r <PROJ_LIST.yaml> <RISC-V_DIR> ')
+    print('options')
+    print(' -h: for help')
+    print(' -t: convert _service to yaml')
+    print(' -r: convert yaml to _services')
+
+def main(argv):
+    try:
+        options, args = getopt.getopt(argv, "htr", ["help"])
+    except getopt.GetoptError:
+        print('error: invalid params')
+        sys.exit()
+    if not options:
+        print('error: options cannot be empty')
+    for option, value in options:
+        if option in ("-h", "--help"):
+            usage()
+            sys.exit()
+        elif option in ("-r"):
+            input_file,output_file=check_file(args)
+            yaml2xml(input_file,output_file)
+            sys.exit()
+        elif option in ("-t",):
+            service_dir = input_file
+            yamlfile = output_file
+            str_buf = "packages:\n"
+            for pkg_dir in sorted(os.listdir(service_dir)):
+                package = pkg_dir
+                if package.startswith('.'):
+                    continue
+                str_buf += "- name: " + package + '\n'
+                for file in os.listdir(service_dir + "/" + package):
+                    if file != "_service":
+                        continue
+                    str_buf += xml2yaml(service_dir + "/" + package + "/" + file)
+            f = open(yamlfile, "a")
+            print(str_buf, file = f)
+            f.close()
+if __name__ == '__main__':
+    main(sys.argv[1:])
+
