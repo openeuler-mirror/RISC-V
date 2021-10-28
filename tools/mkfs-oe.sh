@@ -1,12 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 # Usage: sh mkfs-oe.sh
+#
 # Build an rootfs image with minimal packages list.
 # The output rootfs support systemd, dnf and ssh.
 # This script includes installing RISC-V rpms into 
 # a sysroot directory, which make it should be executed
 # in RISC-V system, or x86/aarch64 system that support
 # cross-arch dnf installation.
+
 . ./globals.inc
 
 INSTALL_RPMS="$CORE_RPMS $BUILD_TOOLS"
@@ -23,10 +25,6 @@ function help()
     echo "Build a rootfs image for openEuler RISC-V"
     exit 0
 }
-
-if [ $# != 0 ]; then
-    help
-fi
 
 function prepare_disk()
 {
@@ -87,10 +85,15 @@ function umount_all()
     losetup -d $LOOPDEV
 }
 
-trap umount_all INT QUIT TERM EXIT ERR
-prepare_disk
-install_rpms
-umount_all
+if [ $# == 0 ]; then
+    trap umount_all INT QUIT TERM EXIT ERR
+    prepare_disk
+    install_rpms
+    umount_all
+else
+    help
+fi
+
 # Currently lack of qemu-img on openEuler RISC-V, 
 # you can do this step in a x86 or aarch64 host 
 #qemu-img convert -f raw -O qcow2 /var/tmp/oe-rv.raw /var/tmp/oe-rv.qcow2
