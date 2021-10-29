@@ -60,3 +60,4 @@ packages:
 - name: httpd
 - name: sscg
 - name: ldns
+- name: util-linux
