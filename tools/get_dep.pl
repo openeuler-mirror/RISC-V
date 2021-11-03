@@ -11,7 +11,7 @@ sub _print_help
     print "Usage:\n";
     print $app  . " -h\n";
     print "  for this help menu.\n";
-    print $app  . "-bp app_name\n";
+    print $app  . " -bp/dp/br/ba/be/pg app_name\n";
     print "  for example:\n";
     print $app  . " -bp bash\n";
     print "  to fetch dependency of package [bash].\n";
@@ -225,7 +225,6 @@ sub _process_bp
 
 sub _process_ba
 {
-    # check bdep of all packages then count top 15 pkgs for build env
     my @pkgs = keys(%pkg_dep_map);
     my %bdep_count;
 
@@ -235,14 +234,19 @@ sub _process_ba
         %main_pkg = %{ $main_pkg{'pkgs'} };
         %main_pkg = %{ $main_pkg{$pkg} };
 
-        #print Dumper \%main_pkg;
-        my @bdeps = @{ $main_pkg{'bdep'} };
-        #print Dumper \@bdeps;
-        for my $bd (@bdeps) {
-            if (exists($bdep_count{$bd})) {
-                $bdep_count{$bd}++;
-            } else {
-                $bdep_count{$bd} = 1;
+        unless (exists($main_pkg{'bdep'})) {
+            #print Dumper \%{ $pkg_dep_map{$pkg} };
+            print "- skip $pkg -\n";
+            #return;
+        } else {
+            my @bdeps = @{ $main_pkg{'bdep'} };
+            #print Dumper \@bdeps;
+            for my $bd (@bdeps) {
+                if (exists($bdep_count{$bd})) {
+                    $bdep_count{$bd}++;
+                } else {
+                    $bdep_count{$bd} = 1;
+                }
             }
         }
     }
@@ -266,8 +270,8 @@ sub _process_ba
     my $max_idx = scalar @sorted_scores - 1;
     my $idx = 0;
     while ($idx <= $max_idx and $idx < 15) {
-        print "Refed " . $sorted_scores[$idx] . " times:\n";
-        print Dumper \@{$rbdev_map{$sorted_scores[$idx]}};
+        print "Refed " . $sorted_scores[$idx] . " times: $rbdev_map{$sorted_scores[$idx]}[0]\n";
+        #print Dumper \@{$rbdev_map{$sorted_scores[$idx]}};
         $idx++;
     }
 }
@@ -483,18 +487,22 @@ switch($ARGV[0]) {
         _print_help($0);
     }
     case "-bp" {
+        print "check build req of $ARGV[1], also print the 'provides' of the $ARGV[1]\n";
         resume_data();
         _process_bp($ARGV[1]);
     }
     case "-dp" {
+        print "Dump meta data for $ARGV[1].\n";
         resume_data();
         _process_dp($ARGV[1]);
     }
     case "-ba" {
+        print "check bdep of all packages then count top 15 pkgs for build env.\n";
         resume_data();
         _process_ba();
     }
     case "-br" {
+        print "Get/provide build environment for $ARGV[1].\n";
         resume_data();
         my @bes = _process_be($ARGV[1]);
         print "------\n";
@@ -503,6 +511,7 @@ switch($ARGV[0]) {
         }
     }
     case "-be" {
+        print "Get/provide build environment.\n";
         resume_data();
         my @all_pkgs = ("glibc");
         my @fs1_pkgs = _process_be("bash");
@@ -526,6 +535,7 @@ switch($ARGV[0]) {
     case "-pg" {
         resume_data();
         my $q = $ARGV[1];
+        print "guest provider for $q\n";
         print "query: [$q]\n";
         if (exists($p2pm{$q})) {
             print Dumper \@{$p2pm{$ARGV[1]}};

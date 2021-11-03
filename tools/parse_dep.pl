@@ -444,18 +444,23 @@ sub _handle_src_dir
 {
     my ($dir) = @_;
     opendir(DIR, $dir);
-    my @dirs = readdir(DIR);
+    my @cnts = readdir(DIR);
     closedir(DIR);
+    my @dirs = grep { -d } @cnts;
+    my $handled_specs = 0;
 
     foreach my $d (@dirs) {
         unless ($d =~ /\./ or $d =~ /\.\./) {
-            my @specs = `ls $dir/$d/*spec`;
+            my @specs = `ls $dir/$d/*.spec`;
             for my $spec (@specs) {
                 print "--- processing: $spec";
                 _handle_one_spec($spec, $d);
             }
+            $handled_specs++;
         }
     }
+
+    print "Handled: " . $handled_specs . " spec files.\n";
 }
 
 #####################################################
