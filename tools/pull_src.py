@@ -21,12 +21,25 @@ import xml.dom.minidom
 import subprocess
 import sys
 
-def _pull_all(base):
+def _clone_all(base):
     for root, dirs, files in os.walk(base):
         for pkg in dirs:
-            _pull(base, pkg)
+            _do_clone(base, pkg)
 
-def _pull(base, name):
+    pass
+
+def _refresh_all(base):
+    for root, dirs, files in os.walk(base):
+        for pkg in dirs:
+            _do_pull(pkg)
+    pass
+
+def _do_pull(name):
+    print("pull %s" % name)
+    subprocess.getstatusoutput("cd %s && git pull" % name)
+    pass
+
+def _do_clone(base, name):
     fullname = os.path.join(base, name, "_service")
     DOMTree = xml.dom.minidom.parse(fullname)
     root = DOMTree.documentElement
@@ -63,15 +76,23 @@ def _pull(base, name):
         print("Get source of [ %s ] failed." % name)
         print("-----")
 
+def help():
+    print("usage: %s all" % sys.argv[0])
+    print("usage: %s <pkg-name>" % sys.argv[0])
 
 def _main():
     rpath = "../configuration/obs_meta/openEuler:Mainline:RISC-V"
     base = os.path.join(os.path.dirname(sys.argv[0]), rpath)
 
-    if sys.argv[1] == "all":
-        _pull_all(base)
+    if len(sys.argv) == 2:
+        if sys.argv[1] == "all":
+            _clone_all(base)
+        elif sys.argv[1] == "refresh":
+            _refresh_all(".")
+        else:
+            _do_clone(base, sys.argv[1])
     else:
-        _pull(base, sys.argv[1])
+        help()
 
 if __name__== '__main__':
     try:
