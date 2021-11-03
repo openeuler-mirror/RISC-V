@@ -61,3 +61,4 @@ packages:
 - name: sscg
 - name: ldns
 - name: util-linux
+- name: emacs
