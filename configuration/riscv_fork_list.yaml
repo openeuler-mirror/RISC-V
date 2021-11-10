@@ -62,3 +62,4 @@ packages:
 - name: ldns
 - name: util-linux
 - name: emacs
+- name: python3
