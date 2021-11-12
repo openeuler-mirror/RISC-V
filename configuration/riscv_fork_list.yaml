@@ -63,3 +63,4 @@ packages:
 - name: util-linux
 - name: emacs
 - name: python3
+- name: openblas
