@@ -40,5 +40,7 @@
 |no|feature|status|sig|owner|
 |:----|:---|:---|:--|:----|
 |[I40OKN](https://gitee.com/openeuler/RISC-V/issues/I40OKN)|镜像支持硬件平台部署|Developing|RISC-V|[@xuzhou zhang](https://gitee.com/whoisxxx), [@xijing](https://gitee.com/xijing666)|
+|[I4IGPE](https://gitee.com/openeuler/RISC-V/issues/I4IGPE)|在openeuler riscv中支持docker容器|Developing|RISC-V|[@xuzhou zhang](https://gitee.com/whoisxxx), [@xijing](https://gitee.com/xijing666)|
+
 
 
