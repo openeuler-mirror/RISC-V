@@ -65,3 +65,4 @@ packages:
 - name: python3
 - name: openblas
 - name: papi
+- name: libkcapi
