@@ -64,3 +64,4 @@ packages:
 - name: emacs
 - name: python3
 - name: openblas
+- name: papi
