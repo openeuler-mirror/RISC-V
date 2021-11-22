@@ -66,3 +66,4 @@ packages:
 - name: openblas
 - name: papi
 - name: libkcapi
+- name: apr
