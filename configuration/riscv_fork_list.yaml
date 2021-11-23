@@ -67,3 +67,5 @@ packages:
 - name: papi
 - name: libkcapi
 - name: apr
+- name: kexec-tools
+- name: haproxy
