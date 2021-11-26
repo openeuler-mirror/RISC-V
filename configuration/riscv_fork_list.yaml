@@ -69,3 +69,4 @@ packages:
 - name: apr
 - name: kexec-tools
 - name: haproxy
+- name: gd
