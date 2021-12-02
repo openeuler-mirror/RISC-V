@@ -70,3 +70,4 @@ packages:
 - name: kexec-tools
 - name: haproxy
 - name: gd
+- name: augeas
