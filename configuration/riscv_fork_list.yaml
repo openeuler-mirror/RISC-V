@@ -71,3 +71,4 @@ packages:
 - name: haproxy
 - name: gd
 - name: augeas
+- name: gsl
