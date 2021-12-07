@@ -72,3 +72,4 @@ packages:
 - name: gd
 - name: augeas
 - name: gsl
+- name: compiler-rt
