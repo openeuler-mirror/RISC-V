@@ -73,3 +73,4 @@ packages:
 - name: augeas
 - name: gsl
 - name: compiler-rt
+- name: pmix
