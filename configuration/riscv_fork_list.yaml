@@ -74,3 +74,4 @@ packages:
 - name: gsl
 - name: compiler-rt
 - name: pmix
+- name: subunit
