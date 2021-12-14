@@ -75,3 +75,4 @@ packages:
 - name: compiler-rt
 - name: pmix
 - name: subunit
+- name: acpid
