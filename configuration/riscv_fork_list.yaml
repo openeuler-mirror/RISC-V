@@ -76,3 +76,5 @@ packages:
 - name: pmix
 - name: subunit
 - name: acpid
+- name: zeromq
+- name: crash
