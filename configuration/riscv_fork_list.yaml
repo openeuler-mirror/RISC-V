@@ -80,3 +80,4 @@ packages:
 - name: crash
 - name: mariadb 
 - name: jimtcl
+- name: openssl
