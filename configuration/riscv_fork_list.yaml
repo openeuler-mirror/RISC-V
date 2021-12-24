@@ -81,3 +81,4 @@ packages:
 - name: mariadb 
 - name: jimtcl
 - name: openssl
+- name: mstflint
