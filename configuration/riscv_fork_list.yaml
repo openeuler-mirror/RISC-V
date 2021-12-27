@@ -82,3 +82,4 @@ packages:
 - name: jimtcl
 - name: openssl
 - name: mstflint
+- name: etmem
