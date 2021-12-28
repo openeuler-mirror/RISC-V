@@ -83,3 +83,4 @@ packages:
 - name: openssl
 - name: mstflint
 - name: etmem
+- name: socket_wrapper 
