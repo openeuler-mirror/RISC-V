@@ -85,3 +85,4 @@ packages:
 - name: etmem
 - name: socket_wrapper
 - name: tzdata
+- name: rhash
