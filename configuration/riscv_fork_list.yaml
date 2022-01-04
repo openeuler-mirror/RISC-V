@@ -86,3 +86,4 @@ packages:
 - name: socket_wrapper
 - name: tzdata
 - name: rhash
+- name: cfitsio
