@@ -89,3 +89,5 @@ packages:
 - name: cfitsio
 - name: lxcfs-tools
 - name: libEMF
+- name: sysbench
+- name: efl
