@@ -502,7 +502,7 @@ switch($ARGV[0]) {
         _process_ba();
     }
     case "-br" {
-        print "Get/provide build environment for $ARGV[1].\n";
+        print STDERR "Get/provide build environment for $ARGV[1].\n";
         resume_data();
         my @bes = _process_be($ARGV[1]);
         print "------\n";
@@ -511,7 +511,7 @@ switch($ARGV[0]) {
         }
     }
     case "-be" {
-        print "Get/provide build environment.\n";
+        print STDERR "Get/provide build environment.\n";
         resume_data();
         my @all_pkgs = ("glibc");
         my @fs1_pkgs = _process_be("bash");
