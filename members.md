@@ -13,19 +13,7 @@
 | 吕晓倩                 | lvxiaoqian      | 开发者           |
 | 席静                   | xijing666       | 开发者、管理员   |
 | 马驰                   | mc964203886     | 开发者           |
-| 刘佳伟                 | liujiawei       | 开发者           |
 | 孙喆炘  [zhé xīn]      | zxs-un          | 开发者           |
-| 李诗洋                 | lishiyangasdf   | 开发者           |
-| 孙浩翔                 | maximsuen       | 访客（登录用户） |
-| 许志凌                 | xinminst        | 访客（登录用户） |
-| 邹通成                 | zou-tongcheng   | 访客（登录用户） |
-| 许嘉玲                 | xujialing       | 访客（登录用户） |
-| 颛孙宇翔   [zhuān sūn] | ZhuansunYuxiang | 访客（登录用户） |
-| 高世豪                 | ShihaoGao       | 访客（登录用户） |
-| 袁政                   | YuanZheng612    | 访客（登录用户） |
-| 刘洋                   | LiuY328         | 访客（登录用户） |
-| 温智翔                 | WenZhixiang     | 访客（登录用户） |
-| 杨心仪                 | yxychristina    | 访客（登录用户） |
 
 
 
