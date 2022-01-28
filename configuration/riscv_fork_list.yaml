@@ -91,3 +91,8 @@ packages:
 - name: libEMF
 - name: sysbench
 - name: efl
+- name: passenger
+- name: qt5-qtscript
+- name: syscontainer-tools
+- name: texlive-base
+- name: openmpi
