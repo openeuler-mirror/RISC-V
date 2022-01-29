@@ -97,3 +97,4 @@ packages:
 - name: texlive-base
 - name: openmpi
 - name: rust
+- name: iSulad-img 
