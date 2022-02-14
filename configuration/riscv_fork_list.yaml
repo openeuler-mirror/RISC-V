@@ -97,4 +97,5 @@ packages:
 - name: texlive-base
 - name: openmpi
 - name: rust
-- name: iSulad-img 
+- name: iSulad-img
+- name: openEuler-logos
