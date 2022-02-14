@@ -96,4 +96,7 @@ packages:
 - name: syscontainer-tools
 - name: texlive-base
 - name: openmpi
+- name: rust
+- name: iSulad-img 
 - name: wayland
+- name: python-httpretty
