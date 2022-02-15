@@ -99,3 +99,4 @@ packages:
 - name: rust
 - name: iSulad-img
 - name: openEuler-logos
+- name: wireguard-tools 
