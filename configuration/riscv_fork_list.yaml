@@ -101,3 +101,5 @@ packages:
 - name: openEuler-logos
 - name: wireguard-tools
 - name: python-urlgrabber
+- name: wayland
+- name: python-httpretty
