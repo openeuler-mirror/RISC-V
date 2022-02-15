@@ -35,10 +35,10 @@ make install
 #!/bin/sh
 
 qemu-system-riscv64 \
-    -machine virt \    
+    -machine virt \
     -nographic \
     -smp 8 \
-    -m 124G \
+    -m 4G \
     -drive file=oe-rv-base-expand.qcow2,format=qcow2,id=hd0 \
     -object rng-random,filename=/dev/urandom,id=rng0 \
     -device virtio-rng-device,rng=rng0 \
