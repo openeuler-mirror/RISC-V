@@ -110,7 +110,7 @@ $ qemu-system-riscv64 \
   -device virtio-blk-device,drive=hd0 \
   -device virtio-net-device,netdev=usernet \
   -netdev user,id=usernet,hostfwd=tcp::12055-:22 \
-  -append 'root=/dev/vda1 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon'
+  -append 'root=/dev/vda1 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon' \
   -bios none
 ````
 注意 `-smp` 选项为CPU核数，`-m` 为虚拟机内存大小 请根据宿主机配置酌情修改。注意修改 `-m` 请同步修改 `-append` 中的 `mem=` 参数。
@@ -119,7 +119,7 @@ $ qemu-system-riscv64 \
 
 这里以主机端口转发的方式实现网络功能。为 SSH 转发的 12055 端口也可改为自己需要的端口号    
 
-QEMU 版本 >= 5.0.0 请加入 `-bios none` 选项
+QEMU 版本 >= 5.2 请加入 `-bios none` 选项
 
 ## 欢迎使用
 
