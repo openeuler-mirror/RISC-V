@@ -123,8 +123,8 @@ QEMU 版本 >= 5.0.0 请加入 `-bios none` 选项
 
 ## 欢迎使用
 
-- 登录用户：root 
-- 默认密码：openEuler12#$
+- 登录用户：`root`
+- 默认密码：`openEuler12#$`
 
 建议在登录成功之后立即修改 root 用户密码
 
