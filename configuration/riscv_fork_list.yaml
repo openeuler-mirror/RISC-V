@@ -102,3 +102,4 @@ packages:
 - name: wireguard-tools
 - name: wayland
 - name: python-httpretty
+- name: openEuler-indexhtml
