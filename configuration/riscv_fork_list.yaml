@@ -103,3 +103,4 @@ packages:
 - name: wayland
 - name: python-httpretty
 - name: openEuler-indexhtml
+- name: oemaker
