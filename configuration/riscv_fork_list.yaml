@@ -110,3 +110,4 @@ packages:
 - name: lxc
 - name: libxslt
 - name: valgrind
+- name: proftpd
