@@ -100,6 +100,7 @@ packages:
 - name: iSulad-img
 - name: openEuler-logos
 - name: wireguard-tools
+- name: python-urlgrabber
 - name: wayland
 - name: python-httpretty
 - name: openEuler-indexhtml
