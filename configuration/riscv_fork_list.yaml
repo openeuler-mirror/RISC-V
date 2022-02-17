@@ -109,3 +109,4 @@ packages:
 - name: pulseaudio
 - name: lxc
 - name: libxslt
+- name: valgrind
