@@ -104,3 +104,5 @@ packages:
 - name: python-httpretty
 - name: openEuler-indexhtml
 - name: oemaker
+- name: coreutils
+- name: pulseaudio
