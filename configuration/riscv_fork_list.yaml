@@ -108,3 +108,4 @@ packages:
 - name: coreutils
 - name: pulseaudio
 - name: lxc
+- name: libxslt
