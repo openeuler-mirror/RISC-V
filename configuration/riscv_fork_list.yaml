@@ -107,3 +107,4 @@ packages:
 - name: oemaker
 - name: coreutils
 - name: pulseaudio
+- name: lxc
