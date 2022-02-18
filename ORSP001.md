@@ -33,6 +33,7 @@
 7. （典型场景） 支持 RISC-V Lab 的 docker 应用场景；支持 Unmatched 及未来的 RISC-V 笔记本桌面场景，支持 XFce 桌面环境和 Firefox 浏览器。
 8. （超前适配） openEuler RISC-V 的软件包不应低于 openEuler mainline 版本。
 9. （补丁托管） 继续以 gitee/openEuler-riscv/ 为中间仓，逐步镜像所有需要 porting 的软件包。
+10. （kernel策略） 目前 openEuler RISC-V 在 QEMU、D1、Unmatched 上使用的是不同的 kernel 来源。后续将进行 kernel 的统一，并直接追到 kernel upstream 的最新稳定版或rc版，以获得最新的 RISC-V 支持。
 
 ## 时间线 / Timeline
 
