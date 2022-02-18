@@ -113,3 +113,4 @@ packages:
 - name: proftpd
 - name: lcr
 - name: clibcni
+- name: osinfo-db-tools
