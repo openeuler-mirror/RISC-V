@@ -118,5 +118,4 @@ packages:
 - name: rubygem-mini_magick
 - name: gupnp
 - name: librepo
-- name: mariadb
 - name: libao
