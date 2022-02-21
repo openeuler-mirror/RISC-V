@@ -115,3 +115,4 @@ packages:
 - name: clibcni
 - name: osinfo-db-tools
 - name: rubygem-cucumber-core
+- name: rubygem-mini_magick
