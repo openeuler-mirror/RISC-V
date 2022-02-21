@@ -116,3 +116,5 @@ packages:
 - name: osinfo-db-tools
 - name: rubygem-cucumber-core
 - name: rubygem-mini_magick
+- name: gupnp
+- name: librepo
