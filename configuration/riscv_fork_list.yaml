@@ -114,3 +114,4 @@ packages:
 - name: lcr
 - name: clibcni
 - name: osinfo-db-tools
+- name: rubygem-cucumber-core
