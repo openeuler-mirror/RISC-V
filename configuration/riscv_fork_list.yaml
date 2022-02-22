@@ -69,7 +69,6 @@ packages:
 - name: oemaker
 - name: openEuler-indexhtml
 - name: openEuler-logos
-- name: openjdk-1.8.0
 - name: openblas
 - name: openmpi
 - name: openssl
