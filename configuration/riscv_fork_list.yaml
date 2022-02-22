@@ -6,6 +6,7 @@ packages:
 - name: aspell
 - name: atlas
 - name: augeas
+- name: bcc
 - name: ceph
 - name: cfitsio
 - name: ck
@@ -82,6 +83,7 @@ packages:
 - name: python-httpretty
 - name: python-keyring
 - name: python-urlgrabber
+- name: python-yamlloader
 - name: python3
 - name: qrencode
 - name: qt
