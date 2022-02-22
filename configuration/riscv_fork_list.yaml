@@ -11,6 +11,7 @@ packages:
 - name: cfitsio
 - name: ck
 - name: clamav
+- name: clevis
 - name: clibcni
 - name: cmake
 - name: compiler-rt
