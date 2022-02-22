@@ -65,7 +65,6 @@ packages:
 - name: mod_auth_openidc
 - name: mpich
 - name: mstflint
-- name: nano
 - name: oemaker
 - name: openEuler-indexhtml
 - name: openEuler-logos
