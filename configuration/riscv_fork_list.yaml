@@ -46,6 +46,7 @@ packages:
 - name: libEMF
 - name: libao
 - name: libdap
+- name: libffado
 - name: libhugetlbfs
 - name: libkate
 - name: libkcapi
