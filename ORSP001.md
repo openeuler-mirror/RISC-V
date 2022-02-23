@@ -20,7 +20,7 @@
 2. 目前存在多个未完成（状态不一致）的工程： 从21.09时期的 openEuler/Mainline 某个时间点切出来的Mainline/RISC-V、2021Q4 开始尝试追 openEuler/22.03/Next 而建立的工程。目前团队规模和修包速度无法支持多个工程同时修复。
 3. 目前 OBS 服务分给个人用户的机器资源很少，RISC-V 架构修包需要排队等待验证。
 4. 目前 src-openEuler/ 仓库代码合入门禁只有 x86 和 arm64，没有 RISC-V，导致 openEuler/Mainline 代码更新很容易 break 掉 RISC-V 架构。
-5. 目前可用的镜像还是2203版本，仅有QEMU版本，缺乏每日构建镜像。
+5. 目前可用的镜像还是2003版本，仅有QEMU版本，缺乏每日构建镜像。
 
 ## 提议 / Proposal
 
