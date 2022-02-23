@@ -67,10 +67,12 @@ packages:
 - name: mod_auth_openidc
 - name: mpich
 - name: mstflint
+- name: nano
 - name: oemaker
 - name: openEuler-indexhtml
 - name: openEuler-logos
 - name: openblas
+- name: openjdk-1.8.0
 - name: openmpi
 - name: openssl
 - name: osinfo-db-tools
