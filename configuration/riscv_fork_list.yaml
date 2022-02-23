@@ -58,6 +58,7 @@ packages:
 - name: libreswan
 - name: libsecret
 - name: libstoragemgmt
+- name: libvpx
 - name: libxslt
 - name: llvm
 - name: lxc
