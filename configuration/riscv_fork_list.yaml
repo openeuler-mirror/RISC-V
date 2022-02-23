@@ -48,6 +48,7 @@ packages:
 - name: libao
 - name: libdap
 - name: libffado
+- name: libffi
 - name: libhugetlbfs
 - name: libkate
 - name: libkcapi
