@@ -1,4 +1,4 @@
-# ORSP001 openEuler RISC-V SIG Proposal 002
+# ORSP002 建立 openEuler RISC-V maintainer community
 
 ## Meta info
 
