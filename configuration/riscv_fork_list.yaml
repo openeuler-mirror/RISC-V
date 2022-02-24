@@ -70,6 +70,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: nano
+- name: nodejs-async
 - name: nss
 - name: oemaker
 - name: oddjob
