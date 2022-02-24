@@ -44,7 +44,7 @@
 
 一个包修复完成，我们的终点是mainline工程下构建成功。在以上流程的执行过程中，我们会对每个关键流程进行监控，主要的跟踪表格详见共享Excel表格：
 
-https://docs.qq.com/sheet/DUHFlV0haT2duWHBG?tab=BB08J2
+https://docs.qq.com/sheet/DUGNPekJQY1RLQ3RG
 
 
 请大家执行以上的流程，并对自己跟踪的包的状态在上述表格中进行维护。
@@ -55,7 +55,7 @@ https://docs.qq.com/sheet/DUHFlV0haT2duWHBG?tab=BB08J2
 
 ## 问题
 
-### 如何在openeuler-risc-v源码仓中新增加一个包
+### 如何在 openeuler-risc-v 源码仓中新增加一个包
 
 以ck包为例举例说明：
 
