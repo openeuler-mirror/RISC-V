@@ -69,6 +69,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: nano
+- name: nss
 - name: oemaker
 - name: oddjob
 - name: openEuler-indexhtml
