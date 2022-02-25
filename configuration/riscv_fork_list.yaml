@@ -67,6 +67,7 @@ packages:
 - name: lxc
 - name: lxcfs-tools
 - name: mariadb 
+- name: mesa
 - name: mod_auth_openidc
 - name: mpich
 - name: mstflint
