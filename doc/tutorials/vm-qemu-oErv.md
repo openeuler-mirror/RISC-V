@@ -22,7 +22,7 @@ qemu-user-static - QEMU user mode emulation binaries (static version)
 qemubuilder - pbuilder using QEMU as backend
 ```
 
-如果软件源中并未收录 `QEMU`，则可以自行下载源码包手动构建安装：      
+如果软件源中并未收录 `QEMU`，则可以自行下载源码包手动构建安装：
 
 > 源码包下载：[https://download.qemu.org/](https://download.qemu.org/)
 
@@ -30,24 +30,24 @@ qemubuilder - pbuilder using QEMU as backend
 ### I. 下载 QEMU 源代码并构建
 
 
-`$ sudo apt install build-essential`      
+`$ sudo apt install build-essential`
 安装必要的构建工具
 
-`$ wget https://download.qemu.org/qemu-<latest>.tar.xz`     
+`$ wget https://download.qemu.org/qemu-<latest>.tar.xz`
  下载最新 QEMU 源码包，**请将 `<latest>` 替换为目前最新的 QEMU 版本**
 
-`$ tar xvJf qemu-<latest>.tar.xz`     
+`$ tar xvJf qemu-<latest>.tar.xz`
 解压刚刚下载的源码包
 
 `$ cd qemu-<latest>`
 
 
 
-`./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/xx/program/riscv64-qemu`      
+`./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/xx/program/riscv64-qemu`
 `riscv-64-linux-user`为用户模式，可以运行基于 RISC-V 指令集编译的程序文件, `softmmu`为镜像模拟器，可以运行基于 RISC-V 指令集编译的linux镜像，为了测试方便，可以两个都安装
 
-`$ make`     
-`$ make install`       
+`$ make`
+`$ make install`
 如果 `--prefix` 指定的目录位于根目录下，则需要在 `./configure` 前加入 `sudo`
 
 
@@ -61,7 +61,7 @@ export PATH=$QEMU_HOME/bin:$PATH
 ````
 **注意一定要将 `QEMU_HOME` 路径替换为 `--prefix` 定义的路径**
 
-`$ source ~/.bashrc`       
+`$ source ~/.bashrc`
 `$ echo $PATH`
 
 
@@ -83,14 +83,14 @@ Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
 
 由于我们的目标是运行最新版的 openEuler RISC-V OS，我们采用最新的发行版 21.03：
 
-下载地址：[https://repo.openeuler.org/openEuler-preview/RISC-V/Image/](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)     
+下载地址：[https://repo.openeuler.org/openEuler-preview/RISC-V/Image/](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/12590933/1627377517238-78ff64df-4328-46db-8a25-b611a03eaccb.png#align=left&display=inline&height=285&id=oWpqj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=285&originWidth=1120&size=48561&status=done&style=none&width=1120)
 其中的两个文件是启动 openEuler RISC-V 移植版所必需的：
-* **fw_payload_oe_docker.elf**       
+* **fw_payload_oe_docker.elf**
 利用 openSBI 将 kernel-5.5 的 image 作为 payload 所制作的用于 QEMU 启动的 image，同时它也增加了 Docker 相关的启动配置。
 
-* **openEuler-preview.riscv64.qcow2**     
+* **openEuler-preview.riscv64.qcow2**
 openEuler RISC-V 移植版的 rootfs 镜像。
 
 
@@ -115,9 +115,9 @@ $ qemu-system-riscv64 \
 ````
 注意 `-smp` 选项为CPU核数，`-m` 为虚拟机内存大小 请根据宿主机配置酌情修改。注意修改 `-m` 请同步修改 `-append` 中的 `mem=` 参数。
 
-启动命令可做成 Shell 脚本，其中 `fw_payload_oe_docker.elf` 与 `openEuler-preview.riscv64.qcow2` 需修改为实际下载的文件名， 并注意相对和绝对路径，如做成启动脚本则可与脚本放在同一目录下。     
+启动命令可做成 Shell 脚本，其中 `fw_payload_oe_docker.elf` 与 `openEuler-preview.riscv64.qcow2` 需修改为实际下载的文件名， 并注意相对和绝对路径，如做成启动脚本则可与脚本放在同一目录下。
 
-这里以主机端口转发的方式实现网络功能。为 SSH 转发的 12055 端口也可改为自己需要的端口号    
+这里以主机端口转发的方式实现网络功能。为 SSH 转发的 12055 端口也可改为自己需要的端口号
 
 QEMU 版本 >= 5.2 请加入 `-bios none` 选项
 
@@ -133,7 +133,7 @@ QEMU 版本 >= 5.2 请加入 `-bios none` 选项
 登陆成功之后，可以看到如下的信息：
 ```
 openEuler-RISCV-rare login: root
-Password: 
+Password:
 Last login: Tue Sep  3 14:07:05 from 172.18.12.1
 
 
@@ -149,6 +149,36 @@ Usage On: 	11%
 Users online: 	1
 
 
-[root@openEuler-RISCV-rare ~]# 
+[root@openEuler-RISCV-rare ~]#
 ```
 
+也可以在 Host Linux 上通过 ssh 登录到运行于 QEMU 模拟器中的 openEuler OS：
+
+```
+$ ssh -p 12055 root@localhost
+```
+
+## [可选] 准备 QEMU x86_64 环境
+
+当需要查看对比openEuler主线软件包情况时，可安装对应的QEMU虚拟机。这里以x86_64、主线版本2109为例说明准备方法。
+
+获取预制的映像文件：
+```
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/virtual_machine_img/x86_64/openEuler-21.09-x86_64.qcow2.xz
+$ xz -d openEuler-21.09-x86_64.qcow2.xz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/OS/x86_64/images/pxeboot/initrd.img
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/OS/x86_64/images/pxeboot/vmlinuz
+```
+
+运行：
+```
+$ qemu-system-x86_64 \
+  -nographic -smp 8 -m 4G \
+  -kernel vmlinuz \
+  -initrd initrd.img \
+  -hda openEuler-21.09-x86_64.qcow2 \
+  -nic user,model=e1000 \
+  -append 'root=/dev/sda2 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon'
+```
+
+root口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
