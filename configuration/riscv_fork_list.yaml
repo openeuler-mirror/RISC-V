@@ -133,3 +133,4 @@ packages:
 - name: wsmancli
 - name: x265
 - name: zeromq
+- name: rubygem-ffi
