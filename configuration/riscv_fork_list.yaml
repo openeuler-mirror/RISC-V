@@ -121,6 +121,7 @@ packages:
 - name: systemd
 - name: tbb
 - name: texlive-base
+- name: three-eight-nine-ds-base
 - name: tss2
 - name: tzdata
 - name: util-linux
