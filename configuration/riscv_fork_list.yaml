@@ -127,6 +127,7 @@ packages:
 - name: util-linux
 - name: valgrind
 - name: vdo
+- name: volume_key
 - name: wayland
 - name: webkit2gtk3
 - name: webrtc-audio-processing
