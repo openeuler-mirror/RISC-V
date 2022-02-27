@@ -22,7 +22,7 @@ qemu-user-static - QEMU user mode emulation binaries (static version)
 qemubuilder - pbuilder using QEMU as backend
 ```
 
-如果软件源中并未收录 `QEMU`，则可以自行下载源码包手动构建安装：
+一般来说，常见 GNU/Linux 发行版软件源中都提供了包含 `qemu-system-riscv64` 的软件包，如果软件源中并未收录 `QEMU`，则可以自行下载源码包手动构建安装：
 
 > 源码包下载：[https://download.qemu.org/](https://download.qemu.org/)
 
@@ -85,10 +85,10 @@ Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
 
 下载地址：[https://repo.openeuler.org/openEuler-preview/RISC-V/Image/](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/12590933/1627377517238-78ff64df-4328-46db-8a25-b611a03eaccb.png#align=left&display=inline&height=285&id=oWpqj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=285&originWidth=1120&size=48561&status=done&style=none&width=1120)
+![image.png](images/download-image.png)
 其中的两个文件是启动 openEuler RISC-V 移植版所必需的：
-* **fw_payload_oe_docker.elf**
-利用 openSBI 将 kernel-5.5 的 image 作为 payload 所制作的用于 QEMU 启动的 image，同时它也增加了 Docker 相关的启动配置。
+* **fw_payload_oe.elf/fw_payload_oe_docker.elf**
+利用 openSBI 将 kernel-5.5 的 image 作为 payload 所制作的用于 QEMU 启动的 image。这两个文件选择一个就可以，前者不支持 Docker，后者支持。
 
 * **openEuler-preview.riscv64.qcow2**
 openEuler RISC-V 移植版的 rootfs 镜像。
