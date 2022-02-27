@@ -25,6 +25,7 @@ packages:
 - name: etmem
 - name: fabtests
 - name: file
+- name: folks
 - name: fwupd
 - name: galera
 - name: gcc
