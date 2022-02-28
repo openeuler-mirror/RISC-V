@@ -19,6 +19,7 @@ packages:
 - name: containerd
 - name: coreutils
 - name: crash
+- name: custodia 
 - name: docker
 - name: efl
 - name: emacs
