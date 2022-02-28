@@ -76,6 +76,7 @@ packages:
 - name: NetworkManager
 - name: nodejs-async
 - name: nss
+- name: ocaml-dune
 - name: oemaker
 - name: oddjob
 - name: openEuler-indexhtml
