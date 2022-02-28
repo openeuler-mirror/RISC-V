@@ -76,6 +76,7 @@ packages:
 - name: nano
 - name: NetworkManager
 - name: nodejs-async
+- name: nodejs-has-symbols
 - name: nss
 - name: ocaml-dune
 - name: oemaker
