@@ -72,6 +72,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: nano
+- name: NetworkManager
 - name: nodejs-async
 - name: nss
 - name: oemaker
