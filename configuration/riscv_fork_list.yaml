@@ -71,6 +71,7 @@ packages:
 - name: mstflint
 - name: nano
 - name: nodejs-async
+- name: nodejs-has-symbols
 - name: nss
 - name: oemaker
 - name: oddjob
