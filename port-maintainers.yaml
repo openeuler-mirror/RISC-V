@@ -1,0 +1,25 @@
+# RISC-V port maintainers
+#
+# 本文件用于存储和表达以下内容：
+# 1. maintainer 的姓名、gitee ID、邮箱
+# 2. pkg group 的名字和包含的包
+# 3. maintainer team 的名字和包含的成员
+# 4. pkg/group 的维护者信息
+
+maintainers:
+  - DongDu:
+    name: "Dong Du"
+    giteeid: dongduResearcher
+    email: Dd_nirvana@sjtu.edu.cn
+  - wuwei:
+    name: "Wei Wu"
+    giteeid: wuwei_plct
+    email: wuwei2016@iscas.ac.cn
+
+packages:
+  - opensbi:
+    name: opensbi
+    oe-url: https://gitee.com/src-openeuler/opensbi
+    port-url: none
+    maintainers:
+      - dongduResearcher
