@@ -72,6 +72,11 @@ packages:
 - name: nano
 - name: nodejs-async
 - name: nodejs-has-symbols
+- name: nodejs-es-to-primitive
+- name: nodejs-is-callable 
+- name: nodejs-is-date-object
+- name: nodejs-is-regex
+- name: nodejs-is-symbol
 - name: nss
 - name: oemaker
 - name: oddjob
