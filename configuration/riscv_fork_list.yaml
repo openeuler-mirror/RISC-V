@@ -121,6 +121,7 @@ packages:
 - name: rubygem-mini_magick
 - name: runc
 - name: rust
+- name: samba
 - name: sblim-sfcc
 - name: socket_wrapper
 - name: sscg
