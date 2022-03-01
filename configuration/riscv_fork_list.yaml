@@ -46,6 +46,7 @@ packages:
 - name: isomd5sum
 - name: jimtcl
 - name: jq
+- name: jsoup
 - name: kexec-tools
 - name: lcr
 - name: ldns
