@@ -48,6 +48,7 @@ packages:
 - name: jq
 - name: jsoup
 - name: kexec-tools
+- name: lapack
 - name: lcr
 - name: ldns
 - name: libecap
