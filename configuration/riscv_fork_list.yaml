@@ -124,8 +124,11 @@ packages:
 - name: redland
 - name: rhash
 - name: risc-v-kernel
+- name: rubygem-byebug
 - name: rubygem-cucumber-core
+- name: rubygem-ethon
 - name: rubygem-mini_magick
+- name: rubygem-thread_safe
 - name: runc
 - name: rust
 - name: samba
