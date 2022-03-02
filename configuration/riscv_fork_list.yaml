@@ -82,6 +82,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: mysql
+- name: maven
 - name: nano
 - name: NetworkManager
 - name: nodejs-async
