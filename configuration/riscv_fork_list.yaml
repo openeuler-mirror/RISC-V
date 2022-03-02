@@ -50,6 +50,7 @@ packages:
 - name: jsoup
 - name: kexec-tools
 - name: lapack
+- name: lasso
 - name: lcr
 - name: ldns
 - name: libecap
