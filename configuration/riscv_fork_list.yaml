@@ -48,6 +48,7 @@ packages:
 - name: jimtcl
 - name: jq
 - name: jsoup
+- name: jsr-305
 - name: kexec-tools
 - name: lapack
 - name: lasso
