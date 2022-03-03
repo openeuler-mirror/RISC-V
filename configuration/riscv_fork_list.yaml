@@ -18,6 +18,7 @@ packages:
 - name: cmake
 - name: compiler-rt
 - name: containerd
+- name: copy-jdk-configs
 - name: coreutils
 - name: crash
 - name: custodia 
