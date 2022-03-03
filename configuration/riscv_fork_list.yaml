@@ -132,6 +132,7 @@ packages:
 - name: redland
 - name: rhash
 - name: risc-v-kernel
+- name: rocksdb
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
 - name: rubygem-ethon
