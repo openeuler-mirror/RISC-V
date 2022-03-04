@@ -3,6 +3,7 @@ packages:
 - name: acpid
 - name: afflib
 - name: alsa-lib
+- name: apache-commons-el
 - name: apr
 - name: aspell
 - name: atlas
