@@ -8,6 +8,7 @@ packages:
 - name: atlas
 - name: attest-tools
 - name: augeas
+- name: axiom
 - name: bcc
 - name: ceph
 - name: cfitsio
