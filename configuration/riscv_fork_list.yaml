@@ -146,7 +146,12 @@ packages:
 - name: samba
 - name: sblim-sfcc
 - name: socket_wrapper
+- name: simde
+- name: simple-xml
+- name: snakeyaml
+- name: sqljet
 - name: sscg
+- name: svnkit
 - name: subunit
 - name: sysbench
 - name: syscontainer-tools
