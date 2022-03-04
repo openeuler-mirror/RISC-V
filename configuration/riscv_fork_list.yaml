@@ -135,6 +135,7 @@ packages:
 - name: rhash
 - name: risc-v-kernel
 - name: rocksdb
+- name: rubygem-aruba
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
 - name: rubygem-ethon
