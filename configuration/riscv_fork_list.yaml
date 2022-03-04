@@ -26,7 +26,9 @@ packages:
 - name: dbus-cpp
 - name: docker
 - name: efl
+- name: elixir
 - name: emacs
+- name: erlang
 - name: etmem
 - name: fabtests
 - name: file
