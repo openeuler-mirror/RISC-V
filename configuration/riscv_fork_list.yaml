@@ -44,6 +44,7 @@ packages:
 - name: golang
 - name: google-noto-emoji-fonts
 - name: gsl
+- name: gtkspellmm30
 - name: gupnp
 - name: glibc
 - name: haproxy
