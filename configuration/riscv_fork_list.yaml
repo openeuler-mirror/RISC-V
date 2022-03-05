@@ -30,6 +30,7 @@ packages:
 - name: elixir
 - name: emacs
 - name: erlang
+- name: erlang-rebar
 - name: etmem
 - name: fabtests
 - name: file
