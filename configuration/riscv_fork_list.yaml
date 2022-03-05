@@ -86,6 +86,7 @@ packages:
 - name: lxcfs-tools
 - name: mariadb 
 - name: mesa
+- name: mina-ftpserver
 - name: mod_auth_openidc
 - name: mpich
 - name: mstflint
