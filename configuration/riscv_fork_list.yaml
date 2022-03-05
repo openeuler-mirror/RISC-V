@@ -19,6 +19,7 @@ packages:
 - name: compiler-rt
 - name: containerd
 - name: coreutils
+- name: codenarc
 - name: crash
 - name: custodia 
 - name: docker
