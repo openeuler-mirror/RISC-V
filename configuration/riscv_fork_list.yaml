@@ -86,6 +86,7 @@ packages:
 - name: libvpx
 - name: libxslt
 - name: llvm
+- name: log4j
 - name: lxc
 - name: lxcfs-tools
 - name: mariadb 
