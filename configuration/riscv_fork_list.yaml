@@ -131,6 +131,7 @@ packages:
 - name: python-urlgrabber
 - name: python-yamlloader
 - name: python3
+- name: qemu
 - name: qrencode
 - name: qt
 - name: qt5-qtbase
