@@ -52,6 +52,7 @@ packages:
 - name: htslib
 - name: http-parser
 - name: httpd
+- name: ibus
 - name: iSulad-img
 - name: isomd5sum
 - name: jimtcl
