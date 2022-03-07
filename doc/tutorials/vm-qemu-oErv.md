@@ -152,7 +152,7 @@ Users online: 	1
 [root@openEuler-RISCV-rare ~]#
 ```
 
-也可以在 Host Linux 上通过 ssh 登录到运行于 QEMU 模拟器中的 openEuler OS：
+建议在 Host Linux 上通过 ssh 登录到运行于 QEMU 模拟器中的 openEuler OS（直接使用，可能会出现vim键盘输入异常）：
 
 ```
 $ ssh -p 12055 root@localhost
