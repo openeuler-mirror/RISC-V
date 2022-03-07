@@ -50,6 +50,7 @@ packages:
 - name: gtkspellmm30
 - name: gupnp
 - name: glibc
+- name: gnome-shell
 - name: haproxy
 - name: htslib
 - name: http-parser
