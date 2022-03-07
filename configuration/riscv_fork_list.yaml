@@ -11,6 +11,7 @@ packages:
 - name: augeas
 - name: axiom
 - name: bcc
+- name: bouncycastle
 - name: ceph
 - name: cfitsio
 - name: ck
