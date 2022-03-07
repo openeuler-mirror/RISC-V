@@ -183,4 +183,5 @@ packages:
 - name: wsmancli
 - name: x265
 - name: zeromq
+- name: zookeeper
 - name: rubygem-ffi
