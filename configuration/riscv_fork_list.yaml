@@ -102,6 +102,7 @@ packages:
 - name: maven
 - name: nano
 - name: NetworkManager
+- name: nodejs
 - name: nodejs-async
 - name: nodejs-has-symbols
 - name: nodejs-es-to-primitive
