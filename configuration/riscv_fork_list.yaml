@@ -70,6 +70,7 @@ packages:
 - name: ldns
 - name: libecap
 - name: libEMF
+- name: libepoxy
 - name: libao
 - name: libdap
 - name: libffado
