@@ -4,6 +4,7 @@ packages:
 - name: afflib
 - name: alsa-lib
 - name: apache-commons-el
+- name: apache-commons-daemon
 - name: apr
 - name: aspell
 - name: atlas
@@ -126,6 +127,7 @@ packages:
 - name: osinfo-db-tools
 - name: papi
 - name: passenger
+- name: pdfbox
 - name: php
 - name: pixman
 - name: pmix
