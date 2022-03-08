@@ -109,6 +109,8 @@ packages:
 - name: nodejs-async
 - name: nodejs-has-symbols
 - name: nodejs-es-to-primitive
+- name: nodejs-fast-levenshtein
+- name: nodejs-glob
 - name: nodejs-is-callable 
 - name: nodejs-is-date-object
 - name: nodejs-is-regex
