@@ -5,6 +5,7 @@ packages:
 - name: alsa-lib
 - name: apache-commons-el
 - name: apache-commons-daemon
+- name: apache-sshd
 - name: apr
 - name: aspell
 - name: atlas
@@ -53,6 +54,7 @@ packages:
 - name: gupnp
 - name: glibc
 - name: gnome-shell
+- name: gradle
 - name: haproxy
 - name: htslib
 - name: http-parser
@@ -101,6 +103,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: mvapich2
+- name: mybatis-generator
 - name: mysql
 - name: maven
 - name: nano
@@ -169,6 +172,7 @@ packages:
 - name: simde
 - name: simple-xml
 - name: snakeyaml
+- name: springframework
 - name: sqljet
 - name: sscg
 - name: svnkit
@@ -188,6 +192,7 @@ packages:
 - name: wayland
 - name: webkit2gtk3
 - name: webrtc-audio-processing
+- name: wildfly-core
 - name: wireguard-tools
 - name: wsmancli
 - name: x265
