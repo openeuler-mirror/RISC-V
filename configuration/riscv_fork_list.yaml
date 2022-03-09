@@ -98,6 +98,7 @@ packages:
 - name: mesa
 - name: mina-ftpserver
 - name: mod_auth_openidc
+- name: mozjs78
 - name: mpich
 - name: mstflint
 - name: mvapich2
