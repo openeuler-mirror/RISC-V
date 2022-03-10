@@ -15,6 +15,7 @@ packages:
 - name: axiom
 - name: bcc
 - name: bouncycastle
+- name: bpftrace
 - name: ceph
 - name: cfitsio
 - name: ck
