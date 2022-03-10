@@ -5,6 +5,7 @@ packages:
 - name: alsa-lib
 - name: apache-commons-el
 - name: apache-commons-daemon
+- name: apache-rat
 - name: apache-sshd
 - name: apr
 - name: aspell
