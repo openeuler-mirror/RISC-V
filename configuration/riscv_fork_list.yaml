@@ -19,6 +19,7 @@ packages:
 - name: cfitsio
 - name: ck
 - name: clamav
+- name: clang
 - name: clevis
 - name: clibcni
 - name: cmake
