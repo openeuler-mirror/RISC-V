@@ -67,6 +67,7 @@ packages:
 - name: jq
 - name: jsoup
 - name: jsr-305
+- name: junit
 - name: kexec-tools
 - name: lapack
 - name: lasso
@@ -198,6 +199,7 @@ packages:
 - name: wireguard-tools
 - name: wsmancli
 - name: x265
+- name: xmvn
 - name: zeromq
 - name: zookeeper
 - name: rubygem-ffi
