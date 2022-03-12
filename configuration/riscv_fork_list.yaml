@@ -96,6 +96,7 @@ packages:
 - name: libsecret
 - name: libstoragemgmt
 - name: libvpx
+- name: libxfce4ui
 - name: libxfce4util
 - name: libxslt
 - name: llvm
