@@ -99,6 +99,7 @@ packages:
 - name: libxslt
 - name: llvm
 - name: log4j
+- name: lwip
 - name: lxc
 - name: lxcfs-tools
 - name: mariadb 
