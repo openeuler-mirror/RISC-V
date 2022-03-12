@@ -143,6 +143,7 @@ packages:
 - name: php
 - name: pixman
 - name: pmix
+- name: podman
 - name: ppp
 - name: proftpd
 - name: pulseaudio
