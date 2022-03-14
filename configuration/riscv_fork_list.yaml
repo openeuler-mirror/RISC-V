@@ -65,6 +65,7 @@ packages:
 - name: httpd
 - name: hwloc
 - name: ibus
+- name: icu
 - name: iSulad-img
 - name: isomd5sum
 - name: jimtcl
