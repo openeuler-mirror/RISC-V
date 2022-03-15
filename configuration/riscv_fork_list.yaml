@@ -143,6 +143,7 @@ packages:
 - name: papi
 - name: passenger
 - name: pdfbox
+- name: perftest
 - name: php
 - name: pixman
 - name: pmix
