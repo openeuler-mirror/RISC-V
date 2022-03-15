@@ -133,6 +133,7 @@ packages:
 - name: ocaml-dune
 - name: oemaker
 - name: oddjob
+- name: oneDNN
 - name: openEuler-indexhtml
 - name: openEuler-logos
 - name: openblas
