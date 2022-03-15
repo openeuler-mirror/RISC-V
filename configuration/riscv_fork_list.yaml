@@ -202,6 +202,7 @@ packages:
 - name: tzdata
 - name: util-linux
 - name: valgrind
+- name: varnish
 - name: vdo
 - name: volume_key
 - name: wayland
