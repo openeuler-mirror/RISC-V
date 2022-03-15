@@ -1,4 +1,5 @@
 packages:
+- name: acl
 - name: acpica-tools
 - name: acpid
 - name: afflib
@@ -181,6 +182,7 @@ packages:
 - name: rust
 - name: samba
 - name: sblim-sfcc
+- name: shared-mime-info
 - name: socket_wrapper
 - name: simde
 - name: simple-xml
