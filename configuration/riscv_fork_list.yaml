@@ -129,6 +129,12 @@ packages:
 - name: nodejs-is-date-object
 - name: nodejs-is-regex
 - name: nodejs-is-symbol
+- name: nodejs-tap
+- name: nodejs-tap-parser
+- name: nodejs-less
+- name: nodejs-mock-fs
+- name: node-gyp
+- name: nodejs-source-map-support
 - name: nss
 - name: ocaml-dune
 - name: oemaker
