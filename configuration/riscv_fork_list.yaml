@@ -148,6 +148,7 @@ packages:
 - name: openmpi
 - name: openssl
 - name: osinfo-db-tools
+- name: os-maven-plugin
 - name: papi
 - name: passenger
 - name: pdfbox
@@ -208,6 +209,7 @@ packages:
 - name: three-eight-nine-ds-base
 - name: tss2
 - name: tzdata
+- name: uglify-js
 - name: util-linux
 - name: valgrind
 - name: varnish
