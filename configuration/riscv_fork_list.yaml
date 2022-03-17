@@ -187,6 +187,7 @@ packages:
 - name: rubygem-thread_safe
 - name: runc
 - name: rust
+- name: rustup
 - name: samba
 - name: sblim-sfcc
 - name: shared-mime-info
