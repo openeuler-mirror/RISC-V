@@ -104,6 +104,7 @@ packages:
 - name: lldb
 - name: llvm
 - name: log4j
+- name: log4j12
 - name: lwip
 - name: lxc
 - name: lxcfs-tools
