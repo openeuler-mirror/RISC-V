@@ -42,6 +42,7 @@ packages:
 - name: erlang-meck
 - name: erlang-rebar
 - name: etmem
+- name: evince
 - name: fabtests
 - name: file
 - name: folks
