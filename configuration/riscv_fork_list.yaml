@@ -139,6 +139,7 @@ packages:
 - name: nodejs-mock-fs
 - name: node-gyp
 - name: nodejs-source-map-support
+- name: nodejs-transformers
 - name: nss
 - name: ocaml-dune
 - name: oemaker
