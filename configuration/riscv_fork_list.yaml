@@ -227,6 +227,7 @@ packages:
 - name: wsmancli
 - name: x265
 - name: xmvn
+- name: xnio
 - name: zeromq
 - name: zookeeper
 - name: rubygem-ffi
