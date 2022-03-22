@@ -99,6 +99,7 @@ packages:
 - name: libreswan
 - name: libsecret
 - name: libstoragemgmt
+- name: libtool
 - name: libvpx
 - name: libxfce4ui
 - name: libxfce4util
