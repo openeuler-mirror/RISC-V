@@ -165,6 +165,7 @@ packages:
 - name: podman
 - name: ppp
 - name: proftpd
+- name: protobuf
 - name: pulseaudio
 - name: python-greenlet
 - name: python-httpretty
