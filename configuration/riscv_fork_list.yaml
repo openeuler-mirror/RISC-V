@@ -47,6 +47,7 @@ packages:
 - name: evince
 - name: fabtests
 - name: file
+- name: flatpak
 - name: folks
 - name: fwupd
 - name: galera
@@ -157,6 +158,7 @@ packages:
 - name: openssl
 - name: osinfo-db-tools
 - name: os-maven-plugin
+- name: ostree
 - name: papi
 - name: passenger
 - name: pdfbox
@@ -189,6 +191,7 @@ packages:
 - name: rhash
 - name: risc-v-kernel
 - name: rocksdb
+- name: rpm-ostree
 - name: rubygem-aruba
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
