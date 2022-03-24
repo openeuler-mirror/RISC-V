@@ -16,6 +16,7 @@ packages:
 - name: attest-tools
 - name: augeas
 - name: axiom
+- name: bazel
 - name: bcc
 - name: bouncycastle
 - name: bpftrace
