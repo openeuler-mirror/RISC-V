@@ -114,6 +114,7 @@ packages:
 - name: lxc
 - name: lxcfs-tools
 - name: mariadb 
+- name: make
 - name: mesa
 - name: mina-ftpserver
 - name: mod_auth_openidc
