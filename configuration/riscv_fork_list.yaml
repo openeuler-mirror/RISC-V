@@ -165,6 +165,7 @@ packages:
 - name: passenger
 - name: pdfbox
 - name: perftest
+- name: perl
 - name: php
 - name: pixman
 - name: pmix
