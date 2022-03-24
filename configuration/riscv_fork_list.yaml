@@ -19,6 +19,7 @@ packages:
 - name: bcc
 - name: bouncycastle
 - name: bpftrace
+- name: byteman
 - name: ceph
 - name: cfitsio
 - name: ck
@@ -199,6 +200,7 @@ packages:
 - name: rustup
 - name: samba
 - name: sblim-sfcc
+- name: sbt
 - name: shared-mime-info
 - name: socket_wrapper
 - name: simde
