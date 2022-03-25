@@ -243,3 +243,4 @@ packages:
 - name: zeromq
 - name: zookeeper
 - name: rubygem-ffi
+- name: zsh
