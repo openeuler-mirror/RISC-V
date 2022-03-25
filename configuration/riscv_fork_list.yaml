@@ -124,6 +124,7 @@ packages:
 - name: mpich
 - name: mstflint
 - name: mvapich2
+- name: mxparser
 - name: mybatis-generator
 - name: mysql
 - name: maven
