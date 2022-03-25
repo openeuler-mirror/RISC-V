@@ -37,6 +37,7 @@ packages:
 - name: crash
 - name: custodia 
 - name: dbus-cpp
+- name: dnf
 - name: docker
 - name: efl
 - name: elixir
@@ -47,6 +48,7 @@ packages:
 - name: etmem
 - name: evince
 - name: fabtests
+- name: ffmpeg
 - name: file
 - name: flatpak
 - name: folks
@@ -60,6 +62,11 @@ packages:
 - name: golang
 - name: google-noto-emoji-fonts
 - name: gsl
+- name: gstreamer1
+- name: gstreamer1-libav
+- name: gstreamer1-plugins-bad-free
+- name: gstreamer1-plugins-base
+- name: gstreamer1-plugins-good
 - name: gtkspellmm30
 - name: gupnp
 - name: glibc
@@ -90,6 +97,7 @@ packages:
 - name: libepoxy
 - name: libao
 - name: libdap
+- name: libdnf
 - name: libffado
 - name: libffi
 - name: libhugetlbfs
@@ -241,6 +249,7 @@ packages:
 - name: x265
 - name: xmvn
 - name: xnio
+- name: zchunk
 - name: zeromq
 - name: zookeeper
 - name: rubygem-ffi
