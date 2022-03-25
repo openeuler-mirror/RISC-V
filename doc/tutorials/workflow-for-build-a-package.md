@@ -65,6 +65,12 @@ https://docs.qq.com/sheet/DUGNPekJQY1RLQ3RG
 2. 第二步：从https://gitee.com/openeuler-risc-v  fork ck包到个人gitee下。后续就可以在个人gitee、个人obs上修改代码并测试，构建成功则提交PR搭配openeuler-risc-v。
 
 
+### 可以被 review 的 PR 的基本要求是什么？
+
+1. 需要遵循原来的 spec 一样的缩进和格式风格。
+2. 如果修改时进行了多次 commit，需要进行 rebase 操作，合并为一个 commit 再提交。
+3. 需要提供项目构建成功的OBS地址辅助审核。
+4. 在非必要的情况下，尽量采用针对 riscv 架构的增量式更改。
 
 ### 什么时候openeuler-risc-v向src-openeuler提交PR？
 
