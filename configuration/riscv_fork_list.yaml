@@ -230,6 +230,7 @@ packages:
 - name: syscontainer-tools
 - name: systemd
 - name: tbb
+- name: tensorflow
 - name: texlive-base
 - name: three-eight-nine-ds-base
 - name: tog-pegasus
