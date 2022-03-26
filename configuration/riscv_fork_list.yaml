@@ -39,6 +39,7 @@ packages:
 - name: dbus-cpp
 - name: dnf
 - name: docker
+- name: easymock
 - name: efl
 - name: elixir
 - name: emacs
@@ -60,7 +61,9 @@ packages:
 - name: gdbus-codegen-glibmm
 - name: gnome-software
 - name: golang
+- name: google-gson
 - name: google-noto-emoji-fonts
+- name: gpars
 - name: gsl
 - name: gstreamer1
 - name: gstreamer1-libav
@@ -72,6 +75,7 @@ packages:
 - name: glibc
 - name: gnome-shell
 - name: gradle
+- name: grizzly
 - name: haproxy
 - name: htslib
 - name: http-parser
@@ -216,6 +220,7 @@ packages:
 - name: samba
 - name: sblim-sfcc
 - name: sbt
+- name: scala
 - name: shared-mime-info
 - name: socket_wrapper
 - name: simde
