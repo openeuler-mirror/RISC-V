@@ -232,6 +232,7 @@ packages:
 - name: tbb
 - name: texlive-base
 - name: three-eight-nine-ds-base
+- name: tog-pegasus
 - name: tss2
 - name: tzdata
 - name: uglify-js
