@@ -261,3 +261,4 @@ packages:
 - name: zookeeper
 - name: rubygem-ffi
 - name: zsh
+- name: rubygem-shoulda
