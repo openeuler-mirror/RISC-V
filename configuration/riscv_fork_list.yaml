@@ -235,6 +235,7 @@ packages:
 - name: syscontainer-tools
 - name: systemd
 - name: tbb
+- name: telepathy-glib
 - name: tensorflow
 - name: texlive-base
 - name: three-eight-nine-ds-base
