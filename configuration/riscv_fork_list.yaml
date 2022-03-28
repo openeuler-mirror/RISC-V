@@ -86,6 +86,7 @@ packages:
 - name: icu
 - name: iSulad-img
 - name: isomd5sum
+- name: jasper
 - name: jimtcl
 - name: jq
 - name: jsoup
