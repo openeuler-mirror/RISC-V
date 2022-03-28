@@ -263,3 +263,6 @@ packages:
 - name: rubygem-ffi
 - name: zsh
 - name: rubygem-shoulda
+- name: gmetrics
+- name: jnr-enxio
+- name: jnr-netdb
