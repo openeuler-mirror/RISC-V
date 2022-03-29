@@ -248,6 +248,7 @@ packages:
 - name: valgrind
 - name: varnish
 - name: vdo
+- name: vlc
 - name: volume_key
 - name: wayland
 - name: webkit2gtk3
