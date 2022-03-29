@@ -143,6 +143,7 @@ packages:
 - name: maven
 - name: nano
 - name: NetworkManager
+- name: node_exporter
 - name: nodejs
 - name: nodejs-async
 - name: nodejs-has-symbols
