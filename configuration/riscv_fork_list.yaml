@@ -12,6 +12,7 @@ packages:
 - name: apache-sshd
 - name: apache-commons-csv
 - name: apr
+- name: armadillo
 - name: aspell
 - name: atlas
 - name: attest-tools
@@ -112,6 +113,7 @@ packages:
 - name: libmbim
 - name: liboauth
 - name: libofa
+- name: libqmi
 - name: librepo
 - name: libreport
 - name: libreswan
