@@ -119,6 +119,7 @@ packages:
 - name: libstoragemgmt
 - name: libtool
 - name: libvpx
+- name: libdvbpsi
 - name: libxfce4ui
 - name: libxfce4util
 - name: libxslt
