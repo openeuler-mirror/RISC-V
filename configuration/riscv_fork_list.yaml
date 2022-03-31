@@ -41,6 +41,7 @@ packages:
 - name: dbus-cpp
 - name: dnf
 - name: docker
+- name: e2fsprogs
 - name: easymock
 - name: efl
 - name: elixir
