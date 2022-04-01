@@ -114,6 +114,7 @@ packages:
 - name: libhugetlbfs
 - name: libkate
 - name: libkcapi
+- name: libmatroska
 - name: libmbim
 - name: liboauth
 - name: libofa
@@ -129,6 +130,8 @@ packages:
 - name: libxfce4ui
 - name: libxfce4util
 - name: libxslt
+- name: live555
+- name: lirc
 - name: lldb
 - name: llvm
 - name: log4j
