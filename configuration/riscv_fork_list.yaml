@@ -87,6 +87,7 @@ packages:
 - name: hwloc
 - name: ibus
 - name: icu
+- name: ima-evm-utils
 - name: iSulad-img
 - name: isomd5sum
 - name: jasper
