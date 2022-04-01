@@ -274,3 +274,4 @@ packages:
 - name: gmetrics
 - name: jnr-enxio
 - name: jnr-netdb
+- name: kubernetes
