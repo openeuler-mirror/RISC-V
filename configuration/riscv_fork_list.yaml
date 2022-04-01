@@ -73,6 +73,7 @@ packages:
 - name: gstreamer1-plugins-bad-free
 - name: gstreamer1-plugins-base
 - name: gstreamer1-plugins-good
+- name: gtk3
 - name: gtkspellmm30
 - name: gupnp
 - name: glibc
