@@ -35,14 +35,17 @@ function install_rpms()
     git clone https://gitee.com/openeuler/RISC-V.git
     mkdir -p rootfs/etc/yum.repos.d
     cp RISC-V/tools/osmaker/qemuimg/oe-rv.repo rootfs/etc/yum.repos.d/oe-rv.repo
+    echo $(cat rootfs/etc/yum.repos.d/oe-rv.repo)
     rpmslist=$(cat RISC-V/tools/osmaker/qemuimg/pkg.list)
     echo $rpmslist
-    yum install -y --installroot $(pwd)/rootfs $rpmslist
+    yum install -y --installroot $(pwd)/rootfs $rpmslist 2>&1 |tee pkginstall_log.txt
+    rm rootfs/etc/yum.repos.d/openEuler.repo
 }
 
 function config_services()
 {
     #systemd-timesyncd
+    cp /etc/systemd/timesyncd.conf rootfs/etc/systemd/timesyncd.conf
     sed -i 's/#NTP=/NTP=ntp.aliyun.com ntp1.aliyun.com time1.cloud.tencent.com time2.cloud.tencent.com/g' rootfs/etc/systemd/timesyncd.conf
     sed -i 's/#FallbackNTP=time1.google.com time2.google.com time3.google.com time4.google.com/FallbackNTP=time1.google.com time2.google.com time3.google.com time4.google.com/g' rootfs/etc/systemd/timesyncd.conf 
     sed -i 's/#RootDistanceMaxSec=5/RootDistanceMaxSec=5/g' rootfs/etc/systemd/timesyncd.conf
