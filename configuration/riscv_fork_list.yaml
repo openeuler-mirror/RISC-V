@@ -253,6 +253,8 @@ packages:
 - name: texlive-base
 - name: three-eight-nine-ds-base
 - name: tog-pegasus
+- name: tracker
+- name: tracker-miners
 - name: tss2
 - name: tycho
 - name: tycho-extras
