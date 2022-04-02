@@ -251,6 +251,8 @@ packages:
 - name: three-eight-nine-ds-base
 - name: tog-pegasus
 - name: tss2
+- name: tycho
+- name: tycho-extras
 - name: tzdata
 - name: uglify-js
 - name: util-linux
