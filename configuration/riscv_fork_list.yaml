@@ -188,6 +188,7 @@ packages:
 - name: openldap
 - name: openmpi
 - name: openssl
+- name: opusfile
 - name: os-maven-plugin
 - name: osinfo-db-tools
 - name: ostree
