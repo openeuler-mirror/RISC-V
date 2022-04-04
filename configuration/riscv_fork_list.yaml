@@ -215,6 +215,7 @@ packages:
 - name: qt
 - name: qt5-qtbase
 - name: qt5-qtdeclarative
+- name: qt5-qtlocation
 - name: qt5-qtscript
 - name: qt5-qtwebkit
 - name: rapidjson
