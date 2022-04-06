@@ -39,6 +39,7 @@ packages:
 - name: crash
 - name: custodia 
 - name: dbus-cpp
+- name: derby
 - name: dnf
 - name: docker
 - name: e2fsprogs
