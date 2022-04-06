@@ -43,6 +43,7 @@ packages:
 - name: docker
 - name: e2fsprogs
 - name: easymock
+- name: eclipse-emf
 - name: efl
 - name: elixir
 - name: emacs
