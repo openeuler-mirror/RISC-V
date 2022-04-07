@@ -78,6 +78,17 @@ function umount_all()
     losetup -d $loopdev
 }
 
+function compress_rootfs()
+{
+    rm -f oe-rv.tar.gz
+    losetup -fP oe-rv.raw
+    loopdev=$(losetup -a | grep -v deleted | grep oe-rv.raw | awk -F: '{print $1;}')
+    mount -o loop ${loopdev}p1 rootfs
+    tar -cvpzf oe-rv.tar.gz rootfs
+    umount rootfs
+    losetup -d $loopdev
+}
+
 
 prepare_img
 echo "prepare_img complete"
@@ -91,4 +102,6 @@ config_extlinux
 echo "config_extlinux complete"
 umount_all
 echo "umount_all complete"
+compress_rootfs
+echo "compress_rootfs complete"
 

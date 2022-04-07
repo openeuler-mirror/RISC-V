@@ -16,5 +16,5 @@ make_rootfs_oe.sh: 自动生成镜像的脚本
 
 1）启动openEuler RISC-V QEMU镜像，在当前目录下(/root)执行脚本。脚本执行完成后会在脚本同一目录下生成。
 
-2）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw)和安装包过程的log(pkginstall_log.txt)
+2）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz)和包安装过程的log(pkginstall_log.txt)
 
