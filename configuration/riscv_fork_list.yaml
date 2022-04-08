@@ -159,6 +159,7 @@ packages:
 - name: mybatis-generator
 - name: mysql
 - name: nano
+- name: netty
 - name: NetworkManager
 - name: node-gyp
 - name: node_exporter
