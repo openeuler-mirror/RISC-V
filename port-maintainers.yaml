@@ -15,6 +15,10 @@ maintainers:
     name: "Wei Wu"
     giteeid: wuwei_plct
     email: wuwei2016@iscas.ac.cn
+  - wangyangdahai:
+    name: "Yang Wang"
+    giteeid: wangyangdahai
+    email: admin@you2.top
 
 packages:
   - firefox:
