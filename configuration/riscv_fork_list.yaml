@@ -220,6 +220,7 @@ packages:
 - name: qemu
 - name: qrencode
 - name: qt
+- name: qt5-qt3d
 - name: qt5-qtbase
 - name: qt5-qtdeclarative
 - name: qt5-qtlocation
