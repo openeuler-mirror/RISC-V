@@ -132,6 +132,7 @@ packages:
 - name: libsecret
 - name: libstoragemgmt
 - name: libtool
+- name: libuv
 - name: libvpx
 - name: libxfce4ui
 - name: libxfce4util
@@ -161,6 +162,7 @@ packages:
 - name: nano
 - name: netty
 - name: NetworkManager
+- name: nghttp2
 - name: node-gyp
 - name: node_exporter
 - name: nodejs
