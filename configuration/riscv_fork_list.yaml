@@ -25,6 +25,7 @@ packages:
 - name: byteman
 - name: ceph
 - name: cfitsio
+- name: chromium
 - name: ck
 - name: clamav
 - name: clang
