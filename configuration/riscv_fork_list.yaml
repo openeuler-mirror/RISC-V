@@ -241,6 +241,7 @@ packages:
 - name: rubygem-ethon
 - name: rubygem-ffi
 - name: rubygem-mini_magick
+- name: rubygem-puma
 - name: rubygem-shoulda
 - name: rubygem-thread_safe
 - name: runc
