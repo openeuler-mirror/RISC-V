@@ -145,6 +145,7 @@ packages:
 - name: llvm
 - name: log4j
 - name: log4j12
+- name: ltrace
 - name: lwip
 - name: lxc
 - name: lxcfs-tools
