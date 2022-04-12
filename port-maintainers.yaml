@@ -19,6 +19,10 @@ maintainers:
     name: "Yang Wang"
     giteeid: wangyangdahai
     email: admin@you2.top
+  - wangjunqiang:
+    name: "Junqiang Wang"
+    giteeid: geasscore
+    email: wangjunqiang@iscas.ac.cn
 
 packages:
   - firefox:
