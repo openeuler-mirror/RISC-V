@@ -43,3 +43,11 @@ packages:
     port-url: none
     maintainers:
       - dongduResearcher
+
+packages:
+  - rust:
+    name: rust
+    oe-url: https://gitee.com/src-openeuler/rust
+    port-url: TBA
+    maintainers:
+      - jchzhou
