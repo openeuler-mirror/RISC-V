@@ -30,4 +30,5 @@ openEuler RISC-V SIG 欢迎所有对本项目感兴趣的人参与进来，工�
 
 ## [项目文档](/doc)
 - [openEuler RISC-V SIG 文档](/doc/README.md)
+- [openEuler RISC-V SIG 工具](/tools/README.md)
 
