@@ -27,6 +27,10 @@ maintainers:
     name: "Xuzhou Zhang"
     giteeid: whoisxxx
     email: zhangxuzhou4@huawei.com
+  - laokz:
+    name: "Kai Zhang"
+    giteeid: laokz
+    email: laokz@foxmail.com
 
 packages:
   - firefox:
