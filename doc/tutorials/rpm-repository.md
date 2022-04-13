@@ -8,7 +8,7 @@
 
 - 位置：软件所镜像源（科技网）
 
-     更新日期 2020-10-27
+    更新日期 2020-10-27
 
     版本较旧，所含软件包覆盖范围较广
   
@@ -42,7 +42,13 @@ gpgcheck=0
 
 ## 测试新软件源
 
-> 新软件源仍在筹备中
+新 rpm 软件源已上线，目前还在初期测试阶段。
+
+预计将随着开发过程持续更新。
+
+- 位置：软件所镜像源（科技网）
+
+  `https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/`
 
 ## 临时使用/测试 OBS 上打好的软件包
 
@@ -61,7 +67,7 @@ gpgcheck=0
 
   - advanced_riscv64 分支
 
-    `http://119.3.219.20:82/openEuler:/Mainline:/RISC-V/standard_riscv64/`
+    `http://119.3.219.20:82/openEuler:/Mainline:/RISC-V/advanced_riscv64/`
 
 - 个人项目构建出的软件包
 
