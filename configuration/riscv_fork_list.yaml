@@ -2,6 +2,7 @@ packages:
 - name: acl
 - name: acpica-tools
 - name: acpid
+- name: adcli
 - name: afflib
 - name: alsa-lib
 - name: antlr3
@@ -39,6 +40,7 @@ packages:
 - name: coreutils
 - name: crash
 - name: custodia 
+- name: dbus
 - name: dbus-cpp
 - name: derby
 - name: dnf
@@ -49,6 +51,7 @@ packages:
 - name: efl
 - name: elixir
 - name: emacs
+- name: enchant2
 - name: erlang
 - name: erlang-erlydtl
 - name: erlang-meck
