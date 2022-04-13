@@ -51,3 +51,11 @@ packages:
     port-url: TBA
     maintainers:
       - jchzhou
+
+packages:
+  - nodejs:
+    name: nodejs
+    oe-url: https://gitee.com/src-openeuler/nodejs
+    port-url: TBA
+    maintainers:
+      - wangyangdahai
