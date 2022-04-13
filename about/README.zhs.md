@@ -13,6 +13,7 @@
 
 - [ORSP001: 调整 22.03 发版计划和 SIG 目标](/proposal/ORSP001.md)
 - [ORSP002: 建立 port maintainer community](/proposal/ORSP002.md)
+- [ORSP003: openEuler RISC-V 软件源暂定运行机制](/proposal/ORSP003.md)
 
 
 ## 参与项目
