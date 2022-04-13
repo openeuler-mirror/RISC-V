@@ -23,6 +23,10 @@ maintainers:
     name: "Junqiang Wang"
     giteeid: geasscore
     email: wangjunqiang@iscas.ac.cn
+  - zhangxuzhou:
+    name: "Xuzhou Zhang"
+    giteeid: whoisxxx
+    email: zhangxuzhou4@huawei.com
 
 packages:
   - firefox:
