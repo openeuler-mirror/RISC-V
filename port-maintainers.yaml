@@ -63,3 +63,27 @@ packages:
     port-url: TBA
     maintainers:
       - wangyangdahai
+
+packages:
+  - openjdk-1.8.0:
+    name: openjdk-1.8.0
+    oe-url: https://gitee.com/src-openeuler/openjdk-1.8.0
+    port-url: https://gitee.com/openeuler-risc-v/openjdk-1.8.0
+    maintainers:
+      - misaka00251
+
+packages:
+  - golang:
+    name: golang
+    oe-url: https://gitee.com/src-openeuler/golang
+    port-url: https://gitee.com/openeuler-risc-v/golang
+    maintainers:
+      - misaka00251
+
+packages:
+  - nano:
+    name: nano
+    oe-url: https://gitee.com/src-openeuler/nano
+    port-url: https://gitee.com/openeuler-risc-v/nano
+    maintainers:
+      - misaka00251
