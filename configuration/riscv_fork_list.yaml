@@ -73,6 +73,7 @@ packages:
 - name: gmetrics
 - name: gnome-shell
 - name: gnome-software
+- name: go-bindata
 - name: golang
 - name: google-gson
 - name: google-noto-emoji-fonts
