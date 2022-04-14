@@ -49,9 +49,10 @@ function cmp_ver_diff()
         second[1]=${temp[$i + 4]}
         second[2]=${temp[$i + 5]}
 
-         # riscv must missed
         if [ "${first[1]}" != "${second[1]}" ]; then
-            printf "%-40s%-30s\n" ${first[1]} ${first[2]} >> $3
+            if [ "${first[0]}" = "x86" ]; then
+                printf "%-40s%-30s\n" ${first[1]} ${first[2]} >> $3
+            fi
             j=3
             continue
         fi
