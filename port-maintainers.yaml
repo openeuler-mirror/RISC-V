@@ -31,6 +31,11 @@ maintainers:
     name: "Kai Zhang"
     giteeid: laokz
     email: laokz@foxmail.com
+  - xijing:
+    name: "Jing Xi"
+    giteeid: phoebe-xi
+    email: xijing@iscas.ac.cn
+
 
 packages:
   - firefox:
