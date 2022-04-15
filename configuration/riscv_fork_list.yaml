@@ -13,6 +13,7 @@ packages:
 - name: apache-commons-daemon
 - name: apache-commons-el
 - name: apache-commons-exec
+- name: apache-commons-jexl
 - name: apache-rat
 - name: apache-sshd
 - name: apr
