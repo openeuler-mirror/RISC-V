@@ -1,10 +1,13 @@
 packages:
+- name: abseil-cpp
 - name: acl
 - name: acpica-tools
 - name: acpid
 - name: adcli
+- name: adwaita-icon-theme
 - name: afflib
 - name: alsa-lib
+- name: amtk
 - name: antlr3
 - name: apache-commons-csv
 - name: apache-commons-daemon
@@ -298,7 +301,14 @@ packages:
 - name: x265
 - name: xmvn
 - name: xnio
+- name: yaml-cpp
+- name: ypserv
+- name: zbar
 - name: zchunk
+- name: zenity
 - name: zeromq
+- name: zimg
+- name: zlib
 - name: zookeeper
 - name: zsh
+- name: zstd
