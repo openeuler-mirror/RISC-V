@@ -194,6 +194,7 @@ packages:
 - name: nodejs-tap-parser
 - name: nodejs-transformers
 - name: nss
+- name: ntp
 - name: ocaml-dune
 - name: oddjob
 - name: oemaker
