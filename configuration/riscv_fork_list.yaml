@@ -226,6 +226,7 @@ packages:
 - name: python-greenlet
 - name: python-httpretty
 - name: python-keyring
+- name: python-qt5
 - name: python-urlgrabber
 - name: python-yamlloader
 - name: python3
