@@ -57,7 +57,7 @@ packages:
   - rust:
     name: rust
     oe-url: https://gitee.com/src-openeuler/rust
-    port-url: TBA
+    port-url: https://gitee.com/openeuler-risc-v/rust
     maintainers:
       - jchzhou
 
@@ -92,3 +92,11 @@ packages:
     port-url: https://gitee.com/openeuler-risc-v/nano
     maintainers:
       - misaka00251
+
+packages:
+  - ffmpeg:
+    name: ffmpeg
+    oe-url: https://gitee.com/src-openeuler/ffmpeg
+    port-url: https://gitee.com/openeuler-risc-v/ffmpeg
+    maintainers:
+      - jchzhou
