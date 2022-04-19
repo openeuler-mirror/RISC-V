@@ -1,5 +1,5 @@
 [base]
 name=base
-baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/epol/
+baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/22.03/everything/
 enabled=1
 gpgcheck=0
