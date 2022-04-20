@@ -223,10 +223,14 @@ packages:
 - name: proftpd
 - name: protobuf
 - name: pulseaudio
+- name: python-dateutil
+- name: python-fixtures
 - name: python-greenlet
 - name: python-httpretty
+- name: python-hypothesis
 - name: python-keyring
 - name: python-qt5
+- name: python-unittest2
 - name: python-urlgrabber
 - name: python-yamlloader
 - name: python3
