@@ -38,6 +38,7 @@ packages:
 - name: clibcni
 - name: cmake
 - name: codenarc
+- name: color-filesystem
 - name: compiler-rt
 - name: containerd
 - name: copy-jdk-configs
