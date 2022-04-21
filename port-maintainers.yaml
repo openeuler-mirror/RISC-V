@@ -100,3 +100,11 @@ packages:
     port-url: https://gitee.com/openeuler-risc-v/ffmpeg
     maintainers:
       - jchzhou
+
+packages:
+  - icu:
+    name: icu
+    oe-url: https://gitee.com/src-openeuler/icu
+    port-url: https://gitee.com/openeuler-risc-v/icu
+    maintainers:
+      - misaka00251
