@@ -98,6 +98,7 @@ packages:
 - name: gtk3
 - name: gtkspellmm30
 - name: gupnp
+- name: grub2
 - name: haproxy
 - name: harfbuzz
 - name: htslib
@@ -171,6 +172,7 @@ packages:
 - name: mozjs78
 - name: mpich
 - name: mstflint
+- name: mutter
 - name: mvapich2
 - name: mxparser
 - name: mybatis-generator
