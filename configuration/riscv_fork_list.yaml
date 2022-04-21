@@ -78,6 +78,7 @@ packages:
 - name: gdb
 - name: gdbus-codegen-glibmm
 - name: glibc
+- name: glm
 - name: glslang
 - name: gmetrics
 - name: gnome-shell
