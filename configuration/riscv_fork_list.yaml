@@ -48,6 +48,7 @@ packages:
 - name: coreutils
 - name: crash
 - name: custodia 
+- name: dblatex
 - name: dbus
 - name: dbus-cpp
 - name: derby
