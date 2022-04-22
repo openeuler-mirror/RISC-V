@@ -211,6 +211,8 @@ packages:
 - name: openEuler-logos
 - name: openblas
 - name: openjdk-1.8.0
+- name: openjdk-11
+- name: openjdk-latest
 - name: openldap
 - name: openmpi
 - name: openssl
