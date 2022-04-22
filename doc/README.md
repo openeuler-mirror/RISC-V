@@ -9,5 +9,6 @@
 - [QEMU-riscv64 版 openEuler 的获取和运行](tutorials/vm-qemu-oErv.md)
 
 ## 外部文档
+- [**openEuler 官方打包规范**](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)
 - [zxs-un整理的文档](https://gitee.com/zxs-un/openEuler-port2riscv64)
 - [lvxiaoqian整理的文档](https://gitee.com/lvxiaoqian/memo)
