@@ -241,6 +241,7 @@ packages:
 - name: python-hypothesis
 - name: python-keyring
 - name: python-qt5
+- name: python-testtools
 - name: python-unittest2
 - name: python-urlgrabber
 - name: python-yamlloader
