@@ -78,6 +78,14 @@ packages:
       - misaka00251
 
 packages:
+  - openjdk-11:
+    name: openjdk-11
+    oe-url: https://gitee.com/src-openeuler/openjdk-11
+    port-url: https://gitee.com/openeuler-risc-v/openjdk-11
+    maintainers:
+      - misaka00251
+
+packages:
   - golang:
     name: golang
     oe-url: https://gitee.com/src-openeuler/golang
@@ -124,3 +132,11 @@ packages:
     port-url: https://gitee.com/openeuler-risc-v/vlc
     maintainers:
       - Jingwiw
+
+packages:
+  - ruby:
+    name: ruby
+    oe-url: https://gitee.com/src-openeuler/ruby
+    port-url: https://gitee.com/openeuler-risc-v/ruby
+    maintainers:
+      - misaka00251

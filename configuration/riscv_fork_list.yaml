@@ -265,6 +265,7 @@ packages:
 - name: risc-v-kernel
 - name: rocksdb
 - name: rpm-ostree
+- name: ruby
 - name: rubygem-aruba
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
