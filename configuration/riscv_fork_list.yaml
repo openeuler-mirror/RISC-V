@@ -137,6 +137,7 @@ packages:
 - name: libffado
 - name: libffi
 - name: libhugetlbfs
+- name: libjpeg-turbo
 - name: libkate
 - name: libkcapi
 - name: libmatroska
