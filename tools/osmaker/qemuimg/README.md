@@ -10,11 +10,24 @@ oe-rv.repo: yum源配置文件。每次脚本执行，都会自动从gitee上获
 
 pkg.list: 新镜像预安装的包。每次脚本执行，都会自动从gitee上获取该文件，并根据文件中列出的包进行安装
 
-make_rootfs_oe.sh: 自动生成镜像的脚本
+make_rootfs_oe.sh: 在openEuler RISC-V QEMU中自动生成镜像的脚本
+
+make_rootfs_oe_docker.sh: 在openEuler RISC-V docker container中自动生成镜像的脚本
 
 #### 2. 使用方法
+
+##### 2.1 make_rootfs_oe.sh使用方法
 
 1）启动openEuler RISC-V QEMU镜像，在当前目录下(/root)执行脚本。脚本执行完成后会在脚本同一目录下生成。
 
 2）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz)和包安装过程的log(pkginstall_log.txt)
 
+3）所生成镜像登录的用户名/密码：root/openEuler12#$
+
+##### 2.2 make_rootfs_oe_docker.sh使用方法
+
+1）执行docker run -itd --privileged --name oe-rv geasscore/openeuler-riscv64:20.03 /bin/bash启动openEuler RISC-V docker container
+
+2）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz), kernel镜像(boot目录)和包安装过程的log(pkginstall_log.txt)
+
+3）所生成镜像登录的用户名/密码：root/openEuler12#$
