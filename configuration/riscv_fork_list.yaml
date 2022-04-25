@@ -366,3 +366,4 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
+- name: python-markdown
