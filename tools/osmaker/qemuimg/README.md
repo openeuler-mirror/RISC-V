@@ -26,8 +26,18 @@ make_rootfs_oe_docker.sh: 在openEuler RISC-V docker container中自动生成镜
 
 ##### 2.2 make_rootfs_oe_docker.sh使用方法
 
-1）执行docker run -itd --privileged --name oe-rv geasscore/openeuler-riscv64:20.03 /bin/bash启动openEuler RISC-V docker container
+1）如若在x86宿主机上运行openEuler-riscv64 docker container, 需要先执行以下步骤：
 
-2）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz), kernel镜像(boot目录)和包安装过程的log(pkginstall_log.txt)
+sudo apt install --no-install-recommends qemu-user-static binfmt-support
 
-3）所生成镜像登录的用户名/密码：root/openEuler12#$
+update-binfmts --enable qemu-riscv64
+
+update-binfmts --display qemu-riscv64
+
+sudo chmod a+x /usr/bin/qemu-*
+
+2）执行docker run -itd --privileged --name oe-rv geasscore/openeuler-riscv64:20.03 /bin/bash启动openEuler RISC-V docker container
+
+3）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz), kernel镜像(boot目录)和包安装过程的log(pkginstall_log.txt)
+
+4）所生成镜像登录的用户名/密码：root/openEuler12#$
