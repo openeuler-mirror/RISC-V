@@ -136,6 +136,7 @@ packages:
 - name: libepoxy
 - name: libffado
 - name: libffi
+- name: libgusb
 - name: libhugetlbfs
 - name: libjpeg-turbo
 - name: libkate
@@ -242,6 +243,7 @@ packages:
 - name: python-hypothesis
 - name: python-keyring
 - name: python-markdown
+- name: python-pandas
 - name: python-qt5
 - name: python-testtools
 - name: python-unittest2
