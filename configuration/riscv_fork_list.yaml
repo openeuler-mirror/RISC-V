@@ -241,6 +241,7 @@ packages:
 - name: python-httpretty
 - name: python-hypothesis
 - name: python-keyring
+- name: python-markdown
 - name: python-qt5
 - name: python-testtools
 - name: python-unittest2
@@ -366,4 +367,3 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-- name: python-markdown
