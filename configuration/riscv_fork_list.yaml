@@ -74,6 +74,7 @@ packages:
 - name: folks
 - name: fwupd
 - name: galera
+- name: gc
 - name: gcc
 - name: gd
 - name: gdb
@@ -175,6 +176,7 @@ packages:
 - name: mozjs78
 - name: mpich
 - name: mstflint
+- name: musl
 - name: mutter
 - name: mvapich2
 - name: mxparser
@@ -235,6 +237,7 @@ packages:
 - name: protobuf
 - name: psutils
 - name: pulseaudio
+- name: python-aiosmtpd
 - name: python-dateutil
 - name: python-fixtures
 - name: python-greenlet
