@@ -1,0 +1,11 @@
+[standard_riscv64]
+name=standard_riscv64
+baseurl=http://119.3.219.20:82/openEuler:/Mainline:/RISC-V/standard_riscv64/
+enabled=1
+gpgcheck=0
+
+[advanced_riscv64]
+name=advanced_riscv64
+baseurl=http://119.3.219.20:82/openEuler:/Mainline:/RISC-V/advanced_riscv64/
+enabled=1
+gpgcheck=0
