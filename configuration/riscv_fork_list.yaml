@@ -170,6 +170,7 @@ packages:
 - name: lxcfs-tools
 - name: make
 - name: mariadb 
+- name: mariadb-connector-c
 - name: maven
 - name: mesa
 - name: mina-ftpserver
