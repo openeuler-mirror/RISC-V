@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comps>
+    <group>
+        <id>xfce-desktop</id>
+        <name>Xfce</name>
+        <default>false</default>
+        <description>A lightweight desktop environment that works well on low end machines.</description>
+        <uservisible>true</uservisible>
+        <packagelist>
+            <packagereq type="mandatory">xfce4-about</packagereq>
+            <packagereq type="mandatory">xfce4-panel</packagereq>
+            <packagereq type="mandatory">xfce4-power-manager</packagereq>
+            <packagereq type="mandatory">xfce4-session</packagereq>
+            <packagereq type="mandatory">xfce4-settings</packagereq>
+            <packagereq type="mandatory">xfconf</packagereq>
+            <packagereq type="mandatory">xfdesktop</packagereq>
+            <packagereq type="mandatory">xfwm4</packagereq>
+            <packagereq type="mandatory"> webkit2gtk3</packagereq>
+            <packagereq>Thunar</packagereq>
+            <packagereq>thunar-volman</packagereq>
+            <packagereq>tumbler</packagereq>
+            <packagereq>xfce4-appfinder</packagereq>
+            <packagereq>xfce4-terminal</packagereq>
+            <packagereq>xfce-polkit</packagereq>
+            <packagereq>xfce-theme-manager</packagereq>
+        </packagelist>
+    </group>
+    <group>
+        <id>xfce-software-development</id>
+        <name>Xfce Software Development</name>
+        <description>Install these packages in order to develop GTK+ and Xfce graphical applications.</description>
+        <default>false</default>
+        <uservisible>false</uservisible>
+        <packagelist>
+            <packagereq type="mandatory">libxfce4ui-devel</packagereq>
+            <packagereq type="mandatory">libxfce4util-devel</packagereq>
+            <packagereq type="default">exo-devel</packagereq>
+            <packagereq type="default">garcon-devel</packagereq>
+            <packagereq type="default">Thunar-devel</packagereq>
+            <packagereq type="default">tumbler-devel</packagereq>
+            <packagereq type="default">xfce4-dev-tools</packagereq>
+            <packagereq type="default">xfce4-panel-devel</packagereq>
+            <packagereq type="default">xfconf-devel</packagereq>
+        </packagelist>
+    </group>
+    <group>
+        <id>xfce-apps</id>
+        <name>Applications for the Xfce Desktop</name>
+        <description>A set of commonly used applications for the Xfce Desktop</description>
+        <default>false</default>
+        <uservisible>false</uservisible>
+        <packagelist>
+            <packagereq>ristretto</packagereq>
+            <packagereq>xfce4-calculator-plugin</packagereq>
+        </packagelist>
+    </group>
+</comps>

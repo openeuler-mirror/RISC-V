@@ -1,0 +1,5 @@
+[hw_pandora_xfce4]
+name=hw_pandora_xfce4
+baseurl=http://121.36.3.168:82/home:/pandora:/xfce4/webkit2gtk3/
+enabled=1
+gpgcheck=0
