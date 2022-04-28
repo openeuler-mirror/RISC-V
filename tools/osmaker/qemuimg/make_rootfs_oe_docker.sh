@@ -87,7 +87,9 @@ function compress_rootfs()
     kpartx -av $loopdev
     mount -o loop /dev/mapper${loopdev#*v}p1 rootfs
     cp -r rootfs/boot .
-    tar -cvpzf oe-rv.tar.gz rootfs
+    cd rootfs
+    tar -cvpzf ../oe-rv.tar.gz *
+    cd ..
     umount rootfs
     kpartx -dv $loopdev
     losetup -d $loopdev
