@@ -1,0 +1,12 @@
+[Factory]
+name=Factory
+baseurl=http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V/22.03/
+enabled=1
+gpgcheck=0
+
+[22.03]
+name=22.03
+baseurl=http://obs-backend.tarsier-infra.com:82/openEuler:/22.03/openEuler_2203/
+enabled=1
+gpgcheck=0
+
