@@ -43,6 +43,7 @@ packages:
 - name: codenarc
 - name: color-filesystem
 - name: compiler-rt
+- name: container-selinux
 - name: containerd
 - name: copy-jdk-configs
 - name: coreutils
