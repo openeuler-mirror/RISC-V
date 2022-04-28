@@ -68,6 +68,7 @@ packages:
 - name: etmem
 - name: evince
 - name: fabtests
+- name: fakechroot
 - name: ffmpeg
 - name: file
 - name: flatpak
@@ -145,6 +146,7 @@ packages:
 - name: libkcapi
 - name: libmatroska
 - name: libmbim
+- name: libnice
 - name: liboauth
 - name: libofa
 - name: libqmi
