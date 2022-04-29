@@ -93,6 +93,7 @@ function compress_rootfs()
     umount rootfs
     kpartx -dv $loopdev
     losetup -d $loopdev
+    zstd oe-rv.raw
 }
 
 
