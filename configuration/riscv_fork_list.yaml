@@ -132,6 +132,7 @@ packages:
 - name: lcr
 - name: ldns
 - name: libEMF
+- name: libaio
 - name: libao
 - name: libdap
 - name: libdnf
