@@ -1,5 +1,5 @@
 [base]
 name=base
-baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/22.03/everything/
+baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Everything/
 enabled=1
 gpgcheck=0
