@@ -81,45 +81,57 @@ Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
 ## 下载 openEuler RISC-V 系统镜像
 恭喜你已经成功编译安装了最新版的 QEMU，接下来我们需要下载 openEuler RISC-V 的系统镜像。
 
-由于我们的目标是运行最新版的 openEuler RISC-V OS，我们采用最新的发行版 21.03：
+由于我们的目标是运行最新版的 openEuler RISC-V OS，我们采用最新的发行版 22.03：
 
-下载地址：[https://repo.openeuler.org/openEuler-preview/RISC-V/Image/](https://repo.openeuler.org/openEuler-preview/RISC-V/Image/)
+注：  `21.03`的系统镜像安装移步至[21.03系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
 
-![image.png](images/download-image.png)
-其中的两个文件是启动 openEuler RISC-V 移植版所必需的：
-* **fw_payload_oe.elf/fw_payload_oe_docker.elf**
-利用 openSBI 将 kernel-5.5 的 image 作为 payload 所制作的用于 QEMU 启动的 image。这两个文件选择一个就可以，前者不支持 Docker，后者支持。
+提供两种安装方式
+### 浏览器下载
+下载地址：[https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/)
 
-* **openEuler-preview.riscv64.qcow2**
+![image.png](images/download-image2203.png)
+### linux命令行安装
+
+```bash
+mkdir oervimg
+cd oervimg
+wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/run.sh
+wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/fw_payload_oe.elf
+wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/openEuler-22.03.riscv64.qcow2
+```
+其中的三个文件说明如下：
+* **fw_payload_oe.elf**
+利用 openSBI 将 kernel-5.10 的 image 作为 payload 所制作的用于 QEMU 启动的 image。
+
+* **openEuler-22.03.riscv64.qcow2**
 openEuler RISC-V 移植版的 rootfs 镜像。
 
-
+* **run.sh**
+利用 `qemu-riscv64` 运行openEuler RISC-V 系统镜像的脚本
 
 ## 通过QEMU启动一个openEuler RISC-V
 
-在上一步下载的文件所在的目录下执行：
+在上一步下载的文件所在的目录下执行`bash run.sh`
 
+run.sh文件说明
 ```
-$ qemu-system-riscv64 \
+#!/bin/bash
+
+qemu-system-riscv64 \
   -nographic -machine virt \
-  -smp 8 -m 4G \
-  -kernel fw_payload_oe_docker.elf \
-  -drive file=openEuler-preview.riscv64.qcow2,format=qcow2,id=hd0 \
+  -smp 8 -m 2G \
+  -bios fw_payload_oe.elf \
+  -drive file=openEuler-22.03.riscv64.qcow2,format=qcow2,id=hd0 \
   -object rng-random,filename=/dev/urandom,id=rng0 \
   -device virtio-rng-device,rng=rng0 \
   -device virtio-blk-device,drive=hd0 \
   -device virtio-net-device,netdev=usernet \
-  -netdev user,id=usernet,hostfwd=tcp::12055-:22 \
-  -append 'root=/dev/vda1 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon' \
-  -bios none
+  -netdev user,id=usernet,hostfwd=tcp::22222-:22
 ````
-注意 `-smp` 选项为CPU核数，`-m` 为虚拟机内存大小 请根据宿主机配置酌情修改。注意修改 `-m` 请同步修改 `-append` 中的 `mem=` 参数。
+注意 `-smp` 选项为CPU核数，`-m` 为虚拟机内存大小 请根据宿主机配置酌情修改。
 
-启动命令可做成 Shell 脚本，其中 `fw_payload_oe_docker.elf` 与 `openEuler-preview.riscv64.qcow2` 需修改为实际下载的文件名， 并注意相对和绝对路径，如做成启动脚本则可与脚本放在同一目录下。
+这里以主机端口转发的方式实现网络功能。为 SSH 转发的 22222 端口也可改为自己需要的端口号
 
-这里以主机端口转发的方式实现网络功能。为 SSH 转发的 12055 端口也可改为自己需要的端口号
-
-QEMU 版本 >= 5.2 请加入 `-bios none` 选项
 
 ## 欢迎使用
 
@@ -128,34 +140,33 @@ QEMU 版本 >= 5.2 请加入 `-bios none` 选项
 
 建议在登录成功之后立即修改 root 用户密码
 
-
-
 登陆成功之后，可以看到如下的信息：
 ```
-openEuler-RISCV-rare login: root
-Password:
-Last login: Tue Sep  3 14:07:05 from 172.18.12.1
+root@localhost's password:
+Last login: Fri Apr 29 07:27:22 2022 from 10.0.2.2
 
 
-Welcome to 5.5.19
+Welcome to 5.10.0
 
-System information as of time: 	Tue Sep  3 09:32:35 UTC 2019
+System information as of time:  Fri Apr 29 07:28:59 UTC 2022
 
-System load: 	0.15
-Processes: 	107
-Memory used: 	2.7%
-Swap used: 	0.0%
-Usage On: 	11%
-Users online: 	1
+System load:    0.11
+Processes:      114
+Memory used:    2.5%
+Swap used:      0.0%
+Usage On:       12%
+IP address:     10.0.2.15
+Users online:   1
 
 
-[root@openEuler-RISCV-rare ~]#
+[root@openEuler-riscv64 ~]#
+
 ```
 
 建议在 Host Linux 上通过 ssh 登录到运行于 QEMU 模拟器中的 openEuler OS（直接使用，可能会出现vim键盘输入异常）：
 
 ```
-$ ssh -p 12055 root@localhost
+$ ssh -p 22222 root@localhost
 ```
 
 ## [可选] 准备 QEMU x86_64 环境
