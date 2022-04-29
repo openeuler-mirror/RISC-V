@@ -38,6 +38,6 @@ sudo chmod a+x /usr/bin/qemu-*
 
 2）执行docker run -itd --privileged --name oe-rv geasscore/openeuler-riscv64:20.03 /bin/bash启动openEuler RISC-V docker container
 
-3）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 文件系统压缩包(oe-rv.tar.gz), kernel镜像(boot目录)和包安装过程的log(pkginstall_log.txt)
+3）脚本执行完成后，会在脚本同一目录下生成新镜像(oe-rv.raw), 新镜像的压缩包(oe-rv.raw.zst), 文件系统压缩包(oe-rv.tar.gz), kernel镜像(boot目录)和包安装过程的log(pkginstall_log.txt)
 
 4）所生成镜像登录的用户名/密码：root/openEuler12#$
