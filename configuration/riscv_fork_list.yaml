@@ -313,6 +313,7 @@ packages:
 - name: tbb
 - name: telepathy-glib
 - name: tensorflow
+- name: texinfo
 - name: texlive
 - name: texlive-base
 - name: texlive-filesystem
