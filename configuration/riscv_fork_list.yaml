@@ -289,11 +289,13 @@ packages:
 - name: rubygem-thread_safe
 - name: runc
 - name: rust
+- name: rust-cbindgen
 - name: rustup
 - name: samba
 - name: sblim-sfcc
 - name: sbt
 - name: scala
+- name: shaderc
 - name: shared-mime-info
 - name: simde
 - name: simple-xml
