@@ -112,6 +112,7 @@ packages:
 - name: httpd
 - name: hunspell
 - name: hwloc
+- name: iSulad
 - name: iSulad-img
 - name: ibus
 - name: icu
@@ -131,6 +132,7 @@ packages:
 - name: lasso
 - name: lcr
 - name: ldns
+- name: lib-shim-v2
 - name: libEMF
 - name: libaio
 - name: libao
