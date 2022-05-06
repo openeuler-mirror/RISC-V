@@ -245,9 +245,11 @@ packages:
 - name: proftpd
 - name: protobuf
 - name: psutils
+- name: ptpython
 - name: pulseaudio
 - name: python-aiosmtpd
 - name: python-arpy
+- name: python-bitstring
 - name: python-dateutil
 - name: python-fixtures
 - name: python-greenlet
@@ -259,6 +261,9 @@ packages:
 - name: python-musicbrainzngs
 - name: python-pandas
 - name: python-qt5
+- name: python-requests-gssapi
+- name: python-restructuredtext-lint
+- name: python-simpleeval
 - name: python-stem
 - name: python-testtools
 - name: python-unittest2
