@@ -83,7 +83,7 @@ Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
 
 由于我们的目标是运行最新版的 openEuler RISC-V OS，我们采用最新的发行版 22.03：
 
-注：  `21.03`的系统镜像安装移步至[21.03系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
+注：  `20.03`的系统镜像安装移步至[20.03系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
 
 提供两种安装方式
 ### 浏览器下载
@@ -171,14 +171,14 @@ $ ssh -p 22222 root@localhost
 
 ## [可选] 准备 QEMU x86_64 环境
 
-当需要查看对比openEuler主线软件包情况时，可安装对应的QEMU虚拟机。这里以x86_64、主线版本2109为例说明准备方法。
+当需要查看对比openEuler主线软件包情况时，可安装对应的QEMU虚拟机。这里以x86_64、主线版本2203为例说明准备方法。
 
 获取预制的映像文件：
 ```
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/virtual_machine_img/x86_64/openEuler-21.09-x86_64.qcow2.xz
-$ xz -d openEuler-21.09-x86_64.qcow2.xz
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/OS/x86_64/images/pxeboot/initrd.img
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-21.09/OS/x86_64/images/pxeboot/vmlinuz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/virtual_machine_img/x86_64/openEuler-22.03-LTS-x86_64.qcow2.xz
+$ xz -d openEuler-22.03-LTS-x86_64.qcow2.xz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images/pxeboot/initrd.img
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images/pxeboot/vmlinuz
 ```
 
 运行：
@@ -187,7 +187,7 @@ $ qemu-system-x86_64 \
   -nographic -smp 8 -m 4G \
   -kernel vmlinuz \
   -initrd initrd.img \
-  -hda openEuler-21.09-x86_64.qcow2 \
+  -hda openEuler-22.03-LTS-x86_64.qcow2 \
   -nic user,model=e1000 \
   -append 'root=/dev/sda2 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon'
 ```
