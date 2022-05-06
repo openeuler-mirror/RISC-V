@@ -1,5 +1,20 @@
 #!/bin/bash
 
+function clean_devices()
+{
+    yum install kpartx -y
+    cleandev=$(losetup -a | grep oe-rv.raw | awk -F: '{print $1;}')
+    if [ ${#cleandev[*]} -gt 0 ]
+    then 
+        for dev in ${cleandev[*]}
+        do
+        echo $dev;
+        kpartx -dv $cleandev;
+        losetup -d $cleandev
+        done
+    fi
+}
+
 function prepare_img()
 {
     truncate -s 10G oe-rv.raw
@@ -12,7 +27,6 @@ function prepare_img()
     
     w
     " | fdisk $loopdev
-    yum install kpartx -y
     kpartx -av $loopdev
     mkfs.ext4 /dev/mapper${loopdev#*v}p1
 }
@@ -96,7 +110,8 @@ function compress_rootfs()
     tar -I 'zstd -T0 -15' -cvf oe-rv.raw.tar.zst oe-rv.raw
 }
 
-
+clean_devices
+echo "clean_devices complete"
 prepare_img
 echo "prepare_img complete"
 mount_img
