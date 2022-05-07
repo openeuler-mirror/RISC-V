@@ -301,6 +301,8 @@ packages:
 - name: runc
 - name: rust
 - name: rust-cbindgen
+- name: rust-packaging
+- name: rust-srpm-macros
 - name: rustup
 - name: samba
 - name: sblim-sfcc
