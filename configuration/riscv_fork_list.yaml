@@ -270,6 +270,7 @@ packages:
 - name: python-urlgrabber
 - name: python-yamlloader
 - name: python3
+- name: pytorch
 - name: qemu
 - name: qrencode
 - name: qt
