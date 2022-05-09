@@ -370,6 +370,7 @@ packages:
 - name: wildfly-core
 - name: wireguard-tools
 - name: wsmancli
+- name: wxPython
 - name: x265
 - name: xmvn
 - name: xnio
