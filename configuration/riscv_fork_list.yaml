@@ -237,6 +237,7 @@ packages:
 - name: pdfbox
 - name: perftest
 - name: perl
+- name: perl-CGI
 - name: php
 - name: pixman
 - name: pmix
