@@ -1,6 +1,7 @@
 ### Sync from the OBS repository per 4 hours.
 01 */4 * * * /var/www/sync/script/hw-mainline-std.sh
-15 */4 * * * /var/www/sync/script/hw-pandora-xfce4.sh
-30 */4 * * * /var/www/sync/script/hw-mainline-adv.sh
-45 */4 * * * /var/www/sync/script/oerv-factory.sh
-59 */4 * * * /var/www/sync/script/oerv-2203.sh
+12 */4 * * * /var/www/sync/script/hw-pandora-xfce4.sh
+24 */4 * * * /var/www/sync/script/hw-mainline-adv.sh
+36 */4 * * * /var/www/sync/script/oerv-factory.sh
+48 */4 * * * /var/www/sync/script/oerv-2203.sh
+59 */4 * * * /var/www/sync/script/oerv-2203-epol.sh
