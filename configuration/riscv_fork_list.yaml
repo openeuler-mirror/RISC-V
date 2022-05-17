@@ -282,6 +282,7 @@ packages:
 - name: python-setuptools_scm_git_archive
 - name: python-simpleeval
 - name: python-smmap
+- name: python-sphobjinv
 - name: python-stem
 - name: python-testtools
 - name: python-unittest2
