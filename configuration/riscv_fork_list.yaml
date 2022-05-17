@@ -26,6 +26,7 @@ packages:
 - name: atlas
 - name: attest-tools
 - name: augeas
+- name: aws-sdk-java
 - name: axiom
 - name: bazel
 - name: bcc
