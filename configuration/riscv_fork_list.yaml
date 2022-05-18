@@ -74,6 +74,7 @@ packages:
 - name: fakechroot
 - name: ffmpeg
 - name: file
+- name: fish
 - name: flatpak
 - name: folks
 - name: fwupd
@@ -423,4 +424,3 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-- name: fish
