@@ -251,6 +251,7 @@ packages:
 - name: ptpython
 - name: pulseaudio
 - name: python-aiosmtpd
+- name: python-aiosnmp
 - name: python-arpy
 - name: python-bitstring
 - name: python-colour
@@ -259,6 +260,7 @@ packages:
 - name: python-firehose
 - name: python-fixtures
 - name: python-flake8-logging-format
+- name: python-FormEncode
 - name: python-greenlet
 - name: python-hkdf
 - name: python-hstspreload
@@ -268,15 +270,19 @@ packages:
 - name: python-iptools
 - name: python-keyring
 - name: python-leather
+- name: python-lightgbm
 - name: python-lockfile
 - name: python-mailer
 - name: python-markdown
 - name: python-musicbrainzngs
+- name: python-ns1-python
 - name: python-openstackdocstheme
 - name: python-pandas
 - name: python-periodictable
 - name: python-precis_i18n
 - name: python-pycurl
+- name: python-pytest-helpers-namespace
+- name: python-pytest-repeat
 - name: python-qt5
 - name: python-requests-gssapi
 - name: python-restructuredtext-lint
