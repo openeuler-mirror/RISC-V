@@ -286,6 +286,7 @@ packages:
 - name: python-pytest-helpers-namespace
 - name: python-pytest-repeat
 - name: python-qt5
+- name: python-quantities
 - name: python-requests-gssapi
 - name: python-restructuredtext-lint
 - name: python-setuptools_scm_git_archive
@@ -298,6 +299,7 @@ packages:
 - name: python-urlgrabber
 - name: python-which
 - name: python-yamlloader
+- name: python-zarr
 - name: python3
 - name: pytorch
 - name: qemu
@@ -399,6 +401,7 @@ packages:
 - name: valgrind
 - name: varnish
 - name: vdo
+- name: vid.stab
 - name: vlc
 - name: volume_key
 - name: wayland
