@@ -241,6 +241,7 @@ packages:
 - name: perftest
 - name: perl
 - name: perl-CGI
+- name: perl-GD
 - name: php
 - name: pixman
 - name: pmix
