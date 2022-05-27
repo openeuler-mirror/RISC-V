@@ -1,17 +1,17 @@
 [Factory]
 name=Factory
-baseurl=http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V/22.03/
+baseurl=http://172.16.0.9:82/Factory:/RISC-V/22.03/
 enabled=1
 gpgcheck=0
 
 [22.03]
 name=22.03
-baseurl=http://obs-backend.tarsier-infra.com:82/openEuler:/22.03/openEuler_2203/
+baseurl=http://172.16.0.9:82/openEuler:/22.03/openEuler_2203/
 enabled=1
 gpgcheck=0
 
-[Epol_22.03]
-name=Epol_22.03
-baseurl=http://obs-backend.tarsier-infra.com:82/openEuler:/22.03:/Epol/openEuler_22.03_Epol/
+[22.03_Epol]
+name=22.03_Epol
+baseurl=http://172.16.0.9:82/openEuler:/22.03:/Epol/openEuler_22.03_Epol/
 enabled=1
 gpgcheck=0
