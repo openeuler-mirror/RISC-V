@@ -242,6 +242,7 @@ packages:
 - name: pdfbox
 - name: perftest
 - name: perl
+- name: perl-Alien-Build
 - name: perl-CGI
 - name: perl-GD
 - name: php
