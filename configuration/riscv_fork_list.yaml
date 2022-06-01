@@ -408,6 +408,7 @@ packages:
 - name: texlive-split-y
 - name: texlive-split-z
 - name: three-eight-nine-ds-base
+- name: thunderbird
 - name: tog-pegasus
 - name: tracker
 - name: tracker-miners
