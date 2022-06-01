@@ -262,6 +262,7 @@ packages:
 - name: python-bitstring
 - name: python-blessings
 - name: python-capturer
+- name: python-clufter
 - name: python_cmake_module
 - name: python-colour
 - name: python-dateutil
@@ -279,9 +280,11 @@ packages:
 - name: python-hypothesis
 - name: python-iptools
 - name: python-keyring
+- name: python-latexcodec
 - name: python-leather
 - name: python-lightgbm
 - name: python-lockfile
+- name: python-lz4
 - name: python-mailer
 - name: python-markdown
 - name: python-musicbrainzngs
@@ -309,6 +312,7 @@ packages:
 - name: python-sphinx-notfound-page
 - name: python-sphobjinv
 - name: python-stem
+- name: python-sysv-ipc
 - name: python-testtools
 - name: python-unittest2
 - name: python-urlgrabber
