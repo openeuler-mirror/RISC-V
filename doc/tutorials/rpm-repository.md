@@ -1,59 +1,71 @@
-# 配置 rpm 软件源
+# 配置软件源
 
-## 测试新软件源
+## 新软件源 (测试中)
 
-openEuler RISC-V 的新 rpm 软件源已上线，目前还在初期测试阶段。
+openEuler RISC-V 的新软件源已上线，目前还在测试阶段。
 
 预计将随着开发过程持续更新。
 
-位置：软件所镜像源（科技网）
+> 软件源内容借助 `中国科学院软件研究所 ISCAS 开源镜像站` 等镜像站点向最终用户进行分发，每日同步一次以上。
+>
+> 在此感谢镜像站维护者们的大力支持。
 
-`https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/`
+### 镜像地址
+软件所 ISCAS 开源镜像站（科技网）
+
+`https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/`
 
 ### 新软件源使用说明
 
 > ⚠️ 测试阶段软件源的结构和内容会依照开发需求不定时调整变动
 >
-> 更新时间 `2022-05-05`
+> 更新时间 `2022-06-01`
 
-#### `mainline` 目录
+#### `devel` 目录
 
-- `mainline` 目录下的软件包均定时从[华为 OBS](https://build.openeuler.org) 同步更新
-- `advanced_riscv64` 和 `standard_riscv64` 目录分别对应着华为 OBS `openEuler:Mainline:RISC-V` 仓库的对应分支
-- `supplementary` 目录对应 `home:pandora:xfce4` 仓库，用于辅助 xfce 打包
+- `devel` 目录下含有开发版快照镜像 (snapshot) 与对应的软件仓库。
+- 构建产物在 `devel/$DATE/$VERSION/` 下，包括各个构建对象的镜像、软件源、rootfs tarball 与日志。
+- 仓库内容来自 CI 的 Dev 分支，每日构建一次以上。
+- 仓库内容仅经过 CI 单次测试，不保证可用性。
 
-#### `Factory` 目录
+#### `testing` 目录
 
-- `Factory` 目录对应 oERV OBS 的 `Factory:RISC-V` 仓库
-- `Factory` 目录定时从 [oERV OBS](https://build.tarsier-infra.com/) 同步更新
+- `testing` 目录下含有测试版快照镜像 (snapshot) 与对应的软件仓库。
+- 构建产物在 `testing/$DATE/$VERSION/` 下，包括各个构建对象的镜像、软件源、rootfs tarball 与日志
+- 仓库内容来自 CI 的 Test 分支，每双周或按需构建。
+- 仓库内容经过 CI 的数次测试，具有基本可用性。
 
-#### `22.03` 目录
+#### `stable` 目录
 
-- `22.03` 目录对应 oERV OBS 的 `openEuler:22.03` 仓库
-- `22.03` 目录定时从 [oERV OBS](https://build.tarsier-infra.com/) 同步更新
+- `stable` 目录下含有稳定版快照镜像 (snapshot) 与对应的软件仓库。
+- 构建产物在 `stable/$DATE/$VERSION/` 下，包括各个构建对象的镜像、软件源、rootfs tarball 与日志。
+- 仓库内容来自为 Testing 基础上的修复版本，预计月度释出。
+- 仓库内容经过 CI 的数次测试与人工测试，具有一定可用性。
 
-#### `2203` 目录
+#### `release` 目录
 
-- `2203` 目录为先前构建的遗留内容，将择机移除
-- `2203` 目录仍维持当初编译时的状态，不会随时间更新
+- `release` 目录下含有稳定版快照镜像 (snapshot) 与对应的软件仓库。
+- 构建产物在 `release/$MAJOR_VERSION/` 下，包括各个构建对象的镜像、软件源、rootfs tarball 与日志。
+- 仓库内容为 openEuler RISC-V 大版本发布内容，将在 openEuler 大版本发布的时间节点择机发布。
+- 仓库内容经过 CI 的数次测试与多次人工测试，具有可用性。
+
+#### `deprecated` 目录
+
+- `deprecated` 目录为先前构建的遗留内容，将择机移除。
+
+#### `development` 目录
+
+- `development` 目录为 `deprecated` 目录的软连接，以保证向后兼容性
 
 #### 示例配置
 
-> ⚠️ 请按照使用需求分别配置 `enabled` 参数
->
-> ⚠️ 不推荐混用来自华为 OBS 和 oERV OBS 的仓库
+> ⚠️ 与快照版本对应的软件源信息已在镜像内配置好，一般情况下无需改动
 
 ``` bash
-[std_mainline]
-name=std_mainline
-baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/mainline/standard_riscv64/
-enabled=0
-gpgcheck=0
-
 [22.03]
 name=22.03
-baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/22.03/
-enabled=0
+baseurl=https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220601/v0.1/repo/22.03/
+enabled=1
 gpgcheck=0
 ```
 
@@ -98,7 +110,7 @@ enabled=1
 gpgcheck=0
 ```
 
-## 旧配置
+## 更旧的配置
 
 > **下述内容仅供参考**
 >
