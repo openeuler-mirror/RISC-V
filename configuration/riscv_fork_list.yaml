@@ -219,6 +219,7 @@ packages:
 - name: nodejs-transformers
 - name: nss
 - name: ntp
+- name: numpy
 - name: ocaml-dune
 - name: oddjob
 - name: oemaker
@@ -253,10 +254,14 @@ packages:
 - name: psutils
 - name: ptpython
 - name: pulseaudio
+- name: pybind11
 - name: python-aiosmtpd
 - name: python-aiosnmp
 - name: python-arpy
+- name: python-astropy
 - name: python-bitstring
+- name: python-blessings
+- name: python-capturer
 - name: python_cmake_module
 - name: python-colour
 - name: python-dateutil
@@ -265,6 +270,7 @@ packages:
 - name: python-fixtures
 - name: python-flake8-logging-format
 - name: python-FormEncode
+- name: python-gnocchiclient
 - name: python-greenlet
 - name: python-hkdf
 - name: python-hstspreload
@@ -281,9 +287,12 @@ packages:
 - name: python-musicbrainzngs
 - name: python-ns1-python
 - name: python-openstackdocstheme
+- name: python-oslo.vmware
 - name: python-pandas
 - name: python-periodictable
 - name: python-precis_i18n
+- name: python-pybtex
+- name: python-pybtex-docutils
 - name: python-pycurl
 - name: python-pytest-helpers-namespace
 - name: python-pytest-repeat
@@ -294,6 +303,8 @@ packages:
 - name: python-setuptools_scm_git_archive
 - name: python-simpleeval
 - name: python-smmap
+- name: python-sphinxcontrib-bibtex
+- name: python-sphinx-notfound-page
 - name: python-sphobjinv
 - name: python-stem
 - name: python-testtools
