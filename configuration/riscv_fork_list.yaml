@@ -294,12 +294,14 @@ packages:
 - name: python-pybtex
 - name: python-pybtex-docutils
 - name: python-pycurl
+- name: python-pypiserver
 - name: python-pytest-helpers-namespace
 - name: python-pytest-repeat
 - name: python-qt5
 - name: python-quantities
 - name: python-requests-gssapi
 - name: python-restructuredtext-lint
+- name: python-setuptools-declarative-requirements
 - name: python-setuptools_scm_git_archive
 - name: python-simpleeval
 - name: python-smmap
