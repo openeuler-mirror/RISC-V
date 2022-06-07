@@ -11,11 +11,13 @@ packages:
 - name: amtk
 - name: antlr3
 - name: aom
+- name: apache-commons-beanutils
 - name: apache-commons-csv
 - name: apache-commons-daemon
 - name: apache-commons-el
 - name: apache-commons-exec
 - name: apache-commons-jexl
+- name: apache-poi
 - name: apache-rat
 - name: apache-sshd
 - name: apr
@@ -185,6 +187,7 @@ packages:
 - name: maven
 - name: mesa
 - name: mina-ftpserver
+- name: mockito
 - name: mod_auth_openidc
 - name: mozjs78
 - name: mpich
