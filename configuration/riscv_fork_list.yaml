@@ -372,6 +372,7 @@ packages:
 - name: socket_wrapper
 - name: springframework
 - name: sqljet
+- name: squid
 - name: sscg
 - name: subunit
 - name: svnkit
