@@ -56,6 +56,10 @@ packages:
 - name: dblatex
 - name: dbus
 - name: dbus-cpp
+- name: dde-api
+- name: dde-daemon
+- name: dde-file-manager
+- name: deepin-desktop-base
 - name: derby
 - name: dnf
 - name: docker
@@ -373,6 +377,7 @@ packages:
 - name: springframework
 - name: sqljet
 - name: sscg
+- name: startdde
 - name: subunit
 - name: svnkit
 - name: sysbench
