@@ -250,6 +250,7 @@ packages:
 - name: perftest
 - name: perl
 - name: perl-Alien-Build
+- name: perl-Archive-Zip
 - name: perl-CGI
 - name: perl-GD
 - name: php
