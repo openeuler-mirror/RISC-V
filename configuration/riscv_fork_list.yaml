@@ -251,8 +251,11 @@ packages:
 - name: perl
 - name: perl-Alien-Build
 - name: perl-Archive-Zip
+- name: perl-B-Keywords
 - name: perl-CGI
 - name: perl-GD
+- name: perl-libwww-perl
+- name: perl-IO-Tty
 - name: php
 - name: pixman
 - name: pmix
