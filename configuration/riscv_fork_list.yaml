@@ -60,6 +60,7 @@ packages:
 - name: dde-api
 - name: dde-daemon
 - name: dde-file-manager
+- name: deepin-clone
 - name: deepin-desktop-base
 - name: derby
 - name: dnf
