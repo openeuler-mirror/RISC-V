@@ -30,6 +30,7 @@ packages:
 - name: augeas
 - name: aws-sdk-java
 - name: axiom
+- name: batik
 - name: bazel
 - name: bcc
 - name: bouncycastle
@@ -65,7 +66,9 @@ packages:
 - name: docker
 - name: e2fsprogs
 - name: easymock
+- name: eclipse-ecf
 - name: eclipse-emf
+- name: eigen3
 - name: efl
 - name: elixir
 - name: emacs
@@ -270,6 +273,7 @@ packages:
 - name: python-astropy
 - name: python-bitstring
 - name: python-blessings
+- name: python-btrfs
 - name: python-capturer
 - name: python-clufter
 - name: python_cmake_module
@@ -368,6 +372,7 @@ packages:
 - name: sblim-sfcc
 - name: sbt
 - name: scala
+- name: scotch
 - name: shaderc
 - name: shared-mime-info
 - name: simde
