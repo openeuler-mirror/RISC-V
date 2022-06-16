@@ -120,6 +120,7 @@ packages:
 - name: grub2
 - name: haproxy
 - name: harfbuzz
+- name: hdf5
 - name: htslib
 - name: http-parser
 - name: httpd
