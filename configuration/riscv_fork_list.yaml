@@ -9,6 +9,7 @@ packages:
 - name: aide
 - name: alsa-lib
 - name: amtk
+- name: annobin
 - name: antlr3
 - name: aom
 - name: apache-commons-beanutils
@@ -110,6 +111,8 @@ packages:
 - name: gradle
 - name: grizzly
 - name: gsl
+- name: gsm
+- name: gssproxy
 - name: gstreamer1
 - name: gstreamer1-libav
 - name: gstreamer1-plugins-bad-free
@@ -119,8 +122,10 @@ packages:
 - name: gtkspellmm30
 - name: gupnp
 - name: grub2
+- name: gzip
 - name: haproxy
 - name: harfbuzz
+- name: htop
 - name: hdf5
 - name: htslib
 - name: http-parser
@@ -132,6 +137,8 @@ packages:
 - name: ibus
 - name: icu
 - name: ima-evm-utils
+- name: iperf3
+- name: iproute
 - name: isomd5sum
 - name: jasper
 - name: jimtcl
@@ -196,11 +203,16 @@ packages:
 - name: maven
 - name: mesa
 - name: mina-ftpserver
+- name: mksh
+- name: mobile-broadband-provider-info
 - name: mockito
 - name: mod_auth_openidc
 - name: mozjs78
 - name: mpich
+- name: mrtg
 - name: mstflint
+- mame: mtools
+- name: mtr
 - name: musl
 - name: mutter
 - name: mvapich2
@@ -259,6 +271,8 @@ packages:
 - name: perl-CGI
 - name: perl-GD
 - name: php
+- name: physfs
+- name: pinentry
 - name: pixman
 - name: pmix
 - name: podman
@@ -268,6 +282,7 @@ packages:
 - name: psutils
 - name: ptpython
 - name: pulseaudio
+- name: pv
 - name: pybind11
 - name: python-aiosmtpd
 - name: python-aiosnmp
@@ -435,6 +450,7 @@ packages:
 - name: tycho-extras
 - name: tzdata
 - name: uglify-js
+- name: unrtf
 - name: util-linux
 - name: valgrind
 - name: varnish
