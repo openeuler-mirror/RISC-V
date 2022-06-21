@@ -211,7 +211,7 @@ packages:
 - name: mpich
 - name: mrtg
 - name: mstflint
-- mame: mtools
+- name: mtools
 - name: mtr
 - name: musl
 - name: mutter
