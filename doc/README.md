@@ -11,5 +11,5 @@
 
 ## 外部文档
 - [**openEuler 官方打包规范**](https://gitee.com/openeuler/community/blob/master/zh/contributors/packaging.md)
-- [zxs-un整理的文档](https://gitee.com/zxs-un/openEuler-port2riscv64)
+- [zxs-un整理的文档](https://gitee.com/zxs-un/doc-port2riscv64-openEuler)
 - [lvxiaoqian整理的文档](https://gitee.com/lvxiaoqian/memo)

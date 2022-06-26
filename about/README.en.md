@@ -24,7 +24,7 @@ Currently, there is an openEuler RISC-V WeChat group open to the public. If you 
 - [Must-Read for Beginners](/doc/tutorials/README.md)
 - [Signing openEuler Community CLA](/doc/tutorials/account-oE-CLA.md)
 - [Workflow for Building a Package](/doc/tutorials/workflow-for-build-a-package.md)
-- [External Documentation: Documentation by zxs-un](https://gitee.com/zxs-un/openEuler-port2riscv64)
+- [External Documentation: Documentation by zxs-un](https://gitee.com/zxs-un/doc-port2riscv64-openEuler)
 
 ## [Documentation](/doc)
 
