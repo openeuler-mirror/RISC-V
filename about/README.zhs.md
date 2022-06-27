@@ -27,7 +27,7 @@ openEuler RISC-V SIG 欢迎所有对本项目感兴趣的人参与进来，工�
 - [新手必看](/doc/tutorials/README.md)
 - [签署 openEuler 开源社区的 CLA](/doc/tutorials/account-oE-CLA.md)
 - [熟悉项目工作流程](/doc/tutorials/workflow-for-build-a-package.md)
-- [外部文档：zxs-un整理的文档](https://gitee.com/zxs-un/openEuler-port2riscv64)
+- [外部文档：zxs-un整理的文档](https://gitee.com/zxs-un/doc-port2riscv64-openEuler)
 - [外部文档：samuel_yuan整理的文档《Play with OpenEuler on VisionFive》](https://gitee.com/samuel_yuan/riscv-openeuler-visionfive)
 
 ## [项目文档](/doc)
