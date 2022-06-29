@@ -281,6 +281,7 @@ packages:
 - name: podman
 - name: ppp
 - name: proftpd
+- name: promu
 - name: protobuf
 - name: psutils
 - name: ptpython
