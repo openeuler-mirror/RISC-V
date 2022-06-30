@@ -288,6 +288,7 @@ packages:
 - name: pulseaudio
 - name: pv
 - name: pybind11
+- name: pyparted
 - name: python-aiosmtpd
 - name: python-aiosnmp
 - name: python-arpy
@@ -331,6 +332,7 @@ packages:
 - name: python-pybtex
 - name: python-pybtex-docutils
 - name: python-pycurl
+- name: python-Pympler
 - name: python-pypiserver
 - name: python-pytest-helpers-namespace
 - name: python-pytest-repeat
