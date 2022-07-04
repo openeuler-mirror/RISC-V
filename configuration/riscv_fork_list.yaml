@@ -68,8 +68,10 @@ packages:
 - name: docker
 - name: e2fsprogs
 - name: easymock
+- name: eclipse
 - name: eclipse-ecf
 - name: eclipse-emf
+- name: eclipse-jgit
 - name: eigen3
 - name: efl
 - name: elixir
