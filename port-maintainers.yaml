@@ -39,6 +39,10 @@ maintainers:
     name: "Jingwei Wang"
     giteeid: Jingwiw
     email: wangjingwei@iscas.ac.cn
+  - jchzhou:
+    name: "Jiacheng Zhou"
+    giteeid: jchzhou
+    email: zhoujiacheng@iscas.ac.cn
 
 
 packages:
