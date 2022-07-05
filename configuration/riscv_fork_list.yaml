@@ -85,6 +85,7 @@ packages:
 - name: evince
 - name: fabtests
 - name: fakechroot
+- name: fakeroot
 - name: ffmpeg
 - name: file
 - name: firefox
