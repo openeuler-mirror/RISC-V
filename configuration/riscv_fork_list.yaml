@@ -338,6 +338,7 @@ packages:
 - name: python-pycurl
 - name: python-Pympler
 - name: python-pypiserver
+- name: python-pyTelegramBotAPI
 - name: python-pytest-helpers-namespace
 - name: python-pytest-repeat
 - name: python-qt5
