@@ -1,179 +1,122 @@
 # 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统
 
-## 安装 `qemu-riscv64`
-> 参考文档：[https://wiki.qemu.org/Documentation/Platforms/RISCV](https://wiki.qemu.org/Documentation/Platforms/RISCV)
+> 修订日期 2022-06-27
 
+## 安装支持 RISC-V 架构的 QEMU 模拟器
 
-以 Ubuntu 为例，查看软件源上是否有qemu-rv64的二进制安装包：
-```
-$ sudo apt update
-$ sudo apt-cache search all | grep qemu
-oem-qemu-meta - Meta package for QEMU
-qemu - fast processor emulator, dummy package
-qemu-system - QEMU full system emulation binaries
-aqemu - QEMU 和 KVM 的 Qt5 前端
-grub-firmware-qemu - GRUB firmware image for QEMU
-nova-compute-qemu - OpenStack Compute - compute node (QEmu)
-qemu-guest-agent - Guest-side qemu-system agent
-qemu-system-x86-xen - QEMU full system emulation binaries (x86)
-qemu-user - QEMU user mode emulation binaries
-qemu-user-binfmt - QEMU user mode binfmt registration for qemu-user
-qemu-user-static - QEMU user mode emulation binaries (static version)
-qemubuilder - pbuilder using QEMU as backend
-```
+### 使用发行版提供的预编译软件包
 
-一般来说，常见 GNU/Linux 发行版软件源中都提供了包含 `qemu-system-riscv64` 的软件包，如果软件源中并未收录 `QEMU`，则可以自行下载源码包手动构建安装：
+一般来说，常见 GNU/Linux 发行版软件源中都提供了包含 `qemu-system-riscv64` 的软件包。各发行版间以及其各个大小版本间对应的包名可能略有不同，详情可移步 [pkgs.org](https://pkgs.org) 进行查询。
 
-> 源码包下载：[https://download.qemu.org/](https://download.qemu.org/)
+> 通常可以通过 `lsb_release -a` 来查询自己正在使用哪个发行版和具体的大版本 (或与之对应的 codename)
 
+- Ubuntu 22.04 提供 6.2 版本:  `$ sudo apt install qemu-system-misc`
+  - 注: 20.04 及以前的版本过旧
+- Debian 11 仓库提供较旧的 5.2 版本: `$ sudo apt install qemu-system-misc`
+  - Debian 11 官方 backports 仓库提供 7.0 版本，可参考这里的 [指引](https://backports.debian.org/Instructions/) 启用 backports 仓库获取新版本软件包: `$ sudo apt install -t bullseye-backports qemu-system-misc`
+  - 注: 10 及以前的版本过旧
+- openEuler 22.03 提供 6.2 版本: `$ sudo dnf install qemu-system-riscv`
+  - 注: 21.09 及以前的版本过旧
+- Fedora 36 提供 6.2 版本: `$ sudo dnf install qemu-system-riscv`
+- Arch Linux (在修订时) 提供 7.0 版本: `$ sudo pacman -Syu qemu-full`
+- openSUSE Tumbleweed (在修订时) 提供 6.2 版本: `$ sudo dnf install qemu`
 
-### I. 下载 QEMU 源代码并构建
+如果官方仓库 (及各种 **您信任的** 第三方仓库) 中未收录 QEMU 或版本过旧 (低于 5.0)，可以移步下一部分从 [QEMU 项目主页](https://www.qemu.org/) 获取源代码进行手动构建。
 
+### 手动编译安装
 
-`$ sudo apt install build-essential`
-安装必要的构建工具
+> 修订者注: 建议优先考虑发行版提供的软件包或在有能力的情况下自行打包，**不鼓励** 非必要情况的编译安装。
+>
+> 下述内容以 Ubuntu 为例
 
-`$ wget https://download.qemu.org/qemu-<latest>.tar.xz`
- 下载最新 QEMU 源码包，**请将 `<latest>` 替换为目前最新的 QEMU 版本**
+- 安装必要的构建工具
 
-`$ tar xvJf qemu-<latest>.tar.xz`
-解压刚刚下载的源码包
+  `$ sudo apt install build-essential git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build`
+- 创建 /usr/local 下的目标目录 `$ sudo mkdir -p /usr/local/bin/qemu-riscv64`
+- 下载最新的 QEMU 源码包 (修订时为 7.0.0 版本) `$ wget https://download.qemu.org/qemu-7.0.0.tar.xz`
+- 解压源码包并切换目录 `$ tar xvJf qemu-7.0.0.tar.xz && cd qemu-7.0.0`
+- 配置编译选项 `$ sudo ./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64`
+  > `riscv64-softmmu` 为系统模式，`riscv64-linux-user` 为用户模式。为了测试方便，可以两个都安装
+- 编译安装 `$ sudo make && sudo make install`
+- 执行 `$ qemu-system-riscv64 --version`，如出现类似如下输出表示 QEMU 成功安装并正常工作。
 
-`$ cd qemu-<latest>`
-
-
-
-`./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/xx/program/riscv64-qemu`
-`riscv-64-linux-user`为用户模式，可以运行基于 RISC-V 指令集编译的程序文件, `softmmu`为镜像模拟器，可以运行基于 RISC-V 指令集编译的linux镜像，为了测试方便，可以两个都安装
-
-`$ make`
-`$ make install`
-如果 `--prefix` 指定的目录位于根目录下，则需要在 `./configure` 前加入 `sudo`
-
-
-### II. 配置环境变量
-
-`$ vim ~/.bashrc`
-在文末添加：
+```` bash
+QEMU emulator version 7.0.0
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 ````
-export QEMU_HOME=/home/xx/program/riscv64-qemu
-export PATH=$QEMU_HOME/bin:$PATH
-````
-**注意一定要将 `QEMU_HOME` 路径替换为 `--prefix` 定义的路径**
-
-`$ source ~/.bashrc`
-`$ echo $PATH`
-
-
-
-### III. 验证安装是否正确
-
-`$ qemu-system-riscv64 --version`
-
-如出现类似如下输出表示 QEMU 工作正常
-````
-QEMU emulator version 5.0.0
-Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
-````
-
-
 
 ## 下载 openEuler RISC-V 系统镜像
-恭喜你已经成功编译安装了最新版的 QEMU，接下来我们需要下载 openEuler RISC-V 的系统镜像。
 
-由于我们的目标是运行最新版的 openEuler RISC-V OS，我们采用最新的发行版 22.03：
+> 注: 旧版本 `20.03` 的系统镜像安装移步至 [20.03 系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
 
-注：  `20.03`的系统镜像安装移步至[20.03系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
+- 下载说明: 至少应当下载启动 payload (`fw_payload_oe_qemuvirt.elf`)，GUI 和 headless 中一种镜像和对应的启动脚本
+- 下载目录: [openEuler-RISC-V/testing/*DATE*/*VER*/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/)
+- 版本说明: 构建日期 `DATE` 形如 `20220622` ，当日构建版本 `VER` 形如 `v0.2`
+  - 如 20220622 的 v0.2 版本 QEMU 镜像文件位于 [openEuler-RISC-V/testing/20220622/v0.2/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/QEMU/)
+- 内容说明:
+  - `fw_payload_oe_qemuvirt.elf`: 利用 openSBI 将 kernel-5.10 的 image 作为 payload 所制作的 QEMU 启动所需文件
+  - `openeuler-qemu-xfce.raw.tar.zst`: openEuler RISC-V QEMU GUI 镜像压缩包
+  - `start_vm_xfce.sh`: GUI 虚拟机启动脚本
+  - `openeuler-qemu.raw.tar.zst`: openEuler RISC-V QEMU headless 镜像压缩包
+  - `start_vm.sh`: headless 虚拟机启动脚本
 
-提供两种安装方式
-### 浏览器下载
-下载地址：[https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/)
+## 启动 openEuler RISC-V 虚拟机
 
-![image.png](images/download-image2203.png)
-### linux命令行安装
+> 以启动 headless 虚拟机为例
+>
+> 需要系统中有 zstd 相关支持库
 
-```bash
-mkdir oervimg
-cd oervimg
-wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/run.sh
-wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/fw_payload_oe.elf
-wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/development/2203/Image/openEuler-22.03.riscv64.qcow2
+- 确认当前目录内包含 `fw_payload_oe_qemuvirt.elf`, `openeuler-qemu.raw.tar.zst` 和 `start_vm.sh`
+- 解压镜像压缩包 `$ tar -I 'zstdmt' -xvf ./openeuler-qemu.raw.tar.zst`
+- 执行启动脚本 `$ bash start_vm.sh`
+
+### [可选] 启动参数调整
+
+- `vcpu` 为 qemu 运行线程数，与 CPU 核数没有严格对应，建议维持为 8 不变
+- `memory` 为虚拟机内存数目，可随需要调整
+- `drive` 为虚拟磁盘路径，可随需要调整
+- `fw` 为启动 payload
+- `ssh_port` 为转发的 SSH 端口，默认为 12055，可随需要调整。
+
+## 登录虚拟机
+
+> 建议在登录成功之后立即修改 root 用户密码
+>
+> 在 console 直接登录可能出现输入异常
+
+- 用户名: `root`
+- 默认密码: `openEuler12#$`
+
+- 登录方式: 命令行 `ssh -p 12055 root@localhost` (或使用您偏好的 ssh 客户端)
+
+登录成功之后，可以看到如下的信息：
+
 ```
-其中的三个文件说明如下：
-* **fw_payload_oe.elf**
-利用 openSBI 将 kernel-5.10 的 image 作为 payload 所制作的用于 QEMU 启动的 image。
-
-* **openEuler-22.03.riscv64.qcow2**
-openEuler RISC-V 移植版的 rootfs 镜像。
-
-* **run.sh**
-利用 `qemu-riscv64` 运行openEuler RISC-V 系统镜像的脚本
-
-## 通过QEMU启动一个openEuler RISC-V
-
-在上一步下载的文件所在的目录下执行`bash run.sh`
-
-run.sh文件说明
-```
-#!/bin/bash
-
-qemu-system-riscv64 \
-  -nographic -machine virt \
-  -smp 8 -m 2G \
-  -bios fw_payload_oe.elf \
-  -drive file=openEuler-22.03.riscv64.qcow2,format=qcow2,id=hd0 \
-  -object rng-random,filename=/dev/urandom,id=rng0 \
-  -device virtio-rng-device,rng=rng0 \
-  -device virtio-blk-device,drive=hd0 \
-  -device virtio-net-device,netdev=usernet \
-  -netdev user,id=usernet,hostfwd=tcp::22222-:22
-````
-注意 `-smp` 选项为CPU核数，`-m` 为虚拟机内存大小 请根据宿主机配置酌情修改。
-
-这里以主机端口转发的方式实现网络功能。为 SSH 转发的 22222 端口也可改为自己需要的端口号
-
-
-## 欢迎使用
-
-- 登录用户：`root`
-- 默认密码：`openEuler12#$`
-
-建议在登录成功之后立即修改 root 用户密码
-
-登陆成功之后，可以看到如下的信息：
-```
-root@localhost's password:
-Last login: Fri Apr 29 07:27:22 2022 from 10.0.2.2
+Last login: Mon Jun 27 15:08:35 2022
 
 
 Welcome to 5.10.0
 
-System information as of time:  Fri Apr 29 07:28:59 UTC 2022
+System information as of time:  Mon Jun 27 07:11:54 PM CST 2022
 
-System load:    0.11
-Processes:      114
-Memory used:    2.5%
+System load:    0.08
+Processes:      130
+Memory used:    1.3%
 Swap used:      0.0%
-Usage On:       12%
+Usage On:       23%
 IP address:     10.0.2.15
-Users online:   1
+Users online:   2
 
 
 [root@openEuler-riscv64 ~]#
-
-```
-
-建议在 Host Linux 上通过 ssh 登录到运行于 QEMU 模拟器中的 openEuler OS（直接使用，可能会出现vim键盘输入异常）：
-
-```
-$ ssh -p 22222 root@localhost
 ```
 
 ## [可选] 准备 QEMU x86_64 环境
 
-当需要查看对比openEuler主线软件包情况时，可安装对应的QEMU虚拟机。这里以x86_64、主线版本2203为例说明准备方法。
+当需要查看对比 openEuler 主线软件包情况时，可安装对应的 QEMU 虚拟机。这里以 x86_64 、主线版本 2203 LTS 为例说明准备方法。
 
-获取预制的映像文件：
+- 下载镜像:
+
 ```
 $ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/virtual_machine_img/x86_64/openEuler-22.03-LTS-x86_64.qcow2.xz
 $ xz -d openEuler-22.03-LTS-x86_64.qcow2.xz
@@ -181,7 +124,8 @@ $ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images
 $ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images/pxeboot/vmlinuz
 ```
 
-运行：
+- 启动虚拟机:
+
 ```
 $ qemu-system-x86_64 \
   -nographic -smp 8 -m 4G \
@@ -192,4 +136,4 @@ $ qemu-system-x86_64 \
   -append 'root=/dev/sda2 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon'
 ```
 
-root口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
+root 口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
