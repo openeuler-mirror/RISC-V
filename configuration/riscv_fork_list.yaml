@@ -359,6 +359,7 @@ packages:
 - name: python-sysv-ipc
 - name: python-testtools
 - name: python-tinydb
+- name: python-tinyrpc
 - name: python-unittest2
 - name: python-urlgrabber
 - name: python-vulture
