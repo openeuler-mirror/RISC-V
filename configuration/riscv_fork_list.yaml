@@ -70,6 +70,7 @@ packages:
 - name: easymock
 - name: eclipse
 - name: eclipse-ecf
+- name: eclipse-egit
 - name: eclipse-emf
 - name: eclipse-jgit
 - name: eigen3
@@ -149,6 +150,7 @@ packages:
 - name: jnr-enxio
 - name: jnr-netdb
 - name: jq
+- name: jsch
 - name: jsoup
 - name: jsr-305
 - name: junit
