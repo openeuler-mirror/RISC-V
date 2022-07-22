@@ -283,6 +283,7 @@ packages:
 - name: perl-IO-Tty
 - name: php
 - name: physfs
+- name: pigz
 - name: pinentry
 - name: pixman
 - name: pmix
