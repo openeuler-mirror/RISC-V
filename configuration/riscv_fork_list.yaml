@@ -352,6 +352,7 @@ packages:
 - name: python-quantities
 - name: python-requests-gssapi
 - name: python-restructuredtext-lint
+- name: python-rope
 - name: python-setuptools-declarative-requirements
 - name: python-setuptools_scm_git_archive
 - name: python-simpleeval
