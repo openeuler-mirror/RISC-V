@@ -257,6 +257,7 @@ packages:
 - name: oddjob
 - name: oemaker
 - name: oneDNN
+- name: opencc
 - name: openEuler-indexhtml
 - name: openEuler-logos
 - name: openblas
