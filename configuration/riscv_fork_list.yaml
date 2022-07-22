@@ -53,6 +53,7 @@ packages:
 - name: containerd
 - name: copy-jdk-configs
 - name: coreutils
+- name: courier-unicode
 - name: crash
 - name: custodia 
 - name: dblatex
