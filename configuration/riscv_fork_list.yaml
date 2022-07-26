@@ -362,6 +362,7 @@ packages:
 - name: python-sphobjinv
 - name: python-stem
 - name: python-sysv-ipc
+- name: python-texext
 - name: python-testtools
 - name: python-tinydb
 - name: python-tinyrpc
