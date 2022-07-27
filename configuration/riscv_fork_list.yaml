@@ -29,11 +29,13 @@ packages:
 - name: atlas
 - name: attest-tools
 - name: augeas
+- name: authselect
 - name: aws-sdk-java
 - name: axiom
 - name: batik
 - name: bazel
 - name: bcc
+- name: bird
 - name: bouncycastle
 - name: bpftrace
 - name: byteman
@@ -376,6 +378,7 @@ packages:
 - name: python-zarr
 - name: python3
 - name: pytorch
+- name: pyxdg
 - name: qemu
 - name: qrencode
 - name: qt
@@ -504,6 +507,7 @@ packages:
 - name: zenity
 - name: zeromq
 - name: zimg
+- name: zinc
 - name: zlib
 - name: zookeeper
 - name: zsh
