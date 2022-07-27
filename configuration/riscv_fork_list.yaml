@@ -155,6 +155,7 @@ packages:
 - name: jsoup
 - name: jsr-305
 - name: junit
+- name: keepalived
 - name: kexec-tools
 - name: kubernetes
 - name: lapack
