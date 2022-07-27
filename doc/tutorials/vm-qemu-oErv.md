@@ -1,6 +1,6 @@
 # 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统
 
-> 修订日期 2022-06-27
+> 修订日期 2022-07-27
 
 ## 安装支持 RISC-V 架构的 QEMU 模拟器
 
@@ -110,6 +110,56 @@ Users online:   2
 
 [root@openEuler-riscv64 ~]#
 ```
+
+## 虚拟机扩容
+
+> 此部分内容参考了教程[《RISC-V openEuler包移植从零开始》](https://gitee.com/yunxiangluo/riscv-openeuler/blob/master/chapter1/class1/README.md#338-%E7%A3%81%E7%9B%98%E6%89%A9%E5%AE%B9) 与博客文章[《在 QEMU 内运行 openEuler RISC-V 移植版》](https://wiki.251.sh/openeuler_risc-v_qemu_install#%E6%88%91%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%B2%A1%E7%A9%BA%E9%97%B4%E4%BA%86)，在此感谢几位作者老师的总结
+
+工作过程中虚拟机磁盘空间不足的情况偶有发生，此时应对其进行扩容。扩容操作分为三步：
+
+> 虚拟硬盘的格式为 .qcow2 时请自行替换文件名后缀
+>
+> 此处以扩容 40G 为例
+
+1. 安装所需工具
+
+- 在宿主机上安装 `qemu-img` 工具
+  - 各个发行版间可能会有所不同，以 Ubuntu 和 Debian 为例：`apt install qemu-utils`
+  - 执行 `qemu-img --help` 验证安装
+- 在 openEuler RISC-V 虚拟机上安装 `growpart` 工具
+  - 若磁盘空间不足以安装此工具，可先进行清理一些无用文件，如 `osc` 缓存的软件包
+  - 执行 `dnf install cloud-utils-growpart` 进行安装
+  - 执行 `growpart --help` 验证安装
+
+2. 扩容虚拟硬盘
+
+- 关闭 openEuler RISC-V 虚拟机
+- 执行 `qemu-img resize openeuler-qemu.raw +40G`
+
+3. 扩容磁盘分区和文件系统
+
+- 启动 openEuler RISC-V 虚拟机
+- 执行 `lsblk` 查看分区情况
+
+```
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+vda    254:0    0   50G  0 disk 
+└─vda1 254:1    0   10G  0 part /
+
+```
+
+- 扩展分区 vda1，执行 `growpart /dev/vda 1`
+- 执行 `lsblk` 可以看到 / 所在的 vda1 分区已经扩展到了预期大小
+
+```
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+vda    254:0    0   50G  0 disk 
+└─vda1 254:1    0   50G  0 part /
+
+```
+
+- 扩展文件系统，执行 `resize2fs /dev/vda1`
+- 执行 `df -h` 验证 / 分区的大小
 
 ## [可选] 准备 QEMU x86_64 环境
 
