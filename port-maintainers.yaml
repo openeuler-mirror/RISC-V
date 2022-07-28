@@ -148,3 +148,10 @@ packages:
     port-url: https://gitee.com/openeuler-risc-v/ruby
     maintainers:
       - misaka00251
+
+packages:
+  - libreoffice:
+    name: libreoffice
+    port-url: https://github.com/Sakura286/libreoffice-core
+    maintainers:
+      - Sakura286
