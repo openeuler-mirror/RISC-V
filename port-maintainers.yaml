@@ -43,6 +43,10 @@ maintainers:
     name: "Jiacheng Zhou"
     giteeid: jchzhou
     email: zhoujiacheng@iscas.ac.cn
+  - Sakura286:
+    name: "Xuan Chen"
+    giteeid: Sakura286
+    email: chenxuan@iscas.ac.cn
 
 
 packages:
@@ -152,6 +156,7 @@ packages:
 packages:
   - libreoffice:
     name: libreoffice
+    oe-url:
     port-url: https://github.com/Sakura286/libreoffice-core
     maintainers:
       - Sakura286
