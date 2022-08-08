@@ -362,6 +362,7 @@ packages:
 - name: python-sphinx-notfound-page
 - name: python-sphobjinv
 - name: python-stem
+- name: python-supervisor
 - name: python-sysv-ipc
 - name: python-texext
 - name: python-testtools
