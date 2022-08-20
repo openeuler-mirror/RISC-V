@@ -181,6 +181,7 @@ packages:
 - name: libjpeg-turbo
 - name: libkate
 - name: libkcapi
+- name: libldb
 - name: libmatroska
 - name: libmbim
 - name: libnice
@@ -192,6 +193,9 @@ packages:
 - name: libreswan
 - name: libsecret
 - name: libstoragemgmt
+- name: libtalloc
+- name: libtevent
+- name: libtdb
 - name: libtool
 - name: libuv
 - name: libvpx
