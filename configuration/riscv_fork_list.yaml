@@ -382,6 +382,7 @@ packages:
 - name: python-unittest2
 - name: python-urlgrabber
 - name: python-vulture
+- name: python-watchdog
 - name: python-which
 - name: python-yamlloader
 - name: python-zarr
