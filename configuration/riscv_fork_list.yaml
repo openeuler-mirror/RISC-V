@@ -105,6 +105,7 @@ packages:
 - name: gd
 - name: gdb
 - name: gdbus-codegen-glibmm
+- name: gimp
 - name: glibc
 - name: glm
 - name: glslang
