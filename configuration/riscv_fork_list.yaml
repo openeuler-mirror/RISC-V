@@ -214,6 +214,7 @@ packages:
 - name: lxc
 - name: lxcfs-tools
 - name: make
+- name: maildrop
 - name: mariadb 
 - name: mariadb-connector-c
 - name: maven
