@@ -444,6 +444,7 @@ packages:
 - name: startdde
 - name: subunit
 - name: svnkit
+- name: swt-chart
 - name: sysbench
 - name: syscontainer-tools
 - name: systemd
