@@ -341,6 +341,7 @@ packages:
 - name: python-leather
 - name: python-lightgbm
 - name: python-limits
+- name: python-lmdb
 - name: python-lockfile
 - name: python-lz4
 - name: python-mailer
