@@ -346,6 +346,7 @@ packages:
 - name: python-lz4
 - name: python-mailer
 - name: python-markdown
+- name: python-mne
 - name: python-musicbrainzngs
 - name: python-ns1-python
 - name: python-openstackdocstheme
