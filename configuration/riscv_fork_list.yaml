@@ -67,6 +67,7 @@ packages:
 - name: dde-file-manager
 - name: deepin-clone
 - name: deepin-desktop-base
+- name: deepin-editor
 - name: derby
 - name: dnf
 - name: docker
