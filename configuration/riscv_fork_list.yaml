@@ -349,6 +349,7 @@ packages:
 - name: python-markdown
 - name: python-mne
 - name: python-mne-bids
+- name: python-mnemonic
 - name: python-musicbrainzngs
 - name: python-ns1-python
 - name: python-openstackdocstheme
