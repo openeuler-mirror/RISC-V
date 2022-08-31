@@ -324,6 +324,7 @@ packages:
 - name: python_cmake_module
 - name: python-colour
 - name: python-dateutil
+- name: python-ddt
 - name: python-d2to1
 - name: python-firehose
 - name: python-fixtures
