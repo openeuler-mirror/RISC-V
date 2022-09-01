@@ -1,5 +1,6 @@
 packages:
 - name: abseil-cpp
+- name: accumulo
 - name: acl
 - name: acpica-tools
 - name: acpid
