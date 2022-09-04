@@ -326,6 +326,7 @@ packages:
 - name: python-colour
 - name: python-dateutil
 - name: python-ddt
+- name: python-dpkt
 - name: python-d2to1
 - name: python-firehose
 - name: python-fixtures
