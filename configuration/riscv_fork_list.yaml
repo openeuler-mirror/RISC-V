@@ -43,6 +43,16 @@ packages:
 - name: ceph
 - name: cfitsio
 - name: chromium
+- name: cinnamon
+- name: cinnamon-control-center
+- name: cinnamon-desktop
+- name: cinnamon-menu
+- name: cinnamon-screensaver
+- name: cinnamon-session
+- name: cinnamon-settings-daemon
+- name: cinnamon-themes
+- name: cinnamon-translations
+- name: cjs
 - name: ck
 - name: clamav
 - name: clang
@@ -233,6 +243,7 @@ packages:
 - name: mstflint
 - name: mtools
 - name: mtr
+- name: muffin
 - name: musl
 - name: mutter
 - name: mvapich2
