@@ -275,6 +275,7 @@ packages:
 - name: nodejs-transformers
 - name: nss
 - name: ntp
+- name: numactl
 - name: numpy
 - name: ocaml-dune
 - name: oddjob
@@ -523,6 +524,7 @@ packages:
 - name: webkit2gtk3
 - name: webrtc-audio-processing
 - name: wildfly-core
+- name: wildfly-elytron
 - name: wireguard-tools
 - name: wsmancli
 - name: wxPython
