@@ -346,6 +346,7 @@ packages:
 - name: python-fixtures
 - name: python-flake8-logging-format
 - name: python-FormEncode
+- name: python-genshi
 - name: python-gnocchiclient
 - name: python-greenlet
 - name: python-hkdf
