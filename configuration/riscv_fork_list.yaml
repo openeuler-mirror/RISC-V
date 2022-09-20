@@ -348,6 +348,7 @@ packages:
 - name: python-flake8-logging-format
 - name: python-FormEncode
 - name: python-genshi
+- name: python-geomet
 - name: python-gnocchiclient
 - name: python-greenlet
 - name: python-hkdf
