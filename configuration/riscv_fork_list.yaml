@@ -1,6 +1,7 @@
 packages:
 - name: abseil-cpp
 - name: accumulo
+- name: activemq
 - name: acl
 - name: acpica-tools
 - name: acpid
