@@ -250,6 +250,7 @@ packages:
 - name: mutter
 - name: mvapich2
 - name: mxparser
+- name: mybatis
 - name: mybatis-generator
 - name: mysql
 - name: nano
