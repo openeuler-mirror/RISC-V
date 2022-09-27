@@ -191,6 +191,7 @@ packages:
 - name: libepoxy
 - name: libffado
 - name: libffi
+- name: libftdi
 - name: libgusb
 - name: libhugetlbfs
 - name: libjpeg-turbo
