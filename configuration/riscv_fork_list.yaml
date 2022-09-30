@@ -354,6 +354,7 @@ packages:
 - name: python-gnocchiclient
 - name: python-greenlet
 - name: python-hkdf
+- name: python-hole
 - name: python-hstspreload
 - name: python-httpretty
 - name: python-httptools
