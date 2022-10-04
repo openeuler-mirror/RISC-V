@@ -323,6 +323,7 @@ packages:
 - name: proftpd
 - name: promu
 - name: protobuf
+- name: psmisc
 - name: psutils
 - name: ptpython
 - name: pulseaudio
