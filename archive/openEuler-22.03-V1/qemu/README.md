@@ -17,7 +17,7 @@
 
 ##### 2.1.1 下载内容
 
-- 下载 QEMU 目录下的[openeuler-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/openeuler-qemu-xfce.qcow2.tar.zst), [fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/fw_payload_oe_qemuvirt.elf), [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/start_vm_xfce.sh), 
+- 下载 QEMU 目录下的[openEuler-22.03-V1-riscv64-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/openEuler-22.03-V1-riscv64-qemu-xfce.qcow2.tar.zst), [fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/fw_payload_oe_qemuvirt.elf), [preview_start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/preview_start_vm_xfce.sh), 
 - [下载地址](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/QEMU/)
 
 ##### 2.1.2 部署和启动
@@ -26,7 +26,7 @@
 
 >已验证启动脚本在 Ubuntu22.04 ，Debian11.4环境下正常运行 
 
-- 确认当前目录内包含`fw_payload_oe_qemuvirt.elf`, 磁盘映像压缩包，和启动脚本`start_vm_xfce.sh`。
+- 确认当前目录内包含`fw_payload_oe_qemuvirt.elf`, 磁盘映像压缩包，和启动脚本`preview_start_vm_xfce.sh`。
 - 解压映像压缩包或使用解压工具解压磁盘映像。
 - 调整启动参数
 - 执行启动脚本
@@ -35,10 +35,10 @@
 
 ```bash
 sudo apt install zstd -y
-tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
+tar -I zstdmt -xvf ./openEuler-22.03-V1-riscv64-qemu-xfce.qcow2.tar.zst
 ```
 
-- 执行 `bash start_vm_xfce.sh`
+- 执行 `bash preview_start_vm_xfce.sh`
 
 注：QEMU下启动Xfce较慢，请耐心等待
 
@@ -65,7 +65,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 或者直接复制脚本代码然后本地新建文本文档然后黏贴另存为.sh文件
 
 - 调整脚本参数并运行脚本，注意此脚本并不会直接打开qemu的图形化窗口，需要使用 spice 连接后才会弹出窗口
-- 安装 virt-viewer 并使用 spice 连接虚拟机
+- 安装 virt-viewer 并使用 spice 连接虚拟机[脚本](./spice_view.bash)
 
 linux环境下（以Debian为例）
 

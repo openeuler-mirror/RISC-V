@@ -22,7 +22,7 @@ openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持
 
 1. 软件包选型升级
 2. 新增软件：Xfce桌面，Chromium浏览器，Firefox浏览器，Libreoffice办公套件，Tunderbird电子邮件客户端，Eclipse，VLC视频播放工具，GIMP图片编辑工具
-3. 新增全栈支持Unmatched开发板
+3. 新增全栈支持Unmatched，VisionFive开发板
 4. 修复bug和cve
 
 支持环境如下：
@@ -30,11 +30,13 @@ openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持
 | 硬件/QEMU | 硬件配置信息 | 测试结果 |
 | ----------------------------------- | ------------------------------------------------------------ | ------------------------- |
 | HiFive Unmatched | CPU: SiFive Freedom U740 SoC <br />内存：16GB DDR4<br />存储设备：SanDisk Ultra 32GB micro SD | 通过 |
+| VisionFive | CPU: JH7100 <br />内存：8GB DDR4<br />存储设备：SanDisk Ultra 32GB micro SD | 通过 |
 | Qemu 6.2/7.0 | CPU: 8<br />内存：8GB <br />存储设备：文件 | 通过 |
 
 | 主要变动                    |
 | ------------------------------- |
 | 支持HiFive Unmatched |
+| 支持VisionFive|
 | 支持常用软件和系统设置功能软件 |
 | 支持Xfce桌面 |
 | 支持Chromium软件 |
@@ -49,4 +51,5 @@ openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持
 
 - [使用QEMU安装openEuler-22.03-V1](./qemu/README.md)
 - [使用Unmatched开发板安装openEuler-22.03-V1](./unmatched/README.md)
+- [使用VisionFive开发板安装openEuler-22.03-V1](./visionfive/README.md)
 
