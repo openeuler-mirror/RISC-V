@@ -20,7 +20,7 @@ ls -l /dev/nvme*
 - 执行完这个代码以后，有可能会出现`/dev/nvme0n1`这样一个NVMe驱动器。这样，通过执行以下指令，就可以将镜像烧录到这个NVMe中。
 
 ```bash
-sudo dd if=/openEuler.img of=/dev/nvme0n1 bs=1M status=progress
+sudo dd if=./openEuler-22.03-V1-riscv64-unmatched-xfce.img of=/dev/nvme0n1 bs=1M status=progress
 ```
 
 - 然后将NVMe驱动器中的根分区挂载到/mnt然后chroot进这个环境。在这种情况下，rootfs往往会在第三分区，也就是`/dev/nvme0n1p3`

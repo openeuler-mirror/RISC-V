@@ -10,8 +10,9 @@ openEuler 22.03-* for RISC-V 是openEuler 22.03-LTS 在RISC-V 架构上的适配
 ### 2.使用说明
 openEuler 22.03-V1 for RISC-V 目前提供了qemu、Unmatched等多种运行环境下的镜像文件，您可以按需选择并按照下面的说明文档使用体验：
 
-- [使用QEMU安装openEuler-22.03-V1](https://gitee.com/openeuler/RISC-V/blob/master/archive/openEuler-22.03-V1/qemu/README.md)
-- [使用Unmatched开发板安装openEuler-22.03-V1](https://gitee.com/openeuler/RISC-V/blob/master/archive/openEuler-22.03-V1/unmatched/README.md)
+- [使用QEMU安装openEuler-22.03-V1](./qemu/README.md)
+- [使用Unmatched开发板安装openEuler-22.03-V1](./unmatched/README.md)
+- [使用VisionFive开发板安装openEuler-22.03-V1](./visionfive/README.md)
 
 
 ### 3.写在最后
