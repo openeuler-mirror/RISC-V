@@ -69,6 +69,7 @@ packages:
 - name: coreutils
 - name: courier-unicode
 - name: crash
+- name: crash-gcore-command
 - name: crash-trace-command
 - name: custodia 
 - name: dblatex
