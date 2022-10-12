@@ -26,7 +26,7 @@
 
 Unmatched的系统镜像下载连接地址如下： https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/Unmatched/
 
-考虑到要安装验证Firefox浏览器，我们可以下载openeuler-unmatched-xfce.img.tar.zst，连接如下：https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/Unmatched/openEuler-22.03-V1-riscv64-unmatched-xfce.img.tar.zst  
+考虑到要安装验证Firefox浏览器，我们可以下载openEuler-22.03-V1-riscv64-unmatched-xfce.img.tar.zst，连接如下：https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-22.03-V1-riscv64/Unmatched/openEuler-22.03-V1-riscv64-unmatched-xfce.img.tar.zst
 
 其他文件均无需下载。
 
@@ -50,7 +50,7 @@ tar -I zstdmt -xvf ./openEuler-22.03-V1-riscv64-unmatched-xfce.img.tar.zst
 将64G micro-sd卡装入读卡器后，插入笔记本电脑。笔记本电脑通常带一个硬盘，所以sd卡对应设备是/dev/sdb
 
 ```bash
-sudo dd if=./openeuler-unmatched-xfce.img of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+sudo dd if=./openEuler-22.03-V1-riscv64-unmatched-xfce.img of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 ```
 
 ### 4. 安装串口调试软件
