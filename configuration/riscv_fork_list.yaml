@@ -164,7 +164,6 @@ packages:
 - name: iperf3
 - name: iproute
 - name: isomd5sum
-- name: jasper
 - name: java-service-wrapper
 - name: jimtcl
 - name: jnr-enxio
@@ -415,7 +414,6 @@ packages:
 - name: python-urlgrabber
 - name: python-vulture
 - name: python-watchdog
-- name: python-which
 - name: python-yamlloader
 - name: python-zarr
 - name: python3
