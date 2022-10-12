@@ -6,7 +6,7 @@
 vcpu=8
 memory=8
 memory_append=`expr $memory \* 1024`
-drive="openeuler-qemu-xfce.qcow2"
+drive="openEuler-22.03-V1-riscv64-qemu-xfce.qcow2"
 fw="fw_payload_oe_qemuvirt.elf"
 ssh_port=
 vnc_port=12056

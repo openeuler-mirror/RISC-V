@@ -57,7 +57,7 @@ tar -I zstdmt -xvf ./openEuler-22.03-V1-riscv64-visionfive-xfce.img.tar.zst
 将64G micro-sd卡装入读卡器后，插入笔记本电脑。笔记本电脑通常带一个硬盘，所以sd卡对应设备是/dev/sdb
 
 ```bash
-sudo dd if=./openeuler-visionfive-xfce.img of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
+sudo dd if=./openEuler-22.03-V1-riscv64-visionfive-xfce.img of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 ```
 
 ### 4. 安装串口调试软件
