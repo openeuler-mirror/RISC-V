@@ -19,6 +19,8 @@ ls -l /dev/nvme*
 
 - 执行完这个代码以后，有可能会出现`/dev/nvme0n1`这样一个NVMe驱动器。这样，通过执行以下指令，就可以将镜像烧录到这个NVMe中。
 
+注：此步拷贝时间较长，如你有SSD外接硬盘盒，建议直接使用电脑外接SSD硬盘盒，执行以下步骤，以节省时间。
+
 ```bash
 sudo dd if=./openEuler-22.03-V1-riscv64-unmatched-xfce.img of=/dev/nvme0n1 bs=1M status=progress
 ```
@@ -30,7 +32,7 @@ sudo mount /dev/nvme0n1p3 /mnt
 sudo chroot /mnt
 ```
 
-- 使用你最喜欢用的文本编辑器(可以使用vim和nano)去编辑`/boot/extlinux/extlinux.conf`这个文件，在SD卡上改变根分区，即
+- 使用你最喜欢用的文本编辑器(可以使用vim和nano)去编辑`vim /boot/extlinux/extlinux.conf`这个文件，在SD卡上改变根分区，即
 
 ```bash
 root=/dev/mmcblk0p3
@@ -42,9 +44,9 @@ root=/dev/mmcblk0p3
 root=/dev/nvme0n1p3
 ```
 
-- 退出chroot环境，然后以同样的方法来编辑 `/boot/extlinux/extlinux.conf`文件。
+- `exit`退出chroot环境，然后以同样的方法来编辑 `vim /boot/extlinux/extlinux.conf`文件。
 
-- 您看！您成功在您的HiFive Unmatched的NVMe驱动器中安装上了可启动openEuler RISC-V系统。重启系统后，它将从NVMe驱动器启动。通过这种方式，您的系统将获得显著的性能提升！
+- 重启系统后，它将从NVMe驱动器启动。
 
 ## 2. SSD下存储扩容方法
 
