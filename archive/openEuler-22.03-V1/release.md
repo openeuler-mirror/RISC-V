@@ -52,4 +52,4 @@ openEuler是一款开源操作系统。当前openEuler内核源于Linux，支持
 - [使用QEMU安装openEuler-22.03-V1](./qemu/README.md)
 - [使用Unmatched开发板安装openEuler-22.03-V1](./unmatched/README.md)
 - [使用VisionFive开发板安装openEuler-22.03-V1](./visionfive/README.md)
-
+- [使用D1开发板安装openEuler-22.03-V1](./d1/README.md)
