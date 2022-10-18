@@ -108,6 +108,7 @@ packages:
 - name: fcitx-libpinyin
 - name: ffmpeg
 - name: file
+- name: fio
 - name: firefox
 - name: fish
 - name: flatpak
