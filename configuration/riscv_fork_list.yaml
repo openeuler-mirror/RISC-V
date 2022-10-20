@@ -147,6 +147,7 @@ packages:
 - name: gupnp
 - name: grub2
 - name: gzip
+- name: hadoop-3.1
 - name: haproxy
 - name: harfbuzz
 - name: htop
