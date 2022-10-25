@@ -380,6 +380,7 @@ packages:
 - name: python-ns1-python
 - name: python-openstackdocstheme
 - name: python-oslo.vmware
+- name: python-outcome
 - name: python-pandas
 - name: python-periodictable
 - name: python-precis_i18n
