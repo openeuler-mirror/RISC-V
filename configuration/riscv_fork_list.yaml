@@ -544,6 +544,7 @@ packages:
 - name: xorg-x11-xauth
 - name: xorg-x11-xbitmaps
 - name: xterm
+- name: xz
 - name: yaml-cpp
 - name: ypserv
 - name: zbar
