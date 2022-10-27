@@ -386,6 +386,7 @@ packages:
 - name: python-precis_i18n
 - name: python-pybtex
 - name: python-pybtex-docutils
+- name: python-pycdlib
 - name: python-pycurl
 - name: python-Pympler
 - name: python-pypiserver
