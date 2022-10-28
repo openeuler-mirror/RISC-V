@@ -34,6 +34,7 @@ packages:
 - name: authselect
 - name: aws-sdk-java
 - name: axiom
+- name: babeld
 - name: batik
 - name: bazel
 - name: bcc
@@ -61,6 +62,7 @@ packages:
 - name: clibcni
 - name: cmake
 - name: codenarc
+- name: colm
 - name: color-filesystem
 - name: compiler-rt
 - name: container-selinux
@@ -162,6 +164,7 @@ packages:
 - name: iSulad-img
 - name: ibus
 - name: icu
+- name: iio-sensor-proxy
 - name: ima-evm-utils
 - name: iperf3
 - name: iproute
@@ -205,6 +208,7 @@ packages:
 - name: libnice
 - name: liboauth
 - name: libofa
+- name: libpaper
 - name: libqmi
 - name: librepo
 - name: libreport
@@ -474,11 +478,13 @@ packages:
 - name: squid
 - name: sscg
 - name: startdde
+- name: stunnel
 - name: subunit
 - name: svnkit
 - name: swt-chart
 - name: sysbench
 - name: syscontainer-tools
+- name: sysstat
 - name: systemd
 - name: tbb
 - name: telepathy-glib
@@ -515,6 +521,7 @@ packages:
 - name: texlive-split-z
 - name: three-eight-nine-ds-base
 - name: thunderbird
+- name: tinyxml2
 - name: tog-pegasus
 - name: tracker
 - name: tracker-miners
