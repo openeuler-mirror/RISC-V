@@ -102,6 +102,7 @@ packages:
 - name: erlang-erlydtl
 - name: erlang-meck
 - name: erlang-rebar
+- name: etcd
 - name: etmem
 - name: evince
 - name: fabtests
