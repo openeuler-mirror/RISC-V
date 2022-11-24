@@ -32,6 +32,7 @@ packages:
 - name: attest-tools
 - name: augeas
 - name: authselect
+- name: avro
 - name: aws-sdk-java
 - name: axiom
 - name: babeld
@@ -42,6 +43,7 @@ packages:
 - name: bouncycastle
 - name: bpftrace
 - name: byteman
+- name: byzanz
 - name: ceph
 - name: cfitsio
 - name: chromium
@@ -95,6 +97,7 @@ packages:
 - name: eclipse-jgit
 - name: eigen3
 - name: efl
+- name: eggo
 - name: elixir
 - name: emacs
 - name: enchant2
@@ -115,6 +118,7 @@ packages:
 - name: firefox
 - name: fish
 - name: flatpak
+- name: flume
 - name: folks
 - name: fwupd
 - name: galera
@@ -124,6 +128,7 @@ packages:
 - name: gd
 - name: gdb
 - name: gdbus-codegen-glibmm
+- name: gearmand
 - name: gimp
 - name: glibc
 - name: glm
@@ -155,6 +160,7 @@ packages:
 - name: haproxy
 - name: harfbuzz
 - name: htop
+- name: hdf
 - name: hdf5
 - name: htslib
 - name: http-parser
@@ -170,6 +176,7 @@ packages:
 - name: iperf3
 - name: iproute
 - name: isomd5sum
+- name: java-client-kubevirt
 - name: java-service-wrapper
 - name: jimtcl
 - name: jnr-enxio
@@ -181,6 +188,8 @@ packages:
 - name: junit
 - name: keepalived
 - name: kexec-tools
+- name: kubeedge
+- name: KubeOS
 - name: kubernetes
 - name: lapack
 - name: lasso
@@ -262,7 +271,10 @@ packages:
 - name: mybatis-generator
 - name: mysql
 - name: nano
+- name: ncbi-blast
 - name: ncdu
+- name: neo4j
+- name: netdata
 - name: netty
 - name: NetworkManager
 - name: nghttp2
@@ -330,6 +342,7 @@ packages:
 - name: proftpd
 - name: promu
 - name: protobuf
+- name: prometheus
 - name: psmisc
 - name: psutils
 - name: ptpython
