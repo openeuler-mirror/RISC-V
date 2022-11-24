@@ -15,6 +15,8 @@
 - [ORSP002: 建立 port maintainer community](/proposal/ORSP002.md)
 - [ORSP003: openEuler RISC-V 软件源暂定运行机制](/proposal/ORSP003.md)
 - [ORSP004: openEuler RISC-V 定时快照构建规范](/proposal/ORSP004.md)
+- [ORSP005: openEuler RISC-V 测试规范](/proposal/ORSP005.md)
+- [ORSP006: 为 openEuler RISC-V 增加「准备仓」](/proposal/ORSP006.md)
 
 
 ## 参与项目
