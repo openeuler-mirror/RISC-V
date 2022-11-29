@@ -565,6 +565,7 @@ packages:
 - name: x265
 - name: xmvn
 - name: xnio
+- name: xorg-x11-server
 - name: xorg-x11-xauth
 - name: xorg-x11-xbitmaps
 - name: xterm
