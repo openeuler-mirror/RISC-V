@@ -119,6 +119,7 @@ packages:
 - name: fish
 - name: flatpak
 - name: flume
+- name: flink
 - name: folks
 - name: fwupd
 - name: galera
