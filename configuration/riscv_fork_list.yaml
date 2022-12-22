@@ -85,6 +85,7 @@ packages:
 - name: deepin-clone
 - name: deepin-desktop-base
 - name: deepin-editor
+- name: deepin-pw-check
 - name: derby
 - name: dnf
 - name: docker
