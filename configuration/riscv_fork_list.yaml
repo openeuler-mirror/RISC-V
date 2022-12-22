@@ -87,6 +87,7 @@ packages:
 - name: deepin-editor
 - name: deepin-pw-check
 - name: derby
+- name: devhelp
 - name: dnf
 - name: docker
 - name: e2fsprogs
@@ -232,6 +233,7 @@ packages:
 - name: libtdb
 - name: libtool
 - name: libuv
+- name: libvirt
 - name: libvpx
 - name: libxfce4ui
 - name: libxfce4util
