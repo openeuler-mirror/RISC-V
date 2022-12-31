@@ -35,7 +35,7 @@
   
 - 安装可选依赖包
   - 注：没装libsdl2*，那么xfce跑不起来
-  - 注：没装libslirp-dev，那么网络设备用不了  - 
+  - 注：没装libslirp-dev，那么网络设备用不了 
   
   `$ sudo apt install libsdl2*`
   
