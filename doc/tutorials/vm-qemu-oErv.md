@@ -34,7 +34,9 @@
   `$ sudo apt install build-essential git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build`
   
 - 安装可选依赖包
-
+  - 注：没装libsdl2*，那么xfce跑步起来
+  - 注：没装libslirp-dev，那么网络设备用不了  - 
+  
   `$ sudo apt install libsdl2*`
   
   `$ sudo apt-get install libslirp-dev`
