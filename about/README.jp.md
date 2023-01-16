@@ -15,7 +15,8 @@
 - [ORSP002: port maintainer community を確立](/proposal/ORSP002.md)
 - [ORSP003: openEuler RISC-V リポジトリの維持メカニズム（仮）](/proposal/ORSP003.md)
 - [ORSP004: openEuler RISC-V タイミング スナップショット構築ルール](/proposal/ORSP004.md)
-
+- [ORSP005: openEuler RISC-V テスト仕様](/proposal/ORSP005.md)
+- [ORSP006: openEuler RISC-V の「準備リポジトリ」を追加](/proposal/ORSP006.md)
 
 ## プロジェクトに参加する
 
