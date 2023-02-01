@@ -12,6 +12,10 @@ This repository is a portal for openEuler RISC-V SIG. It hosts documentation, pr
 
 - [ORSP001: Adjust 22.03 Release Plan and Goal of SIG](/proposal/ORSP001.md)
 - [ORSP002: Establish a Port Maintainer Community](/proposal/ORSP002.md)
+- [ORSP003: Tentative Operation Specification of openEuler RISC-V Repository](/proposal/ORSP003.md)
+- [ORSP004: Operation Specification of Building Scheduled Snapshots](/proposal/ORSP004.md)
+- [ORSP005: Writing Test Specification for openEuler RISC-V ](/proposal/ORSP005.md)
+- [ORSP006: Set Up 「Pre-openEuler Repository」 for RISC-V SIG](/proposal/ORSP006.md)
 
 ## Get Involved
 
@@ -24,7 +28,8 @@ Currently, there is an openEuler RISC-V WeChat group open to the public. If you 
 - [Must-Read for Beginners](/doc/tutorials/README.md)
 - [Signing openEuler Community CLA](/doc/tutorials/account-oE-CLA.md)
 - [Workflow for Building a Package](/doc/tutorials/workflow-for-build-a-package.md)
-- [External Documentation: Documentation by zxs-un](https://gitee.com/zxs-un/doc-port2riscv64-openEuler)
+- [External Documentation by zxs-un](https://gitee.com/zxs-un/doc-port2riscv64-openEuler)
+- [External Documentation by samuel_yuan: Play with OpenEuler on VisionFive](https://gitee.com/samuel_yuan/riscv-openeuler-visionfive)
 
 ## [Documentation](/doc)
 
