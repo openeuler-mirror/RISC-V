@@ -243,6 +243,7 @@ packages:
 - name: live555
 - name: lldb
 - name: llvm
+- name: llvm-mlir
 - name: log4j
 - name: log4j12
 - name: ltrace
@@ -263,6 +264,7 @@ packages:
 - name: motif
 - name: mozjs78
 - name: mpich
+- name: mpv
 - name: mrtg
 - name: mstflint
 - name: mtools
