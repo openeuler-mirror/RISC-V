@@ -44,6 +44,7 @@ packages:
 - name: bpftrace
 - name: byteman
 - name: byzanz
+- name: cadvisor
 - name: ceph
 - name: cfitsio
 - name: chromium
