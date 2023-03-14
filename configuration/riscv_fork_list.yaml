@@ -322,6 +322,7 @@ packages:
 - name: openjdk-latest
 - name: openldap
 - name: openmpi
+- name: openresty
 - name: openssl
 - name: opusfile
 - name: os-maven-plugin
