@@ -242,6 +242,7 @@ packages:
 - name: libxslt
 - name: lirc
 - name: live555
+- name: lld
 - name: lldb
 - name: llvm
 - name: llvm-mlir
