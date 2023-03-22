@@ -204,6 +204,7 @@ packages:
 - name: libEMF
 - name: libaio
 - name: libao
+- name: libcareplus
 - name: libdap
 - name: libdnf
 - name: libdvbpsi
