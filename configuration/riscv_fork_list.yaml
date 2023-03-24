@@ -147,6 +147,7 @@ packages:
 - name: google-noto-emoji-fonts
 - name: gpars
 - name: gradle
+- name: greatsql
 - name: grizzly
 - name: gsl
 - name: gsm
