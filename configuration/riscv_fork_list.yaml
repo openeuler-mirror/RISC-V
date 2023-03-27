@@ -254,6 +254,7 @@ packages:
 - name: lwip
 - name: lxc
 - name: lxcfs-tools
+- name: lzo
 - name: make
 - name: maildrop
 - name: mariadb 
