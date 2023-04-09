@@ -4,6 +4,7 @@
 
 1. root用户密码`openEuler12#$`
 2. openeuler用户密码`openEuler12#$`,默认用户
+3. 刷写镜像之前请通过串口输出信息来确认 U-Boot 版本. 如果显示的日期为 2023 年 1 月或更早, 则会无法启动. 请[下载最新固件后](https://github.com/starfive-tech/VisionFive2/releases)按照[官方文档](https://doc.rvspace.org/VisionFive2/Quick_Start_Guide/VisionFive2_SDK_QSG/updating_spl_and_u_boot%20-%20vf2.html)更新 SPL 和 U-Boot, [启动模式](https://doc.rvspace.org/VisionFive2/Quick_Start_Guide/VisionFive2_SDK_QSG/boot_mode_settings.html)应拨至 1-bit QSPI Nor Flash.
 
 ### 1. 准备硬件
 
