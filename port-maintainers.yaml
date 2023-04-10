@@ -47,6 +47,10 @@ maintainers:
     name: "Xuan Chen"
     giteeid: Sakura286
     email: chenxuan@iscas.ac.cn
+  - misaka00251:
+    name: "Xin Liu"
+    giteeid: misaka00251
+    email: liuxin@iscas.ac.cn
 
 
 packages:
