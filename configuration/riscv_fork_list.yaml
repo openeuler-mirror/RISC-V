@@ -591,6 +591,7 @@ packages:
 - name: zbar
 - name: zchunk
 - name: zenity
+- name: zerofree
 - name: zeromq
 - name: zimg
 - name: zinc
