@@ -1,4 +1,5 @@
 packages:
+- name: A-Tune-BPF-Collection
 - name: abseil-cpp
 - name: accumulo
 - name: activemq
@@ -42,6 +43,7 @@ packages:
 - name: bird
 - name: bouncycastle
 - name: bpftrace
+- name: byaccj
 - name: byteman
 - name: byzanz
 - name: cadvisor
@@ -68,6 +70,7 @@ packages:
 - name: colm
 - name: color-filesystem
 - name: compiler-rt
+- name: container-exception-logger
 - name: container-selinux
 - name: containerd
 - name: copy-jdk-configs
@@ -89,6 +92,7 @@ packages:
 - name: deepin-pw-check
 - name: derby
 - name: devhelp
+- name: dietlibc
 - name: dnf
 - name: docker
 - name: dwz
@@ -99,7 +103,9 @@ packages:
 - name: eclipse-egit
 - name: eclipse-emf
 - name: eclipse-jgit
+- name: ed
 - name: eigen3
+- name: efivar
 - name: efl
 - name: eggo
 - name: elixir
@@ -126,6 +132,7 @@ packages:
 - name: flink
 - name: folks
 - name: fwupd
+- name: fxload
 - name: galera
 - name: gawk
 - name: gc
@@ -181,6 +188,7 @@ packages:
 - name: ima-evm-utils
 - name: iperf3
 - name: iproute
+- name: iputils
 - name: isomd5sum
 - name: java-client-kubevirt
 - name: java-service-wrapper
@@ -194,6 +202,7 @@ packages:
 - name: junit
 - name: keepalived
 - name: kexec-tools
+- name: kpatch
 - name: kubeedge
 - name: KubeOS
 - name: kubernetes
@@ -255,6 +264,7 @@ packages:
 - name: lxc
 - name: lxcfs-tools
 - name: lzo
+- name: mac-robber
 - name: make
 - name: maildrop
 - name: mariadb 
@@ -286,6 +296,7 @@ packages:
 - name: ncbi-blast
 - name: ncdu
 - name: neo4j
+- name: net-tools
 - name: netdata
 - name: netty
 - name: NetworkManager
@@ -351,8 +362,10 @@ packages:
 - name: pipewire
 - name: pixman
 - name: pmix
+- name: pngcrush
 - name: podman
 - name: ppp
+- name: pptp
 - name: proftpd
 - name: promu
 - name: protobuf
@@ -569,12 +582,14 @@ packages:
 - name: vid.stab
 - name: vlc
 - name: volume_key
+- name: vsftpd
 - name: wayland
 - name: webkit2gtk3
 - name: webrtc-audio-processing
 - name: wildfly-core
 - name: wildfly-elytron
 - name: wireguard-tools
+- name: wireless-tools
 - name: wpa_supplicant
 - name: wsmancli
 - name: wxPython
@@ -595,6 +610,7 @@ packages:
 - name: zeromq
 - name: zimg
 - name: zinc
+- name: zip
 - name: zlib
 - name: zookeeper
 - name: zsh
