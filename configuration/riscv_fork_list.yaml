@@ -95,6 +95,7 @@ packages:
 - name: dietlibc
 - name: dnf
 - name: docker
+- name: dvdplusrw-tools
 - name: dwz
 - name: e2fsprogs
 - name: easymock
@@ -228,6 +229,7 @@ packages:
 - name: libjpeg-turbo
 - name: libkate
 - name: libkcapi
+- name: libkeepalive
 - name: libldb
 - name: libmatroska
 - name: libmbim
@@ -240,6 +242,7 @@ packages:
 - name: libreport
 - name: libreswan
 - name: libsecret
+- name: libserf
 - name: libstoragemgmt
 - name: libtalloc
 - name: libtevent
@@ -248,18 +251,22 @@ packages:
 - name: libuv
 - name: libvirt
 - name: libvpx
+- name: libx86emu
 - name: libxfce4ui
 - name: libxfce4util
 - name: libxslt
+- name: linuxptp
 - name: lirc
 - name: live555
 - name: lld
 - name: lldb
 - name: llvm
 - name: llvm-mlir
+- name: lm_sensors
 - name: log4j
 - name: log4j12
 - name: ltrace
+- name: lua-lpeg
 - name: lwip
 - name: lxc
 - name: lxcfs-tools
@@ -392,6 +399,7 @@ packages:
 - name: python-ddt
 - name: python-dpkt
 - name: python-d2to1
+- name: python-dmidecode
 - name: python-exif
 - name: python-firehose
 - name: python-fixtures
@@ -508,6 +516,7 @@ packages:
 - name: sbt
 - name: scala
 - name: scotch
+- name: sgpio
 - name: shaderc
 - name: shared-mime-info
 - name: simde
@@ -523,8 +532,10 @@ packages:
 - name: startdde
 - name: stunnel
 - name: subunit
+- name: suitesparse
 - name: svnkit
 - name: swt-chart
+- name: symlinks
 - name: sysbench
 - name: syscontainer-tools
 - name: sysstat
@@ -532,6 +543,7 @@ packages:
 - name: systemtap
 - name: tbb
 - name: telepathy-glib
+- name: telnet
 - name: tensorflow
 - name: texinfo
 - name: texlive
@@ -565,8 +577,10 @@ packages:
 - name: texlive-split-z
 - name: three-eight-nine-ds-base
 - name: thunderbird
+- name: tinycdb
 - name: tinyxml2
 - name: tog-pegasus
+- name: traceroute
 - name: tracker
 - name: tracker-miners
 - name: tss2
@@ -578,6 +592,7 @@ packages:
 - name: util-linux
 - name: valgrind
 - name: varnish
+- name: vconfig
 - name: vdo
 - name: vid.stab
 - name: vlc
