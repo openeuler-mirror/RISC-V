@@ -121,6 +121,7 @@ packages:
 - name: elixir
 - name: emacs
 - name: enchant2
+- name: environment-modules
 - name: erlang
 - name: erlang-erlydtl
 - name: erlang-meck
@@ -209,6 +210,7 @@ packages:
 - name: java-service-wrapper
 - name: jbigkit
 - name: jimtcl
+- name: jna
 - name: jnr-enxio
 - name: jnr-netdb
 - name: jq
@@ -356,6 +358,7 @@ packages:
 - name: openEuler-logos
 - name: openblas
 - name: opencc
+- name: opengauss-server
 - name: openjdk-1.8.0
 - name: openjdk-11
 - name: openjdk-latest
@@ -363,6 +366,7 @@ packages:
 - name: openmpi
 - name: openresty
 - name: openssl
+- name: openssl_tpm2_engine
 - name: opusfile
 - name: os-maven-plugin
 - name: osinfo-db-tools
@@ -547,6 +551,7 @@ packages:
 - name: squid
 - name: sscg
 - name: startdde
+- name: strace
 - name: stunnel
 - name: subunit
 - name: suitesparse
