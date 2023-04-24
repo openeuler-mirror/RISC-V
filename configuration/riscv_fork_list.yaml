@@ -662,3 +662,4 @@ packages:
 - name: zstd
 - name: lmdb
 - name: lua-filesystem
+- name: procinfo
