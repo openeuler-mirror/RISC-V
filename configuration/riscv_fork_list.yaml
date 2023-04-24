@@ -45,6 +45,7 @@ packages:
 - name: bazel
 - name: bcc
 - name: bird
+- name: boost
 - name: bouncycastle
 - name: bpftrace
 - name: busybox 
@@ -55,7 +56,9 @@ packages:
 - name: bzip2
 - name: cadvisor
 - name: ceph
+- name: certmonger
 - name: cfitsio
+- name: chromaprint
 - name: chromium
 - name: cinnamon
 - name: cinnamon-control-center
@@ -67,11 +70,13 @@ packages:
 - name: cinnamon-themes
 - name: cinnamon-translations
 - name: cjs
+- name: cjose
 - name: ck
 - name: clamav
 - name: clang
 - name: clevis
 - name: clibcni
+- name: clucene
 - name: cmake
 - name: codenarc
 - name: colm
@@ -102,8 +107,11 @@ packages:
 - name: derby
 - name: devhelp
 - name: dietlibc
+- name: dmraid
 - name: dnf
 - name: docker
+- name: dpdk
+- name: dtc
 - name: dvdplusrw-tools
 - name: dwz
 - name: e2fsprogs
