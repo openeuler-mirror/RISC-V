@@ -2,8 +2,10 @@ packages:
 - name: A-Tune-BPF-Collection
 - name: Judy
 - name: KubeOS
+- name: LZMA-SDK
 - name: NetworkManager
 - name: OpenCSD
+- name: PyQt4
 - name: abseil-cpp
 - name: accumulo
 - name: acl
@@ -72,8 +74,8 @@ packages:
 - name: cinnamon-settings-daemon
 - name: cinnamon-themes
 - name: cinnamon-translations
-- name: cjs
 - name: cjose
+- name: cjs
 - name: ck
 - name: clamav
 - name: clang
@@ -134,6 +136,7 @@ packages:
 - name: emacs
 - name: enchant2
 - name: environment-modules
+- name: epstool
 - name: erlang
 - name: erlang-erlydtl
 - name: erlang-meck
@@ -240,8 +243,8 @@ packages:
 - name: jsoup
 - name: jsr-305
 - name: junit
-- name: kata-integration
 - name: kata-containers
+- name: kata-integration
 - name: keepalived
 - name: kexec-tools
 - name: kim-api
@@ -273,11 +276,13 @@ packages:
 - name: libftdi
 - name: libgusb
 - name: libhugetlbfs
+- name: libisoburn
 - name: libjpeg-turbo
 - name: libkate
 - name: libkcapi
 - name: libkeepalive
 - name: libldb
+- name: liblockfile
 - name: libmatroska
 - name: libmbim
 - name: libnice
@@ -310,10 +315,12 @@ packages:
 - name: llvm
 - name: llvm-mlir
 - name: lm_sensors
+- name: lmdb
 - name: log4j
 - name: log4j12
 - name: lsof
 - name: ltrace
+- name: lua-filesystem
 - name: lua-lpeg
 - name: lwip
 - name: lxc
@@ -350,6 +357,7 @@ packages:
 - name: mybatis-generator
 - name: mysql
 - name: nano
+- name: native-platform
 - name: ncbi-blast
 - name: ncdu
 - name: neo4j
@@ -426,6 +434,7 @@ packages:
 - name: podman
 - name: ppp
 - name: pptp
+- name: procinfo
 - name: proftpd
 - name: prometheus
 - name: promu
@@ -531,6 +540,7 @@ packages:
 - name: pytorch
 - name: pyxdg
 - name: qemu
+- name: qgnomeplatform
 - name: qrencode
 - name: qt
 - name: qt-assistant-adp
@@ -579,6 +589,7 @@ packages:
 - name: simple-xml
 - name: sip
 - name: snakeyaml
+- name: snappy-java
 - name: socat
 - name: socket_wrapper
 - name: spark
@@ -692,6 +703,3 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-- name: lmdb
-- name: lua-filesystem
-- name: procinfo
