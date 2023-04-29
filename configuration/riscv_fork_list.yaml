@@ -716,3 +716,8 @@ packages:
 - name: nvme-snsd
 - name: system-storage-manager
 - name: webbench
+- name: libimagequant
+- name: perl-Devel-Size
+- name: perl-HTML-Parser
+- name: perl-TermReadKey
+- name: pesign
