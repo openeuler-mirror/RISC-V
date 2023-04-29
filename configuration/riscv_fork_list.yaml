@@ -703,3 +703,12 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
+- name: cdparanoia
+- name: esc
+- name: filebench
+- name: kata_integration
+- name: memleax
+- name: nethogs
+- name: nvme-snsd
+- name: system-storage-manager
+- name: webbench
