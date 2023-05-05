@@ -721,3 +721,4 @@ packages:
 - name: perl-HTML-Parser
 - name: perl-TermReadKey
 - name: pesign
+- name: edk2
