@@ -49,10 +49,12 @@ packages:
 - name: bazel
 - name: bcc
 - name: bird
+- name: bolt
 - name: boost
 - name: bouncycastle
 - name: bpftrace
 - name: brasero
+- name: brltty
 - name: busybox
 - name: bwa
 - name: byaccj
@@ -153,10 +155,12 @@ packages:
 - name: fakeroot
 - name: fcitx-libpinyin
 - name: fcoe-utils
+- name: festival
 - name: ffmpeg
 - name: file
 - name: filebench
 - name: fio
+- name: firebird
 - name: firefox
 - name: fish
 - name: flatpak
@@ -247,6 +251,7 @@ packages:
 - name: jsch
 - name: jsoup
 - name: jsr-305
+- name: jss
 - name: junit
 - name: kata-containers
 - name: kata_integration
@@ -258,6 +263,7 @@ packages:
 - name: kubeedge
 - name: kubernetes
 - name: kunpengsecl
+- name: labltk
 - name: ladspa
 - name: lapack
 - name: lasso
