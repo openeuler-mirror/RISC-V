@@ -51,6 +51,7 @@ packages:
 - name: batik
 - name: bazel
 - name: bcc
+- name: bind-dyndb-ldap
 - name: bird
 - name: bolt
 - name: boost
@@ -379,6 +380,7 @@ packages:
 - name: mariadb
 - name: mariadb-connector-c
 - name: maven
+- name: memcached
 - name: memleax
 - name: mesa
 - name: mina-ftpserver
@@ -413,6 +415,7 @@ packages:
 - name: nethogs
 - name: netty
 - name: nfs-utils
+- name: nfs4-acl-tools
 - name: nghttp2
 - name: node-gyp
 - name: node_exporter
