@@ -368,6 +368,7 @@ packages:
 - name: ltrace
 - name: lua-filesystem
 - name: lua-lpeg
+- name: luajit
 - name: lwip
 - name: lxc
 - name: lxcfs-tools
@@ -383,6 +384,7 @@ packages:
 - name: memcached
 - name: memleax
 - name: mesa
+- name: metacity
 - name: mina-ftpserver
 - name: mksh
 - name: mobile-broadband-provider-info
@@ -770,6 +772,7 @@ packages:
 - name: wsmancli
 - name: wxPython
 - name: x265
+- name: xmms
 - name: xmvn
 - name: xnio
 - name: xorg-x11-server
