@@ -618,6 +618,7 @@ packages:
 - name: qrencode
 - name: qt
 - name: qt-assistant-adp
+- name: qt5
 - name: qt5-qt3d
 - name: qt5-qtbase
 - name: qt5-qtdeclarative
