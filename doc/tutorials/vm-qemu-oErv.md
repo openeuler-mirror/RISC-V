@@ -1,6 +1,6 @@
 # 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统
 
-> 修订日期 2023-04-12
+> 修订日期 2023-05-10
 
 ## 安装支持 RISC-V 架构的 QEMU 模拟器
 
@@ -17,7 +17,7 @@
   - 注: 10 及以前的版本过旧
 - openEuler 22.03 提供 6.2 版本: `$ sudo dnf install qemu-system-riscv`
   - 注: 21.09 及以前的版本过旧
-- Fedora 36 提供 6.2 版本: `$ sudo dnf install qemu-system-riscv`
+- Fedora 38 提供 7.2.1 版本: `$ sudo dnf install qemu-system-riscv`
 - Arch Linux (在修订时) 提供 7.0 版本: `$ sudo pacman -Syu qemu-full`
 - openSUSE Tumbleweed (在修订时) 提供 6.2 版本: `$ sudo dnf install qemu`
 
@@ -54,30 +54,11 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 > - 执行 `$ qemu-system-riscv64 --version`，提示 7.2.0 的提示信息
 
 
-## 下载 openEuler RISC-V 系统镜像
+## 下载 openEuler RISC-V 系统镜像 & 启动系统
 
-> 注: 旧版本 `20.03` 的系统镜像安装移步至 [20.03 系统镜像下载](https://gitee.com/openeuler/RISC-V/blob/dced224a78ff47e547d4d00fcf3023177c7f4a5f/doc/tutorials/vm-qemu-oErv.md#%E4%B8%8B%E8%BD%BD-openeuler-risc-v-%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F)
+对于不同的版本我们均有提供 QEMU 文档，请查阅本 Repo 的 [release 目录](https://gitee.com/openeuler/RISC-V/tree/master/release)来获取不同的版本。
 
-- 下载说明: 至少应当下载启动 payload (`fw_payload_oe_qemuvirt.elf`)，GUI 和 headless 中一种镜像和对应的启动脚本
-- 下载目录: [openEuler-RISC-V/testing/*DATE*/*VER*/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/)
-- 版本说明: 构建日期 `DATE` 形如 `20220622` ，当日构建版本 `VER` 形如 `v0.2`
-  - 如 20220622 的 v0.2 版本 QEMU 镜像文件位于 [openEuler-RISC-V/testing/20220622/v0.2/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/QEMU/)
-- 内容说明:
-  - `fw_payload_oe_qemuvirt.elf`: 利用 openSBI 将 kernel-5.10 的 image 作为 payload 所制作的 QEMU 启动所需文件
-  - `openeuler-qemu-xfce.raw.tar.zst`: openEuler RISC-V QEMU GUI 镜像压缩包
-  - `start_vm_xfce.sh`: GUI 虚拟机启动脚本
-  - `openeuler-qemu.raw.tar.zst`: openEuler RISC-V QEMU headless 镜像压缩包
-  - `start_vm.sh`: headless 虚拟机启动脚本
-
-## 启动 openEuler RISC-V 虚拟机
-
-> 以启动 headless 虚拟机为例
->
-> 需要系统中有 zstd 相关支持库
-
-- 确认当前目录内包含 `fw_payload_oe_qemuvirt.elf`, `openeuler-qemu.raw.tar.zst` 和 `start_vm.sh`
-- 解压镜像压缩包 `$ tar -I 'zstdmt' -xvf ./openeuler-qemu.raw.tar.zst`
-- 执行启动脚本 `$ bash start_vm.sh`
+例如，欲了解如何下载 openEuler RISC-V 23.03 并通过 QEMU 仿真 RISC-V 环境启动，请访问 [release 目录下的 openEuler-23.03 文件夹](https://gitee.com/openeuler/RISC-V/tree/master/release/openEuler-23.03)。
 
 ### [可选] 启动参数调整
 
