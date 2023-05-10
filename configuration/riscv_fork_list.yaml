@@ -66,6 +66,7 @@ packages:
 - name: byzanz
 - name: bzip2
 - name: cadvisor
+- name: ca-certificates
 - name: cdparanoia
 - name: ceph
 - name: certmonger
@@ -127,6 +128,7 @@ packages:
 - name: docker
 - name: dovecot
 - name: dpdk
+- name: dpkg
 - name: dtc
 - name: dvdplusrw-tools
 - name: dwz
@@ -291,6 +293,7 @@ packages:
 - name: libbsd
 - name: libcap
 - name: libcareplus
+- name: libclc
 - name: libdap
 - name: libdb
 - name: libdnf
@@ -674,6 +677,7 @@ packages:
 - name: snappy-java
 - name: socat
 - name: socket_wrapper
+- name: source-highlight
 - name: spark
 - name: sphinx
 - name: springframework
