@@ -65,8 +65,8 @@ packages:
 - name: byteman
 - name: byzanz
 - name: bzip2
-- name: cadvisor
 - name: ca-certificates
+- name: cadvisor
 - name: cdparanoia
 - name: ceph
 - name: certmonger
@@ -242,6 +242,7 @@ packages:
 - name: httpd
 - name: hunspell
 - name: hwloc
+- name: i40e
 - name: iSulad
 - name: iSulad-img
 - name: ibus
@@ -448,6 +449,7 @@ packages:
 - name: nvme-snsd
 - name: ocaml-dune
 - name: oddjob
+- name: oec-hardware
 - name: oemaker
 - name: ogdi
 - name: oneDNN
@@ -780,6 +782,7 @@ packages:
 - name: xmms
 - name: xmvn
 - name: xnio
+- name: xorg-x11-drv-intel
 - name: xorg-x11-server
 - name: xorg-x11-xauth
 - name: xorg-x11-xbitmaps
