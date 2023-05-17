@@ -202,6 +202,7 @@ packages:
 - name: gmetrics
 - name: gnome-shell
 - name: gnome-software
+- name: gnu-efi
 - name: gnutls
 - name: go-bindata
 - name: golang
