@@ -666,6 +666,7 @@ packages:
 - name: sblim-sfcc
 - name: sbt
 - name: scala
+- name: scap-workbench
 - name: scotch
 - name: secpaver
 - name: sendmail
@@ -682,6 +683,7 @@ packages:
 - name: socket_wrapper
 - name: source-highlight
 - name: spark
+- name: spdk
 - name: sphinx
 - name: springframework
 - name: sqljet
