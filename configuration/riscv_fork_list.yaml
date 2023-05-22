@@ -467,6 +467,7 @@ packages:
 - name: openldap
 - name: openmpi
 - name: openresty
+- name: opensbi
 - name: opensc
 - name: openscap
 - name: opensp
@@ -513,6 +514,7 @@ packages:
 - name: ppp
 - name: pptp
 - name: procinfo
+- name: procps-ng
 - name: proftpd
 - name: prometheus
 - name: promu
