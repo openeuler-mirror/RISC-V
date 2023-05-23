@@ -1,6 +1,6 @@
 # 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统
 
-> 修订日期 2023-05-10
+> 修订日期 2023-05-23
 
 ## 安装支持 RISC-V 架构的 QEMU 模拟器
 
@@ -13,15 +13,17 @@
 - Ubuntu 22.04 提供 6.2 版本:  `$ sudo apt install qemu-system-misc`
   - 注: 20.04 及以前的版本过旧
 - Debian 11 仓库提供较旧的 5.2 版本: `$ sudo apt install qemu-system-misc`
-  - Debian 11 官方 backports 仓库提供 7.0 版本，可参考这里的 [指引](https://backports.debian.org/Instructions/) 启用 backports 仓库获取新版本软件包: `$ sudo apt install -t bullseye-backports qemu-system-misc`
+  - Debian 11 官方 backports 仓库 (在修订时) 提供 7.2 版本，可参考这里的 [指引](https://backports.debian.org/Instructions/) 启用 backports 仓库获取新版本软件包: `$ sudo apt install -t bullseye-backports qemu-system-misc`
   - 注: 10 及以前的版本过旧
 - openEuler 22.03 提供 6.2 版本: `$ sudo dnf install qemu-system-riscv`
   - 注: 21.09 及以前的版本过旧
 - Fedora 38 提供 7.2.1 版本: `$ sudo dnf install qemu-system-riscv`
-- Arch Linux (在修订时) 提供 7.0 版本: `$ sudo pacman -Syu qemu-full`
-- openSUSE Tumbleweed (在修订时) 提供 6.2 版本: `$ sudo dnf install qemu`
+- Arch Linux (在修订时) 提供 8.0 版本: `$ sudo pacman -Syu qemu-full`
+- openSUSE Tumbleweed (在修订时) 提供 7.1 版本: `$ sudo dnf install qemu`
 
-如果官方仓库 (及各种 **您信任的** 第三方仓库) 中未收录 QEMU 或版本过旧 (低于 5.0)，可以移步下一部分从 [QEMU 项目主页](https://www.qemu.org/) 获取源代码进行手动构建。
+如果官方仓库 (及各种 **您信任的** 第三方仓库) 中未收录 QEMU 或版本过旧 (低于 5.0)，或者发行版提供的软件包构建时未开启本项目所需的 slirp 网络模块（如运行时出现报错：`network backend 'user' is not compiled into this binary` ），请移步下一部分从 [QEMU 项目主页](https://www.qemu.org/) 获取源代码进行手动构建。
+
+> QEMU 从 7.2.0 版本之后[移除了 slirp 子模块](https://wiki.qemu.org/ChangeLog/7.2#Removal_of_the_%22slirp%22_submodule_(affects_%22-netdev_user%22))，会影响用户模式的网络功能，需要提前加上依赖包和配置选项。
 
 ### 手动编译安装
 
@@ -30,29 +32,19 @@
 > 下述内容以 Ubuntu 为例
 
 - 安装必要的构建工具
-  `$ sudo apt install build-essential git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build`
+  `$ sudo apt install build-essential git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build libslirp-dev`
 - 创建 /usr/local 下的目标目录 `$ sudo mkdir -p /usr/local/bin/qemu-riscv64`
-- 下载 QEMU 源码包 (此处以应用更广泛的 7.0 版本为准) `$ wget https://download.qemu.org/qemu-7.0.0.tar.xz`
-- 解压源码包并切换目录 `$ tar xvJf qemu-7.0.0.tar.xz && cd qemu-7.0.0`
+- 下载 QEMU 源码包 (此处以 7.2 版本为例) `$ wget https://download.qemu.org/qemu-7.2.0.tar.xz`
+- 解压源码包并切换目录 `$ tar xvJf qemu-7.2.0.tar.xz && cd qemu-7.2.0`
 - 配置编译选项 `$ sudo ./configure --enable-slirp --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/usr/local/bin/qemu-riscv64`
-  > `riscv64-softmmu` 为系统模式，`riscv64-linux-user` 为用户模式。为了测试方便，可以两个都安装
+  > `riscv64-softmmu` 为系统模式，`riscv64-linux-user` 为用户模式。为了测试方便建议两个都编译，以免后续需要时重复编译
 - 编译安装 `$ sudo make && sudo make install`
 - 执行 `$ qemu-system-riscv64 --version`，如出现类似如下输出表示 QEMU 成功安装并正常工作。
 
 ```` bash
-QEMU emulator version 7.0.0
+QEMU emulator version 7.2.0
 Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 ````
-> QEMU 7.2.0 [新版本更新中移除了 slirp 子模块](https://wiki.qemu.org/ChangeLog/7.2#Removal_of_the_%22slirp%22_submodule_(affects_%22-netdev_user%22))，会影响用户模式的网络功能，需要提前加上依赖包和配置选项。
-> 
-> 具体地，**如果你需要 7.2.0 及之后的 QEMU，则应在上述 7.0 版本操作基础上额外注意：**
-> - 补充安装缺失的模块
-    `$ sudo apt install libslirp-dev`
-> - 获取、解压 7.2.0 版本的 QEMU 源码
-    `$ wget https://download.qemu.org/qemu-7.2.0.tar.xz`
-    `$ tar xvJf qemu-7.2.0.tar.xz && cd qemu-7.2.0`
-> - 执行 `$ qemu-system-riscv64 --version`，提示 7.2.0 的提示信息
-
 
 ## 下载 openEuler RISC-V 系统镜像 & 启动系统
 
