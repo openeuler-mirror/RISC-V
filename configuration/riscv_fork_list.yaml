@@ -123,6 +123,7 @@ packages:
 - name: devhelp
 - name: dhcp
 - name: dietlibc
+- name: diffutils
 - name: dmraid
 - name: dnf
 - name: docker
@@ -171,6 +172,7 @@ packages:
 - name: fftw
 - name: file
 - name: filebench
+- name: findutils
 - name: fio
 - name: firebird
 - name: firefox
@@ -379,6 +381,7 @@ packages:
 - name: lxcfs-tools
 - name: lzip
 - name: lzo
+- name: m4
 - name: mac-robber
 - name: maildrop
 - name: make
