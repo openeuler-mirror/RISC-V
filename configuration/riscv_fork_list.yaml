@@ -765,6 +765,7 @@ packages:
 - name: udisks2
 - name: uglify-js
 - name: unrtf
+- name: unzip
 - name: ustr
 - name: util-linux
 - name: valgrind
