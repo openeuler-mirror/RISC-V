@@ -668,11 +668,13 @@ packages:
 - name: rust-srpm-macros
 - name: rustup
 - name: samba
+- name: sbd
 - name: sblim-sfcc
 - name: sbt
 - name: scala
 - name: scap-workbench
 - name: scotch
+- name: secGear
 - name: secpaver
 - name: sendmail
 - name: sgpio
@@ -748,6 +750,7 @@ packages:
 - name: texlive-split-z
 - name: three-eight-nine-ds-base
 - name: thunderbird
+- name: tigervnc
 - name: tinycdb
 - name: tinyxml
 - name: tinyxml2
@@ -774,6 +777,7 @@ packages:
 - name: vdo
 - name: vid.stab
 - name: vlc
+- name: vmtop
 - name: volume_key
 - name: vsftpd
 - name: wayland
