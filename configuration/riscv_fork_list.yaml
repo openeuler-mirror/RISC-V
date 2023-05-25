@@ -95,6 +95,7 @@ packages:
 - name: codenarc
 - name: colm
 - name: color-filesystem
+- name: compat-openssl11 
 - name: compiler-rt
 - name: container-exception-logger
 - name: container-selinux
@@ -262,6 +263,7 @@ packages:
 - name: java-client-kubevirt
 - name: java-service-wrapper
 - name: jbigkit
+- name: jemalloc
 - name: jimtcl
 - name: jna
 - name: jnr-enxio
@@ -341,6 +343,7 @@ packages:
 - name: libserf
 - name: libsmi
 - name: libsoup
+- name: libssh
 - name: libstoragemgmt
 - name: libtalloc
 - name: libtdb
@@ -373,6 +376,7 @@ packages:
 - name: log4j12
 - name: lsof
 - name: ltrace
+- name: lttng-ust
 - name: lua-filesystem
 - name: lua-lpeg
 - name: luajit
@@ -522,6 +526,7 @@ packages:
 - name: prometheus
 - name: promu
 - name: protobuf
+- name: psm
 - name: psmisc
 - name: psutils
 - name: ptpython
@@ -815,4 +820,3 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-- name: psm
