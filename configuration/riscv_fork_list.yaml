@@ -277,6 +277,7 @@ packages:
 - name: kata-containers
 - name: kata_integration
 - name: keepalived
+- name: kernel
 - name: kexec-tools
 - name: kim-api
 - name: kiwi
