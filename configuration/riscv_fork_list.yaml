@@ -458,6 +458,7 @@ packages:
 - name: numactl
 - name: numpy
 - name: nvme-snsd
+- name: ocaml
 - name: ocaml-dune
 - name: oddjob
 - name: oec-hardware
@@ -681,6 +682,7 @@ packages:
 - name: sbt
 - name: scala
 - name: scap-workbench
+- name: scipy
 - name: scotch
 - name: secGear
 - name: secpaver
@@ -705,12 +707,14 @@ packages:
 - name: squid
 - name: sscg
 - name: star
+- name: stax-ex
 - name: startdde
 - name: strace
 - name: stunnel
 - name: subunit
 - name: subversion
 - name: suitesparse
+- name: SuperLU
 - name: supermin
 - name: svnkit
 - name: swt-chart
