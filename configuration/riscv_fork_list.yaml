@@ -8,6 +8,7 @@ packages:
 - name: NetworkManager
 - name: OpenCSD
 - name: PyQt4
+- name: WasmEngine
 - name: abseil-cpp
 - name: accumulo
 - name: acl
@@ -189,6 +190,7 @@ packages:
 - name: fxload
 - name: galera
 - name: gawk
+- name: gazelle
 - name: gc
 - name: gcc
 - name: gd
