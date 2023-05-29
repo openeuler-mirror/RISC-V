@@ -109,6 +109,7 @@ packages:
 - name: crash-gcore-command
 - name: crash-trace-command
 - name: custodia
+- name: cyrus-sasl
 - name: dblatex
 - name: dbus
 - name: dbus-cpp
