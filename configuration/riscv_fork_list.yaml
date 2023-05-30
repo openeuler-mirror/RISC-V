@@ -118,6 +118,7 @@ packages:
 - name: dde-api
 - name: dde-daemon
 - name: dde-file-manager
+- name: debugedit
 - name: deepin-clone
 - name: deepin-desktop-base
 - name: deepin-editor
