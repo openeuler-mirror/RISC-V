@@ -1,6 +1,6 @@
 # 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统
 
-> 修订日期 2023-05-23
+> 修订日期 2023-05-31
 
 ## 安装支持 RISC-V 架构的 QEMU 模拟器
 
@@ -143,17 +143,19 @@ vda    254:0    0   50G  0 disk
 - 扩展文件系统，执行 `resize2fs /dev/vda1`
 - 执行 `df -h` 验证 / 分区的大小
 
-## [可选] 准备 QEMU x86_64 环境
+## [可选] 准备 QEMU x86_64 或 arm64 环境
 
-当需要查看对比 openEuler 主线软件包情况时，可安装对应的 QEMU 虚拟机。这里以 x86_64 、主线版本 2203 LTS 为例说明准备方法。
+当需要对比 openEuler 主线软件包，或者进行内核对比测试等情况时，可安装对应的 QEMU x86_64 或 arm64 虚拟机环境。这里以主线版本 openEuler-22.03-LTS-SP1 为例说明准备方法。
+
+1. QEMU x86_84
 
 - 下载镜像:
 
 ```
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/virtual_machine_img/x86_64/openEuler-22.03-LTS-x86_64.qcow2.xz
-$ xz -d openEuler-22.03-LTS-x86_64.qcow2.xz
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images/pxeboot/initrd.img
-$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS/OS/x86_64/images/pxeboot/vmlinuz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/virtual_machine_img/x86_64/openEuler-22.03-LTS-SP1-x86_64.qcow2.xz
+$ xz -d openEuler-22.03-LTS-SP1-x86_64.qcow2.xz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/OS/x86_64/images/pxeboot/initrd.img
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/OS/x86_64/images/pxeboot/vmlinuz
 ```
 
 - 启动虚拟机:
@@ -163,9 +165,35 @@ $ qemu-system-x86_64 \
   -nographic -smp 8 -m 4G \
   -kernel vmlinuz \
   -initrd initrd.img \
-  -hda openEuler-22.03-LTS-x86_64.qcow2 \
-  -nic user,model=e1000 \
-  -append 'root=/dev/sda2 rw console=ttyS0 systemd.default_timeout_start_sec=600 selinux=0 highres=off mem=4096M earlycon'
+  -hda openEuler-22.03-LTS-SP1-x86_64.qcow2 \
+  -net user,hostfwd=::2222-:22 -net nic \
+  -append 'root=/dev/sda2 console=ttyS0'
 ```
 
-root 口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
+- root口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
+
+2. QEMU arm64
+
+- 下载镜像：
+
+```
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/virtual_machine_img/aarch64/openEuler-22.03-LTS-SP1-aarch64.qcow2.xz
+$ xz -d openEuler-22.03-LTS-SP1-aarch64.qcow2.xz
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/OS/aarch64/images/pxeboot/initrd.img
+$ wget https://mirror.iscas.ac.cn/openeuler/openEuler-22.03-LTS-SP1/OS/aarch64/images/pxeboot/vmlinuz
+```
+
+- 启动虚拟机：
+
+```
+$ qemu-system-aarch64 \
+  -nographic \
+  -M virt -cpu cortex-a57 \
+  -smp 8 -m 4G \
+  -kernel vmlinuz \
+  -initrd initrd.img \
+  -hda openEuler-22.03-LTS-SP1-aarch64.qcow2 \
+  -nic user,model=e1000,hostfwd=tcp::2222-:22 \
+  -append 'root=/dev/vda2 console=ttyAMA0'
+```
+- root口令与上面相同。虚拟机的网络、时间(除时区)、软件源等已设置好，开机即可用。
