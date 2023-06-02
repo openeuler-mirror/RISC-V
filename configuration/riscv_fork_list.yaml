@@ -374,6 +374,7 @@ packages:
 - name: lldb
 - name: llvm
 - name: llvm-mlir
+- name: llvm-bolt
 - name: lm_sensors
 - name: lmbench
 - name: lmdb
