@@ -21,6 +21,7 @@ packages:
 - name: aide
 - name: alsa-lib
 - name: amtk
+- name: anaconda
 - name: annobin
 - name: antlr3
 - name: aom
