@@ -116,14 +116,18 @@ packages:
 - name: dbus-cpp
 - name: dbxtool
 - name: dcraw
+- name: ddcutil
 - name: dde-api
 - name: dde-daemon
 - name: dde-file-manager
+- name: dde-session-ui
 - name: debugedit
 - name: deepin-clone
 - name: deepin-desktop-base
 - name: deepin-editor
 - name: deepin-pw-check
+- name: deepin-music
+- name: deepin-menu
 - name: derby
 - name: devhelp
 - name: dhcp
@@ -135,6 +139,7 @@ packages:
 - name: dovecot
 - name: dpdk
 - name: dpkg
+- name: dtkwm
 - name: dtc
 - name: dvdplusrw-tools
 - name: dwz
