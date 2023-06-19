@@ -133,6 +133,7 @@ packages:
 - name: dhcp
 - name: dietlibc
 - name: diffutils
+- name: disomaster
 - name: dmraid
 - name: dnf
 - name: docker
@@ -141,6 +142,9 @@ packages:
 - name: dpkg
 - name: dtkwm
 - name: dtc
+- name: dtkcore
+- name: dtkgui
+- name: dtkwidget
 - name: dvdplusrw-tools
 - name: dwz
 - name: dyninst
@@ -213,6 +217,7 @@ packages:
 - name: glm
 - name: glslang
 - name: gmetrics
+- name: gn
 - name: gnome-shell
 - name: gnome-software
 - name: gnu-efi
@@ -254,6 +259,7 @@ packages:
 - name: htslib
 - name: http-parser
 - name: httpd
+- name: httpry
 - name: hunspell
 - name: hwloc
 - name: i40e
@@ -264,6 +270,7 @@ packages:
 - name: iio-sensor-proxy
 - name: ima-evm-utils
 - name: initscripts
+- name: ioprocess
 - name: iperf3
 - name: iproute
 - name: iputils
