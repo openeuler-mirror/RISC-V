@@ -318,6 +318,7 @@ packages:
 - name: libcap
 - name: libcareplus
 - name: libclc
+- name: libcrystalhd
 - name: libdap
 - name: libdb
 - name: libdnf
@@ -345,6 +346,7 @@ packages:
 - name: liblognorm
 - name: libmatroska
 - name: libmbim
+- name: libmpd
 - name: libnetwork
 - name: libnice
 - name: liboauth
@@ -416,6 +418,7 @@ packages:
 - name: memleax
 - name: mesa
 - name: metacity
+- name: mimetic
 - name: mina-ftpserver
 - name: mksh
 - name: mobile-broadband-provider-info
@@ -513,6 +516,7 @@ packages:
 - name: pbzip2
 - name: pciutils
 - name: pdfbox
+- name: peony
 - name: perftest
 - name: perl
 - name: perl-Alien-Build
@@ -726,6 +730,8 @@ packages:
 - name: star
 - name: stax-ex
 - name: startdde
+- name: stalld
+- name: stb
 - name: strace
 - name: stunnel
 - name: subunit
@@ -779,11 +785,13 @@ packages:
 - name: texlive-split-z
 - name: three-eight-nine-ds-base
 - name: thunderbird
+- name: tidb
 - name: tigervnc
 - name: tinycdb
 - name: tinyxml
 - name: tinyxml2
 - name: tog-pegasus
+- name: toolbox
 - name: traceroute
 - name: tracker
 - name: tracker-miners
@@ -796,6 +804,7 @@ packages:
 - name: uboot-tools
 - name: udisks2
 - name: uglify-js
+- name: ukwm
 - name: unrtf
 - name: unzip
 - name: ustr
@@ -828,6 +837,7 @@ packages:
 - name: xorg-x11-server
 - name: xorg-x11-xauth
 - name: xorg-x11-xbitmaps
+- name: xsd
 - name: xterm
 - name: xz
 - name: yaml-cpp
