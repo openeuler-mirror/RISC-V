@@ -8,6 +8,7 @@ packages:
 - name: NetworkManager
 - name: OpenCSD
 - name: PyQt4
+- name: SuperLU
 - name: WasmEngine
 - name: abseil-cpp
 - name: accumulo
@@ -35,12 +36,14 @@ packages:
 - name: apache-rat
 - name: apache-sshd
 - name: apr
+- name: arangodb
 - name: armadillo
 - name: asio
 - name: aspell
 - name: asymptote
 - name: atlas
 - name: attest-tools
+- name: attica
 - name: audit
 - name: augeas
 - name: authselect
@@ -79,6 +82,7 @@ packages:
 - name: cinnamon-control-center
 - name: cinnamon-desktop
 - name: cinnamon-menu
+- name: cinnamon-mozjs78
 - name: cinnamon-screensaver
 - name: cinnamon-session
 - name: cinnamon-settings-daemon
@@ -109,6 +113,7 @@ packages:
 - name: crash
 - name: crash-gcore-command
 - name: crash-trace-command
+- name: cri-tools
 - name: custodia
 - name: cyrus-sasl
 - name: dblatex
@@ -118,6 +123,7 @@ packages:
 - name: dcraw
 - name: ddcutil
 - name: dde-api
+- name: dde-calendar
 - name: dde-daemon
 - name: dde-file-manager
 - name: dde-session-ui
@@ -125,9 +131,12 @@ packages:
 - name: deepin-clone
 - name: deepin-desktop-base
 - name: deepin-editor
-- name: deepin-pw-check
-- name: deepin-music
+- name: deepin-font-manager
 - name: deepin-menu
+- name: deepin-music
+- name: deepin-pw-check
+- name: deepin-system-monitor
+- name: deepin-turbo
 - name: derby
 - name: devhelp
 - name: dhcp
@@ -140,11 +149,11 @@ packages:
 - name: dovecot
 - name: dpdk
 - name: dpkg
-- name: dtkwm
 - name: dtc
 - name: dtkcore
 - name: dtkgui
 - name: dtkwidget
+- name: dtkwm
 - name: dvdplusrw-tools
 - name: dwz
 - name: dyninst
@@ -176,6 +185,7 @@ packages:
 - name: etcd
 - name: etmem
 - name: evince
+- name: exim
 - name: fabtests
 - name: fakechroot
 - name: fakeroot
@@ -191,6 +201,7 @@ packages:
 - name: firebird
 - name: firefox
 - name: fish
+- name: flatbuffers
 - name: flatpak
 - name: flink
 - name: flume
@@ -218,6 +229,8 @@ packages:
 - name: glslang
 - name: gmetrics
 - name: gn
+- name: gnome-boxes
+- name: gnome-remote-desktop
 - name: gnome-shell
 - name: gnome-software
 - name: gnu-efi
@@ -228,6 +241,7 @@ packages:
 - name: google-noto-emoji-fonts
 - name: gpars
 - name: gradle
+- name: grafana
 - name: greatsql
 - name: grizzly
 - name: grpc
@@ -267,8 +281,11 @@ packages:
 - name: iSulad-img
 - name: ibus
 - name: icu
+- name: ignition
 - name: iio-sensor-proxy
+- name: im-chooser
 - name: ima-evm-utils
+- name: indicator-china-weather
 - name: initscripts
 - name: ioprocess
 - name: iperf3
@@ -297,11 +314,20 @@ packages:
 - name: kernel
 - name: kexec-tools
 - name: kim-api
+- name: kiran-cc-daemon
 - name: kiwi
 - name: kpatch
 - name: kubeedge
 - name: kubernetes
 - name: kunpengsecl
+- name: kylin-calculator
+- name: kylin-ipmsg
+- name: kylin-music
+- name: kylin-photo-viewer
+- name: kylin-recorder
+- name: kylin-usb-creator
+- name: kylin-user-guide
+- name: kylin-video
 - name: labltk
 - name: ladspa
 - name: lapack
@@ -312,6 +338,7 @@ packages:
 - name: leveldb
 - name: lib-shim-v2
 - name: libEMF
+- name: libXNVCtrl
 - name: libaio
 - name: libao
 - name: libbsd
@@ -325,6 +352,7 @@ packages:
 - name: libdvbpsi
 - name: libecap
 - name: libepoxy
+- name: liberasurecode
 - name: libesmtp
 - name: libffado
 - name: libffi
@@ -341,11 +369,13 @@ packages:
 - name: libkate
 - name: libkcapi
 - name: libkeepalive
+- name: libkysdk-system
 - name: libldb
 - name: liblockfile
 - name: liblognorm
 - name: libmatroska
 - name: libmbim
+- name: libmetal
 - name: libmpd
 - name: libnetwork
 - name: libnice
@@ -388,8 +418,8 @@ packages:
 - name: lld
 - name: lldb
 - name: llvm
-- name: llvm-mlir
 - name: llvm-bolt
+- name: llvm-mlir
 - name: lm_sensors
 - name: lmbench
 - name: lmdb
@@ -487,6 +517,7 @@ packages:
 - name: openEuler-indexhtml
 - name: openEuler-logos
 - name: openblas
+- name: openbox
 - name: opencc
 - name: opengauss-dcf
 - name: opengauss-server
@@ -497,6 +528,7 @@ packages:
 - name: openldap
 - name: openmpi
 - name: openresty
+- name: openresty-valgrind
 - name: opensbi
 - name: opensc
 - name: openscap
@@ -510,6 +542,7 @@ packages:
 - name: osinfo-db-tools
 - name: ostree
 - name: pacemaker
+- name: pangox-compat
 - name: papi
 - name: paps
 - name: passenger
@@ -517,6 +550,7 @@ packages:
 - name: pciutils
 - name: pdfbox
 - name: peony
+- name: percona-xtrabackup
 - name: perftest
 - name: perl
 - name: perl-Alien-Build
@@ -659,6 +693,7 @@ packages:
 - name: qrencode
 - name: qt
 - name: qt-assistant-adp
+- name: qt-at-spi
 - name: qt5
 - name: qt5-qt3d
 - name: qt5-qtbase
@@ -697,6 +732,7 @@ packages:
 - name: rust-packaging
 - name: rust-srpm-macros
 - name: rustup
+- name: rygel
 - name: samba
 - name: sbd
 - name: sblim-sfcc
@@ -727,17 +763,16 @@ packages:
 - name: sqljet
 - name: squid
 - name: sscg
-- name: star
-- name: stax-ex
-- name: startdde
 - name: stalld
+- name: star
+- name: startdde
+- name: stax-ex
 - name: stb
 - name: strace
 - name: stunnel
 - name: subunit
 - name: subversion
 - name: suitesparse
-- name: SuperLU
 - name: supermin
 - name: svnkit
 - name: swt-chart
@@ -795,6 +830,7 @@ packages:
 - name: traceroute
 - name: tracker
 - name: tracker-miners
+- name: trafficserver
 - name: tree
 - name: tss2
 - name: ttmkfdir
@@ -804,6 +840,9 @@ packages:
 - name: uboot-tools
 - name: udisks2
 - name: uglify-js
+- name: ukui-control-center
+- name: ukui-search
+- name: ukui-settings-daemon
 - name: ukwm
 - name: unrtf
 - name: unzip
@@ -827,6 +866,7 @@ packages:
 - name: wireguard-tools
 - name: wireless-tools
 - name: wpa_supplicant
+- name: wrk
 - name: wsmancli
 - name: wxPython
 - name: x265
