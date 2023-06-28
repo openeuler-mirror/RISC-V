@@ -658,6 +658,7 @@ packages:
 - name: python-pytest-repeat
 - name: python-qt5
 - name: python-quantities
+- name: python-reportlab
 - name: python-requests-gssapi
 - name: python-restructuredtext-lint
 - name: python-rope
@@ -848,6 +849,7 @@ packages:
 - name: unzip
 - name: ustr
 - name: util-linux
+- name: v4l-utils
 - name: valgrind
 - name: varnish
 - name: vconfig
