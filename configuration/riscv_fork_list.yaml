@@ -896,3 +896,4 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
+- name: memkind
