@@ -188,6 +188,7 @@ packages:
 - name: etmem
 - name: evince
 - name: exim
+- name: execstack
 - name: fabtests
 - name: fakechroot
 - name: fakeroot
@@ -287,6 +288,7 @@ packages:
 - name: iio-sensor-proxy
 - name: im-chooser
 - name: ima-evm-utils
+- name: imageTailor
 - name: indicator-china-weather
 - name: initscripts
 - name: ioprocess
@@ -453,6 +455,7 @@ packages:
 - name: metacity
 - name: mimetic
 - name: mina-ftpserver
+- name: minimap2
 - name: mksh
 - name: mobile-broadband-provider-info
 - name: mockito
@@ -562,6 +565,7 @@ packages:
 - name: perl-CGI
 - name: perl-Devel-Size
 - name: perl-GD
+- name: perl-Glib
 - name: perl-HTML-Parser
 - name: perl-IO-Tty
 - name: perl-TermReadKey
@@ -721,6 +725,7 @@ packages:
 - name: rsync
 - name: rsyslog
 - name: ruby
+- name: rubik
 - name: rubygem-aruba
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
