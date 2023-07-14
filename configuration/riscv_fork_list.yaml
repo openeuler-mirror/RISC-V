@@ -114,6 +114,7 @@ packages:
 - name: crash-gcore-command
 - name: crash-trace-command
 - name: cri-tools
+- name: criu
 - name: custodia
 - name: cyrus-sasl
 - name: dblatex
@@ -446,6 +447,7 @@ packages:
 - name: mariadb-connector-c
 - name: maven
 - name: memcached
+- name: memkind
 - name: memleax
 - name: mesa
 - name: metacity
@@ -897,4 +899,3 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-- name: memkind
