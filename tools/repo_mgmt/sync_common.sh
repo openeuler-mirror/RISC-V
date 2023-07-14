@@ -26,7 +26,7 @@ else
 	echo -e "${BOLDYELLOW}:: Starting reposync...${ENDCOLOR}";
 	eval $sync_command;
 	sync_exit=$?;
-	echo -e "${BOLDYELLOW}:: Repository syncronized.${ENDCOLOR}";
+	echo -e "${BOLDYELLOW}:: Repository synchronized.${ENDCOLOR}";
 	echo -e "${BOLDYELLOW}:: Starting createrepo...${ENDCOLOR}";
 	eval $meta_gen_command;
 	meta_exit=$?;

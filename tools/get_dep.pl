@@ -192,7 +192,7 @@ sub _process_bp
 
     print "package: [" . $pkg . "]\n";
     print "version: " . $pkg_info{"version"} . "\n";
-    print "build dependenies:\n";
+    print "build dependencies:\n";
 
     %pkg_info = %{ $pkg_dep_map{$pkg} };
     %pkg_info = %{ $pkg_info{'pkgs'} };
