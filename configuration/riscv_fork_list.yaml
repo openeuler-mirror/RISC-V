@@ -6,6 +6,7 @@ packages:
 - name: KubeOS
 - name: LZMA-SDK
 - name: NetworkManager
+- name: OpenAMP
 - name: OpenCSD
 - name: PyQt4
 - name: SuperLU
@@ -187,8 +188,8 @@ packages:
 - name: etcd
 - name: etmem
 - name: evince
-- name: exim
 - name: execstack
+- name: exim
 - name: fabtests
 - name: fakechroot
 - name: fakeroot
@@ -233,6 +234,8 @@ packages:
 - name: gmetrics
 - name: gn
 - name: gnome-boxes
+- name: gnome-builder
+- name: gnome-contacts
 - name: gnome-remote-desktop
 - name: gnome-shell
 - name: gnome-software
@@ -423,6 +426,7 @@ packages:
 - name: lldb
 - name: llvm
 - name: llvm-bolt
+- name: llvm-bolt-15
 - name: llvm-mlir
 - name: lm_sensors
 - name: lmbench
@@ -520,6 +524,7 @@ packages:
 - name: oemaker
 - name: ogdi
 - name: oneDNN
+- name: open-iscsi
 - name: openEuler-indexhtml
 - name: openEuler-logos
 - name: openblas
@@ -535,6 +540,7 @@ packages:
 - name: openmpi
 - name: openresty
 - name: openresty-valgrind
+- name: openresty-zlib
 - name: opensbi
 - name: opensc
 - name: openscap
@@ -689,6 +695,7 @@ packages:
 - name: python-urlgrabber
 - name: python-vulture
 - name: python-watchdog
+- name: python-xgboost
 - name: python-yamlloader
 - name: python-zarr
 - name: python3
@@ -724,8 +731,8 @@ packages:
 - name: rrdtool
 - name: rsync
 - name: rsyslog
-- name: ruby
 - name: rubik
+- name: ruby
 - name: rubygem-aruba
 - name: rubygem-byebug
 - name: rubygem-cucumber-core
