@@ -13,7 +13,7 @@ CLA, Contributor License Agreement, 社区贡献者许可协议。
 
 总之，CLA是开源社区为了避免法律纠纷而要开源求贡献者签署的一个协议。
 
-对 openeuler 开源社区的仓库提请合并代码（Pull Request），就会检验该代码的提交者(commiter)邮箱是否签署CLA，
+对 openeuler 开源社区的仓库提请合并代码（Pull Request），就会检验该代码的提交者(committer)邮箱是否签署CLA，
 未签署CLA的代码不予合并。建议在提交PR之前，就完成CLA的签署。
 
 
