@@ -310,6 +310,7 @@ packages:
 - name: jna
 - name: jnr-enxio
 - name: jnr-netdb
+- name: jose
 - name: jq
 - name: jsch
 - name: jsoup
@@ -710,6 +711,7 @@ packages:
 - name: qt
 - name: qt-assistant-adp
 - name: qt-at-spi
+- name: qtav
 - name: qt5
 - name: qt5-qt3d
 - name: qt5-qtbase
