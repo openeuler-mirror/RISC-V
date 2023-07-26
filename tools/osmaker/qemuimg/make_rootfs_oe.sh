@@ -95,7 +95,7 @@ echo "prepare_img complete"
 mount_img
 echo "mount_img complete"
 install_rpms
-echo "istall_rpms complete"
+echo "install_rpms complete"
 config_services
 echo "config_services complete"
 config_extlinux
