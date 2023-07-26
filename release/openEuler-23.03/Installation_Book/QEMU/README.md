@@ -42,7 +42,7 @@
 
 ```bash
 sudo apt install zstd -y
-tar -I zstdmt -xvf ./openEuler-23.03-V1-xfce-qemu-preview.qcow2.zst
+unzstd openEuler-23.03-V1-xfce-qemu-preview.qcow2.zst
 ```
 
 然后执行 `bash start_vm_xfce.sh` 启动虚拟机。
