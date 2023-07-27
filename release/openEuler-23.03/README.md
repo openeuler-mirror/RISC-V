@@ -35,7 +35,7 @@ openEuler 23.03 for RISC-V 目前提供了qemu、Unmatched、Visionfive、Vision
 - [搭建web服务器](./User_Book/系统管理/搭建web服务器.md)
 - [搭建数据库服务器](./User_Book/系统管理/搭建数据库服务器.md)
 
-### 3.2 应用软件
+#### 3.2 应用软件
 
 - [XFCE使用手册](./User_Book/XFCE使用手册)
 - [DDE使用手册](./User_Book/DDE使用手册)
