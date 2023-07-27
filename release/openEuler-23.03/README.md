@@ -18,9 +18,9 @@ openEuler 23.03 for RISC-V 目前提供了qemu、Unmatched、Visionfive、Vision
 - [Licheerv开发板安装openEuler](./Installation_Book/D1_and_Licheerv/README.md)
 - [SG2042开发板安装openEuler](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/preview/openEuler-23.03-V1-riscv64/SG2042/)
 
-### 3 用户手册
+### 3.用户手册
 
-#### 3.1 系统管理
+#### 3.1系统管理
 
 - [基础配置](./User_Book/系统管理/基础配置.md)
 - [查看系统信息](./User_Book/系统管理/查看系统信息.md)
@@ -35,7 +35,7 @@ openEuler 23.03 for RISC-V 目前提供了qemu、Unmatched、Visionfive、Vision
 - [搭建web服务器](./User_Book/系统管理/搭建web服务器.md)
 - [搭建数据库服务器](./User_Book/系统管理/搭建数据库服务器.md)
 
-#### 3.2 应用软件
+#### 3.2应用软件
 
 - [XFCE使用手册](./User_Book/XFCE使用手册)
 - [DDE使用手册](./User_Book/DDE使用手册)
@@ -57,5 +57,6 @@ openEuler 23.03 for RISC-V 目前提供了qemu、Unmatched、Visionfive、Vision
 - [MySQL使用手册](./User_Book/MySQL使用手册)
 
 
-### 3.写在最后
+### 4.写在最后
+
 openEuler for RISC-V作为新架构支持，目前还有很多不足，您在使用过程中遇到问题可以在https://gitee.com/openeuler/RISC-V 中通过issue反馈，问题有可能在后续的版本中进行修复完善。同时也随时欢迎有志者加入openEuler RISC-V SIG 一起学习交流。
