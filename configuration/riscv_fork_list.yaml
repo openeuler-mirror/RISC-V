@@ -411,6 +411,7 @@ packages:
 - name: libtpms
 - name: libuser
 - name: libuv
+- name: libvarlink
 - name: libverto
 - name: libvirt
 - name: libvma
