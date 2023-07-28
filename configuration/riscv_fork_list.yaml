@@ -468,6 +468,7 @@ packages:
 - name: mod_auth_openidc
 - name: motif
 - name: mozjs78
+- name: mpfr
 - name: mpich
 - name: mpv
 - name: mrtg
@@ -712,7 +713,6 @@ packages:
 - name: qt
 - name: qt-assistant-adp
 - name: qt-at-spi
-- name: qtav
 - name: qt5
 - name: qt5-qt3d
 - name: qt5-qtbase
@@ -721,6 +721,7 @@ packages:
 - name: qt5-qtscript
 - name: qt5-qtwebengine
 - name: qt5-qtwebkit
+- name: qtav
 - name: ragel
 - name: rapidjson
 - name: raptor2
