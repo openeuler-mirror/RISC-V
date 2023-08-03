@@ -233,6 +233,7 @@ packages:
 - name: glm
 - name: glslang
 - name: gmetrics
+- name: gmp
 - name: gn
 - name: gnome-boxes
 - name: gnome-builder
