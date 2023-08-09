@@ -528,6 +528,7 @@ packages:
 - name: oec-hardware
 - name: oemaker
 - name: ogdi
+- name: oncn-bwm
 - name: oneDNN
 - name: open-iscsi
 - name: openEuler-indexhtml
