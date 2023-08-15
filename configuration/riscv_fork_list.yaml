@@ -437,6 +437,7 @@ packages:
 - name: lmdb
 - name: log4j
 - name: log4j12
+- name: lorax
 - name: lsof
 - name: ltrace
 - name: lttng-ust
