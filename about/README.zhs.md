@@ -23,7 +23,7 @@
 
 openEuler RISC-V SIG 欢迎所有对本项目感兴趣的人参与进来，工作流程见[新手入门](/doc/tutorials)和[项目文档](/doc)。
 
-目前有一个公开的 openEuler RISC-V 微信群，想入微信群请添加PLCT实验室吴伟（fangzhang1024）的微信邀请入群（请标注「oerv」方便通过），同时欢迎在校生实习！
+目前有一个公开的 openEuler RISC-V 微信群，想入微信群请添加PLCT实验室吴伟（fosshelper）的微信邀请入群（请标注「oerv」方便通过），同时欢迎在校生实习！
 
 ### [新手入门](/doc/tutorials)
 - [新手必看](/doc/tutorials/README.md)
