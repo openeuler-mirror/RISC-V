@@ -131,6 +131,7 @@ packages:
 - name: dde-session-ui
 - name: debugedit
 - name: deepin-clone
+- name: deepin-compressor 
 - name: deepin-desktop-base
 - name: deepin-editor
 - name: deepin-font-manager
