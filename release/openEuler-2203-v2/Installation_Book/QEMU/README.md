@@ -47,7 +47,7 @@ tar -I zstdmt -xvf ./openEuler-22.03-V2-xfce-qemu-preview.qcow2.tar.zst
 
 然后执行 `bash start_vm_xfce.sh` 启动虚拟机。
 
-脚本图像输出参数方面可能根据宿主机的环境变化而有些不同。若终端报错，可根据终端提醒，对脚本中 '-display' 与 '-device virtio-vga' 两项进行更改，脚本参数更改具体据环境而变，可自行搜索学习，另外的方法为绕过直接图像输出使用 vnc 或 spice 等方式登陆远程桌面，详情参见附录。
+脚本图像输出参数方面可能根据宿主机的环境变化而有些不同。若终端报错，可根据终端提醒，对脚本中 '-display' 与 '-device virtio-vga' 两项进行更改，脚本参数更改具体据环境而变，可自行搜索学习，另外的方法为绕过直接图像输出使用 vnc 或 spice 等方式登录远程桌面，详情参见附录。
 
 运行脚本中可能会出现 `pa` 报错的情况，是本地机的 Qemu 无法加载 PulseAudio 导致的，可通过将音频后端 `pa` 修改为 `none`（不使用音频后端，即只虚拟声卡但不发出声音）或 `spice`（将音频输出到 Spice，并使用 Spice 连接远程桌面听声音）
 
