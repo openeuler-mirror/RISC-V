@@ -33,7 +33,7 @@ def save_not_exist_packages(service,save):
     print("not exist:" + service)
     with open(not_exist_file, mode='a+') as fw:
         fw.write(service+"\n")
-    fw.close()
+
     
 def save_not_replace_packages(lens_origin,lens_insert,service,save):
     """"save the names of packages which do not use tar_scm_kernel or have been replaced """
@@ -42,7 +42,7 @@ def save_not_replace_packages(lens_origin,lens_insert,service,save):
         if (lens_origin == lens_insert):
             print("not change:" + service)
             fw.write(service+"\n")
-        fw.close()
+    
     
 def replace_service(file,temp_file):
     """replace tar_scm_kenel to tar_scm and insert extract_file"""
@@ -58,10 +58,10 @@ def replace_service(file,temp_file):
             if origin_line in l:
                 lines.insert(lens_origin-2,insert_lines)
         lens_insert = len(lines)
-        fr.close()
+    
         for line in lines:
             fw.write(line.replace(origin_line,update_line))
-        fw.close()
+
         return lens_origin,lens_insert
 
 if __name__ == '__main__':
