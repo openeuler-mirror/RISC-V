@@ -801,6 +801,7 @@ packages:
 - name: suitesparse
 - name: supermin
 - name: svnkit
+- name: swig
 - name: swt-chart
 - name: symlinks
 - name: sysbench
