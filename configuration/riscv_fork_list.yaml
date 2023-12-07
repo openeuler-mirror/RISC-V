@@ -535,6 +535,7 @@ packages:
 - name: open-iscsi
 - name: openEuler-indexhtml
 - name: openEuler-logos
+- name: openEuler-rpm-config
 - name: openblas
 - name: openbox
 - name: opencc
