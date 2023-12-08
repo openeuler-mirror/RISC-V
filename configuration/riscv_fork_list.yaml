@@ -94,6 +94,7 @@ packages:
 - name: ck
 - name: clamav
 - name: clang
+- name: clang-15
 - name: clevis
 - name: clibcni
 - name: clucene
