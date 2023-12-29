@@ -36,7 +36,7 @@ def _refresh_all(base):
 
 def _do_pull(name):
     print("pull %s" % name)
-    subprocess.getstatusoutput("cd %s && git pull" % name)
+    subprocess.run(["git", "pull"], cwd=name, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     pass
 
 def _do_clone(base, name):
@@ -69,8 +69,9 @@ def _do_clone(base, name):
 
     _cmd = "git clone %s" % url
     print("_cmd: %s" % _cmd)
-    subprocess.getstatusoutput("git clone %s" % url)
-    subprocess.getstatusoutput("cd %s && git checkout %s && git reset --hard" % (name, revision))
+    subprocess.run(["git", "clone", url], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    cmd = ["git", "checkout", revision, "&&", "git", "reset", "--hard"]
+    subprocess.run(cmd, cwd=name, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if not os.path.exists(name):
         print("-----")
         print("Get source of [ %s ] failed." % name)
