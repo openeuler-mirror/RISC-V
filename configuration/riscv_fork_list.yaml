@@ -469,6 +469,7 @@ packages:
 - name: minimap2
 - name: mksh
 - name: mobile-broadband-provider-info
+- name: moby
 - name: mockito
 - name: mod_auth_openidc
 - name: motif
