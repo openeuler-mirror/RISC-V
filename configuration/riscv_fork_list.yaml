@@ -112,6 +112,7 @@ packages:
 - name: copy-jdk-configs
 - name: coreutils
 - name: courier-unicode
+- name: cpio
 - name: crash
 - name: crash-gcore-command
 - name: crash-trace-command
