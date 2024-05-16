@@ -809,6 +809,7 @@ packages:
 - name: swt-chart
 - name: symlinks
 - name: sysbench
+- name: syscare
 - name: syscontainer-tools
 - name: syslinux
 - name: sysstat
