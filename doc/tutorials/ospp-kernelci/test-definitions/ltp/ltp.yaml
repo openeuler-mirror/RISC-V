@@ -1,0 +1,26 @@
+metadata:
+    name: ltp
+    format: "Lava-Test Test Definition 1.0"
+    description: "Run ltp test suite on openEuler"
+    os:
+        - openEuler
+    scope:
+        - functional
+    devices:
+        - all
+run:
+    steps:
+            - yum install -y gcc automake
+            - df -h
+            - wget -P /root https://github.com/linux-test-project/ltp/releases/download/20240524/ltp-full-20240524.tar.xz
+            - cd /root
+            - tar -xJf ltp-full-20240524.tar.xz
+            - df -h
+            - cd ltp-full-20240524
+            - make autotools
+            - ./configure
+            - make -j $(nproc)
+            - df -h
+            - make install
+            - cd /opt/ltp
+            - ./runltp

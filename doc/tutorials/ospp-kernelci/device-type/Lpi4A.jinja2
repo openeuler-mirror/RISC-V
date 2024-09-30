@@ -1,0 +1,26 @@
+{% extends 'base-uboot.jinja2' %}
+
+{% set uboot_mkimage_arch = 'riscv' %}
+{% set console_device = console_device|default('ttyS0') %}
+{% set baud_rate = baud_rate|default(115200) %}
+
+{% set booti_kernel_addr = '0x00200000' %}
+{% set booti_dtb_addr = '0x03800000' %}      
+{% set booti_ramdisk_addr = '0x06000000' %}
+
+{% set uboot_initrd_high = '0xffffffffffffffff' %}
+{% set uboot_fdt_high = '0xffffffffffffffff' %}
+
+{% set boot_character_delay = 100 %}
+
+{% set shutdown_message = 'The system will reboot now!' %}
+{% set bootloader_prompt = bootloader_prompt|default('Light LPI4A#') %}
+
+{% set uboot_tftp_commands=[
+    "tftp 0x0 mine/final/dtb/fw_dynamic.bin",
+    "bootslave",
+    "tftp {KERNEL_ADDR} {KERNEL}",
+    "setenv initrd_size ${filesize}",
+    "tftp {DTB_ADDR} {DTB}"]
+-%}
+

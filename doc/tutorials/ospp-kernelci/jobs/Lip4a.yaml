@@ -1,0 +1,85 @@
+device_type: Lpi4a
+job_name: 
+context:
+  boot_character_delay: 1000
+  extra_nfsroot_args: ",nolock,nfsvers=3"
+timeouts:
+  job:
+    minutes: 301
+  action:
+   minutes: 300
+  actions:
+    power-off:
+      seconds: 30
+priority: medium
+visibility: public
+metadata:
+  # please change these fields when modifying this job for your own tests.
+  format: 
+  name: 
+  description: ""
+  version: "1.0"
+# ACTION_BLOCK
+actions:
+# DEPLOY_BLOCK
+- deploy:
+    timeout:
+      minutes: 20
+    to: tftp
+    kernel:
+      url: file:///home/2024ospp-large-files/Image
+      type: image
+    dtb:
+      url: file:///home/2024ospp-large-files/licheepi4a/thead/th1520-lichee-pi-4a.dtb
+    nfsrootfs:
+      url: file:///home/2024ospp-large-files/openeuler-rootfs.tar.gz
+      compression: gz
+# BOOT_BLOCK
+- boot:
+    timeout:
+      minutes: 20
+    method: u-boot
+    commands: nfs
+    soft_reboot:
+    - root
+    - openEuler
+    - reboot
+    - The system will reboot now!
+    prompts:
+      - '[root@openeuler-riscv64 ~]#'
+    auto_login:
+      login_prompt: "(.*)openeuler-riscv64 login:(.*)"
+      username: root
+      password_prompt: "Password:"
+      password: openEuler12#$
+# TEST_BLOCK
+- test:
+    timeout:
+      minutes: 240
+    definitions:
+    - repository:
+        metadata:
+          format: Lava-Test Test Definition 1.0
+          name: install-dependency-package
+        run:
+          steps:
+            - yum install -y gcc automake
+            - df -h
+      from: inline
+      name: install-dependency-package-inline
+      path: inline/install-dependency-package.yaml
+    - repository: https://github.com/Linaro/test-definitions.git
+      from: git
+      path: automated/linux/ltp/ltp.yaml
+      parameters:
+        TST_CMDFILES: syscalls
+        SKIPFILE: skipfile-lkft.yaml
+        BOARD: qemu
+        BRANCH: master
+        ENVIRONMENT: production
+        TIMEOUT_MULTIPLIER: '30'
+        ROOT_PASSWD: openEuler12#$
+        BUILD_FROM_TAR: true
+        LTP_VERSION: 20240524
+        TEST_DIR: /root/ltp
+      name: ltp-syscalls-tests
