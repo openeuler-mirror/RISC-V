@@ -1,0 +1,21 @@
+metadata:
+    name: kselftest
+    format: "Lava-Test Test Definition 1.0"
+    description: "Run kselftest test suite on openEuler"
+    os:
+        - openEuler
+    scope:
+        - functional
+    devices:
+        - all
+run:
+    steps:
+          - yum install -y git make gcc flex bison clang
+          - df -h
+          - cd /root
+          - git clone https://gitee.com/feifei-fertilizer/riscv-kernel.git
+          - cd riscv-kerner.git
+          - git checkout OLK-6.6
+          - make defconfig
+          - make -C tools/testing/selftests
+          - make -C tools/testing/selftests run_tests

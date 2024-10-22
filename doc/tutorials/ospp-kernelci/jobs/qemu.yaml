@@ -1,0 +1,91 @@
+# Your first LAVA JOB definition for an riscv_64 QEMU
+device_type: qemu
+job_name: 
+timeouts:
+  job:
+    minutes: 660
+  action:
+    minutes: 650
+  connection:
+    minutes: 5
+priority: medium
+visibility: public
+# context allows specific values to be overridden or included
+context:
+  # tell the qemu template which architecture is being tested
+  # the template uses that to ensure that qemu-system-riscv64 is executed.
+  arch: riscv64
+  machine: virt
+  guestfs_interface: virtio
+  extra_options:
+    - -machine virt
+    - -nographic
+    - -smp 16
+    - -m 16G
+    - -device virtio-blk-device,drive=hd0
+    - -append "root=/dev/vda rw console=ttyS0 selinux=0"
+    - -device virtio-net-device,netdev=usernet
+    - -netdev user,id=usernet,hostfwd=tcp::10008-:22
+metadata:
+  # please change these fields when modifying this job for your own tests.
+  format: 
+  name: 
+  description: ""
+  version: "1.0"
+# ACTION_BLOCK
+actions:
+# DEPLOY_BLOCK
+- deploy:
+    timeout:
+      minutes: 20
+    to: tmpfs
+    images:
+      kernel:
+        image_arg: -kernel {kernel}
+        url: file:///home/2024ospp-large-files/Image
+      rootfs:
+        image_arg: -drive file={rootfs},format=raw,id=hd0
+        url: file:///home/2024ospp-large-files/openeuler-rootfs.img
+# BOOT_BLOCK
+- boot:
+    timeout:
+      minutes: 20
+    method: qemu
+    media: tmpfs
+    prompts: ["root@openeuler-riscv64"]
+    auto_login:
+      login_prompt: "openeuler-riscv64 login:"
+      username: root
+      password_prompt: "Password:"
+      password: openEuler12#$
+# TEST_BLOCK
+- test:
+    timeout:
+      minutes: 240
+    definitions:
+    - repository:
+        metadata:
+          format: Lava-Test Test Definition 1.0
+          name: install-dependency-package
+        run:
+          steps:
+            - yum install -y gcc automake
+            - df -h
+      from: inline
+      name: install-dependency-package-inline
+      path: inline/install-dependency-package.yaml
+    - repository: https://github.com/Linaro/test-definitions.git
+      from: git
+      path: automated/linux/ltp/ltp.yaml
+      parameters:
+        TST_CMDFILES: syscalls
+        SKIPFILE: skipfile-lkft.yaml
+        BOARD: qemu
+        BRANCH: master
+        ENVIRONMENT: production
+        TIMEOUT_MULTIPLIER: '30'
+        ROOT_PASSWD: openEuler12#$
+        BUILD_FROM_TAR: true
+        LTP_VERSION: 20240524
+        TEST_DIR: /root/ltp
+      name: ltp-syscalls-tests
