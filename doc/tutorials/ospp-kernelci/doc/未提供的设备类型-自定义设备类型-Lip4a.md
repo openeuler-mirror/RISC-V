@@ -616,7 +616,7 @@ Check for:
 
    - `boot_character_delay`：设置 lava 输入字符的时间，主要是为了模拟人类键盘输入，电脑输入过快可能会造成字符倒置等情况
 
-6. **设置 shudown 提示词**：
+6. **设置 shutdown 提示词**：
 
    ```jinja2
    {% set shutdown_message = 'The system will reboot now!' %}

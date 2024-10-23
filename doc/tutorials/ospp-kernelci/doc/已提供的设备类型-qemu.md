@@ -60,5 +60,5 @@ COPY --from=0 lava-healthchecks-binary/next /usr/share/nginx/html/next/
 COPY --from=0 lava-healthchecks-binary/stable /usr/share/nginx/html/stable/
 ```
 
-也可以为你的 dokcer 容器配置代理
+也可以为你的 docker 容器配置代理
 

@@ -220,7 +220,7 @@ params:
     #                                 # dir ./automated/linux/ltp/
     #   SKIPFILE: "http://people.linaro.org/~naresh.kamboju/skipfile"
     #   SKIPFILE: "skipfile-lkft.yaml" # yaml file that will be parsed with
-    #                                  # skipgen. Must use "yaml" extention.
+    #                                  # skipgen. Must use "yaml" extension.
     # NOTE: busybox wget may not work with https link so prefer to use http
     SKIPFILE: ""
 
