@@ -927,8 +927,6 @@ packages:
 - name: zookeeper
 - name: zsh
 - name: zstd
-
-# Java SIG packages (for upgrade system jdk)
 - name: geronimo-jta
 - name: hibernate-commons-annotations
 - name: jackson-parent
